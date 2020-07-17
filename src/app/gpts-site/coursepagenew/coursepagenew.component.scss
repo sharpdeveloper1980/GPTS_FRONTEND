@@ -1,0 +1,167 @@
+.courseNewBanner {
+    background-image: url(../../../assets/images/theme-three/instiBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-bottom40 {
+    margin-bottom: 40px;
+}
+
+.margin-top40 {
+    margin-top: 40px;
+}
+
+.border-right-course:last-child::after {
+    display: none;
+}
+.breadcrumb{padding-left:0px;padding-right:0px;}
+.margin-top95 {
+    margin-top: 95px;
+}
+.banner-height {
+    .row {
+        align-items: flex-end;
+    }
+}
+.ellipsis-course {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-col {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:15px;
+    margin-right: 15px;
+    margin-bottom:30px;
+    position: relative;
+
+    a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+.margin-icon-text {
+    margin-top: 25px;
+}
+
+.icon-width {
+    width: 87px;
+}
+
+.colored-box-0 {
+    background: #efefef;
+}
+
+.colored-box-1 {
+    background: #fbf2f3;
+}
+
+.colored-box-2 {
+    background: #e9eafc;
+}
+
+.colored-box-3 {
+    background: #e5f5ff;
+}
+
+.colored-box-4 {
+    background: #dde9eb;
+}
+
+.box-margin {
+    margin-bottom: 25px;
+    transition: all 1s ease-in-out;
+}
+
+.box-margin:hover {
+    box-shadow: 3px 9px 14px -16px black;
+    transition: all 0.3s ease-in-out;
+}
+.banner-icon-position{
+    position: relative;
+    top: 30px;
+}
+
+.box-padding {
+    padding: 47px;
+}
+
+.light-red-head-bg {
+    background: #fef4f2;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 12px;
+    padding: 5px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.border-right-course::after {
+    content: "";
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    left: auto;
+}
+
+
+
+.more-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 80px;
+}
+
+.light-hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 145px;
+    width: 90%;
+}
+
+.remove-padding-top {
+    padding-top: 0;
+}
+
+.section-padding-overide-course {
+    padding-top: 108px;
+    padding-bottom: 45px;
+    padding-right: 20px;
+padding-left: 20px;
+}
+
+.footer-text-width {
+    max-width: 55%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
+
+
+@media (max-width: 1199px) {
+    .banner-height {
+        .text-macro {
+            max-width: 632px;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+<app-header></app-header>
+
+<!-- banner -->
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="bloglist-back dynheader">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big">Power your mind</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-7 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/blogs.svg" class="img-fluid bannerImgSub banner-icon-position"
+            alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- research and blogs text -->
+  <div class="custom-container section-padding">
+
+    <div class="row">
+      <!--  -->
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 text-xl-left text-lg-left text-center">
+        <h3 class="font-size50 custom-text-light margin-btm42">Research Blogs and Insights</h3>
+        <p class="orange-text font-size25 footer-text-width2 margin-bottom70 tagline-orange margin-top-12">Our blog
+          section consists
+          of in-house
+          research work and
+          articles from
+          contributing authors. </p>
+        <p class="font-color33 text-small footer-text-width2">Education is an ever-evolving dynamic sphere. It time for
+          you to be an active part of the public discourse on the future of our education system. Stay updated on the
+          latest innovations, debates and news through our blog posts and articles.</p>
+      </div>
+      <div class="col-xl-3 col-lg-3 d-md-none d-sm-none d-none d-xl-block d-lg-block">
+        <img src="assets/images/theme-three/bloglist.jpg" class="img-fluid" alt="image">
+      </div>
+    </div>
+  </div>
+
+  <!-- blogs + sidebar -->
+  <div class="section-padding remove-padding-top  bloglist-bubble">
+    <div class="custom-container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 nosidebar">
+        <div class="position-sidebar-sticky">
+          <div class="col-12 borderFollow border-follow-new">
+            <h5 class="text-uppercase">Follow us on</h5>
+            <p><a href="https://facebook.com/GPTSindia/" class="socialIcon"><i class="fa fa-facebook"></i> </a> <a
+                href="https://twitter.com/Gptsglobal" class="socialIcon"><i class="fa fa-twitter"></i> </a><a
+                href="https://in.linkedin.com/company/great-place-to-study" class="socialIcon"><i
+                  class="fa fa-linkedin"></i>
+              </a> <a href="http://instagram.com/greatplacetostudy" class="socialIcon"><i class="fa fa-instagram"></i>
+              </a>
+            </p>
+          </div>
+          <!-- popular post -->
+          <div class="col-12 borderFollow oneMarginEm">
+            <h5 class="text-uppercase">popular posts</h5>
+          </div>
+          <div class="col-12 borderFollowList">
+            <!-- set repeat -->
+            <div *ngFor="let popular of popularBlogs" class="postBox d-inline-flex">
+              <div class="imageBox">
+                <img [src]="popular.thumb" class="img-fluid" alt="image">
+              </div>
+              <div class="blogtextpara">
+                <a [routerLink]='["/bloglist",popular.slug]'>
+                  <p>{{popular.title}}</p>
+                  <p class="nameBlog">{{popular.author_name}}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="row">
+          <div class="col-12 d-xl-flex d-lg-flex removepadding">
+            <div class="row  blog-card-section">
+              <div *ngFor="let blogCard of blogsCarousel | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"
+                class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 margin-bottom2">
+                <div class="card new-card">
+                  <a class="blog-link" [routerLink]="'/bloglist/'+blogCard.slug"> </a>
+                  <img class="card-img-top" src="{{blogCard.thumb}}" alt="Card image">
+                  <div class="card-body">
+
+                    <h5 class="card-title card-title-height">{{blogCard.title}}</h5>
+
+                    <h6 class="card-subtitle text-muted d-flex justify-content-between">
+                      <span>{{blogCard.author_name}}</span> <span class="date">{{blogCard.created_at}}</span></h6>
+                    <p class="card-text">{{blogCard.description}}</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div></div>
+
+  <!-- pagination -->
+  <div class="custom-container section-padding remove-padding-top">
+    <div class="col-12 d-flex justify-content-center">
+      <ngb-pagination (pageChange)="paginationClick(page)" [(page)]="page" [collectionSize]="blogsCarousel.length"
+        [directionLinks]="false">
+        <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+      </ngb-pagination>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        The best way to show your greatness is to build great people for future
+
+      </div>
+      <div class="sub-text">
+        Great Thing happens!
+      </div>
+      <button *ngIf="!loggedIn" (click)="openSignupModal()" class="custom-secondary-btn">
+        Get Started
+      </button>
+    </div>
+  </div>
+
+
+</div> <!-- theme three ends -->

@@ -1,0 +1,19 @@
+<!--One level Breadcrumb-->
+<div *ngIf="arrayOfRoutes.length" class="breadcrumb-bg">
+  <div class="custom-container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent">
+        <li *ngFor="let data of arrayOfRoutes | slice:-2 ; index as i; last as last"
+          class="breadcrumb-item text-uppercase" [class.link]="!last">
+          <a *ngIf="!last; else activePage" class="" [routerLink]="makeLink(data, i)">
+            {{getName(data)}}<span *ngIf="data.split('-').length >= 2">...</span>
+          </a>
+          <ng-template #activePage>
+            <a class="">{{getName(data)}}<span *ngIf="data.split('-').length >= 2">...</span>
+            </a>
+          </ng-template>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+
+  <div id="page-content-wrapper" *ngIf="counselorData">
+    <div class="dashboard-three custom-dashboard-three">
+      <!-- three boxes -->
+      <div class=" margin-btm63">
+        <div class="container-fluid">
+          <div class="row margin-default-adjustment">
+            <div class="col-12">
+              <h3 class="font-color-1e ">Hi <span>{{studentName}},</span>
+                Welcome to your dashboard
+              </h3>
+              <p class="font-size25 font-color-blue32">Get unique perspectives and understand the tools of the trade
+                from experts in different domains</p>
+            </div>
+          </div>
+          <!-- 3 boxes weird -->
+          <div class="row" *ngIf="counselorData; else notFound">
+            <div class="col-md-12">
+              <h4 class="mb-5 leagueFont mt-5">Student List {{careerList}}</h4>
+              <div class="table-responsive relative">
+                <div class="row" id="filter">
+                  <div class="col-md-1"><label class="control-label"><strong class="">Filter:</strong></label></div>
+                  <div class="col-md-5">
+                    <input type="text" placeholder="Search by email address..." [(ngModel)]="searchText" class="form-control" />
+                  </div>
+                </div>
+                <table class="table table-striped table-bordered" >
+                  <thead>
+                    <tr>
+                      <th>Full Name</th>
+                      <th>Class</th>
+                        <th>Email Id</th>
+                        <th>Registered On</th>
+                        <th>Contact Number</th>
+                        <th>Report</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of counselorData | filter:searchText | paginate:{itemsPerPage:30,currentPage:p}; let i=index">
+                      <td>{{ item.first_name }}&nbsp;{{item.last_name}}</td>
+                      <td><span *ngIf="item.class==1">8th</span>
+                        <span *ngIf="item.class==2">9th</span>
+                        <span *ngIf="item.class==3">10th appearing</span>
+                        <span *ngIf="item.class==4">10th completed</span>
+                        <span *ngIf="item.class==5">11th</span>
+                        <span *ngIf="item.class==6">12th appearing</span>
+                        <span *ngIf="item.class==7">12th complete</span>
+                      </td>
+                      <td>{{ item.email_id }}</td>
+                      <td>{{ item.created_at }}</td>
+                      <td>{{item.contact_no}}</td>
+                      <td><a class="d-inline-block download" href="javascript:void(0);" (click)="getPDF(item.tte_user_id)" *ngIf="item.tte_status==3"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      </a>  
+                      </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="showLoader"*ngIf="loading">
+                  <i class="fa fa-spinner fa-spin" ></i>
+                </div>
+              <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                
+
+            </div>
+            </div>
+          </div>
+          <ng-template #notFound>
+            <div class="position-relative ng-star-inserted">
+              <div class="position-absolute soon-info-wrapper text-center">
+                <p class="">Data not available.</p></div>
+                <div class="blurred-box d-block justify-content-center align-items-center">
+                  <div class="dummy-box w-50 h-50 border m-auto border-primary"></div></div></div>
+          </ng-template>
+
+        </div>
+      </div>
+
+    </div><!-- dashboard three div ends-->
+  </div>

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+.p-t-80 {padding-top:80px;}
+.p-b-80{padding-bottom: 80px;}
+.pt-80 {padding-top:80px;}
+.pb-80{padding-bottom: 80px;}
+.m-t-80 {margin-top:80px;}
+.m-b-80{margin-bottom: 80px;}
+.mt-60{margin-top:60px;}
+.mb-60{margin-bottom: 60px;}
+.pt-60{padding-top:60px;}
+.pb-60{padding-bottom: 60px;}
+.pt-100{padding-top:100px;}
+.pb-100{padding-bottom: 100px;}
+.pt-150{padding-top:150px;}
+.pb-150{padding-bottom: 150px;}
+$leagueSpartanBold:'League Spartan Bold';
+$lightGrey:#f7f7f7;
+$theme-one:#10A577;
+$theme-three:#283679;
+$theme-two:#AC2D07;
+$theme-four:#CEB733;
+$roboto-family:'Roboto', sans-serif;
+.font-roboto-family{font-family: $roboto-family!important;}
+p{font-family: $roboto-family; font-weight: 400; }
+.heading-title{font-family: $leagueSpartanBold;font-size: 35px;}
+
+//dream institute section
+#dreamInstituteVideo .video-carousel .swiper-container .swiper-button-next{ width: 39px; height: 39px; text-align: center; background: none;}
+#dreamInstituteVideo .video-carousel .swiper-container .swiper-button-prev{background: none;text-align: center; padding: 0; width: auto; height: auto;}
+#dreamInstituteVideo .video-carousel .swiper-container .swiper-slide { width: 32.2%;     cursor: initial;}
+
+.swiper-button-prev img,.swiper-button-next img {  width: auto; height: auto; padding: 0; margin-top: 4px;}
+.swiper-button-prev img { width: auto; height: auto; padding: 0; margin-top: 4px;}
+.control-arrow { position: absolute; bottom: 0px; left: 50%; transform: translateY(-50%);}
+.control-arrow .arrow{display: inline-block; position: static;;}
+.swiper-container.swiper-container-horizontal {padding-bottom: 60px;}
+.caption {margin-top:15px; text-align: left; color: #000000;}
+.thumb{position: relative;}
+.caption h3{ font-size: 16px;font-family: $leagueSpartanBold; margin-bottom: 10px;line-height: 1.4;}
+.caption:hover h3{color: $theme-three;}
+
+.video-thumbnail span.play-icon {position: absolute; border: none; width: 50px; height: auto; opacity: .7; transition: all .2s ease;}
+.video-thumbnail:hover span.play-icon{width:55px; opacity: 1;}
+.video-thumbnail .thumb> img { min-height: 228px;}
+.video-thumbnail img {width: 100%;transition: all .2s ease;}
+.video-thumbnail:hover .thumb > img{box-shadow: 0px 0px 20px #00000096; }
+.video-thumbnail { text-align: center;}
+.video-thumbnail .thumb{cursor: pointer;}
+.video-thumbnail span.play-icon img{box-shadow: none!important;}
+span.favroite-icon { position: absolute; top: 5px; right: 10px; opacity: .8;}
+span.favroite-icon img { width: 15px!important; height: 14px;}
+#dreamInstituteVideo .custom-control-arrow{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: auto;
+}
+#dreamInstituteVideo  .video-carousel .swiper-container .custom-control-arrow .swiper-button-prev {
+    background: none;
+    text-align: center;
+    padding: 0 5px;
+    width: auto;
+    height: auto;
+    float: left;
+}
+#dreamInstituteVideo  .video-carousel .swiper-container .custom-control-arrow .swiper-button-next {
+    width: auto;
+    height: auto;
+    text-align: center;
+    background: none;
+    float: right;
+    padding: 0 5px;
+}
+#dreamInstituteVideo .custom-university-list{
+    bottom: 13px;
+    left: 50%;
+    width: 340px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #cdcdcd;
+    height: 12px;
+    border-radius: 8px;
+    display: table;
+}
+
+
+//home video popup css start
+#dreamVideoPopup .modal-content { background: none; padding: 0;    border: none;}
+#dreamVideoPopup .modal-content .modal-header { border: none; padding: 0; position: absolute; z-index: 1; right: -8px; top: -4px;}
+#dreamVideoPopup .modal-content .modal-body { padding: 0;box-shadow: 0 0 10px #333;}
+#dreamVideoPopup .modal-content .modal-header button.close {padding: 0; background: #ffffff; opacity: 1; width: 30px; height: 30px; border-radius: 50px; box-shadow: 0 0 13px #949494;}
+#dreamVideoPopup.modal.show .modal-dialog { top: 50%; transform: translate(0, -50%);}
+#clusterVideoPopup .modal-content { background: none; padding: 0;    border: none;}
+#clusterVideoPopup .modal-content .modal-header { border: none; padding: 0; position: absolute; z-index: 1; right: -8px; top: -4px;}
+#clusterVideoPopup .modal-content .modal-body { padding: 0;box-shadow: 0 0 10px #333;}
+#clusterVideoPopup .modal-content .modal-header button.close {padding: 0; background: #ffffff; opacity: 1; width: 30px; height: 30px; border-radius: 50px; box-shadow: 0 0 13px #949494;}
+#clusterVideoPopup.modal.show .modal-dialog { top: 50%; transform: translate(0, -50%);}
+
+//home video popup css end
+
+
+//all institute wrapper css start
+.top-college-list-menu .custom-search-career{min-width:260px}
+.theme-three.universityContainer .top-college-list-menu  .custom-search-career.ng-select .ng-select-container{
+    background: #ffffff;
+}
+.top-college-list h2 {
+    font-weight: 400;
+}
+#clusterMenu{border:none}
+// #institute-wrapper{border-top: 1px solid rgba(112, 112, 112, 0.15);}
+// .top-college-list-menu { padding-right: 40px; }
+// .customBdrLeft{border-left: 1px solid rgba(112, 112, 112, 0.15);padding-left: 30px;}
+.top-college-list-menu h3{ font-size: 30px; font-weight: 400;}
+.top-college-list-menu ul li a{font-size: 17px; font-family: $roboto-family; position: relative; padding-left:50px; margin: 10px 0; color: #000000; display: inline-block;font-weight: 400;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+.top-college-list-menu ul li a span{ position: absolute; left:0; content: ''; font-family: $leagueSpartanBold; font-size: 25px;top:8px;}
+.top-college-list-menu ul li:hover a,.top-college-list-menu ul li a.active{color: $theme-three; }
+// .top-college-list { padding-left: 20px;}
+.college-box{color: #000000;}
+.college-box .thumb { margin-bottom: 20px;}
+.college-box .thumb img{transition: all .3s ease; width:100%;}
+.college-box:hover .thumb > img{box-shadow: 0px 0px 20px #00000096; }
+.college-box:hover .caption h3{color: $theme-three;}
+//all institute wrapper css end
+
+.mobile-select-grop{background: #283679; color: #ffffff; padding: 15px; font-size: 19px!important; border-radius: 4px; cursor: pointer; position: relative;}
+.mobile-select-grop i { position: absolute; right: 15px; font-size: 14px;transition: all 0.4s ease; top:39%; transform: translateY(-50%); transform: rotateZ(-90deg);}
+
+
+
+@media(max-width:1600px){
+    .heading-title{font-size: 30px;}
+}
+@media(min-width:1025px){
+    #clusterMenu{overflow-y: scroll; height: 400px;}
+    .sticky-sidebar {
+        height: 570px;
+        background: white;
+        position: absolute;
+        top: 0;
+        width: 330px;
+        margin-top: -20px;
+        padding-top: 0px;
+        border-radius: 3px;
+        z-index: 1;
+    }.sticky-class {
+        position: fixed;
+        top: 100px;
+    }.sticky-class.remove-sticky{
+        position: absolute;
+    }
+    .top-college-list-menu.desktop{display: none;}
+}
+@media(max-width:1024px){
+    .sticky-sidebar{ width: 265px;}
+    .top-college-list-menu.desktop{display: block;}
+    .heading-title{font-size: 30px;}
+    .top-college-list-menu ul li a span{top:3px;}
+    .top-college-list-menu ul li a span{font-size: 20px;}
+    .top-college-list-menu ul li a {padding-left: 40px;}
+    .top-college-list{margin-top:0px!important}
+}
+@media(min-width:992px) and(max-width:1024px){
+  .top-college-list-menu h3 { font-size: 25px;}
+    
+}
+@media(max-width:991px){
+    
+
+
+    .top-college-list.pt-60.pb-60 {   padding-top: 0px!important;  padding-left: 0; }
+    .college-box .thumb img{width:100%;}
+ 
+   
+@media(min-width:768px) and (max-width:991px){
+    #dreamInstituteVideo .video-carousel .swiper-container .swiper-slide{width:48%;}
+}
+}
+@media(min-width:481px) and (max-width:767px){}
+@media(min-width:768px){
+    .mobile-select-grop{    display: inline-block;    margin-bottom: 10px; padding-right:45px; width:auto;}
+    #clusterMenu {position: absolute;  display: none;z-index: 1000;background: #283679;
+        padding: 25px 0;
+        border-radius: 4px;}
+    #clusterMenu.show {   display: block; max-height: 300px; right: 15px; overflow-y: scroll;}
+    .mobile-select-grop.active i{transform: rotateZ(0deg);}
+
+#clusterMenu li a.nav-link.active { background: none;}
+    #clusterMenu li a { color: #ffffff; padding-left: 50px; display: block;padding-right:15px;}
+    #clusterMenu li a span{font-size: 15px; margin-left: 20px; margin-top: 2px;}
+}
+@media(max-width:767px){
+    div#edioSearch {text-align: left!important;  margin-top: 20px;  }
+    .top-college-list-menu .custom-search-career{display: block!important;}
+    .mobile-select-grop{    display: block;    margin-bottom: 10px;padding-right:35px; width:97%;}
+    #dreamInstituteVideo .video-carousel .swiper-container .swiper-slide { width: 98%; }
+    #clusterMenu {position: absolute;  width: 94%; display: none;z-index: 1000;background: #283679;
+        padding: 25px 0;
+        border-radius: 4px;}
+    #clusterMenu.show {   display: block; max-height: 300px;  overflow-y: scroll;}
+    .mobile-select-grop.active i{transform: rotateZ(0deg);}
+
+#clusterMenu li a.nav-link.active { background: none;}
+    #clusterMenu li a { color: #ffffff; padding-left: 50px; display: block;padding-right:15px;}
+    #clusterMenu li a span{font-size: 15px; margin-left: 20px; margin-top: 2px;}
+}
+@media(max-width:480px){
+   
+    .top-college-list.pt-60.pb-60{padding-left:15px;}
+    #dreamVideoPopup .modal-content .modal-header,#clusterVideoPopup .modal-content .modal-header {
+        right: 22px;
+        top: -20px;
+    }
+}
+@media(max-width:400px){
+    // #dreamInstituteVideo .custom-control-arrow{width: 280px;}
+    #dreamInstituteVideo .custom-university-list{width:220px}
+}
+@media(max-width:320px){
+    #clusterMenu{width:91%;}
+    .top-college-list .col-6 { flex: 0 0 100%; max-width: 100%;}
+}
+
+.search_colleges {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    text-align: left !important;
+}
+.search_colleges .ng-option {
+    text-align: left !important;
+}
+.search_colleges .ng-option span {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+.d-none{display:none !important;}

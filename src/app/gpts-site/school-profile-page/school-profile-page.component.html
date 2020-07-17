@@ -1,0 +1,514 @@
+<div class="school-profile-page-container">
+  <!-- header -->
+  <app-header></app-header>
+  <!-- header image (note: have to discuss with manu regarding slider at this place) -->
+  <div class="container-fluid removePadding">
+    <div class="row">
+      <div class="poster-image" appScrollDetect (scrolledOver)="changeUI($event)"> <img class="poster-image"
+          src="assets/images/comparison/school-slider.jpg">
+      </div>
+    </div>
+  </div>
+  <!-- header image ends -->
+  <!-- school logo + name + rate -->
+  <div #instituteName class="container-fluid customContainer">
+    <div class="row d-xl-flex d-lg-flex d-md-flex">
+      <!-- logo -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <img src="../../../assets/images/common/school-logo.jpg" class="img-fluid schoolLogoLocation" alt="school-logo">
+      </div>
+      <!-- school name , location, location -->
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <!-- school name -->
+        <h5 class="schoolName">Jagran Lakecity University, <span class="schoolLocation">Bhopal</span> <span
+            class="schoolRating">4.5</span> </h5>
+        <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+            class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+      </div>
+    </div>
+  </div>
+  <!-- school logo + name + rate -->
+  <!-- about school + video -->
+  <div class="container-fluid customContainer">
+    <div class="row d-xl-flex d-lg-flex d-md-flex">
+      <!-- about school -->
+      <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+        <!-- heading -->
+        <h4 class="schoolHeading">About School</h4>
+        <p class="schoolPara text-justify">At Jagran Lakecity University, we are committed to provide our students a
+          holistic environment that promotes self- awareness and competency. Founded on life-enriching values, we are a
+          completely government recognized and approved state private university under section 2(f) of UGC Act 1956,
+          Government of India. Recognised as Global League Institute in 2015 & 2016 By The Great Place To Study Research
+          Institute and ranked as No1 Private University by Career 360 for 2017, the university has become vital part of
+          Central India in short span of 5 years.</p>
+        <p class="schoolPara text-justify">JLU is a practice-based University, which carries forward the legacy of
+          Jagran Social Welfare Society in being a pioneer in provision of quality education. The courses on offer
+          through various Schools embody the University’s longstanding commitment to leadership and innovation in higher
+          education. The curriculum for individual course is designed through a perfect blend of inputs from renowned
+          academicians and industry leaders who are a part of our academic advisory board. The academics at JLU are of
+          the highest global calibre and are committed to excellence in teaching and learning. </p>
+        <p class="schoolPara text-justify">JLU currently offers full time Degrees at undergraduate, postgraduate and
+          research level in the field of Law, Journalism, Advertising & PR, Engineering & Technology, Management,
+          Commerce, Economics, Public Administration, Banking, Finance, Hospitality, Humanities , Education and Sports
+        </p>
+        <p class="schoolPara text-justify">We welcome you to explore your study options and career paths with us.</p>
+      </div>
+
+      <!-- video plugin -->
+      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+        <p>video plugin to discuss</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- why choose school -->
+  <div class="container-fluid customContainer marginWhyTop">
+    <div class="row">
+      <div class="col-12">
+        <!-- heading -->
+        <h4 class="schoolHeading">Why choose JLU</h4>
+        <!-- para -->
+        <p class="schoolPara">Jagran Lakecity University (JLU) is established with a firm belief that there is nothing
+          more pious than providing education. At JLU, diversity is valued, multiculturalism celebrated, and the
+          integrity of the individual respected. JLU is a practice based university which carries forward the legacy of
+          our parent body ‘Jagran Social Welfare Society’ (JSWS) in being the pioneers in provision of quality
+          education. </p>
+      </div>
+    </div>
+
+    <!-- slider -->
+    <div class="row">
+      <div class="col-12 blueBg">
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="circleSlideConfig" class="carousel graphy ">
+
+          <!-- <div class="graphy"> -->
+          <div ngxSlickItem class="slide">
+            <div>
+              <p class="chooseHeading text-left">Industry Based curriculum</p>
+              <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+                by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+                respective Academic board for each school. </p>
+            </div>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <div>
+            <p class="chooseHeading text-left">Industry Based curriculum</p>
+            <p class="choosePara text-left">At JLU Bhopal, the curriculum for each individual course has been designed
+              by a perfect blend of inputs from renowned academicians and industry leaders who now constitute our
+              respective Academic board for each school. </p>
+          </div>
+          <!-- </div> -->
+        </ngx-slick-carousel>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- slider -->
+  <div class="container-fluid customContainer marginWhyTop">
+    <div class="row">
+      <div class="col-12">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ssi -->
+  <div class="container-fluid customContainer marginWhyTop">
+    <div class="row">
+      <div class="col-12">
+        <!-- heading -->
+        <h4 class="schoolHeading">Student Satisfaction Index</h4>
+        <!-- para -->
+        <p class="schoolPara">Excepteur minim amet, aliquip. Dolore dolore velit mollit nisi ut. Ut reprehenderit
+          pariatur cupidatat mollit eiusmod. Ipsum voluptate aute est. In ipsum deserunt dolor. Magna quis velit
+          consequat consequat sit. Fugiat nisi est consectetur aute. Ullamco eu deserunt veniam, </p>
+      </div>
+    </div>
+    <!-- 6 card boxes -->
+    <div class="row">
+      <!-- c1 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/hf.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Happiness Factor</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+      <!-- c2 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/eca.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Extra Curricular Activity</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+      <!-- c3 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/le.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Learning Experience</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+      <!-- c4 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/loc.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Life on Campus</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+      <!-- c5 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/infra.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Infrastructure</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+      <!-- c6 -->
+      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+        <div class="whiteCardSsi text-center">
+          <!-- icon -->
+          <img src="../../../assets/images/kpi/alr.png" class="img-fluid kpiLogoWidth" alt="image">
+          <!-- head -->
+          <p class="kpiName">Alumni Relation</p>
+          <!-- star -->
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i></p>
+          <p class="kpiRating">3.5</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 4 percentages -->
+    <div class="row d-xl-flex d-lg-flex d-md-flex marginWhyTop">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center rightBrTwo">
+        <h3 class="percentageHead">1500</h3>
+        <p class="percentagePara">Out of 2000 students said JLU is a <strong>Great Place to Study</strong></p>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center rightBrTwo">
+        <h3 class="percentageHead">85%</h3>
+        <p class="percentagePara">Of Girl Student say JLU is <strong>Secure Campus</strong></p>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center rightBrTwo">
+        <h3 class="percentageHead">1700</h3>
+        <p class="percentagePara">Students out of 2000 says JLU has good <strong>Infrastructure</strong></p>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+        <h3 class="percentageHead">75%</h3>
+        <p class="percentagePara">Of Alumini says JLU has a <strong>Great recall in the industry</strong></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- word that matter slider -->
+  <div class="container-fluid backgroundGrey marginWhyTop text-center">
+    <!-- heading -->
+    <div class="row marginTopWord">
+      <div class="col-12">
+        <h4 class="text-uppercase wordHeadMatter">words that matter</h4>
+      </div>
+    </div>
+
+    <!-- slider -->
+    <div class="row">
+      <p>video plugin to discuss</p>
+    </div>
+
+  </div>
+
+  <!-- courses -->
+  <div class="container-fluid customContainer marginWhyTop">
+    <!-- heading -->
+    <div class="row">
+      <div class="col-12">
+        <h4 class="schoolHeading">Courses</h4>
+        <p class="schoolPara">Excepteur minim amet, aliquip. Dolore dolore velit mollit nisi ut. Ut reprehenderit
+          pariatur cupidatat mollit eiusmod. Ipsum voluptate aute est. In ipsum deserunt dolor. Magna quis velit
+          consequat consequat sit. Fugiat nisi est consectetur aute. Ullamco eu deserunt veniam, </p>
+      </div>
+    </div>
+
+    <!-- course links -->
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- course links 2 -->
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- course links 3 -->
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+        <a href="#">
+          <div class="whiteStripCard d-flex">
+            <div class="borderImg col-3"><img src="../../../assets/images/courses/c1.png" class="img-fluid courseIcon">
+            </div>
+            <div class="courseNameTextBox col-9 text-center">JLU School of Law</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- load more -->
+    <div class="row">
+      <div class="col-12 text-right">
+        <a href="#" class="loadMore">Load More</a>
+        <hr>
+      </div>
+    </div>
+
+  </div>
+  <!-- facilities -->
+  <div class="container-fluid customContainer marginWhyTop">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="schoolHeading">Facilities</h4>
+      </div>
+    </div>
+    <div class="row d-xl-flex d-lg-flex d-md-flex">
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f1.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Hostel</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f2.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Library</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f3.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Cafeteria</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f4.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">WI-FI</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f5.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Gym</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f6.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Outdoor Games</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f7.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Games</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f8.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Shops</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f9.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">ATM</p>
+      </div>
+      <div class="col text-center">
+        <img src="../../../assets/images/facility/f10.png" class="img-fluid facilitySize" alt="image">
+        <p class="facilityName">Lab</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- button -->
+  <div class="container-fluid customContainer btnMargin">
+    <div class="row d-xl-flex d-lg-flex d-md-flex">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12"></div>
+      <!-- button -->
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-xl-flex d-lg-flex d-md-flex">
+        <div class="col-6 textEnd">
+          <a href="#" class="greenBtnWebsite btn text-uppercase">Build your profile</a>
+        </div>
+        <div class="col-6 textStart">
+          <a href="#" class="hollowGreyBtn btn text-uppercase">Add to Favourite</a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12"></div>
+    </div>
+  </div>
+
+
+
+
+</div>

@@ -1,0 +1,524 @@
+<div id="page-content-wrapper">
+  <div class="dashboard-three">
+    <div class="edieo-middle-section edieo-detail-section pt-0">  
+      <!--video-detail start--> 
+        <div class="container-fluid video-detail m-b-60 pl-0 pr-0">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-8">
+              <div class="video-section">
+                  <div class="embed-responsive bdr-radius-8 embed-responsive-16by9 ">
+                      <!-- removed this "big-video-container" class from here-->
+                      <vg-player class="embed-responsive-item" (click)="playCondition('edieoDetail'+ bid)">
+                        <vg-overlay-play></vg-overlay-play>
+                        <vg-buffering></vg-buffering>
+                        <vg-controls>
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                        </vg-controls>
+                        <video  [poster]="bthumb" [vgMedia]="media" id="edieoDetail{{bid}}" [src]="bvideo"
+                          #media class="videoClass"></video>
+                      </vg-player>
+                  </div>
+              </div>
+      
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-4">
+              <div class="video-content">
+                <h1>{{btittle}}</h1>
+                <p><strong>{{bdescp}}</strong></p>
+                <ul>
+                  <!--<li><strong><i class="fa fa-clock-o" aria-hidden="true"></i>2hr 24min</strong></li>-->
+                  <li><strong><i class="fa fa-calendar" aria-hidden="true"></i>{{bdate}}</strong></li>
+                </ul>
+                <div class="action">
+                  <a href="javascript:void(0);" *ngIf="loggedIn"  (click)="myFavEdieo(bid)" class="btn custom-primary-btn "><i class="fa fa-plus" aria-hidden="true"></i> Add to Favourites</a>
+                </div>
+              </div>
+              <a href="/student-dashboard/edieo" class="viewAll"><i class="fa fa-angle-left" aria-hidden="true"></i>View All Careers</a>
+            </div>
+          </div>
+        </div>
+        <!--video-detail end--> 
+      
+      
+     
+<!--related section start-->
+<div class="container-fluid related-sec pl-0 pr-0">
+  <div class="related-article">
+      <ngb-tabset class="sfi-tab-conatiner" type="pills" [justify]="'center'">
+        <ngb-tab *ngIf="tababout">
+          <ng-template ngbTabTitle>{{tababout}}</ng-template>
+          <ng-template ngbTabContent>
+          
+            <!--About content start-->
+            <div  id="edieoAboutContent" class="sfi-tab-conatiner custom-edieo-about-info"  *ngIf="careerName; else notFound">
+ 
+
+              <div class="container-fluid"> <div class="pt-40 pb-40">
+                      <div class="row align-items-top">
+                        <div class="col-lg-7">
+                          <h2 class="mb-3 custom-text-light margin-btm36">About {{careerName}}</h2>
+                          <p class="text-macro course-para">{{careerAbout}}</p>
+                          <div class="key-psychology-wrapper mt-5" *ngIf="psychology">
+                            <h3 class="mb-2">Key Psychology</h3>
+                            <p class="font-size14 font-color33">{{psychology}}</p>
+                          </div>
+                        </div>
+                      <div class="col-lg-5">
+                        <div *ngIf="areaCovered">
+                          <h3>Area Covered</h3>
+                         <div class="d-flex flex-wrap discover-pills-wrapper">
+                            <div class="tab-wrapper" *ngFor="let data of areaCovered">
+                              <div *ngIf="data != null" class="tabs">{{data}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-md-12">
+                            <!------------------------------------>
+                      <div class="margin-btm-link" *ngIf="futureProspect">
+                        <div class="row text-left text-lg-left" #futurePros>
+                          <!-- texts -->
+                          <div class="col-xl-12 col-12">
+                            <h3 class="custom-text-light mb-2">Future Prospect</h3>
+                            <p class="text-small font-color33 custom-text-light">{{futureProspect}}</p>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                      <!------------------------------------related career--->
+                      
+                      <div class="related-career" *ngIf="relatedCareer">
+                                      <div class="container-fluid">                            
+                                      <div class="row justify-content-center">
+                                        <h2 class="custom-text-light margin-btm36 col-md-12 text-center">Related Careers</h2>                             
+                                        <div class="col-md-12 mt-5">
+                                         <div class="row">
+                                          <ul class=" col-lg-3 col-md-6 mb-3 border-right" *ngFor="let data of relatedCareer">
+                                            <li class="margin-btm17 font-color33 text-small text-center"><h3 class="pt-2 mb-2">{{data.title}}</h3>
+                                              {{data.description}}
+                                            </li>
+                                          </ul>
+                                         </div>
+                                       </div>
+                                     </div>
+                                      </div>
+                                    
+                                    </div>
+                    
+                      <!----------------------------------------------->
+                      <div class="career-job pt-60 pb-60" *ngIf="careerJobs">
+                      <div class="container-fluid ">
+                        <div class="row align-items-center">
+                          <div class="col-lg-5 col-md-6">
+                            <h2 class="custom-text-light">How I Get a job as {{careerName}}</h2>
+                            <p class="mt-3">Some of the suggestion are &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                          </div>
+                          <!-- 3 white strips -->
+                          <div class="col-md-6 col-lg-7 border-left">
+                            <div class="d-block text-macro p-position-white border-bottom pb-3 mb-3 pt-2 mt-2 ng-star-inserted ml-5" *ngFor="let data of careerJobs">
+                              <h3>{{data.title}}</h3>
+                              <p  [innerHtml]="data.description"></p>
+                            </div>
+                          </div>
+                        </div></div></div>
+                      <!------------------------------------------->
+                      <div *ngIf="competencies" class="competencies pt-60 pb-60">
+                        <div class="container-fluid">
+                          <div class="row margin-btm-link">
+                            <div class="col-md-12 text-center">
+                              <h2 class="">Competencies needed for the job</h2>
+                            </div>
+                          </div>
+                          <div class="row justify-content-center mt-5 pt-3">
+                            <div class="col-md-6 col-lg-6" *ngFor="let data of competencies">
+                             <div class="career-jobs-box mb-4">
+                              <h3>{{data.title}}</h3>
+                              <p>{{data.description}}</p>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                      <!-------------------------------------->
+                      <div class="career-pros pt-60 pb-60" *ngIf="careerPro">
+                      <div class="container-fluid">
+                        <div class="row">
+                            <!-- pros -->
+                            <div class="col-xl-6 col-md-6 col-12 border-rightpink">
+                              <div class="career-pros-box pr-3">
+                                <h2 class="mb-3">Pros</h2>
+                              <div class="pro-con-wrapper" [innerHtml]="careerPro"></div>
+                              </div>
+                            </div>
+                            <!-- cons -->
+                            <div class="col-xl-6 col-md-6 col-12">
+                              <div class="career-pros-box pr-3 ml-3">
+                              <h2 class="mb-3">Cons</h2>
+                              <div class="pro-con-wrapper" [innerHtml]="careerCon"></div>
+                            </div>  </div>
+                          </div>
+                       </div>
+                      </div>
+                      <!-------------------------------------------->
+                      <div class="career-loader pt-60 pb-60" *ngIf="careerLadder.length > 0">
+                        <div class="container-fluid">
+                          <div class="row " *ngIf="careerLadder">
+                            <div class="col-xl-12 col-md-12 text-center">
+                              <h2 class="custom-text-light mb-3">Career Ladder</h2>
+                              <p class="text-small font-color33">The market for electrical and electronics engineers is projected to grow by
+                                7 percent between 2016 and 2026. It is one of the fastest growing sectors. The scope of electrical
+                                engineering is rapidly growing as it finds application in renewable energy sector, optical sensors,
+                                telecommunication, etc.</p>
+                            </div>
+                            <div class="col-xl-12 col-12 mt-5 pt-3">
+                              <div class="custom-timeline-container">
+                                <ul>
+                                  <li *ngFor="let data of careerLadder; index as i">
+                                    <div>
+                                      <h2>{{i+1}}</h2>
+                                      <h3>{{data}}</h3>
+                                      
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     
+                      
+                      <!--------------------------------------------------->
+                      <div class="entrance-examination pt-60 pb-5" *ngIf="careerExam.length > 0">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-12 text-center">
+                              <h2 class="mb-5">Entrance Examination</h2>
+                            </div>
+                          </div>
+                          <!-- table -->
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="table-responsive">
+                                <table class="table table-borderless">
+                                  <thead class="thead-dark">
+                                    <tr>
+                                      <th>Name of Examination</th>
+                                      <th>Details</th>
+                                      <th>Date of Examination</th>
+                                      <th>Application Form</th>
+                                      <th>Application Fees</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr *ngFor="let data of careerExam">
+                                      <td><strong>{{data.exam_name}}</strong></td>
+                                      <td>{{data.exam_detail}}</td>
+                                      <td><strong>{{data.exam_date}}</strong></td>
+                                      <td><strong>{{data.application_form}}</strong></td>
+                                      <td><strong>{{data.application_fee}}</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      </div>
+              <ng-template #notFound>
+                <div class="position-relative ng-star-inserted">
+                  <div class="position-absolute soon-info-wrapper text-center">
+                    <p class="">Data not available.</p></div>
+                    <div class="blurred-box d-block justify-content-center align-items-center">
+                      <div class="dummy-box w-50 h-50 border m-auto border-primary"></div></div></div>
+              </ng-template>
+           <!--about content end-->
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="{{tabthree}}" *ngIf="tabthree">
+          <ng-template ngbTabContent>
+            <div class="sneak-information" *ngIf="careerAboutSneak; else notFound">
+              <!--sneak about-->
+              <div class="container-fluid pt-40 pb-40">               
+                <div class="row">
+                 <div class="col-lg-12 col-md-12 col-xl-12" *ngIf="!expVideo">
+                   <h2 class="mb-3">{{careerNameSneak}}</h2>
+                   <p>{{careerAboutSneak | slice: 0: aboutLength}}<span *ngIf="!(aboutLength === careerAboutSneak.length)">...</span></p>
+                   <button *ngIf="!(aboutLength === careerAboutSneak.length) else loadLess"
+               class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = careerAboutSneak.length">
+               Load More
+             </button>
+             <ng-template #loadLess>
+               <button class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = 500">
+                 View Less
+               </button>
+             </ng-template>
+                 </div>
+                  <div class="col-lg-6 col-md-12 col-xl-6 mb-3" *ngIf="expVideo">
+                    <h2 class="mb-3">{{careerNameSneak}}</h2>
+                    <p>{{careerAboutSneak | slice: 0: aboutLength}}<span *ngIf="!(aboutLength === careerAboutSneak.length)">...</span></p>
+                    <button *ngIf="!(aboutLength === careerAboutSneak.length) else loadLess"
+               class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = careerAboutSneak.length">
+               Load More
+             </button>
+             <ng-template #loadLess>
+               <button class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = 500">
+                 View Less
+               </button>
+             </ng-template>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-xl-6">
+                   <div class="white-border-video" *ngIf="expVideo">
+                     <div class="embed-responsive embed-responsive-16by9 ">
+                       <!-- removed this "big-video-container" class from here-->
+                       <vg-player class="embed-responsive-item">
+                         <vg-overlay-play></vg-overlay-play>
+                         <vg-buffering></vg-buffering>
+                         <vg-controls>
+                           <vg-play-pause></vg-play-pause>
+                           <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                           <vg-scrub-bar [vgSlider]="true">
+                             <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                             <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                           </vg-scrub-bar>
+                           <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                           <vg-mute></vg-mute>
+                           <vg-volume></vg-volume>
+                           <vg-fullscreen></vg-fullscreen>
+                         </vg-controls>
+                         <video [poster]="expVidThumb" [vgMedia]="media" [src]="expVideo" #media
+                           class="videoClass"></video>
+                       </vg-player>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!--sneak about-->
+ 
+              <!--trending career start-->
+              <div class="tranding-career mt-5" *ngIf="subCareerList.length > 0">
+               <div class="container-fluid">
+                 <div class="row">
+                   <div class="col-12">
+                     <h2 class="custom-text-light margin-bottom40 text-center margin-top95 mb-5 pb-0">Trending Careers</h2>
+                   </div>
+                 </div>
+           
+                 <!-- boxes -->
+                 <div class="row justify-content-center" *ngIf="subCareerList.length">
+           
+                   <div *ngFor="let subCareer of subCareerList | slice:0:show; index as i" class="custom-col col-md-4 col-xl-4 col-lg-4 col-sm-6">
+                     <a [routerLink]="'/course/'+ slug2 +'/'+subCareer.sub_career_slug" class="d-block">
+                     <div class="text-center trend-career-box" >
+                      <div class="imgBox mb-3" [ngStyle]="{ 'background-image': 'url(' + subCareer.sub_career_image + ')'}">
+                       
+                     </div>
+                       <p class="text-macro custom-text-light font-color33 margin-icon-text">{{subCareer.sub_career_name}}</p>
+                     </div>
+                    </a>
+                   </div>
+           
+                   <div class="col-12 text-center mt-4" *ngIf="subCareerList.length > 6">
+                       <button class="d-inline-block custom-secondary-btn margin-top45"
+                         *ngIf="subCareerList.length > 6 &&  show <= subCareerList.length else lessBtn"
+                         (click)="show = show+6">VIEW MORE</button>
+                       <ng-template #lessBtn>
+                         <button class="d-inline-block custom-secondary-btn margin-top45" (click)="show = 6">
+                           VIEW LESS
+                         </button>
+                       </ng-template>
+                     </div>
+             
+                  
+           
+                 </div>
+               </div>
+              </div>
+ <!--trending career end-->
+         <!--do you know start-->
+        <div class="do-you-know pt-100 pb-40" *ngIf="doYouKnow">
+         <div class="container-fluid">
+           <div class="row">
+             <div class="col-md-12 col-lg-5 col-xl-4">
+              <div class="img">
+                <img src="assets/images/edieo/creative-art-thumb.jpg" class="img-fluid" alt="Do you know iamge">
+              </div>
+             </div>
+             <div class="col-md-12 col-xl-8 col-lg-7">
+               <h2 class="mb-5">Do you know?</h2>
+               <ul>
+                 <li *ngFor="let data of doYouKnow; let i = index" >
+                   <span>0{{i+1}}</span>
+                   <p><strong>{{data.title}}</strong></p>
+                   <p>{{data.description}}</p>
+                 </li>
+               </ul>
+             </div>
+        </div></div></div>
+         <!--do you know end-->
+ 
+            </div>
+            <ng-template #notFound>
+              <div class="position-relative ng-star-inserted">
+                <div class="position-absolute soon-info-wrapper text-center">
+                  <p class="">Data not available.</p></div>
+                  <div class="blurred-box d-block justify-content-center align-items-center">
+                    <div class="dummy-box w-50 h-50 border m-auto border-primary"></div></div></div>
+            </ng-template>
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="{{tabfour}}" *ngIf="tabfour">
+          <ng-template ngbTabContent>
+            <!-- <div class="edieo-common must-know">    
+              <div class="box" *ngFor="let val of clusters" ngIf="val.edieo_cluster_thumb != ''"> 
+                <div class="image"><img src="{{val.edieo_cluster_thumb}}" class="img-fluid" /> </div>
+                <a class="" href="javascript:void(0);" (click)="getSingleEdieo(val.id,'collegecluster')"><div class="caption"></div> </a>
+              </div>
+            </div> -->
+            <div class="container-fluid">    
+              <div class="clearfix"></div>
+              <div class="row justify-content-md-left text-left">
+            <div class="col-md-6 col-lg-6"  *ngFor="let discoverData of discoverCollege">
+              <div class="margin-bottom68">
+                  <div class="embed-responsive bdr-radius-8 embed-responsive-16by9" (click)="playCondition('video'+discoverData.tte_career_id)">
+                      <!-- removed this "big-video-container" class from here-->
+                      <vg-player class="embed-responsive-item">
+                          <vg-overlay-play></vg-overlay-play>
+                          <vg-buffering></vg-buffering>
+                          <vg-controls>
+                              <vg-play-pause></vg-play-pause>
+                              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                              <vg-scrub-bar [vgSlider]="true">
+                                  <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                  <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                              </vg-scrub-bar>
+                              <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                              <vg-mute></vg-mute>
+                              <vg-volume></vg-volume>
+                              <vg-fullscreen></vg-fullscreen>
+                          </vg-controls>
+                          <video [poster]="discoverData.cluster_thumb" id="video{{discoverData.tte_career_id}}" [vgMedia]="homeVideo" [src]="discoverData.cluster_video" class="videoClass" #homeVideo></video>
+                      </vg-player>
+                  </div>
+              </div>
+              <div class="whiteBoxVideo">
+                  <!-- <p class="text-macro">Career Video</p> -->
+                  <p class="text-macro text-left"> {{discoverData.name}}</p>
+              </div>
+          </div>   </div>
+        </div>
+          </ng-template>
+        </ngb-tab>
+        
+        <ngb-tab title="{{tabone}}" *ngIf="tabone">
+            <ng-template ngbTabContent>
+              <div class="edieo-common must-know"  *ngIf="resultOne; else notFound">    
+                <div class="box" *ngFor="let val of resultOne">
+                  <div class="image"><img src="{{val.video_thumb}}" class="img-fluid" /> </div>
+                  <a class="" href="javascript:void(0);" (click)="getSingleEdieo(val.id,'type')"><div class="caption"></div> </a>
+                </div>
+              </div>
+              <ng-template #notFound>
+                <div class="position-relative ng-star-inserted">
+                  <div class="position-absolute soon-info-wrapper text-center">
+                    <p class="">Data not available.</p></div>
+                    <div class="blurred-box d-block justify-content-center align-items-center">
+                      <div class="dummy-box w-50 h-50 border m-auto border-primary"></div></div></div>
+              </ng-template>
+            </ng-template>
+          </ngb-tab>
+
+          <ngb-tab *ngIf="tabtwo">
+            <ng-template ngbTabTitle>{{tabtwo}}</ng-template>
+            <ng-template ngbTabContent>
+              <div class="container-fluid"  *ngIf="careerVideo.length > 0; else notFound">    
+                <!-- <div class="row">
+                  <div class="col-md-12 col-xl-12  text-center">
+                    <h3 class="custom-text-medium custom-text-light">Browse all content below</h3>
+                <p class="sub-text orange-text">Play the stories</p>
+                  </div>
+                </div> -->
+                <div class="clearfix"></div>
+                <div class="row justify-content-md-left text-left mt-3">
+                  <!-- 1 -->
+                  <div class="col-xl-6 col-md-6 video-padding-right" *ngFor="let data of careerVideo">
+                    <div class="embed-responsive bdr-radius-8 embed-responsive-16by9 videoShadow">
+                      <vg-player class="embed-responsive-item" (click)="checkLoggedIn($event,'video'+data.video_id)">
+                        <vg-overlay-play></vg-overlay-play>
+                        <vg-buffering></vg-buffering>
+                        <vg-controls>
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                        </vg-controls>
+                        <video  [poster]="data.video_thumb" [vgMedia]="media" id="video{{data.video_id}}" [src]="data.video" #media
+                          class="videoClass"></video>
+                      </vg-player>
+                    </div>
+                    <!-- whitebox for video with heart -->
+                    <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+                      <p class="text-macro" [title]=data.video_name>{{data.video_name}}</p>
+                      <p class="text-small">{{data.video_title}}</p>
+                      <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.activeHeart]="data.fav"
+                        (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <ng-template #notFound>
+              <div class="position-relative ng-star-inserted">
+                <div class="position-absolute soon-info-wrapper text-center">
+                  <p class="">Data not available.</p></div>
+                  <div class="blurred-box d-block justify-content-center align-items-center">
+                    <div class="dummy-box w-50 h-50 border m-auto border-primary"></div></div></div>
+            </ng-template>
+            </ng-template>
+          </ngb-tab>
+
+          <ngb-tab title="{{allcareer}}" *ngIf="allcareer">
+            <ng-template ngbTabContent>
+              <div class="edieo-common must-know">    
+               <div class="box" *ngFor="let val of clusters"> 
+                <div class="image"><img src="{{val.edieo_thumb}}" class="img-fluid" /> </div>
+                <a class="" href="javascript:void(0);" (click)="getSingleEdieo(val.id,'cluster')"><div class="caption"></div> </a>
+              </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+
+        </ngb-tabset>
+  </div>
+</div>
+<!--related section end-->
+        
+      
+      
+      
+      </div>
+</div>
+</div>

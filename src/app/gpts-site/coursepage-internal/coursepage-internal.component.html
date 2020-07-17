@@ -1,0 +1,316 @@
+<app-header></app-header>
+
+<!-- body -->
+
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="instiBack">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big">{{careerName}}</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-7 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/main-career.svg"
+            class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+<!--One level Breadcrumb-->
+<div *ngIf="arrayOfRoutes.length" class="breadcrumb-bg">
+    <div class="custom-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent">
+            <li class="breadcrumb-item text-uppercase" [class.link]="!last">
+                <a  class="" href="/careerlibrary"> All Careers</a>        
+              </li>
+          <li *ngFor="let data of arrayOfRoutes | slice:-2 ; index as i; last as last"
+            class="breadcrumb-item text-uppercase" [class.link]="!last">
+            <a *ngIf="!last; else activePage" title="{{getName(data)}}" class="" [routerLink]="makeLink(data, i)">
+              {{getName(data)}}<span *ngIf="data.split('-').length >= 2">...</span>
+            </a>
+            <ng-template #activePage>
+              <a class="" title="{{getName(data)}}">{{getName(data)}}<span *ngIf="data.split('-').length >= 2">...</span>
+              </a>
+            </ng-template>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- <app-breadcrumb></app-breadcrumb> -->
+  
+
+  <div class="custom-container position-relative">
+    <div #scrollContainer [class.sticky-class]="stickyPosition" [class.remove-sticky]="removeSticky"
+      [style.top.px]="removeSticky ? stopScrollTop : '100'" class="sticky-sidebar" (scrollerStop)="stopScroll($event)"
+      [ElementStop]="pageFooter" appScrollDetect (scrolledOver)="changeUI($event)">
+
+      <!-- triangle -->
+      <div class="triangle"></div>
+      <h4 class="sub-text font-color33 padding-link custom-text-light margin-btm-link">Links</h4>
+      <ul class="sidebar-font text-small custom-text-light">
+        <li><a (click)="scrollTo(aboutCareer)">- About Career</a></li>
+        <li><a (click)="scrollTo(relCareer)">- Related Career</a></li>
+        <li><a (click)="scrollTo(futurePros)">- Future Prospects</a></li>
+        <li><a (click)="scrollTo(suggestion)">- How I Become an {{careerName}}</a></li>
+        <li><a (click)="scrollTo(competenciesWrapper)">- Competencies needed for the job</a></li>
+        <li><a (click)="scrollTo(proCons)">- Pros and Cons</a></li>
+        <li><a (click)="scrollTo(careeLadder)">- Career Ladder</a></li>
+        <li><a (click)="scrollTo(enteranceExam)">- Entrance Examination</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <!--course path -->
+  <div #subCourseContainer class="sub-course-container">
+
+    <!-- 3 video section -->
+    <div class="gray-background">
+      <div class="custom-container section-padding">
+       <div class="row">
+         <div class="col-xl-12 ">
+          <h3 class="custom-text-medium custom-text-light">Browse all content below</h3>
+          <p class="sub-text orange-text">Play the stories</p>
+         </div>
+       </div>
+
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-xl-6 video-padding-right" *ngFor="let data of careerVideo">
+            <div class="embed-responsive embed-responsive-16by9 videoShadow">
+              <vg-player class="embed-responsive-item" (click)="checkLoggedIn($event)">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video  [poster]="data.video_thumb" [vgMedia]="media" [src]="data.video" #media
+                  class="videoClass"></video>
+              </vg-player>
+            </div>
+            <!-- whitebox for video with heart -->
+            <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+              <p class="text-macro" [title]=data.video_name>{{data.video_name}}</p>
+              <p class="text-small">{{data.video_title}}</p>
+              <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.activeHeart]="data.fav"
+                (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about course with area -->
+    <div class="about-career-page">
+      <div class="custom-container section-padding">
+        <div class="row" #aboutCareer>
+          <div class="col-12">
+            <h3 class="font-size50 custom-text-light margin-btm36">About {{careerName}}</h3>
+            <p class="text-macro course-para margin-btm-link">{{careerAbout}}</p>
+            <p class="sub-text orange-text">Area Covered</p>
+            <div class="d-flex flex-wrap discover-pills-wrapper">
+              <div class="tab-wrapper" *ngFor="let data of areaCovered">
+                <div *ngIf="data != null" class="tabs">{{data}}</div>
+              </div>
+            </div>
+
+            <div class="key-psychology-wrapper">
+              <div>Key Psychology</div>
+              <p class="font-size14 font-color33">{{psychology}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- related careers -->
+    <div class="custom-container section-padding pt-0">
+      <div class="row" #relCareer>
+        <!-- heading -->
+        <div class="col-12">
+          <h3 class="font-size50 custom-text-light margin-btm36">Related Careers</h3>
+        </div>
+      </div>
+      <!-- list related careers -->
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <ul class="adjust-padding-left" *ngFor="let data of relatedCareer">
+            <li class="margin-btm17 font-color33 text-small"><span class="blue-career">{{data.title}}</span>
+              {{data.description}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- future prospects -->
+    <div class="custom-container section-padding pt-0">
+      <div class="row text-center text-lg-left" #futurePros>
+        <!-- image -->
+        <div class="col-xl-3 col-12">
+          <img src="assets/images/theme-three/future.jpg" class="img-fluid" alt="image">
+        </div>
+        <!-- texts -->
+        <div class="col-xl-9 col-12">
+          <h3 class="font-size50 custom-text-light margin-btm36">Future Prospect</h3>
+          <p class="text-small font-color33 custom-text-light">{{futureProspect}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- how i get -->
+    <div class="custom-container section-padding how-background padding-top44">
+      <div class="row" #suggestion>
+        <div class="col-12 padding-btm50 text-center text-lg-center">
+          <h3 class="font-size50 custom-text-light">How I Get a job as {{careerName}}</h3>
+          <p class="sub-text orange-text">Some of the suggestion are</p>
+        </div>
+        <!-- 3 white strips -->
+        <div class="col-12">
+          <div class="d-block text-macro p-position-white margin-bottom19" *ngFor="let data of careerJobs"><span
+              class="padding-left15 white-shadow-bg  shadow-crazy">{{data.title}}</span>
+            <p class="d-inline-block" [innerHtml]="data.description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- competencies -->
+    <div class="competencies-bubble-background" #competenciesWrapper>
+      <div class="custom-container section-padding">
+        <div class="row margin-btm-link">
+          <div class="col-12 text-center text-lg-left">
+            <h3 class="font-size50 custom-text-light">Competencies needed for the job</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col" *ngFor="let data of competencies">
+            <h6 class="text-macro lightred-background font-color33">{{data.title}}</h6>
+            <p class="font-size14 font-color33 width-215">{{data.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- pros and cons -->
+      <div class="custom-container section-padding  pt-0">
+        <div class="pro-back">
+          <div class="row" #proCons>
+            <!-- pros -->
+            <div class="col-xl-6 col-12 border-rightpink">
+              <h4 class="sub-text">Pros</h4>
+              <div class="pro-con-wrapper" [innerHtml]="careerPro">
+
+              </div>
+              <!-- <ul class="ul-padding25">
+            <li class="text-small font-color33">This is a well-paying field of work.</li>
+            <li class="text-small font-color33">Electrical engineers have a wide range of career choices.</li>
+            <li class="text-small font-color33">This career has great fluidity within different fields which makes it
+              easy to change to a different
+              field or pick a speciality.</li>
+            <li class="text-small font-color33">Skills learned in this field can be used in other fields as well.</li>
+          </ul> -->
+            </div>
+            <!-- cons -->
+            <div class="col-xl-6 col-12">
+              <h4 class="sub-text">Cons</h4>
+              <div class="pro-con-wrapper" [innerHtml]="careerCon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- career ladder -->
+    <div class="custom-container section-padding career-ladder-back career-map-back">
+      <div class="row" #careeLadder>
+        <div class="col-xl-4 col-12">
+          <h3 class="font-size50 custom-text-light margin-btm36">Career Ladder</h3>
+          <p class="text-small font-color33">The market for electrical and electronics engineers is projected to grow by
+            7 percent between 2016 and 2026. It is one of the fastest growing sectors. The scope of electrical
+            engineering is rapidly growing as it finds application in renewable energy sector, optical sensors,
+            telecommunication, etc.</p>
+        </div>
+        <div class="col-xl-7 offset-xl-1 col-12">
+          <div class="timeline-container">
+
+            <ul>
+              <li *ngFor="let data of careerLadder.slice().reverse(); index as i">
+                <div>
+                  <h2>{{data}}</h2>
+                  <small>{{careerLadder.length - i}}</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- entrance examination -->
+    <div class="custom-container section-padding padding-top44">
+      <div class="row margin-btm-link mb-3" #enteranceExam>
+        <div class="col-12">
+          <h3 class="font-size50 custom-text-light">Entrance Examination</h3>
+        </div>
+      </div>
+      <!-- table -->
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Name of Examination</th>
+                  <th>Details</th>
+                  <th>Date of Examination</th>
+                  <th>Application Form</th>
+                  <th>Application Fees</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of careerExam">
+                  <td>{{data.exam_name}}</td>
+                  <td>{{data.exam_detail}}</td>
+                  <td>{{data.exam_date}}</td>
+                  <td>{{data.application_form}}</td>
+                  <td>{{data.application_fee}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div #pageFooter class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light">
+        The ability of passing ideas, and stories from one generation
+      </div>
+      <div class="sub-text">
+        Great Thing happens!
+      </div>
+      <a routerLink="/careerlibrary" class="custom-primary-btn">
+        View Career Library
+      </a>
+    </div>
+  </div>
+
+
+</div>

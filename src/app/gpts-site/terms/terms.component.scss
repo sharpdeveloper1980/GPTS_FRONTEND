@@ -1,0 +1,135 @@
+.dalham-background {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.sidebar-color {
+    border-radius: 4px;
+    background-color: #f4eff6;
+    padding: 15px;
+    position: sticky;
+    top: 75px;
+}
+ol li,.orange-text{word-break: break-all;}
+.sidebar-ul {
+    margin-top: 20px;
+}
+
+.sidebar-li {
+    border-bottom: 1px solid #e0cfe7;
+    position: relative;
+    line-height: 0;
+    font-size: 14px;
+    margin-top: 0;
+    padding-left: 11px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+
+    a {
+        color: #343434;
+        line-height: normal;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #333;
+        padding-right: 5px;
+        position: absolute;
+        left: 0;
+        top: 21px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: white;
+        position: absolute;
+        bottom: -2px;
+    }
+
+    &:last-child:after {
+        display: none;
+    }
+
+    &:last-child {
+        border-bottom: 0px solid #e0cfe7;
+    }
+}
+
+.margin-bottom44 {
+    margin-bottom: 44px;
+}
+
+.margin-bottom72 {
+    margin-bottom: 72px;
+}
+
+.margin-bottom25 {
+    margin-bottom: 25px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+li {
+    display: block;
+    font-size: 16px;
+    border-bottom: 1px solid #dcdcdc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    p {
+        font-size: 16px;
+        color: #333333;
+        padding-top: 20px;
+    }
+}
+
+li:last-child {
+    border-bottom: 0px solid transparent;
+}
+
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+    font-weight: 400;
+}
+
+.border-bottom-none {
+    border-bottom: 0px;
+}
+
+.footer-text-width {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.font-size30 {
+    font-size: 30px;
+}
+
+.font-color34 {
+    color: #343434;
+}

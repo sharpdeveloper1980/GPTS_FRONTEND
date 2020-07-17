@@ -1,0 +1,337 @@
+
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+//global css
+.p-t-60{padding-top: 100px;}
+.p-b-60{padding-bottom: 100px;}
+.m-b-30{margin-bottom: 30px;}
+.m-b-60{margin-bottom: 60px;}
+.p-t-100{padding-top: 100px;}
+.p-b-100{padding-bottom: 100px;}
+.pb-80{padding-bottom: 80px;}
+.pt-80{padding-top: 80px;}
+$colorWhite:#ffffff;
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+//hero section
+.hero-banner{
+    background: url('../../../assets/images/city-tour/hero-banner.jpg')no-repeat center top;
+    min-height:918px;
+    color: #ffffff;position: relative;
+}
+.hero-banner .hero-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}.sponsorShip {
+  position: absolute;
+  bottom: -260px;
+  left: 50px;
+}
+.sponsorShip span {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;width:13%;
+}.sponsorShip span.sessionPartner {
+  font-size: 25px;
+  font-weight: 400;
+  padding-right: 30px;width:auto;
+  border-right:solid 1px #393a3c;
+}
+.hero-banner .hero-content h1{font-size: 70px; font-weight: 600; margin-bottom: 20px;font-family: $leagueSpartanBold;}
+.hero-banner .hero-content p{font-size: 30px;margin-bottom: 20px;}
+.hero-banner .hero-content a{text-transform: uppercase;}
+
+
+
+//about section
+.about-heading{font-weight: bold; font-size: 35px;text-transform: uppercase;font-family: $leagueSpartanBold;}
+.about-heading span{font-weight: 400;}
+.about-tour-city p{margin-bottom: 20px;line-height: 30px;}
+.object-outcome .about-heading{font-weight: 400;background: #fcfcfd; padding: 20px 50px 20px 88px;  display: inline-block; }
+.object-outcome ul li{list-style-type: disc; margin-bottom: 20px; line-height: 30px;}
+
+//city date section
+.city-date .about-heading{
+    font-weight: 400;background: #fcfcfd; padding: 20px 150px;  display: inline-block; margin:auto;
+}
+.city-date .calendar-box h2{  font-weight: bold; color: #808285; text-transform: uppercase; font-size: 50px;margin-bottom: 20px;}
+.city-date .calendar-box h2 span {color: #d9eafe; font-size: 80px;margin-left:20px}
+.sponsorShip span:last-child { width: auto;}
+.calendar-content thead {
+    color: #ffffff;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    font-weight: 600;
+}.calendar-content td.weekend {
+    background: #d5e8fe;color:#ffffff;
+}.calendar-content td {
+    background: #f1f2f2;font-weight: 400;
+}.calendar-content th, .calendar-content td {
+    border: solid 5px #ffffff; vertical-align: middle;
+}.calendar-content thead {
+    color: #ffffff;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    font-weight: 600;
+}.calendar-content thead th.weekend {
+    background: #4171f9;
+}.calendar-content thead th {
+    text-align: center;
+    border: solid 5px #ffffff;
+    background: #808285;
+
+}
+.calendar-content thead th,.calendar-content td{    min-width: 73px;padding:10px;}
+.calendar-content td.empty{background: #ffffff;}
+.calendar-content td span {
+    display: block;
+    background: #d4170d;
+    padding: 0px 4px;
+    color: #ffffff;
+    font-size: 10px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+.calendar-content td span.delhi{background: #d4170d;}
+.calendar-content td span.chandigarh{background: #17c887;}
+.calendar-content td span.jaipur{background: #ea00ff;}
+.calendar-content td span.kolkata{background: #f29216;}
+.calendar-content td span.bhopal{background: #4e91f4;}
+.calendar-content td span.bangalore{background: #15ceba;}
+.calendar-content td span.mumbai{background: #eac80f;}
+.calendar-content td span.hyderabad{background: #a615d5;}
+.calendar-content td span.chennai{background: #7f3b20;}
+.calendar-content td span.ahmedabad{background: #1243b3;}
+.calendar-content td span.pune{background: #f44236;}
+.calendar-content td span.dehradun{background: #673bb7;}
+
+//agenda
+.agenda{background: #fcfcfd;}
+.agenda h2{font-weight: 600;}
+.agenda .agenda-box { margin-bottom: 30px; padding: 0 50px 0 50px;}
+.p-r-0{padding-right:0px!important;}
+.p-l-0{padding-left:0px!important;}
+.agenda h3 { font-size: 24px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px;}
+
+//cityTourRegistration
+.cityTourRegistration .registration-form{background: #3e3063;min-height: 600px; padding:60px 150px; color: #ffffff;}
+.cityTourRegistration .registration-image{background-image:url('../../../assets/images/city-tour/register-image.jpg');
+background-repeat: no-repeat;background-size: cover;}
+.registration-form h3{font-size: 30px; text-transform: uppercase;font-weight: 600; margin-bottom: 30px;}
+.registration-form .form-control{    border-radius: 4px;
+    background-color: #3e3063;
+    border: 1px solid rgba(255,255,255,.3);color:#c3c3c3;
+    height: 42px;}
+    .registration-form .custom-primary-btn {width:100%;height:45px}
+    .registration-form .custom-primary-btn.download{background: #a2a2a2;border-color:#a2a2a2;color:#ffffff;}
+    .registration-form .custom-secondary-btn{width:100%;height:45px}
+    .registration-form .form-control::-webkit-input-placeholder {
+        color: rgba(255,255,255,.3);;
+      }
+      .alert.alert-danger ul {
+        margin-bottom: 0;
+    }
+    .registration-form select.form-control {  cursor: pointer; }
+
+      /* with the :focus here, we would show grey when not using the element */
+      .registration-form select.form-control {
+    color: #c3c3c3;
+  }
+  /* with the :focus here, we show grey when using the element */
+  .registration-form select.form-control:focus,.registration-form select.form-control:visited {
+    color: #c3c3c3;
+  }
+  .registration-form select.form-control option {
+    color: #ffffff;
+  }
+  .registration-form select.form-control option:not(:first-of-type) {
+    color: #c3c3c3;
+  }
+      //supprt start
+
+      .support .support-image{background-image:url('../../../assets/images/city-tour/support-image.jpg');
+        background-repeat: no-repeat;background-size: cover;height:600px}
+      .support .support-content{ color:#ffffff;background: #000000;min-height: 600px;text-align: center;padding: 150px 150px;}
+      .support .support-content h3{font-size: 35px;line-height: 30px;font-weight: 600;text-transform: uppercase; line-height: 1;font-family: $leagueSpartanBold;}
+      .support .support-content p{ font-size: 16px;line-height: 30px;font-weight: 300;text-align: center;      }
+      .support .support-content p a{color: #ffffff;}
+      .support .support-content p span{display: block;}
+
+      //partner logo
+      .partner-logo{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,ffffff+100 */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,f2f2f2+59,ffffff+100 */
+background: #f2f2f2; /* Old browsers */
+background: -moz-linear-gradient(top,  #f2f2f2 0%, #f2f2f2 59%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f2f2f2 0%,#f2f2f2 59%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f2f2f2 0%,#f2f2f2 59%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+        }
+        //speaker
+        .our-speaker .spaker-box{    min-height: 343px;}
+
+        .our-speaker .spaker-box.speaker-1 {background-image:url('../../../assets/images/city-tour/speaker-1.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-2 {background-image:url('../../../assets/images/city-tour/speaker-2.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-3 {background-image:url('../../../assets/images/city-tour/speaker-3.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-4 {background-image:url('../../../assets/images/city-tour/speaker-4.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-5 {background-image:url('../../../assets/images/city-tour/speaker-5.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-6 {background-image:url('../../../assets/images/city-tour/speaker-6.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-7 {background-image:url('../../../assets/images/city-tour/speaker-7.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-8 {background-image: url('../../../assets/images/city-tour/speaker-8.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-9 {background-image: url('../../../assets/images/city-tour/speaker-9.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-10 {background-image: url('../../../assets/images/city-tour/speaker-10.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-11 {background-image: url('../../../assets/images/city-tour/speaker-11.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-12 {background-image: url('../../../assets/images/city-tour/speaker-12.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-13 {background-image: url('../../../assets/images/city-tour/speaker-13.jpg'); background-size: cover;}
+        .our-speaker .spaker-box .speaker-content{opacity: 0; transition: all 0.3s ease 0.2s;overflow: hidden; position: absolute; left:0px;top:0px;width:100%; height:100%; background: rgba(0,0,0,.8);}
+        .our-speaker .spaker-box .speaker-content .title {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%; font-size: 0;letter-spacing: .3; overflow: hidden;
+            left: -100%;transition: all 0.3s ease 0.2s;
+            z-index: 2;
+        }
+        .our-speaker .spaker-box:hover .speaker-content,.our-speaker .spaker-box:hover .speaker-content .title{ opacity: 1; font-size: 24px;}
+        .our-speaker .spaker-box:hover .speaker-content .title{ left: 0;display: block;transition: all 0.3s ease 0.2s;
+            text-align: center;}
+            .our-speaker .spaker-box .speaker-content .title h3{       margin-bottom: 3px;
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 3.5px;}
+                .our-speaker .spaker-box .speaker-content .title p{font-style: italic; font-size: 14px;}
+                .calendar-content td span.completed{color: #17c887;
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: capitalize;}
+  .calendar-content td span.scheduled{
+    color:#4171f9;
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: capitalize; display: none;
+  }
+//testimonial section start
+.testimonial{    background: #fcfcfd;}
+.carousel-caption2 {border: solid 2px #153b932e;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: unset;
+    margin-top: 0;
+    background: #edf2ff;}
+.testimonial .carousel-caption2 h3{
+    font-family: $roboto-family;
+    position: relative;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    background: #edf2ff;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 35px; 
+} 
+.testimonial .carousel-caption2 p{margin-bottom: 15px;}
+.testimonial .carousel-control-prev, .testimonial .carousel-control-next{display: none;}
+.testimonial .title{ margin-top:50px;}
+.testimonial .title span.image{width:60px; height:60px; border-radius: 50px;overflow: hidden;    display: inline-block;}
+.testimonial .title p{font-size: 14px; margin-bottom: 0px;}
+//responsive css start
+
+      @media(min-width:1201px) and (max-width:1600px){
+        .cityTourRegistration .registration-form{padding: 60px 100px;;}
+        .hero-banner{min-height: 700px;}
+        .support .support-content{padding: 180px 100px;}
+        .support .support-content{padding: 150px 20px;}
+        .sponsorShip{bottom: -140px;}
+      }
+      @media(min-width:992px) and (max-width:1200px){
+        .cityTourRegistration .registration-form{ padding: 50px 50px;}
+        .object-outcome .about-heading{padding-left:50px}
+        .agenda .agenda-box{padding: 0 20px 0 20px;}
+        .agenda h3{font-size: 22px;}
+        .support .support-content{padding: 150px 20px;}
+      }
+@media(max-width:991px){
+    .cityTourRegistration .registration-image{height:600px;}
+    .calendar-content thead th,.calendar-content td{    min-width: 93px;}
+    .calendar-content{overflow-x: scroll; padding-bottom: 20px;margin-bottom: 40px;}
+}
+      @media(min-width:768px) and (max-width:991px){
+      .hero-banner{min-height: 800px;}
+      .hero-banner .hero-content h1{    font-size: 60px;}
+      .hero-banner .hero-content p{font-size: 25px;}
+      .agenda .agenda-box{padding:0px;}
+      .agenda h3{font-size: 16px;}
+      .object-outcome .about-heading{padding-left: 8px; padding-right:8px;  display: block;    text-align: center;}
+      .object-outcome .about-heading br{display: none;}
+      .object-outcome ul li{text-align: center; list-style:none;}
+      .sponsorShip{    bottom: -180px;}
+      .sponsorShip span{    width: 23%;}
+      .sponsorShip span.sessionPartner{   font-size: 17px;
+        margin-right: 20px;
+        padding-right: 20px;
+        width: auto;}
+
+    }
+
+    @media(max-width:767px){
+
+            .calendar-content th{font-size: 15px;}
+            .city-date .calendar-box h2{font-size: 35px;}
+            .city-date .calendar-box h2 span{    font-size: 50px; margin-left: 5px;}
+            .cityTourRegistration .registration-form{padding: 60px 50px;}
+            .support .support-content{    min-height: 1px;    padding: 100px 50px;}
+            .city-date .about-heading{    padding: 20px;}
+            .object-outcome ul li{text-align: center; list-style:none;}
+            .partner-logo img.img-fluid{margin:20px 0;}
+            .agenda .border-right{border-right:none!important;}
+            .object-outcome .about-heading{display: block; text-align: center;    padding-left: 10px;  padding-right: 10px;}
+            .object-outcome .about-heading br{display: none;}
+            .sponsorShip{    bottom: -180px;}
+      .sponsorShip span{    width: 23%;}
+      .sponsorShip span.sessionPartner{   font-size: 17px;
+        margin-right: 20px;
+        padding-right: 20px;
+        width: auto;}
+    }
+    @media(max-width:480px){
+        .hero-banner .hero-content h1{    font-size: 50px;}
+        .object-outcome .about-heading{padding: 20px; padding-left: 20px;  display: block;text-align: center;}
+        .city-date .calendar-box h2 span{font-size: 40px;}
+        .city-date .calendar-box h2 {  font-size: 30px;    }
+        .cityTourRegistration .registration-form {  padding: 30px 30px;        }
+        .city-date .calendar-box h2 span{font-size: 40px;}
+        .city-date .calendar-box h2 {font-size: 25px;  text-align: center; }
+        .about-heading{font-size: 30px;}
+        .hero-banner .hero-content{text-align: center;}
+        .partner-logo img.img-fluid {margin:20px 0; }
+        .amrita-logo {  margin-top: 0;  }
+        .agenda .agenda-box{padding: 0 20px 0 20px;}
+        .city-date .about-heading{display: block;}
+        .sponsorShip span {
+          width: 37%;
+          margin-right: 10px;
+          margin-left: 10px;
+          margin-bottom: 15px;
+      }
+        .sponsorShip span.sessionPartner{
+          width: 100%;
+          border-right: none;
+          margin-bottom: 20px;margin-left: 0;
+          margin-right: 0;
+        }
+        .sponsorShip {  bottom: -250px;   left: 0;   }
+
+    }

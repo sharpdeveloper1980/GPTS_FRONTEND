@@ -1,0 +1,512 @@
+<div> 
+  <div id="page-content-wrapper">
+    <div class="dashboard-three custom-dashboard-three">
+      <!-- three boxes -->
+      <div class=" margin-btm63">
+        <div class="container-fluid">
+          <div class="row margin-default-adjustment">
+              <div class="col-6 dashboard_name">
+                <h3 class="font-color-1e head_name">Hi <span>{{studentName}},</span>
+                  Welcome to your dashboard
+                </h3>
+              </div>
+              <div class="col-6 dashboard_right">
+                <div class="dashboard_search">
+                  <input type="test" class="dashboard_input">
+                  <img src="assets/images/student-dashboard/search.png">
+                </div>
+                <div class="dashboard_bell">
+                  <img src="assets/images/student-dashboard/bell.png">
+                </div>
+              </div>
+              <!-- <p class="sub_head">Get unique perspectives and understand the tools of the trade
+                from experts in different domains</p> -->
+          </div>
+          <!-- 3 boxes weird -->
+          <!-- <div class="row justify-content-center box-container"> -->
+            <!-- <div class="box">
+              <h6>Profile Strength </h6>
+              <div class="progress">
+                  <div class="prog-bar" style="width: 80%"></div>
+                  <span></span>
+              </div>
+            </div>
+            <div class="box">
+              <h6>Career Assessment </h6>
+              <a type="button" href="javascript:void(0);" class="btn btn-default box_btn">Download Report</a>
+            </div>
+            <div class="box">
+              <h6>Explore Video Career Library </h6>
+              <a type="button" href="javascript:void(0);" class="btn btn-default box_btn">Watch Videos</a>
+            </div> -->
+            <!-- <div class="col-xl-4 col-lg-6 col-12 one-number">
+              <div class="arrow-one"></div>
+              <div class="active-blue text-center box-three" [class.completed-box]="(profileStatus === '100%')">
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Build your profile</h6>
+                <p class="font-size16 font-color-blue32 font-weight400">Fill you personal information to get access to
+                  your dashboard and enter the world of opportunities.
+                </p>
+                <a *ngIf="!(profileStatus == '100%'); else completed_profile"
+                  routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Fill
+                  Information</a>
+                <ng-template #completed_profile>
+                  <a routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Edit
+                    Information</a>
+                </ng-template>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 two-number">
+              <div class="arrow-two"></div>
+              <div class=" text-center box-three" [ngClass]="profileStatus === '100%' ? 'active-red': 'disabled-box'">
+                <img src="assets/images/dashboard-three/Ca-ico-step2.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Take career assessment</h6>
+                <p class="font-size16 font-color-blue32 font-weight400">Take 15 min positive psychology career
+                  assessment to learn about top 5 recommended careers
+                </p>
+                <a *ngIf="!tteTestTaken; else completed_test"
+                  [routerLink]="profileStatus === '100%' ? ['/student-dashboard/career-discovery-test'] : []"
+                  class="custom-primary-btn button-position-box">Take Assesment</a>
+                <ng-template #completed_test>
+                  <a routerLink="/student-dashboard/career-discovery-result"
+                    class="custom-secondary-btn button-position-box">View Report</a>
+                </ng-template>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 three-number">
+              <div class="text-center box-three" [ngClass]="tteTestTaken ? 'active-violet' : 'disabled-box'">
+                <img src="assets/images/dashboard-three/mustwatch-ico-step3.png" class="img-fluid image-size"
+                  alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Explore Video Career Library</h6>
+                <p class="font-size16 font-color-blue32 font-weight400">Dig deep into career library and its visual
+                  content to learn about your suitable careers.</p>
+                <a [routerLink]="tteTestTaken ? ['/student-dashboard/must-watch'] : []"
+                  class="custom-secondary-btn button-position-box">Watch
+                  Videos</a>
+              </div>
+            </div> -->
+          <!-- </div> -->
+          <div class="box_second" style="color:#8A8A8A;">
+            <div class="dashboard_subtitle box_second_grid">
+              <p class="openSanse_ragular">
+                Get unique perspectives and understand the tools of the trade from experts in different domains
+              </p>
+            </div>
+            <div class="dashboard_status openSanse_ragular box_second_grid">
+              
+              <div class="single status" style="border: none;">
+                <div class="single_title">Favourite Videos</div>
+                <div class="single_value openSanse_semiBold">28</div>
+              </div>
+              <div class="single status">
+                <div class="single_title">Assessment Status</div>
+                <div *ngIf="!tteTestTaken" class="single_value openSanse_semiBold">Pending</div>
+                <div *ngIf="tteTestTaken" class="single_value openSanse_semiBold">Completed</div>
+              </div>
+              <div class="single status">
+                <div class="single_title">Date</div>
+                <div class="single_value openSanse_semiBold">{{currentDate | date:'dd MMM, y'}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard_box">
+            <div class="single_box">
+              <div class="box_title">Profile Strength</div>
+              <div class="box_bar">
+                <div class="bar_fill" [ngStyle]="{'width': profileStatus }"><span></span></div>
+              </div>
+              <div *ngIf="(profileStatus != '100%');" class="box_bottom openSanse_ragular"><a routerLink="/student-dashboard/student-profile" class="complete_now">Complete now</a></div>
+              <div *ngIf="(profileStatus == '100%');" class="box_bottom openSanse_ragular">Completed</div>
+            </div>
+            <div class="single_box">
+              <div class="box_title">Career Assessment</div>
+              <!-- <a href="#" class="openSanse_ragular">DOWNLOAD REPORT</a> -->
+              <a *ngIf="!tteTestTaken"
+                  [routerLink]="profileStatus === '100%' ? ['/student-dashboard/career-discovery-test'] : []"
+                   class="openSanse_ragular box_btns">TAKE ASSESSMENT</a>
+              <a *ngIf="pdfUrl.length" [href]=pdfUrl download="report.pdf" target="_blank" class="openSanse_ragular box_btns">DOWNLOAD REPORT</a>
+            </div>
+            <div class="single_box">
+              <div class="box_title">Explore Video Career Library</div>
+              <a [routerLink]="tteTestTaken ? ['/student-dashboard/must-watch'] : []" class="openSanse_ragular box_btns">WATCH VIDEOS</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- latest in career  -->
+      <div class="section-spacing d-none">
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <!-- left side -->
+              <div class="col-lg-6 col-12 no-padding responsive-layout">
+                <!-- white box -->
+                <div class="col-12 ">
+                  <a class="white-box white-box-image box-padding min-height192 d-block" href="/course/creative-art-design/wedding-planning">
+                    <h5 class="font-size20 margin-bottom25 font-color-blue32 font-weight300">Wedding Planner</h5>
+                    <p class="font-size16 font-weight400 font-color33 margin-bottom15 d-none">Animation & 3D</p>
+                    <p class="font-size16 font-color-blue32 font-weight300 max-width-one">Weddings are celebrations of love and the beginning of a beautiful phase that lasts a lifetime. A wedding planner is an indispensable part of this festival of love.</p>
+                  </a>
+
+                </div>
+                <!-- two halfs -->
+                <div class="col-12 d-xl-flex no-padding margin-top30">
+                  <!-- left -->
+                  <div class="col-xl-6 col-12">
+                    <a class="dark-image box-padding min-height192 d-block" href="/student-dashboard/edieo-detail/career/18">
+                      <h5 class="font-size20 margin-bottom23 font-color-white font-weight300">Solopreneur , the one man army</h5>
+                      <p class="font-size18 font-color-white font-weight300">Solopreneur runs a business but his business is limited to himself. A solopreneur does not hire employees.</p>
+                    </a>
+
+                  </div>
+                  <!-- right -->
+                  <div class="col-xl-6 col-12">
+                    <a class="white-box white-box-image-scope box-padding min-height192 d-block" href="/student-dashboard/edieo-detail/career/7">
+                      <p class="font-size16 font-color-blue32 font-weight300 max-width-two">Would you like to shape policy in a particular sector? <br> Know more about Public Policy Analyst</p>
+                    </a>
+
+                  </div>
+                </div>
+                <!-- unique -->
+                <div class="col-12 margin-top30">
+                  <a class="white-box box-padding min-height192 violet-gradient d-block" href="/course/creative-art-design/performing-arts">
+                    <h5 class="font-size20 margin-bottom23 font-color-blue32 font-weight300">Future Prospects in
+                      Performing Arts</h5>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/dashboard-three/unique.png" class="img-fluid white-image" alt="image">
+                      <p class="font-size16 font-color-blue32 font-weight300 max-width-three">The scope for performing
+                        arts majors in India is vast, that being said, the field is very competitive. The journey to
+                        becoming a performing artist starts early, take your first step in
+                        the exciting field of entertainment today.</p>
+                    </div>
+                  </a>
+
+                </div>
+              </div>
+              <!-- right side -->
+              <div class="col-lg-6 col-12 responsive-layout">
+                <div class="blue-background box-padding">
+                  <h5 class="font-color-white font-size20 font-weight300 margin-bottom49">Did you know ?</h5>
+                  <ul class="did-list font-color-white font-size16 font-weight300">
+                    <li>Surveys show that there are more NGOs than hospital beds in India. There are 4 NGOs for every 1000
+                      individuals in urban areas and 2.3 NGOs for every 1000 individuals in rural areas. This number is on
+                      the rise, bringing plenty of employment opportunities in the third sector.</li>
+                    <li>Creative art and design introduces individuals to a range of intellectual and practical skills.
+                      These skills are critical in perfecting your craft to have maximum impact on the world.</li>
+                    <li>According to Fortune Magazine, a staggering nine out of ten start-ups will eventually fail. The
+                      ones that survive go through trial by fire. An entrepreneur is a captain who steers the ship towards
+                      success. Hence, persistence is a skill that is of utmost importance for an entrepreneur.</li>
+                    <li>An individual with a degree in architecture is not limited to designing and creating buildings.
+                      You can also contribute to saving the environment by specialising in organic housing. You can also
+                      design maps and plan cities for video games.</li>
+                    <li>Defence is one of the most highly paid sectors in the country. As you progress further in your
+                      career, your pay scale increases. You will also get promoted on a time-scale basis up to a certain
+                      rank.
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- top trending -->
+      <div class="section-spacing" *ngIf="inspiringvideo">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 text-center"><h4 class="font-size-30 mt-3 font-color-33 leagueFont mb-3">Trending Master Stories</h4></div>
+          </div>
+          <!-- video copy from website -->
+          <div class="row pt-30 margin-btm63">
+            <!-- text section -->
+            <!-- <div class="custom-col padding-l-r15">
+
+             
+              <p class="font-color-orange font-size20 font-weight300 margin-bottom38">Watch One of Our Videos Now</p>
+
+              <p class="font-size16 font-color34 font-weight300 line-height25">Watch beginners, professionals and
+                legends of various
+                industries share their experiences and invaluable insights with the Video Library. It’s time to take
+                your first step and dive into a world of exciting career profiles. Watch beginners, professionals and
+                legends of various industries share their experiences and invaluable insights with the Video Library.
+                It’s time to take your first step and dive into a world of exciting career profiles.
+              </p>
+            </div> -->
+            <!-- video section -->
+
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+              *ngFor="let video of inspiringvideo | slice:0:6; index as i">
+              <div class=" embed-responsive embed-responsive-16by9" id="{{video.video_id}}"
+                (click)="stopAllVid(media.id)">
+
+                <!-- remove this " video-container" class from here -->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                 
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+
+                  <video [vgMedia]="media" #media id="favideo{{i}}" [src]="video.video" [poster]="video.video_thumb">
+                  </video>
+                </vg-player>
+
+              </div>
+
+              <!-- whitebox for video with heart -->
+              <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+                <p class="text-macro leagueFont">{{video.video_name}}</p>
+                <p class="font-size14">{{video.designation}}</p>
+                <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.inactive]="!data.fav"
+                  (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+              </div>
+            </div>
+          
+            <div class="col-md-12 text-center mt-3 ">
+              <a routerLink="/interview" class="custom-primary-btn w-150 d-inline-block">
+                More
+              </a>
+            </div>
+          </div>
+          <!--Edieo start-->
+ <div class="row">
+  <!-- heading -->
+  <div class="col-12 text-center ">
+    <h4 class="font-size-30 font-color-33 leagueFont mb-3">Explore Career </h4>
+  </div>
+  <!-- orange -->
+  <!-- <div class="col-12">
+    <div class="light-orangeBg d-inline-flex align-items-center">
+      <img src="assets/images/dashboard-three/quote.svg" class="img-fluid" alt="image">
+      <p class="font-size20 font-weight300 font-color33">It is a research led edutainment platform offering students 4-5 min crisp inforgraphics videos on diverse careers, inspiring educational institutions, did you know facts and country/city insights (national and international students). The aim is to generate interest in out of classroom learning among students, organically and through visually appealing, cinematic content.</p>
+    </div>
+
+  </div> -->
+</div>
+<!-- 4 weird images -->
+<div class="row justify-content-center margin-btm63 pt-30 ">
+  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+  <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('astronaut')">
+    <!-- remove this " video-container" class from here -->
+    <vg-player class="embed-responsive-item">
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+
+    
+
+      <vg-controls>
+        <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+
+      <video [vgMedia]="astronaut01" #astronaut01 id="astronaut" src="https://d33umu47ssmut9.cloudfront.net/edieo/static/astronaut.mp4" poster="https://d33umu47ssmut9.cloudfront.net/edieo/static/astronaut.png">
+      </video>
+    </vg-player>
+
+  </div>
+
+</div>
+
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+  <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('fashionDesigner')">
+    <!-- remove this " video-container" class from here -->
+    <vg-player class="embed-responsive-item">
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+
+      <vg-controls>
+        <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+
+      <video [vgMedia]="fashionDesigner" #fashionDesigner id="fashionDesigner" src="https://d33umu47ssmut9.cloudfront.net/edieo/static/fashion-designer.mp4" poster="https://d33umu47ssmut9.cloudfront.net/edieo/static/fashion-designer.png">
+      </video>
+    </vg-player>
+
+  </div>
+
+</div>
+
+
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+  <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('pastryChef')">
+    <!-- remove this " video-container" class from here -->
+    <vg-player class="embed-responsive-item">
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+ <vg-controls>
+  <vg-play-pause></vg-play-pause>
+  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+  <vg-scrub-bar [vgSlider]="true">
+      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+      <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+  </vg-scrub-bar>
+  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+  <vg-mute></vg-mute>
+  <vg-volume></vg-volume>
+  <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+
+      <video [vgMedia]="pastryChef" #pastryChef id="pastryChef" src="https://d33umu47ssmut9.cloudfront.net/edieo/static/pastry-chef.mp4" poster="https://d33umu47ssmut9.cloudfront.net/edieo/static/pastry-chef.png">
+      </video>
+    </vg-player>
+
+  </div>
+
+</div>
+
+  <!-- button -->
+  <div class="col-12 mt-3 text-center">
+    <a routerLink="/student-dashboard/edieo" class="custom-primary-btn w-150 d-inline-block">More</a>
+  </div>
+</div>
+<!--Edieo end-->
+          <!-- inspirational -->
+          <div class="row">
+            <!-- heading -->
+            <div class="col-12 text-center">
+              <h4 class="font-size-30 font-color-33 leagueFont mb-3">Explore Colleges</h4>
+            </div>
+            <!-- orange -->
+            <!-- <div class="col-12">
+              <div class="light-orangeBg d-inline-flex align-items-center">
+                <img src="assets/images/dashboard-three/quote.svg" class="img-fluid" alt="image">
+                <p class="font-size20 font-weight300 font-color33">Find educational institutes that offer programmes to suit your interests and passion. CDAP allows you to simplify and navigate the complex task of choosing the right college; it empowers you to follow your dreams.</p>
+              </div>
+
+            </div> -->
+          </div>
+          <!-- 4 weird images -->
+          <div class="row justify-content-center pt-30">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+              <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('designColleges')">
+                <!-- remove this " video-container" class from here -->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+
+                  <video [vgMedia]="designColleges" #designColleges id="designColleges" src="https://d33umu47ssmut9.cloudfront.net/discover-college/design-colleges.mp4" poster="https://d33umu47ssmut9.cloudfront.net/discover-college/design-colleges.png">
+                  </video>
+                </vg-player>
+
+              </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+              <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('engineering')">
+                <!-- remove this " video-container" class from here -->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+
+                  <video [vgMedia]="engineering" #engineering id="engineering" src="https://d33umu47ssmut9.cloudfront.net/discover-college/engineering.mp4" poster="https://d33umu47ssmut9.cloudfront.net/discover-college/engineering.png">
+                  </video>
+                </vg-player>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+              <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('filmmaking')">
+                <!-- remove this " video-container" class from here -->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                    <vg-scrub-bar [vgSlider]="true">
+                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                        <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+                    <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+
+                  <video [vgMedia]="filmmaking" #filmmaking id="filmmaking" src="https://d33umu47ssmut9.cloudfront.net/discover-college/filmmaking.mp4" poster="https://d33umu47ssmut9.cloudfront.net/discover-college/filmmaking.png">
+                  </video>
+                </vg-player>
+
+              </div>
+
+            </div>
+            <!-- button -->
+           
+            <div class="col-12 mt-3 text-center">
+              <a routerLink="/discover-colleges" class="custom-primary-btn w-150 d-inline-block">More</a>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div><!-- dashboard three div ends-->
+  </div>
+</div>

@@ -1,0 +1,462 @@
+<app-header></app-header>
+
+<div class="theme-three">
+    <!-- banner section -->
+   <div class="custom-container pt-70">
+        <div class="studentBack dynheader">
+                <div class="">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-6 col-md-4 col-12 text-center text-lg-left">
+                           
+                        </div>
+                        <div class="col-xl-4 col-lg-6  col-md-8 col-12 text-left">
+                            <h2 class="text-big">Choose from 
+                                    the finest 
+                                    institutions 
+                                    in the country</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   </div>
+
+
+    <!-- search section -->
+        <!-- <div class="custom-container">
+            <div class="row margin_tp_35">
+                <div class="col-12">
+                    <div class="input-group blue-box-search">
+                        <ng-select class="custom-search-career bg-white" bindValue="career_id" bindLabel="name"
+                            [searchable]="true" placeholder="Browse through Diverse Career Profiles">
+                        </ng-select>
+                        <div class="input-group-append">
+                            <button class="btn custom-button" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="font-size50 custom-text-light margin-bottom18">The Stage is set for you to conquer the world</h3>
+            <p class="orange-text font-size25">It is time begin your journey as a thought leader of tomorrow.
+            </p>
+        </div>
+        </div>
+        </div> -->
+
+    <!-- First Section 3 video -->
+   <!--  <div class="custom-container section-padding">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video-section-text text-center">
+                    <div class="custom-text-medium custom-text-light mb-3">Find the best fit college for you</div>
+                    <div class="orange-text sub-text">See the Insights on</div>
+                    <p class="text-small font-color34 margin-top38">Finding the perfect college can be a complex and
+                        often daunting experience for young
+                        students. With few avenues to get accurate information, it isn’t easy for students to make the
+                        right decision regarding higher education. Great Place To Study has designed a platform to
+                        help students get a glimpse into the leading educational institutions. Students can witness the
+                        learning experience, life on campus, extracurricular activities, infrastructure and happiness
+                        quotient offered by various higher education institutions through highly informative and
+                        engaging videos.</p>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-12">
+
+                <div class="videos_3_text_area">
+                    
+                    <div class="discover_3_video_text" *ngFor="let data of random">
+
+                        <div class="margin-bottom68"
+                            style="border: 2px solid white;box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);position: relative;">
+                            <div class="embed-responsive embed-responsive-16by9 ">
+                                removed this "big-video-container" class from here
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video preload="auto" [poster]="data.thumb" [vgMedia]="randomvideo"
+                                        [src]="data.video" class="videoClass" #randomvideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+                        <div class="whiteBoxVideo">
+                            <p class="text-macro">{{ data.user_name }}</p>
+                            <p class="font-size14">{{ data.location }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> 
+        </div>
+    </div>-->
+
+
+    <div class="gray-background grey_bg73">
+        <div class="custom-container section-padding pt-100 pb100">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div class="custom-text-medium custom-text-light text-center">Explore Colleges</div>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap cluster_space">
+                    <ng-container *ngFor="let data of clusters">
+                        <div class="disc_cluster_width d-flex cluster_1 cluster_bg"
+                            [style.background]="'url('+data.cluster_thumb+')'">
+                            <a [routerLink]="" (click)="scrollToDiv($event,data.tte_career_id)" class="cluster_anchor">
+                                <p class="position-absolute cluster_text cluster_text_position">{{ data.name }}</p>
+                            </a>
+                        </div>
+                    </ng-container>
+                </div>
+
+
+                <!-- <div class="col-md-6 col-lg-4"  *ngFor="let clusterData of clusters">
+                        <div class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('video'+clusterData.tte_career_id)">
+                             
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video [poster]="clusterData.cluster_image" id="video{{clusterData.tte_career_id}}" [vgMedia]="homeVideo" [src]="clusterData.cluster_video" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+                        <div class="whiteBoxVideo">
+                           
+                            <p class="text-macro text-center"> {{clusterData.name}}</p>
+                        </div>
+                    </div> -->
+
+
+
+                <!-- Cluster Box -->
+                <div id="scroll_div" class="col-12 p-0 culster_video_area" style="display: none;">
+                    <div class="d-flex flex-wrap cluster_v_area_padding" *ngIf="clusterdetail.length">
+                        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11 mr-auto mb-4">
+                            <div class="custom-text-medium custom-text-semi size-29">{{ clusterdetail[0].name }}</div>
+                            <div class="d-flex flex-wrap justify_cicles mt-3">
+                                <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                                    <div class="cluster_circles">
+                                        <img src="assets/images/theme-three/discover-colleges/film-studio.png"
+                                            class="img-fluid">
+                                    </div>
+                                    <p class="text-center cluster_circle_text">{{ clusterdetail[0].college_no }}
+                                        Colleges</p>
+                                </div>
+                                <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                                    <div class="cluster_circles">
+                                        <img src="assets/images/theme-three/discover-colleges/calendar.png"
+                                            class="img-fluid">
+                                    </div>
+                                    <p class="text-center cluster_circle_text">{{ clusterdetail[0].under_programme }}+
+                                        Undergraduate Programme</p>
+                                </div> 
+                                 <!-- <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                                    <div class="cluster_circles">
+                                        <img src="assets/images/theme-three/discover-colleges/reading.png"
+                                            class="img-fluid">
+                                    </div>
+                                    <p class="text-center cluster_circle_text">{{ clusterdetail[0].students_enrolled }}
+                                        Students Enrolled per Year</p>
+                                </div>  -->
+                                <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                                    <div class="cluster_circles">
+                                        <img src="assets/images/theme-three/discover-colleges/diploma.png"
+                                            class="img-fluid">
+                                    </div>
+                                    <p class="text-center cluster_circle_text">{{ clusterdetail[0].average_fees }}</p>
+                                </div>
+                            </div>
+                            <!-- <div class="mt-3">
+                                <div class="quotes_detail">{{ clusterdetail[0].quotes }}</div>
+                                <p class="text-small orange-text">- By {{ clusterdetail[0].person_name }}</p>
+                            </div> -->
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-12">
+
+                            <div *ngIf="clusterdetail[0].cluster_video" class="white-border-video">
+                                <div class="embed-responsive embed-responsive-16by9 ">
+                                     removed this "big-video-container" class from here
+                                    <vg-player class="embed-responsive-item">
+                                        <vg-overlay-play></vg-overlay-play>
+                                        <vg-buffering></vg-buffering>
+                                        <vg-controls>
+                                            <vg-play-pause></vg-play-pause>
+                                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                            <vg-scrub-bar [vgSlider]="true">
+                                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                                <vg-scrub-bar-buffering-time vgFor="homeVideo">
+                                                </vg-scrub-bar-buffering-time>
+                                            </vg-scrub-bar>
+                                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                            <vg-mute></vg-mute>
+                                            <vg-volume></vg-volume>
+                                            <vg-fullscreen></vg-fullscreen>
+                                        </vg-controls>
+                                        <video  [poster]="clusterdetail[0].video_thumb" [vgMedia]="homeVideo"
+                                            [src]="clusterdetail[0].cluster_video" class="videoClass"
+                                            #homeVideo></video>
+                                    </vg-player>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div *ngIf="collegelist" class="p-0 mt-3 purple_area pb-3 d-flex align-items-center" style="height: 400px;">
+                        <div class="col-12 swiper-custom-container">
+                            <div class="swiper-container cluster-colleges-carousel w-100" [swiper]="browseListConfig">
+                                <div class="swiper-wrapper">
+                                    <div *ngFor="let dd of collegelist" class=" swiper-slide">
+                                                                                
+                                        <div class="embed-responsive embed-responsive-16by9 ">
+                                          
+                                          <vg-player class="embed-responsive-item">
+                                            <vg-overlay-play></vg-overlay-play>
+                                            <vg-buffering></vg-buffering>
+                                            <vg-controls>
+                                              <vg-play-pause></vg-play-pause>
+                                              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                              <vg-scrub-bar [vgSlider]="true">
+                                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                                <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                              </vg-scrub-bar>
+                                              <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                              <vg-mute></vg-mute>
+                                              <vg-volume></vg-volume>
+                                              <vg-fullscreen></vg-fullscreen>
+                                            </vg-controls>
+                                            <video [poster]="dd.thumb" [vgMedia]="media" [src]="dd.video" #media
+                                              class="videoClass"></video>
+                                          </vg-player>
+                                        </div>
+                                
+                                        whitebox for video with heart
+                                        <div class="whiteBoxVideo mb-1" (click)="checkLoggedIn($event)">
+                                          <p class="text-macro">{{dd.user_name}}</p>
+                                          <a href="#" class="font-size14">Learn More</a>
+                                        </div>
+                                      
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-prev-browse custom-swiper-button">
+                                <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+                            </div>
+                            <div class="swiper-button-next swiper-button-next-browse custom-swiper-button"><img
+                                    src="assets/images/static/white-right.svg" alt="image" class="imageRightIcon"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- Carousel Slider -->
+                    <div *ngIf="collegelist" class="p-0 mt-3 purple_area pb-3" style="height: 400px;">
+                        <div class="col-12 swiper-custom-container">
+                            <div class="swiper-container browse-tiles-carousel w-100" [swiper]="browseListConfig">
+                                <div class="swiper-wrapper">
+                                    <div *ngFor="let dd of collegelist" class="text-center swiper-slide new-card">
+                                        <a class="position-absolute w-100 h-100 cursor-pointer" [routerLink]=""></a>
+                                        <img [src]="dd.thumb" class="w-100" alt="image">
+                                        <p class="sliderBrowse">{{dd.user_name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-prev-browse custom-swiper-button">
+                                <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+                            </div>
+                            <div class="swiper-button-next swiper-button-next-browse custom-swiper-button"><img
+                                    src="assets/images/static/white-right.svg" alt="image" class="imageRightIcon"></div>
+                        </div>
+                    </div>
+                    <!-- End Carousel Slider -->
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    
+        <!-- Process Map -->
+        <div class="custom-container section-padding process_map d-none">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="custom-text-medium custom-text-light text-center">Choose from the finest institutions in
+                            the country</div>
+                        <div class="orange-text sub-text text-center">CDAP gives you the opportunity to find a college that
+                            nurtures your passion and interest.</div>
+                        <div class="dot_map_bg pt-3 pb-3">
+                            <div class="process-map-height">
+                                <img src="assets/images/theme-three/discover-colleges/process-line.png"
+                                    class="img-fluid position-absolute">
+                                <!-- 1 -->
+                                <div class="individual_process d-flex flex-column">
+                                    <div class="process_img height_35_process"><img
+                                            src="assets/images/theme-three/discover-colleges/take.png" class="img-fluid">
+                                    </div>
+                                    <div class="height_35_process d-flex flex-column justify-content-center">
+                                        <div class="custom-text-medium custom-text-light text-center">Still confused about
+                                            making the right career choice?</div>
+                                        <div class="orange-text sub-text text-center">Take the Career Discovery Assessment
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="individual_process d-flex flex-column-reverse">
+                                    <div class="process_img height_35_process"><img
+                                            src="assets/images/theme-three/discover-colleges/view.png" class="img-fluid">
+                                    </div>
+                                    <div class="height_35_process d-flex flex-column justify-content-center">
+                                        <div class="custom-text-medium custom-text-light text-center">Make the decision that
+                                            you
+                                            won’t regret</div>
+                                        <div class="orange-text sub-text text-center">View and then analyze your insightful
+                                            Career Report</div>
+                                    </div>
+                                </div>
+    
+    
+                                <!-- 3 -->
+                                <div class="individual_process d-flex flex-column">
+                                    <div class="process_img height_35_process"><img
+                                            src="assets/images/theme-three/discover-colleges/explore.png" class="img-fluid">
+                                    </div>
+                                    <div class="height_35_process d-flex flex-column justify-content-center">
+                                        <div class="custom-text-medium custom-text-light text-center">Get Inspired by
+                                            Industry
+                                            Giants and Veterans</div>
+                                        <div class="orange-text sub-text text-center">Explore the first comprehensive Video
+                                            Career Library & EDIEO</div>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div class="individual_process white_process_box d-flex flex-column-reverse">
+                                    <div class="process_img height_35_process"><img
+                                            src="assets/images/theme-three/discover-colleges/search.png" class="img-fluid">
+                                    </div>
+                                    <div class="height_35_process d-flex flex-column justify-content-center">
+                                        <div class="custom-text-medium custom-text-light text-center">Choose the Best Fit
+                                            College</div>
+                                        <div class="orange-text sub-text text-center">Search Colleges</div>
+                                    </div>
+                                </div>
+    
+                                <!-- 5 -->
+                                <div class="individual_process d-flex flex-column">
+                                    <div class="process_img height_35_process"><img
+                                            src="assets/images/theme-three/discover-colleges/apply.png" class="img-fluid">
+                                    </div>
+                                    <div class="height_35_process d-flex flex-column justify-content-center">
+                                        <div class="custom-text-medium custom-text-light text-center">Apply to multiple
+                                            universities at a go</div>
+                                        <div class="orange-text sub-text text-center">One Step Common Application</div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Featured Universities -->
+            <div class="custom-container section-padding featured_university d-none">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="custom-text-medium custom-text-light text-center">Promising institutions featured by
+                            Great Place To Study
+                        </div>
+                        <div class="orange-text sub-text text-center">Take a quick glance at progressive institutions that
+                            are changing the Indian education model
+                        </div>
+                        <p class="text-small font-color34 margin-top38 text-center">Great Place To Study, through its
+                            featured programmes, has brought to you some of the most
+                            unique and progressive educational institutions that are empowering young minds. These
+                            programmes showcase reputable schools and colleges that are elevating the standard of the
+                            Indian education system to meet and exceed global standards.</p>
+                        <div class=""></div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between flex-wrap mt-5">
+                        <div class="featured_uni_box">
+                            <!-- <div class="featured_uni_img_1 featured_uni_img"
+                                style="background-image:url('https://img.youtube.com/vi/3NV_SnrSkDA/hqdefault.jpg')"></div>
+                             -->
+                            <!-- <iframe height="260" style="width: 100%;" src="https://youtu.be/embed/3NV_SnrSkDA"></iframe>
+                             -->
+                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/3NV_SnrSkDA" frameborder="0" allowfullscreen></iframe>
+                             
+                             <div class="featured_uni_name">
+                                <img src="assets/images/theme-three/discover-colleges/school_logos/IBS_Logo.jpg"
+                                    class="img-fluid mr-4 uni_logo">
+                                <span class="featured_uni_text">ICFAI Business School(IBS), Hyderabad</span>
+                            </div>
+                        </div>
+                        <div class="featured_uni_box">
+                            <!-- <div class="featured_uni_img_2 featured_uni_img"
+                                style="background-image: url('https://img.youtube.com/vi/FTCJQpHPrgI/hqdefault.jpg');">
+                            </div> -->
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FTCJQpHPrgI" frameborder="0" allowfullscreen></iframe>
+                            <div class="featured_uni_name">
+                                <img src="assets/images/theme-three/discover-colleges/school_logos/imt.jpg"
+                                    class="img-fluid mr-4 uni_logo">
+                                <span class="featured_uni_text">IMT, Hyderabad</span>
+                            </div>
+                        </div>
+                        <div class="featured_uni_box">
+                            <!-- <div class="featured_uni_img_3 featured_uni_img"
+                                style="background-image: url('https://img.youtube.com/vi/7E4WtvLtLnQ/hqdefault.jpg');">
+                            </div>
+                             -->
+                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/7E4WtvLtLnQ" frameborder="0" allowfullscreen></iframe>
+                             <div class="featured_uni_name">
+                                <img src="assets/images/theme-three/discover-colleges/school_logos/apeejay_stya_university_logo.jpg"
+                                    class="img-fluid mr-4 uni_logo">
+                                <span class="featured_uni_text">Apeejay Satya University, Haryana</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-12 text-center load-more-button"><button class="custom-secondary-btn"><span
+                                class="ng-star-inserted">Load More</span></button></div>
+                                 -->
+    
+                </div>
+            </div>
+    
+            <div class="page-footer-section text-center d-none">
+                <div class="custom-container">
+                    <div class="col-lg-7 mx-auto custom-text-medium custom-text-light footer-text-width mb-5">
+                        Showcasing powerful stories that will inspire the next generation of world leaders.
+                    </div>
+                    <!-- <div class="sub-text">
+                        Great Thing happens!
+                    </div> -->
+                    <button [routerLink]="['/careerlibrary']" class="custom-primary-btn">
+                        Start Your Journey
+                    </button>
+                </div>
+            </div>

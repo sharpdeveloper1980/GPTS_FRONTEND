@@ -1,0 +1,90 @@
+.compareBtn {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: white;
+    padding: 13px 11px;
+    display: block;
+    text-align: center;
+    position: unset;
+    width: 47.8%;
+    left: auto;
+}
+
+.certifiedText {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 46%;
+    position: absolute;
+    right: -87px;
+    top: 87px;
+    letter-spacing: 10.5px;
+    padding: 4px;
+}
+
+meter.c-starRating {
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-bottom: 11px;
+}
+
+.whiteSearchBox {
+    background: white;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 6px 21px -2px #d8d8d8;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.dropdown-menu.show {
+    display: block;
+    height: auto;
+    transform: none!important;
+    top: auto!important;
+    width: 230px;
+    right: 0px!important;
+    left: auto!important;
+}
+
+.filterText{
+    font-size: 13px;
+    color: #546170;
+}
+
+.cardCustomFilter {
+    margin-top: -9px;
+}
+
+i.fa.fa-angle-right {
+    position: absolute;
+    right: 15px;
+}
+
+.cardHeaderCustom {
+    background: white;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.2px;
+    border-bottom: 0;
+    padding-bottom: 16px;
+    padding-top: 5px;
+}
+
+.dropdown a {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.4px;
+    text-rendering: auto;
+    font-size: 12.5px;
+}
+
+.compareBtnPosition{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}

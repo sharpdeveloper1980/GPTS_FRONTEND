@@ -1,0 +1,108 @@
+
+.schoolSelect {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+    border: 0;
+    border-bottom: 1px solid #e6e9ed;
+    border-radius: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    outline: none;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+.spanSchoolSort{
+    font-size: 13px;
+    float: left;
+    margin-right: 10px;
+    padding-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+}
+
+.alignRight{
+    display: block;
+    float: right;
+}
+
+.borderCardSchool{
+    border: 1px solid #dadada;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+    transition: all 0.5s ease-in-out;
+}
+
+.borderCardSchool:hover{
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 3px 28px -9px #000000;
+}
+
+
+
+.imgProfileSchool{
+    width: 125px;
+        height: 100%;
+        
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+}
+
+
+.viewSchool:after{
+    content: ' ';
+    width: 2px;
+    height: 16px;
+    background: #6f6f6f;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 8%;
+}
+
+.greenBtn{
+    background: #46c38e;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 7px 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.greenBtnPadd{
+    padding: 5px 20px;
+}
+
+.schoolEventHead{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+    padding-top: 1em;
+}
+
+.schoolLocation{
+    color: #8a97a7;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+.greySchoolCard{
+    background: #f7f7f7;
+}
+
+.schoolmodalTitle{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+}
+
+.modalWidthSchool{
+    width: 45%;
+}

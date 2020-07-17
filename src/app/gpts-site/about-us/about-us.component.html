@@ -1,0 +1,354 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="about-background dynheader">
+    <div class="custom-container banner-height">
+      <div class="row mt-150 pt-5">
+        <div class="col-lg-4 col-md-12 col-12">
+         <div class="heading-title" data-aos="fade-up" data-aos-duration="1000">
+           <label>M I S S I O N</label>
+           <h1>CHAMPIONING A HOLISTIC EDUCATION</h1>
+         </div>
+        </div>
+       
+      </div>
+      <div class="row mt-150 pt-5 align-items-start">
+        <div class="col-lg-4 col-md-12 col-12 mb-5">
+         <div class="heading-title" data-aos="fade-up" data-aos-duration="1000">
+           <label>O U R G O A L</label>
+           <p>is to revolutionize existing educational models and promote great teaching practices. Our core foundation rests on the principle that quality education can change the world.</p>
+         </div>
+        </div>
+       
+        <div class="col-lg-4 col-md-12 col-12 order-12">
+          <div class="heading-title" data-aos="fade-up" data-aos-duration="1000">
+            <label>O U R F O C U S</label>
+            <p>is to create communication platforms between students and institute, and to drive solutions for issues we care about.</p>
+          </div>
+         </div>
+         <div class="col-lg-4 order-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- great dream -->
+
+  <div id="gpts-product" class="pt-100 pb-100">
+   <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="about-title mb-4">GPTS PRODUCTS</h3>
+        <p>Explore our interactive tools that help teachers, students, and institutions discover<br>and engage with each other. Find out if you can join the league of great<br> institutions through the School Fulfillment Index (SFI) and be a stalwart in the field of<br> education. If you’re a student, CDAP can guide you through the sea of fascinating<br> career streams and lead you to your dream college. With GPTS Featured, get<br> the finest schools and colleges at your dispense and learn how they fit you best.</p>
+      </div>
+    </div>
+    <div class="row mt-5 pt-3" data-aos="fade-up" data-aos-duration="1000">
+     <div class="col-lg-8 offset-lg-2">
+        <!--slider start-->
+      <div class="swiper-container our-product-carousel" [swiper]="gptsProduct">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper align-items-center">
+            <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+            <div class="swiper-slide career-slide" >
+                <div class="video-thumbnail">
+                    <div class="thumb">
+                      <img src="assets/images/about/product-03.jpg" alt="thumbnail" class="prod_img">
+                    <div class="gpts_product_name">
+                      <h3>CDAP</h3>
+                      <p>Career Discovery and Assessment Platform</p>
+                    </div>
+                   </div>
+                </div>
+         </div>
+         <div class="swiper-slide career-slide" >
+          <div class="video-thumbnail">
+              <div class="thumb">
+               <img src="assets/images/about/product-02.jpg" alt="thumbnail" class="prod_img">
+             <div class="gpts_product_name">
+                <h3 style="margin-bottom: -30px;">Knowledge Studio</h3>
+              </div>
+             </div>
+          </div>
+   </div>
+   <div class="swiper-slide career-slide">
+    <div class="video-thumbnail">
+        <div class="thumb" >
+          <img src="assets/images/about/product-01.jpg" alt="thumbnail" class="prod_img">
+        <div class="gpts_product_name">
+          <h3 style="margin-bottom: -8px;">NANO Class</h3>
+        </div>
+       </div>
+    </div>
+</div>
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/about/product-04.jpg" alt="thumbnail" class="prod_img">
+        <div class="gpts_product_name"> 
+          <h3>SFI</h3>
+          <p>Student fulfilment Index</p>
+        </div>
+      </div>
+     
+  </div>
+</div>
+
+<!-- <div class="swiper-slide career-slide" >
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/about/prod-01.jpg" alt="thumbnail" class="prod_img">
+      </div>
+     
+  </div>
+</div> -->
+
+          </div>
+        <!-- If we need navigation buttons -->
+        <div class="control-arrow custom-control-arrow">
+          <div class="swiper-button-prev arrow">
+            <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+        </div>
+        <div class="swiper-button-next arrow">
+            <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+        </div>
+        </div>
+    </div>
+    <!--slider end-->
+     </div>
+    </div>
+   </div>
+  </div>
+
+
+  <div id="meetOurTeam" class="pt-100 pb-100">
+    <div class="custom-container">
+      <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-lg-4 col-md-12 text-center">
+          <h3 class="about-title mb-4">MEET OUR PEOPLE</h3>
+          <p>Explore our interactive tools that help teachers, students, and institutions discover and engage with each other. Find out if you can join the league of great institutions through the School Fulfillment Index (SFI) and be a stalwart in the field of education. If you’re a student, CDAP can guide you through the sea of fascinating career streams and lead you to your dream college. With GPTS Featured, get the finest schools and colleges at your dispense and learn how they fit you best.</p>
+        </div>
+        <div class="col-lg-1 mb-5"></div>
+        <div class="col-lg-7 col-md-12">
+          <div class="row align-items-center">
+            <div class="col-md-7 col-sm-7">
+              <div class="thumbnail">
+              <a class="thumb d-block" href="javascript:void(0)"  (click)="teamVideoPopup()">  <img src="assets/images/about/video.jpg" class="img-fluid"></a>
+                <span class="play-icon"  (click)="teamVideoPopup()"><img class="play icon" src="assets/images/home-five/play-button.png"></span>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-5">
+              <div class="thumbnail mb-4 pb-2">
+                <img src="assets/images/about/rec-1.jpg" class="img-fluid">
+              </div>
+              <div class="thumbnail">
+                <img src="assets/images/about/rec-2.jpg" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="ourValue" class="pt-150 pb-150">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center pb-3 mb-5" data-aos="fade-up" data-aos-duration="1000"><h3 class="about-title mb-4">OUR VALUES</h3>
+      <p>Our focus is to create communication platforms between students and institutes, and to drive solutions for issues we care about.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Friendly Workplace </h4>
+        <p>GPTS is structured like an open family that recognises the value of ideas and understands their potential to fuel innovative growth.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Happier Weekdays</h4>
+        <p>At Great Place To Study, every day is “bring your passion to work” day. Our offices are filled with fun, frolic, and interesting conversations. </p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Choose Positivity</h4>
+        <p>With a vehement passion for revolutionary education, the GPTS family is a multigenerational workforce that fully embraces and understands diversity. </p>
+      </div>
+      <div class="col-lg-4 col-md-6 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Learn and Explore</h4>
+        <p>The open culture at every level allows new members to have a safe space and an honest dialogue. We believe in a healthy exchange of ideas and knowledge.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Loving the new</h4>
+        <p>We at GPTS believe that the future is made better when looked from different perspectives. We pride ourselves in swaying from tradition and striving for innovation that is charged with positive outcomes.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 pr-5" data-aos="fade-up" data-aos-duration="1000">
+        <h4>Constant learning</h4>
+        <p>The GPTS family is a community of lifelong learners, responsible global citizens, and champions of our own success. Being an education firm, we preach less and learn more.</p>
+      </div>
+      <!-- <div class="col-md-4 offset-md-4 mb-5pr-5">
+        <h4>Compassion</h4>
+        <p>A family dedicated to excellence in education, GPTS acts as a concerned and caring parent to its customers, mostly students, shaping their mind and mental health for a better tomorrow.</p>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<div id="grown">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="about-title">WE HAVE GROWN A LOT<br>SINCE WE HAVE STARTED</h3>
+      </div>
+      <div class="col-md-8 offset-md-2" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/map.jpg" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ourBlog" class="pt-100 pb-100">
+  <div class="custom-container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row align-items-center" >
+      <div class="col-lg-4 col-md-12 text-center"><h3 class="about-title mb-4">FROM OUR BLOGS</h3>
+        <p>Read what some of the champion educationists of our day have to say. Stay updated on the latest innovations, debates and news through our blog posts and articles.
+        </p>
+      </div>
+      <div class="col-lg-1 mb-5"></div>
+      <div class="col-lg-7 col-md-12">
+        <div class="row">
+          <div *ngFor="let blogCard of blogsCarousel; let j = index" class="col-lg-5 col-md-5 offset-md-1 col-sm-5 offset-sm-1">
+            <div class="thumbnail">
+            <div class="thumb">  <img [src]="blogCard.thumb" class="img-fluid"></div>
+             <p><span>{{blogCard.author_name}}&nbsp;|&nbsp;{{blogCard.created_at}} </span></p>
+             <h4>{{blogCard.title}}</h4>
+             <p><a [routerLink]="'/bloglist/'+blogCard.slug">Read More <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a></p>
+            </div>
+          </div>
+         
+          <!-- <div class="col-lg-5 col-md-5 col-sm-5">
+            <div class="thumbnail">
+              <div class="thumb">  <img src="assets/images/about/blog.jpg" class="img-fluid"></div>
+               <p><span>Shekhar Bhatacharjee&nbsp;|&nbsp;15 January 2018</span></p>
+               <h4>Liberal Arts help you to become life long learners</h4>
+               <p><a href="javascript:void(0)">Read More <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a></p>
+              </div>
+          </div> -->
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--our leader start-->
+
+<div id="ourLeader" class="pt-150 pb-150">
+  <div class="custom-container">
+   <div class="row">
+     <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+       <h3 class="about-title mb-4">OUR LEADERS</h3>
+       <p>Explore our interactive tools that help teachers, students, and institutions discover<br> and engage with each other. Find out if you can join the league of great<br>institutions through the Student Fulfillment Index (SFI) and be a stalwart in the<br> field of education. If you’re a student, CDAP can guide you through the sea of<br> fascinating career streams and lead you to your dream college. With GPTS Featured, get the<br> finest schools and colleges at your dispense and learn how they fit you best.</p>
+     </div>
+   </div>
+   <div class="row mt-5 pt-3">
+   <div class="col-lg-10 offset-lg-1">
+     <div class="row">
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/shekhar.jpg" class="img-fluid">
+        <h4>Shekhar Bhattacharjee</h4>
+        <p><span>Founder & CEO</span></p> 
+        <p><a href="https://twitter.com/shekharab" target="_blank" class="mr-3"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/shekharbhattacharjee/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/arvina.jpg" class="img-fluid">
+        <h4>Arvina </h4>
+        <p><span>Co-founder</span></p>
+        <p><a href="javascript:void(0)" class="mr-3"><i class="fa fa-twitter" style="color: grey;"></i></a><a href="https://www.linkedin.com/in/arvina-purkayastha-015543105/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/jessy.jpg" class="img-fluid">
+        <h4>Gurjashan Singh</h4>
+        <p><span>VP- Alliances & Solutions</span></p>
+        <p><a href="https://twitter.com/SinghGurjashan" target="_blank" class="mr-3"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/gurjashansingh/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/manu.jpg" class="img-fluid">
+        <h4>Manu Nair</h4>
+        <p><span>VP- Product & Operations</span></p>
+        <p><a href="https://twitter.com/manunair_" target="_blank" class="mr-3"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/manunair29/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/kriti.jpg" class="img-fluid">
+        <h4>Kriti</h4>
+        <p><span>Head HR</span></p>
+        <p><a href="https://twitter.com/Gptsglobal" target="_blank" class="mr-3"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/kriti-khanna-3585b472/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/about/anis.jpg" class="img-fluid">
+        <h4>Anis Siddiqui</h4>
+        <p><span>Asst. VP- Bussiness Communications</span></p>
+        <p><a href="https://twitter.com/Gptsglobal" target="_blank" class="mr-3"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/anis-a-s-0175b8149" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+      </div>
+     </div>
+   </div>
+
+   </div>
+  </div>
+ </div>
+<!--our leader end-->
+
+<!--our jaurney start-->
+<div id="jaurney" class="pt-150 pb-150 dark-color">
+  <div class="custom-container">
+    <div class="row align-items-center">
+      <div class="col-md-12 jaurney-content pt-5 mt-5" data-aos="fade-up" data-aos-duration="1000">
+        <h2>BE A PART OF OUR JOURNEY</h2>
+        <p>We are always looking for great folks to join us on our mission. If you want to be a part of our story,<br> We would love to chat.</p>
+        <p class="mt-5"><a href="javascript:void(0)" class="custom-secondary-btn d-inline-block">Work with us</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--our jaurney end-->
+
+</div>
+
+
+
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="teamVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9 ">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item">
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                                               
+                      <video  #homeVideo  poster="https://d33umu47ssmut9.cloudfront.net/home-video/new/5e848bf10e392.jpg" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" src="assets/images/about/5e848bf1dfe24.mp4">
+                      </video>
+                 <!-- https://d33umu47ssmut9.cloudfront.net/home-video/new/5e848bf1dfe24.mp4 -->
+                  </vg-player>
+
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

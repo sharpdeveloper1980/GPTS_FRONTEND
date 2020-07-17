@@ -1,0 +1,143 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="contact-back dynheader">
+    <div class="custom-container banner-height">
+      <div class="row align-items-center ">
+        <div class="col-lg-6 col-12 text-center text-lg-left">
+          <h2 class="text-big">We are always here for you</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-6 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/contact.svg" class="img-fluid bannerImgSub banner-icon-position"
+            alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact for -->
+  <div class="dotsback">
+    <div class="custom-container section-padding lightgreyBackgroundContact remove-padding-bottom">
+
+      <div class="row d-xl-flex d-lg-flex">
+
+        <div class="col"></div>
+        <div class="col-xl-10 d-flex remove-padding-res contact-form-container">
+          <!-- left -->
+          <div class="col-xl-6 col-lg-6 col-md-5 col-sm-12 col-12 text-xl-left text-lg-left text-center">
+            <img src="assets/images/theme-three/contact-avatar.png" class="img-fluid margin-bottom20" alt="image">
+            <p class="contactOne">Feel Free to Contact Us</p>
+            <p class="contactTwo"></p>
+
+            <div class="margintpbtm">
+              <p class="contactThree">For Media Related Queries</p>
+              <p class="mailContact"><i class="fa fa-envelope"></i> <a
+                  href="mailto:info@greatplacetostudy.org">srishti@greatplacetostudy.org</a></p>
+              <p class="mailContact"><i class="fa fa-phone"></i> +91-11-41023100</p>
+            </div>
+
+            <div class="margintpbtm">
+              <p class="contactThree">For Product Related Queries</p>
+              <p class="mailContact"><i class="fa fa-envelope"></i> <a
+                  href="mailto:info@greatplacetostudy.org">info@greatplacetostudy.org</a></p>
+              <p class="mailContact"><i class="fa fa-phone"></i> +91-11-41023100</p>
+            </div>
+
+            <div class="margintpbtm">
+              <p class="contactThree">For Business Related Queries</p>
+              <p class="mailContact"><i class="fa fa-envelope"></i> <a
+                  href="mailto:info@greatplacetostudy.org">vishnu@greatplacetostudy.org</a></p>
+              <p class="mailContact"><i class="fa fa-phone"></i> +91-8448292457</p>
+            </div>
+
+          </div>
+          <!-- right -->
+          <div class="col-xl-6 col-lg-6 col-md-7 col-sm-12 col-12">
+            <div class="whiteBackContact">
+              <div class="triangle"></div>
+              <p class="text-uppercase orangeFont">Get in touch</p>
+              <p class="text-center orange-text font-size20">We offer a wide range of seryou with any unconventional.
+              </p>
+              <!-- <h4 class="text-uppercase blackContactForm">CONTACT FORM</h4> -->
+              <p class="grey-light-background">We are a team of professional and skilled experts in all domestic
+                spheres.
+
+              </p>
+              <form [formGroup]="contactForm" (ngSubmit)="sendContactQuery()">
+                <div class="form-group">
+                  <input formControlName="name" type="text" class="form-control contactForm" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <ng-select class="custom-contactus" [items]="contactType" bindValue="name" bindLabel="name"
+                    [searchable]="false" placeholder="I am a" formControlName="contact_type" class="contactForm">
+                  </ng-select>
+                </div>
+                <div class="form-group">
+                  <input formControlName="email" type="email" class="form-control contactForm" placeholder="Email id">
+                </div>
+                <div class="form-group">
+                  <input appOnlyNumber maxlength="10" formControlName="contact" type="text"
+                    class="form-control contactForm" placeholder="Contact Number">
+                </div>
+                <div class="form-group">
+                  <textarea formControlName="message" class="form-control contactForm" placeholder="Message"></textarea>
+                </div>
+                <div class="text-center btn-margin">
+                  <button type="submit" [disabled]="!contactForm.valid"
+                    class="d-inline-block custom-primary-btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <!-- <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        The ability of passing ideas, and stories from one generation
+      </div>
+      <div class="sub-text">
+        Great Thing happens!
+      </div>
+      <button (click)="openSignupModal()" class="custom-primary-btn">
+        Register
+      </button>
+    </div>
+  </div> -->
+
+
+</div> <!-- theme three ends -->
+
+
+
+
+
+<!-- contact -->
+
+
+<ng-template #successModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{message}}</p>
+  </div>
+  <!-- <div class="modal-footer">
+
+  </div> -->
+</ng-template>

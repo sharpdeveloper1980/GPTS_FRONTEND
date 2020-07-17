@@ -1,0 +1,147 @@
+<ng-template class="copy" #queryModal let-modal>
+  <div class="modal-body">
+    <div class="row justify-content-center">
+      <!-- image -->
+      <div class="col-xl-5 col-lg-5 col-12 loginBg cust_loginBg">
+
+        <img src="assets/images/common/login-image.png" class="img-fluid himg d-none" alt="image">
+        <h3 class="cust-insituQuote insituQuote mt-5 pl-0 pr-0 pt-5">Tell us more about yourself!
+        </h3>
+        <div class="contact-detail">
+        <p class="reg-text"> We will get back soon</p>
+        <p class="g-strong">GPTS Contact</p>
+        <p class="g-weak">Mr. Gauransh Kakkar</p>
+        <p class="g-weak"><a href="mailto:ravi@greatplacetostudy.org">gauransh@greatplacetostudy.org</a></p>
+        <p class="g-weak">+91-9711495528</p>
+      </div>
+      </div>
+      <!-- form -->
+      <div class="col-xl-7 col-lg-7 col-md-12 col-12 login-dots-reg pb-4">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="sigin-Head-reg">Query Form</h3>
+        <form [formGroup]="queryForm">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input type="text" class="form-control modalFormcontrol" name="name" placeholder="Enter your name"
+                  required="" maxlength="50" formControlName="name" aria-required="true">
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="form-group">
+
+
+                <input type="text" class="form-control modalFormcontrol" name="email" placeholder="Enter your email"
+                  required="" maxlength="50" formControlName="email" aria-required="true">
+
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="form-group">
+
+
+                <input type="text" class="form-control modalFormcontrol" name="mobile"
+                  placeholder="Enter your contact no." formControlName="contact_number" required="" maxlength="20"
+                  aria-required="true">
+
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="form-group">
+
+
+                <!-- <select name="hearfrom" class="form-control modalFormcontrol" required="" aria-required="true">
+                        <option>Internet</option>
+                        <option>Another Client</option>
+                        <option>Local Ad</option>
+                        <option>Newspaper</option>
+                        <option>Magazine</option>
+                        <option>Social Media</option>
+                      </select> -->
+                <ng-select class="queryform-select form-control modalFormcontrol" [items]="contactType" bindValue="name"
+                  bindLabel="name" [searchable]="false" placeholder="How did you hear about us?"
+                  formControlName="hear_about">
+                </ng-select>
+
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="form-group">
+
+
+                <ng-select class="queryform-select form-control modalFormcontrol" [items]="solutionsList"
+                  bindValue="name" bindLabel="name" [searchable]="false"
+                  placeholder="What solutions are you looking for?" formControlName="solution">
+                </ng-select>
+
+              </div>
+            </div>
+
+
+
+
+            <div class="col-12">
+              <div class="form-group">
+
+
+                <textarea class="form-control modalFormcontrol" name="message" required="" rows="4"
+                  placeholder="Enter your message here" formControlName="message" maxlength="500"
+                  aria-required="true"></textarea>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-12">
+              <div class="form-group">
+                <button type="submit" class="btnBlueSfi">Submit</button>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <!-- <div class="modal-footer">
+    
+      </div> -->
+</ng-template>

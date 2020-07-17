@@ -1,0 +1,27 @@
+.createHeading{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.createBtn{
+    background: white;
+    border: 1px solid #546170;
+    color: #546170;
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 6px 18px;
+    width: 150px;
+    margin-right: 15px;
+}
+
+.createBtn:hover{
+    background: rgba(115, 125, 136, 0.15);
+}
+
+
+
+

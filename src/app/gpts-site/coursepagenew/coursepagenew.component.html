@@ -1,0 +1,232 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="courseNewBanner">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big">{{careerName}}</h2>
+
+        </div>
+        <div class="col-lg-7 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/main-career.svg"
+            class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- breadcrumb start-->
+  <div class="breadcrumb-bg ng-star-inserted"><div class="custom-container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb bg-transparent">
+   <li  class="breadcrumb-item text-uppercase link ng-star-inserted">
+  <a  class="ng-star-inserted" ng-reflect-router-link="/careerlibrary" href="/careerlibrary"> All Careers</a></li>
+    <li  class="breadcrumb-item text-uppercase ng-star-inserted"><a _ngcontent-c4="" class="ng-star-inserted">{{careerName}}</a></li>
+  </ol></nav>
+</div>
+</div>
+<!--breadcrumb end -->
+
+  <div class="gray-background">
+    <!-- general overview -->
+    <div class="section-padding">
+      <div class="custom-container">
+        <div class="row align-items-start">
+          <div class="col-lg-4 col-12 text-center">
+            <img src="assets/images/theme-three/course-main-img.png" class="img-fluid" alt="image">
+          </div>
+          <div class="col-lg-8 col-12 text-center text-lg-left">
+            <h3 class="font-size50 custom-text-light margin-bottom40">General Overview</h3>
+            <p class="text-macro font-color34 margin-bottom40">
+              {{careerAbout | slice: 0: aboutLength}}<span *ngIf="!(aboutLength === careerAbout.length)">...</span></p>
+            <button *ngIf="!(aboutLength === careerAbout.length) else loadLess"
+              class="d-inline-block custom-secondary-btn" (click)="aboutLength = careerAbout.length">
+              Load More
+            </button>
+
+            <ng-template #loadLess>
+              <button class="d-inline-block custom-secondary-btn" (click)="aboutLength = 500">
+                View Less
+              </button>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- engineering / technical insights -->
+    <div class="section-padding-overide-course pt-0">
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-12">
+            <h5 class="text-center orange-text sub-text custom-text-light">See the Insights on</h5>
+            <h3 class="font-size50 text-center custom-text-light margin-bottom40">{{careerName}} from industry experts
+            </h3>
+          </div>
+        </div>
+        <!-- video -->
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-8 text-center">
+            <div class="white-border-video">
+              <div class="embed-responsive embed-responsive-16by9 ">
+                <!-- removed this "big-video-container" class from here-->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                    <vg-scrub-bar [vgSlider]="true">
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+                    <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  <video [poster]="expVidThumb" [vgMedia]="media" [src]="expVideo" #media
+                    class="videoClass"></video>
+                </vg-player>
+              </div>
+            </div>
+
+            <p *ngIf="!loggedIn" class="orange-text custom-text-light sub-text margin-top40 margin-bottom40">You need to
+              register to view
+              all videos</p>
+            <button (click)="openSignupModal()" *ngIf="!loggedIn" class="d-inline-block custom-primary-btn">Get All
+              Access</button>
+          </div>
+          <div class="col"></div>
+        </div>
+
+        <!-- three videos -->
+        <div class="row justify-content-center section-padding-overide-course inner-side-spacing">
+          <!-- 1 -->
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 removePadding video-padding-right"
+            *ngFor="let video of careerVideo | slice: 0:videoToShow; index as i">
+            <div class="embed-responsive embed-responsive-16by9 ">
+              <!-- remove this "video-container" class from here -->
+              <vg-player class="embed-responsive-item" (click)="checkLoggedIn($event)">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video  [poster]="video.video_thumb" [vgMedia]="media" [src]="video.video" #media
+                  class="videoClass"></video>
+              </vg-player>
+            </div>
+
+            <!-- whitebox for video with heart -->
+            <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+              <p class="text-macro" [title]=video.video_title>{{video.video_name}}</p>
+              <p class="font-size14 ellipsis-course">{{video.designation}}</p>
+              <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.activeHeart]="video.fav"
+                (click)="addToFav(video.video_id, $event, fav)"><i class="fa fa-heart-o"></i></p>
+            </div>
+          </div>
+          <!-- button -->
+          <div *ngIf="careerVideo.length > 3" class="col-12 text-center margin-top40">
+            <button *ngIf="videoToShow < careerVideo.length; else less" class="d-inline-block custom-secondary-btn"
+              (click)="videoToShow = careerVideo.length">
+              Load more</button>
+            <ng-template #less>
+              <button class="d-inline-block custom-secondary-btn" (click)="videoToShow = 3">
+                View less</button>
+            </ng-template>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- trending career -->
+  <div class="section-padding remove-padding-top">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="font-size50 custom-text-light margin-bottom40 text-center margin-top95">Trending Careers</h3>
+        </div>
+      </div>
+
+      <!-- boxes -->
+      <div class="row justify-content-center" *ngIf="subCareerList.length">
+
+        <div *ngFor="let subCareer of subCareerList | slice:0:show; index as i" class="custom-col colored-box-{{i%5}}">
+          <a [routerLink]="subCareer.sub_career_slug"></a>
+          <div class="text-center">
+            <img src="assets/images/theme-three/icon-careerLanding.png" class="img-fluid icon-width" alt="image">
+            <p class="text-macro custom-text-light font-color33 margin-icon-text">{{subCareer.sub_career_name}}</p>
+          </div>
+        </div>
+
+        <div class="col-12 text-center mt-4" *ngIf="subCareerList.length > 8">
+            <button class="d-inline-block custom-secondary-btn margin-top45"
+              *ngIf="subCareerList.length > 8 &&  show <= subCareerList.length else lessBtn"
+              (click)="show = show+8">VIEW MORE</button>
+            <ng-template #lessBtn>
+              <button class="d-inline-block custom-secondary-btn margin-top45" (click)="show = 8">
+                VIEW LESS
+              </button>
+            </ng-template>
+          </div>
+  
+       
+
+      </div>
+    </div>
+  </div>
+
+  <!-- do you know -->
+  <div class="section-padding pt-0">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="font-size50 custom-text-light margin-bottom40 text-center">Do you know?</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center margin-top40">
+        <div class="col-xl-4 text-center border-right-course more-padding" *ngFor="let data of doYouKnow">
+          <h3 class="sub-text font-color33 custom-text-light light-red-head-bg">{{data.title}}</h3>
+          <p class="">{{data.description}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        The ability of passing ideas, and stories from one generation
+      </div>
+      <!-- <div class="sub-text">
+        Great Thing happens!
+      </div> -->
+      <a routerLink="/careerlibrary" class="custom-primary-btn">
+        View Career Library
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>

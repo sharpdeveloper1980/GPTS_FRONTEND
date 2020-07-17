@@ -1,0 +1,857 @@
+<!-- step 2 -->
+<div>
+  <div id="page-content-wrapper">
+    <div class="dashboard-three">
+      <!-- three boxes -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row margin-default-adjustment">
+            <div class="col-12">
+              <h3 class="font-color-1e font-size50 font-weight300">Hi <span class="font-weight400">Srishti,</span>
+                Welcome to your dashboard
+              </h3>
+              <p class="font-size25 font-color-blue32">Get unique perspectives and understand the tools of the trade
+                from experts in different domains</p>
+            </div>
+          </div>
+          <!-- 3 boxes weird -->
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-6 col-12 one-number">
+              <div class="active-blue text-center box-three" [class.completed-box]="(profileStatus === '100%')">
+                <!-- arrow -->
+                <div class="arrow-position">
+                  <div class="arrow">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Fill your Complete Profile</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a *ngIf="!(profileStatus == '100%'); else completed_profile"
+                  routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Build
+                  Your Profile</a>
+                <ng-template #completed_profile>
+                  <a routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Edit
+                    Information</a>
+                </ng-template>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 two-number">
+              <div class=" text-center box-three" [ngClass]="profileStatus === '100%' ? 'active-red': 'disabled-box'">
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Career Assessment</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a *ngIf="!tteTestTaken; else completed_test"
+                  [routerLink]="profileStatus === '100%' ? ['/student-dashboard/career-discovery-test'] : []"
+                  class="custom-primary-btn">Take Career Assesment</a>
+                <ng-template #completed_test>
+                  <a routerLink="/student-dashboard/career-discovery-result"
+                    class="custom-primary-btn button-position-box">View Report</a>
+                </ng-template>
+              </div>
+              <!-- arrow -->
+              <div class="arrow-position-bottom">
+                <div class="arrow">
+                  <div class="curve"></div>
+                  <div class="point"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 three-number">
+              <div class="text-center box-three" [ngClass]="tteTestTaken ? 'active-violet' : 'disabled-box'">
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Must Watch</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a [routerLink]="tteTestTaken ? ['/student-dashboard/must-watch'] : []"
+                  class="custom-primary-btn button-position-boxs">Watch
+                  Videos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- career discovery assessment -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- blue -->
+            <div class="col-lg-8 col-12">
+              <div class="blue-bg-career d-lg-flex">
+                <!-- image -->
+                <div class="col-lg-3 col-12">
+                  <img src="assets/images/dashboard-three/cda-blue.png" class="img-fluid" alt="image">
+                </div>
+                <!-- text -->
+                <div class="col-lg-9 col-12">
+                  <h4 class="font-size30 font-color33 font-weight300 margin-bottom26">Career Discovery Assessment</h4>
+                  <p class="font-weight300 font-color33 font-size16">Thriving Index by GPTS is a positive
+                    psychology-enabled assessment which identifies your inherent strengths based on your thought process
+                    to help determine viable career pathways for you. It helps young minds map out career trajectories
+                    where they can be the best possible version of themselves. Career Discovery Assessment is a powerful
+                    tool that is designed to help you not just survive but thrive in this rapidly evolving global
+                    atmosphere.</p>
+                </div>
+              </div>
+            </div>
+            <!-- white -->
+            <div class="col-lg-4 col-12">
+              <div class="white-box-step">
+                <h4 class="font-size30 font-color33 font-weight300 margin-bottom26">Profile Strength</h4>
+                <!-- profile completion graph -->
+                <div>
+
+                </div>
+                <!-- button -->
+                <div class="text-center">
+                  <a href="#" class="custom-secondary-btn">Complete Your Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- career discovery process -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row margin-bottom52">
+            <div class="col-12">
+              <h4 class="font-size30 font-color33 font-weight300 margin-bottom26">Career Discovery Process</h4>
+            </div>
+          </div>
+          <!-- steps -->
+          <div class="row justify-content-center">
+
+            <!-- s1 -->
+            <div class="custom-col-cdp text-center">
+              <div class="white-cdp-box">
+                <!-- arrow -->
+                <div class="arrow-position-s">
+                  <div class="arrow-s">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <!-- image -->
+                <img src="../../../assets/images/dashboard-three/cdt.png" class="img-fluid" alt="image">
+                <!-- text -->
+                <p class="font-size20 font-color33 font-weight300">Take the Career
+                  Discovery Test</p>
+              </div>
+            </div>
+            <!-- s2 -->
+            <div class="custom-col-cdp text-center">
+              <div class="white-cdp-box">
+                <!-- arrow -->
+                <div class="arrow-position-bottom-s">
+                  <div class="arrow-s">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <!-- image -->
+                <img src="../../../assets/images/dashboard-three/cdt.png" class="img-fluid" alt="image">
+                <!-- text -->
+                <p class="font-size20 font-color33 font-weight300">Identify your strengths</p>
+              </div>
+            </div>
+            <!-- s3 -->
+            <div class="custom-col-cdp text-center">
+              <div class="white-cdp-box">
+                <!-- arrow -->
+                <div class="arrow-position-s">
+                  <div class="arrow-s">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <!-- image -->
+                <img src="../../../assets/images/dashboard-three/cdt.png" class="img-fluid" alt="image">
+                <!-- text -->
+                <p class="font-size20 font-color33 font-weight300">Download your detialed report</p>
+              </div>
+            </div>
+            <!-- s4 -->
+            <div class="custom-col-cdp text-center">
+              <div class="white-cdp-box">
+                <!-- arrow -->
+                <div class="arrow-position-bottom-s">
+                  <div class="arrow-s">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <!-- image -->
+                <img src="../../../assets/images/dashboard-three/cdt.png" class="img-fluid" alt="image">
+                <!-- text -->
+                <p class="font-size20 font-color33 font-weight300">Get best fit career options</p>
+              </div>
+            </div>
+            <!-- s5 -->
+            <div class="custom-col-cdp text-center">
+              <div class="white-cdp-box">
+
+                <!-- image -->
+                <img src="../../../assets/images/dashboard-three/cdt.png" class="img-fluid" alt="image">
+                <!-- text -->
+                <p class="font-size20 font-color33 font-weight300">View our video career library</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- blog section -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- 3 box -->
+            <div class="col-lg-7 col-12 removePadding">
+              <div class="d-lg-flex">
+                <div class="col-lg-6 col-12">
+                  <a href="#">
+                    <div class="d-blue d-boxy">
+                      <img src="assets/images/dashboard-three/last-activity.png" class="img-fluid margin-bottom23"
+                        alt="image">
+                      <h4 class="font-size25 font-weight300 font-color-white  margin-bottom12">Latest in EDIEO</h4>
+                      <p class="font-size16 font-weight300 font-color-white">Trending Tech Careers In Demand</p>
+                    </div>
+                  </a>
+
+
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="d-blue-light d-boxy">
+                    <img src="assets/images/dashboard-three/career-addition.png" class="img-fluid margin-bottom23"
+                      alt="image">
+                    <h4 class="font-size25 font-weight300 font-color-white margin-bottom12">Career Addition</h4>
+                    <p class="font-size16 font-weight300 font-color-white">Lorem ipsum dolor sit amet, conse ctetur
+                      adipiscin elit, sed do eiumorem ipsum lor sit amet, conse ctetur adipiscin </p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="pink-bg d-lg-flex ">
+                  <div class="col-lg-7 co-12">
+                    <h4 class="font-size30 font-weight300 font-color-white margin-bottom23">Latest Added Video in
+                      Career Library </h4>
+                    <p class="font-size16 font-weight300 font-color-white">Lorem ipsum dolor sit amet,
+                      conse ctet ur
+                      adipi
+                      scinlit, sed do eiumod tempor incididunt labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                  <div class="col-lg-5 col-12 removePadding">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video class="embed-responsive-item">
+                        <source src="assets/video/1.mp4" type="video/mp4">
+                      </video>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- blogs -->
+            <div class="col-lg-5 col-12">
+              <div class="blog-bg">
+                <h4 class="font-size30 font-weight300 font-color33 margin-bottom49">Recent News</h4>
+                <!-- news section -->
+                <div class="d-flex blog-border-bottom">
+
+                  <!-- image -->
+                  <div class="col-3 removePadding">
+                    <img src="assets/images/dashboard-three/blog-image.jpg" class="img-fluid blog-image" alt="image">
+                  </div>
+                  <!-- text details -->
+                  <div class="col-9">
+                    <!-- title -->
+                    <h5 class="font-size20 font-color33 font-weight300">Except eurint Lorem Ipsum</h5>
+                    <!-- date -->
+                    <p class="font-size12 font-color33 font-weight300 margin-bottom12">Posted on 31 July 19</p>
+                    <!-- content -->
+                    <p class="font-size14 font-color33 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                      adipiscing incid idsunt ut labore et dolore </p>
+                  </div>
+
+                </div>
+                <div class="d-flex blog-border-bottom">
+
+                  <!-- image -->
+                  <div class="col-3 removePadding">
+                    <img src="assets/images/dashboard-three/blog-image.jpg" class="img-fluid blog-image" alt="image">
+                  </div>
+                  <!-- text details -->
+                  <div class="col-9">
+                    <!-- title -->
+                    <h5 class="font-size20 font-color33 font-weight300">Except eurint Lorem Ipsum</h5>
+                    <!-- date -->
+                    <p class="font-size12 font-color33 font-weight300 margin-bottom12">Posted on 31 July 19</p>
+                    <!-- content -->
+                    <p class="font-size14 font-color33 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                      adipiscing incid idsunt ut labore et dolore </p>
+                  </div>
+
+                </div>
+                <div class="d-flex blog-border-bottom">
+
+                  <!-- image -->
+                  <div class="col-3 removePadding">
+                    <img src="assets/images/dashboard-three/blog-image.jpg" class="img-fluid blog-image" alt="image">
+                  </div>
+                  <!-- text details -->
+                  <div class="col-9">
+                    <!-- title -->
+                    <h5 class="font-size20 font-color33 font-weight300">Except eurint Lorem Ipsum</h5>
+                    <!-- date -->
+                    <p class="font-size12 font-color33 font-weight300 margin-bottom12">Posted on 31 July 19</p>
+                    <!-- content -->
+                    <p class="font-size14 font-color33 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                      adipiscing incid idsunt ut labore et dolore s</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- new added colleges -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row">
+            <h6>new added colleges - slider to be added by parikshet</h6>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- top trending -->
+      <div class="section-spacing pt-0">
+        <div class="container-fluid">
+          <!-- video copy from website -->
+          <div class="row">
+            <!-- text section -->
+            <div class="custom-col padding-l-r15">
+
+              <h2 class="font-color33 font-size30 font-weight300 margin-bottom12">Latest in EDIEO</h2>
+              <p class="font-color-orange font-size20 font-weight300 margin-bottom38">Watch One of Our Videos Now</p>
+
+              <p class="font-size16 font-color34 font-weight300 line-height25">Watch beginners, professionals and
+                legends of various
+                industries share their experiences and invaluable insights with the Video Library. It’s time to take
+                your first step and dive into a world of exciting career profiles. Watch beginners, professionals and
+                legends of various industries share their experiences and invaluable insights with the Video Library.
+
+              </p>
+            </div>
+            <!-- video section -->
+
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+              *ngFor="let video of inspiringvideo | slice:0:5;i as index">
+              <div class=" embed-responsive embed-responsive-16by9 ">
+                <!-- remove this " video-container" class from here -->
+                <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                  <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                    <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+
+                    <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+
+                  <video id="" [vgMedia]="media" #media id="favideo{{i}}" [src]="video.video"
+                    [poster]="video.video_thumb">
+                  </video>
+                </vg-player>
+
+              </div>
+
+              <!-- whitebox for video with heart -->
+              <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+                <p class="text-macro">{{video.video_name}}</p>
+                <p class="font-size14">{{video.designation}}</p>
+                <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.inactive]="!data.fav"
+                  (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- step 2 ends -->
+
+
+<!-- step 3 -->
+
+<div style="display: none;">
+  <div id="page-content-wrapper">
+    <div class="dashboard-three">
+      <!-- three boxes -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row margin-default-adjustment">
+            <div class="col-12">
+              <h3 class="font-color-1e font-size50 font-weight300">Hi <span class="font-weight400">Srishti,</span>
+                Welcome to your dashboard
+              </h3>
+              <p class="font-size25 font-color-blue32">Get unique perspectives and understand the tools of the trade
+                from experts in different domains</p>
+            </div>
+          </div>
+          <!-- 3 boxes weird -->
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-6 col-12 one-number">
+              <div class="active-blue text-center box-three" [class.completed-box]="(profileStatus === '100%')">
+                <!-- arrow -->
+                <div class="arrow-position">
+                  <div class="arrow">
+                    <div class="curve"></div>
+                    <div class="point"></div>
+                  </div>
+                </div>
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Fill your Complete Profile</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a *ngIf="!(profileStatus == '100%'); else completed_profile"
+                  routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Build
+                  Your Profile</a>
+                <ng-template #completed_profile>
+                  <a routerLink="/student-dashboard/student-profile" class="custom-primary-btn button-position-box">Edit
+                    Information</a>
+                </ng-template>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 two-number">
+              <div class=" text-center box-three" [ngClass]="profileStatus === '100%' ? 'active-red': 'disabled-box'">
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Career Assessment</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a *ngIf="!tteTestTaken; else completed_test"
+                  [routerLink]="profileStatus === '100%' ? ['/student-dashboard/career-discovery-test'] : []"
+                  class="custom-primary-btn button-position-box">Take Career Assesment</a>
+                <ng-template #completed_test>
+                  <a routerLink="/student-dashboard/career-discovery-result"
+                    class="custom-primary-btn button-position-box">View Report</a>
+                </ng-template>
+              </div>
+              <!-- arrow -->
+              <div class="arrow-position-bottom">
+                <div class="arrow">
+                  <div class="curve"></div>
+                  <div class="point"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12 three-number">
+              <div class="text-center box-three" [ngClass]="tteTestTaken ? 'active-violet' : 'disabled-box'">
+                <img src="assets/images/dashboard-three/blue-icon.png" class="img-fluid image-size" alt="image">
+                <h6 class="font-size20 font-color33 font-weight400">Must Watch</h6>
+                <p class="font-size16 font-color-blue32 font-weight300">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing incididsunt
+                  ut labore et dolore
+                  magna aliqua.
+                  Ut enim ad minim veniam</p>
+                <a [routerLink]="tteTestTaken ? ['/student-dashboard/must-watch'] : []"
+                  class="custom-primary-btn button-position-box">Watch
+                  Videos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- my brief -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- video -->
+            <div class="col-lg-5 col-12">
+              <!-- video -->
+              <div class="white-border-video margin-bottom45">
+                <div class="embed-responsive embed-responsive-16by9 ">
+                  <video class="embed-responsive-item">
+                    <source src="assets/video/1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- information -->
+              <div class="information-bg">
+                <h3 class="font-size30 font-color33 font-weight300">Information</h3>
+                <hr>
+                <div class="information-txt">
+                  <p class="font-size16 font-color33 font-weight300"><span
+                      class="col-3 removePadding">10<sup>th</sup></span> <span class="col-3">2012</span>
+                    <span class="col-6">Amity International School</span></p>
+                  <p class="font-size16 font-color33 font-weight300"><span
+                      class="col-3 removePadding">12<sup>th</sup></span> <span class="col-3">2014</span>
+                    <span class="col-6">Amity International School</span></p>
+                </div>
+                <hr>
+                <div class="information-txt-two">
+                  <p class="font-size16 font-color33 font-weight300"><span class="b-bold">Gender
+                      <span class="normal-f">Female</span></span> <span class="b-bold">Age
+                      <span class="normal-f">23</span></span> <span class="b-bold">Contact <span
+                        class="normal-f">+91-940-252-5252</span></span> </p>
+                  <p class="remove-margin-bottom"><span class="b-bold">Email <span
+                        class="normal-f">amandasthurston@aol.com</span></span> </p>
+                </div>
+              </div>
+            </div>
+            <!-- text -->
+            <div class="col-lg-6 col-12 offset-1">
+              <h3 class="font-weight300 font-color33 font-size50 margin-bottom38">My Brief</h3>
+              <p class="font-color-orange  font-size25 font-weight300 margin-bottom45">Lorem ipsum dolor sit amet,
+                consectetur
+                adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore.</p>
+              <p class="font-size16 font-weight300 font-color33 margin-bottom45">Lorem ipsum dolor sit amet, consectetur
+                adipiscing
+                incidsunt ut labore et dolore magna aliqua. Ut enim ad minim veniam psum dolor sit amet, consectetur
+                adipiscing incidsunt ut labore et dolore magecter adipiscing incididsunt ut labore et dolore. Lorem
+                ipsum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore magna aliqua. </p>
+              <p class="font-size16 font-weight300 font-color33 margin-bottom45">Lorem ipsum dolor sit amet, consectetur
+                adipiscing
+                incidsunt ut labore et dolore magna aliqua. Ut enim ad minim veniam psum dolor sit amet, consectetur
+                adipiscing incidsunt ut labore et dolore magecter adipiscing incididsunt ut labore et dolore. Lorem
+                ipsum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore magna aliqua. </p>
+              <p class="font-size16 font-weight300 font-color33 margin-bottom45">Lorem ipsum dolor sit amet, consectetur
+                adipiscing
+                incidsunt ut labore et dolore magna aliqua. Ut enim ad minim veniam psum dolor sit amet, consectetur
+                adipiscing incidsunt ut labore et dolore magecter adipiscing incididsunt ut labore et dolore. Lorem
+                ipsum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore magna aliqua. </p>
+
+              <a href="#" class="custom-secondary-btn"> View Full Profile</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- your workstyles -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="white-box-work">
+                <h3 class="font-size30 font-weight300 font-color33">Your Workstyles</h3>
+                <div class="d-lg-flex align-items-center">
+                  <div class="col-lg-9 col-12 removePadding">
+                    <p class="font-size16 font-weight400 font-color33">Lorem ipsum dolor sit amet, consectetur
+                      adipiscing incidsunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p class="font-size16 font-weight300 font-color33">
+                      Ut enim ad minim veniam psum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore
+                      magecter adipiscing incididsunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur
+                      adipiscing incidsunt ut labore et dolore magna aliqua. Ut enim ad minim veniam psum dolor sit
+                      amet, consectetur adipiscing incidsunt ut labore et dolore magecter adipiscing incididsunt ut
+                      labore.
+                      et dolrem ipsum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam psum dolor sit amet, consectetur adipiscing incidsunt ut labore et dolore
+                      magecter adipiscing incididsunt ut labore et doeum dolor sit amet.</p>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                    <img src="assets/images/dashboard-three/dash-step-three.jpg" class="img-fluid" alt="image">
+                  </div>
+                </div>
+                <!-- charts  -->
+                <div>
+                  <p>charts to be added by parikshet with slider</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- career suggested -->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row margin-bottom95">
+            <div class="col-12">
+              <h3 class="font-size30 font-weight300 font-color33">Career Suggested by TTE</h3>
+            </div>
+          </div>
+          <!-- tte card -->
+          <div class="row">
+            <div class="col-xl-4 col-lg-6 col-12">
+              <div class="white-card-box-career text-center">
+                <img src="assets/images/dashboard-three/FakeDP.jpeg" class="img-fluid border-image-card" alt="images">
+                <p class="font-size30 font-weight400 font-color33">Creative</p>
+                <p class="font-size16 font-weight300 font-color33 max-width-l margin-tp-btm">Lorem ipsum dolor sit amet,
+                  consec tetur adipiscing
+                  elit</p>
+                <ul class="blue-border">
+                  <li><span class="p1 font-weight400">Salary</span><span class="p2">Rs.50k - Rs.75k</span></li>
+                  <li><span class="p1 font-weight400">Employment Opportunities</span><span class="p2">Rs. 2539</span>
+                  </li>
+                  <li><span class="p1 font-weight400">Minimum Education Required</span><span class="p2">Under
+                      Graduation</span></li>
+                </ul>
+                <div class="d-flex two-p-border border-right-blue">
+                  <div class="col-6 position-relative ">
+                    <p>Shortlist</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Add to Compare</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="custom-primary-btn">Know More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12">
+              <div class="white-card-box-career text-center">
+                <img src="assets/images/dashboard-three/FakeDP.jpeg" class="img-fluid border-image-card" alt="images">
+                <p class="font-size30 font-weight400 font-color33">Creative</p>
+                <p class="font-size16 font-weight300 font-color33 max-width-l margin-tp-btm">Lorem ipsum dolor sit amet,
+                  consec tetur adipiscing
+                  elit</p>
+                <ul class="blue-border">
+                  <li><span class="p1 font-weight400">Salary</span><span class="p2">Rs.50k - Rs.75k</span></li>
+                  <li><span class="p1 font-weight400">Employment Opportunities</span><span class="p2">Rs. 2539</span>
+                  </li>
+                  <li><span class="p1 font-weight400">Minimum Education Required</span><span class="p2">Under
+                      Graduation</span></li>
+                </ul>
+                <div class="d-flex two-p-border border-right-blue">
+                  <div class="col-6 position-relative ">
+                    <p>Shortlist</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Add to Compare</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="custom-primary-btn">Know More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12">
+              <div class="white-card-box-career text-center">
+                <img src="assets/images/dashboard-three/FakeDP.jpeg" class="img-fluid border-image-card" alt="images">
+                <p class="font-size30 font-weight400 font-color33">Creative</p>
+                <p class="font-size16 font-weight300 font-color33 max-width-l margin-tp-btm">Lorem ipsum dolor sit amet,
+                  consec tetur adipiscing
+                  elit</p>
+                <ul class="blue-border">
+                  <li><span class="p1 font-weight400">Salary</span><span class="p2">Rs.50k - Rs.75k</span></li>
+                  <li><span class="p1 font-weight400">Employment Opportunities</span><span class="p2">Rs. 2539</span>
+                  </li>
+                  <li><span class="p1 font-weight400">Minimum Education Required</span><span class="p2">Under
+                      Graduation</span></li>
+                </ul>
+                <div class="d-flex two-p-border border-right-blue">
+                  <div class="col-6 position-relative ">
+                    <p>Shortlist</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Add to Compare</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="custom-primary-btn">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- trending edieo-->
+      <div class="section-spacing">
+        <div class="container-fluid">
+          <div class="row margin-bottom49">
+            <div class="col-12">
+              <h3 class="font-size30 font-weight300 font-color33">Trending Edieo</h3>
+              <p class="font-size16 font-weight400 font-color-orange">Get inspired by Industry Giants</p>
+            </div>
+          </div>
+          <!-- repeat row -->
+          <div class="row">
+            <div class="col-12 margin-between-two">
+              <div class="d-flex align-items-center white-row-video">
+                <div class="col"><img src="assets/images/dashboard-three/video-thumbnail.jpg" class="img-fluid"
+                    alt="image">
+                </div>
+                <div class="col">
+                  <p class="name-one font-weight400">Sujeet Singh</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Executive Chef</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Radisson Hotel Group</p>
+                </div>
+                <div class="col d-flex justify-content-center"><a href="#" class="blue-round-btn"><i
+                      class="fa fa-play"></i></a></div>
+              </div>
+
+            </div>
+            <div class="col-12 margin-between-two">
+              <div class="d-flex align-items-center white-row-video">
+                <div class="col"><img src="assets/images/dashboard-three/video-thumbnail.jpg" class="img-fluid"
+                    alt="image">
+                </div>
+                <div class="col">
+                  <p class="name-one font-weight400">Sujeet Singh</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Executive Chef</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Radisson Hotel Group</p>
+                </div>
+                <div class="col d-flex justify-content-center"><a href="#" class="blue-round-btn"><i
+                      class="fa fa-play"></i></a></div>
+              </div>
+
+            </div>
+            <div class="col-12 margin-between-two">
+              <div class="d-flex align-items-center white-row-video">
+                <div class="col"><img src="assets/images/dashboard-three/video-thumbnail.jpg" class="img-fluid"
+                    alt="image">
+                </div>
+                <div class="col">
+                  <p class="name-one  font-weight400">Sujeet Singh</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Executive Chef</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Radisson Hotel Group</p>
+                </div>
+                <div class="col d-flex justify-content-center"><a href="#" class="blue-round-btn"><i
+                      class="fa fa-play"></i></a></div>
+              </div>
+
+            </div>
+            <div class="col-12 margin-between-two">
+              <div class="d-flex align-items-center white-row-video">
+                <div class="col"><img src="assets/images/dashboard-three/video-thumbnail.jpg" class="img-fluid"
+                    alt="image">
+                </div>
+                <div class="col">
+                  <p class="name-one font-weight400">Sujeet Singh</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Executive Chef</p>
+                </div>
+                <div class="col">
+                  <p class="name-one">Radisson Hotel Group</p>
+                </div>
+                <div class="col d-flex justify-content-center"><a href="#" class="blue-round-btn"><i
+                      class="fa fa-play"></i></a></div>
+              </div>
+
+            </div>
+            <!-- load more button -->
+            <div class="col-12 text-center margin-top50">
+              <a href="#" class="custom-secondary-btn">Load More</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- recommended video -->
+      <div class="section-spacing">
+        <div class="row margin-bottom49">
+          <div class="col-12">
+            <h3 class="font-size30 font-weight300 font-color33">Recommended Video</h3>
+          </div>
+        </div>
+        <!-- video slider -->
+
+        <div class="row">
+
+          <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"
+            *ngFor="let video of inspiringvideo | slice:0:4;i as index">
+            <div class=" embed-responsive embed-responsive-16by9 ">
+              <!-- remove this " video-container" class from here -->
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+
+                <vg-scrub-bar>
+                  <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                  <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+
+                <video id="" [vgMedia]="media" #media id="favideo{{i}}" [src]="video.video"
+                  [poster]="video.video_thumb">
+                </video>
+              </vg-player>
+
+            </div>
+
+            <!-- whitebox for video with heart -->
+            <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+              <p class="text-macro">{{video.video_name}}</p>
+              <p class="font-size14">{{video.designation}}</p>
+              <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.inactive]="!data.fav"
+                (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- step 3 ends -->

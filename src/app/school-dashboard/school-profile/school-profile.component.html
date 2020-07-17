@@ -1,0 +1,509 @@
+<app-header></app-header>
+
+<div class="container-fluid whiteBox p-0">
+  <div class="custom-tabset school-dashboard-profile">
+    <ngb-tabset [justify]="currentJustify">
+      <!-- personal info -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">PERSONAL INFO</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="row">
+
+
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <!-- heading -->
+              <div class="col-12 removePadding">
+                <h3 class="boxHeading">Basic Information</h3>
+              </div>
+              <!-- s1 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">College/
+                      Institute Name</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+
+                      <input type="text" class="form-control schoolFormControl">
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s2 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword"
+                      class="col-xl-6 col-form-label text-right customSchoollabel">Ownership</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+
+                      <select class="form-control">
+                        <option></option>
+                      </select>
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s3 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Permanent
+                      Address</label>
+                    <div class="col-xl-6 removePadding">
+                      <textarea class="form-control" rows="7"></textarea>
+                      <select class="form-control">
+                        <option>Country</option>
+                      </select>
+                      <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex">
+                        <!-- left -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 removePadding">
+                          <select class="form-control selectWidth">
+                            <option>State</option>
+                          </select>
+                        </div>
+                        <!-- right -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 removePadding">
+                          <input type="text" class="form-control" placeholder="Postal Code">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <!-- heading -->
+              <div class="col-12">
+                <h3 class="boxHeading">Contact Details</h3>
+              </div>
+              <!-- s1 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Landline
+                      Number</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 removePadding">
+                        <input type="text" class="form-control selectWidth">
+                      </div>
+                      <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 removePadding">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s2 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Mobile
+                      Number</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+
+                      <input type="text" class="form-control schoolFormControl">
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s3 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Email
+                      ID</label>
+                    <div class="col-xl-6 removePadding">
+
+                      <input type="email" class="form-control schoolFormControl">
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s4 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 text-right removePadding">
+                  <a href="#" class="blueLink ">Add more details</a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- button -->
+            <div class="col-12 d-flex justify-content-center">
+              <button class="greenBtn btn">Submit</button>
+            </div>
+
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <!-- about -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">ABOUT</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+
+        </ng-template>
+      </ngb-tab>
+      <!-- accounts -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">ACCOUNTS</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="row">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <!-- heading -->
+              <div class="col-12 removePadding">
+                <h3 class="boxHeading">Admin Information</h3>
+              </div>
+              <!-- s1 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword"
+                      class="col-xl-6 col-form-label text-right customSchoollabel">Username</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+
+                      <input type="text" class="form-control schoolFormControl">
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s2 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Email
+                      ID</label>
+                    <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                      <input type="email" class="form-control schoolFormControl">
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s3 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword"
+                      class="col-xl-6 col-form-label text-right customSchoollabel">Password</label>
+                    <div class="col-xl-6 removePadding">
+
+                      <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                          <input type="password" class="form-control schoolFormControl selectWidth">
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                          <button class="btn greenBtn removeRadius changeGreenBtn">Change Password</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- s4 -->
+              <div class="col-12 removePadding">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+                  <div class="form-group row customFormGroup">
+                    <label for="inputPassword" class="col-xl-6 col-form-label text-right customSchoollabel">Account
+                      Type</label>
+                    <div class="col-xl-6 removePadding">
+                      <label class="customSchoollabel customPaddTop">Administrator</label>
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <!-- heading -->
+              <div class="col-12 removePadding">
+                <h3 class="boxHeading">Other Accounts</h3>
+              </div>
+
+              <div class="col-12 removePadding">
+
+                <div class="borderSchoolAccount">
+                  <!-- s1 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s2 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s3 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s4 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s5 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s6 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+                  <!-- s7 -->
+                  <div class="col-12 d-flex borderSchoolAccountTwo">
+                    <div class="col-6">
+                      <p class="usernameAccount">Username</p>
+                      <p class="emailAccount">email@email.com</p>
+                      <p class="mobileAccount">+91-999-999-9999</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p class="admissionAccount">Admission Department</p>
+                      <p class="createAccount">Created on : 12/11/2018</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- account create -->
+              <div class="col-12 text-right">
+                <a href="#" class="manageAccountLink" data-toggle="modal" data-target="#myModal">Create New Account</a>
+              </div>
+
+              <!-- create account modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title modalTitle">Create New Account</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+                          <!-- s1 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Username</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <input type="text" class="form-control schoolFormControl">
+
+                              </div>
+                            </div>
+                          </div>
+                          <!-- s2 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Email ID</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <input type="email" class="form-control schoolFormControl">
+
+                              </div>
+                            </div>
+                          </div>
+                          <!-- s3 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Password</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <input type="password" class="form-control schoolFormControl">
+
+                              </div>
+                            </div>
+                          </div>
+                          <!-- s4 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Confirm Password</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <input type="password" class="form-control schoolFormControl">
+
+                              </div>
+                            </div>
+                          </div>
+                          <!-- s5 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Type of Account</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <label class="checkbox-inline"><input type="checkbox" value="">Admin</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="">Sub-Admin</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- s6 -->
+                          <div class="col-12">
+
+                            <div class="form-group row customFormGroup">
+                              <label for="inputPassword"
+                                class="col-xl-6 col-form-label text-right customSchoollabel">Roles and
+                                Responsibilities</label>
+                              <div class="col-xl-6 d-xl-flex d-lg-flex d-md-flex removePadding">
+                                <select class="form-control">
+                                  <option></option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- submit btn -->
+                          <div class="col-12 d-flex justify-content-center">
+                            <button class="greenBtn">DONE</button>
+                          </div>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>

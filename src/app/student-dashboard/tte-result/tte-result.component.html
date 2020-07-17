@@ -1,0 +1,427 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <div class="dashboard-three custom-dashboard-three"> 
+
+        <!-- == start main code for body == --> 
+        <!-- search box -->
+        <!-- <div class="container-fluid whiteBox">
+    <div class="row">
+      <div class="col-12 d-flex"> 
+        <p class="headingTwo headingTwoAdjust col-xl-1 col-lg-1 col-md-2 col-sm-12 col-12">Search
+          for </p>
+        <div class="dropdown collegeOrangeTop  col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <button class="btn btn-secondary dropdown-toggle drpDownBtn" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Colleges
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          </div> 
+        </div>
+        <div class="form-group  col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
+          <input type="text" class="form-control customSearch" placeholder="Search" /> </div>
+      </div>
+    </div>
+  </div> -->
+
+        <!-- thriving index -->
+        <div class="container-fluid">
+            <!-- box heading -->
+            <div class="row justify-content-center align-items-center section-spacing">
+                <div class="col-lg-12">
+                    <h3 class="font-color33 page_black">The Thriving Index Career Report</h3>
+                    
+                    <div class="sub_heading">
+                        <div class="sub_title">Congratulations!</div>
+                        <p class="openSans_light">Your Thriving Career Report is ready. It is time to take the next step towards a promising future!</p>
+                    </div>
+
+                    <div class="sub_heading_bottom page_light_grey openSans_light"> 
+                        With the power of information that is at your fingertips, you can now make an informed decision about your career. 
+                        <br><br>It will help you identify a career path and choose an educational institution that empowers you to chase your dreams.
+                    </div>                      
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center section-spacing section_two">
+                <div class="col-lg-12">
+                    <h3 class="title_short page_black">Benefits of career report</h3>
+                </div>
+                <div class="col-sm-6">
+                    <div class="inner">
+                        <div class="numbers page_light_grey">01</div>
+                        <div class="benifits_detail page_light_grey openSans_light">
+                            The report provides you feedback on your dominant Work Styles based on your dominant strengths as well as possible career pathways. Based on your strengths, the report helps map your career suitability across 24 Occupational Clusters and will then provide you the top 5 Occupational Clusters suitable for you.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="inner">
+                        <div class="numbers page_light_grey">02</div>
+                        <div class="benifits_detail page_light_grey openSans_light">
+                            Keep in mind that this report provides career recommendations based on your strengths profile only and it is not a measure of your ability, skills or aptitude. Your final decision on which career to pursue will need to consider other factors such as your skills, ability, macro job conditions, wages, availability of jobs, work conditions, educational qualifications etc.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="inner">
+                        <div class="numbers page_light_grey">03</div>
+                        <div class="benifits_detail page_light_grey openSans_light">
+                            While this report provides an overview of possible career options, it cannot include all possible jobs that exist (or will exist) across the globe. This is an exploratory tool for you to better understand and appreciate your strengths and orientations so you can prepare for the career(s) that you feel most passionate about.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="inner">
+                        <div class="numbers page_light_grey">04</div>
+                        <div class="benifits_detail page_light_grey openSans_light">
+                            Whether you are just starting out in your career, thinking about a career change, or considering higher education options, you will gain tremendous insights into your strengths and most suitable careers based on this report.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center align-items-center section-spacing section_three">
+                <div class="col-lg-12">
+                    <h3 class="title_short page_black">Your work style</h3>
+                </div>
+                <div class="col-lg-12 work_style_container"> 
+                    <div class="swiper-container carousel graphy circle-slider" [swiper]="circleSlideConfig">
+                    <div class="swiper-wrapper work_style_wrapper" style="transform: translate3d(-84px, 0px, 0px) !important;transition-duration: 0ms !important;">
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[0].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[0].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Incisive</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[1].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[1].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Community</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[2].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[2].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Innovative</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[3].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[3].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Enterprising</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[4].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[4].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Relational</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[5].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[5].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Persuasive</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[6].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[6].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Practical</div> 
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="graph"> 
+                        <circle-progress
+                          [percent]="normedFactors[7].value * 100"
+                          [maxPercent] = 100
+                          [radius]="70"
+                          [outerStrokeWidth]="23"
+                          [innerStrokeWidth]="20"
+                          [outerStrokeColor]="'#FD7272'"
+                          [innerStrokeColor]="'#f7f2f2'"
+                          [animation]="true"
+                          [animationDuration]="100"
+                          [showTitle] = false
+                          [showUnits] = false
+                          [showSubtitle] = false
+                          [responsive] = true
+                          [space] = -20
+                        ></circle-progress>
+                        <div class="graph_number page_black">{{normedFactors[7].value * 10}}</div>
+                        <div class="graph_bottom page_light_grey openSanse_ragular">Specialist</div> 
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-prev arrow_btns_up">
+                    <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+                </div>
+                <div class="swiper-button-next arrow_btns_up">
+                    <img src="assets/images/static/white-right.svg" alt="image" class="imageLeftIcon">
+                </div>
+                </div>
+                </div>                
+                <div class="col-md-2 custom_radio">
+                    
+                        <p (change)="workstyleInfo('incisive', $event)">
+                          <input type="radio" id="check1" class="rd_btn" name="radio-group" (change)="workstyleInfo('incisive', $event)" checked>
+                          <label for="check1" class="page_light_grey openSans_light">Incisive</label>
+                        </p>
+                        <p (change)="workstyleInfo('community', $event)">
+                          <input type="radio" id="check2" class="rd_btn" name="radio-group" (change)="workstyleInfo('community', $event)">
+                          <label for="check2" class="page_light_grey openSans_light">Community</label>
+                        </p>
+                        <p (change)="workstyleInfo('innovative', $event)">
+                          <input type="radio" id="check3" class="rd_btn" name="radio-group" (change)="workstyleInfo('innovative', $event)">
+                          <label for="check3" class="page_light_grey openSans_light">Innovative</label>
+                        </p>
+                        <p (change)="workstyleInfo('enterprising', $event)">
+                            <input type="radio" id="check4" class="rd_btn" name="radio-group" (change)="workstyleInfo('enterprising', $event)">
+                            <label for="check4" class="page_light_grey openSans_light">Enterprising</label>
+                          </p>
+                    
+                </div>
+                <div class="col-md-2 custom_radio">
+                    
+                        <p (change)="workstyleInfo('relational', $event)">
+                          <input type="radio" id="check5" class="rd_btn" name="radio-group" (change)="workstyleInfo('relational', $event)">
+                          <label for="check5" class="page_light_grey openSans_light">Relational</label>
+                        </p>
+                        <p (change)="workstyleInfo('persuasive', $event)">
+                          <input type="radio" id="check6" class="rd_btn" name="radio-group" (change)="workstyleInfo('persuasive', $event)">
+                          <label for="check6" class="page_light_grey openSans_light">Persuasive</label>
+                        </p>
+                        <p (change)="workstyleInfo('practical', $event)">
+                          <input type="radio" id="check7" class="rd_btn" name="radio-group" (change)="workstyleInfo('practical', $event)">
+                          <label for="check7" class="page_light_grey openSans_light">Practical</label>
+                        </p>
+                        <p (change)="workstyleInfo('specialist', $event)">
+                            <input type="radio" id="check8" class="rd_btn" name="radio-group" (change)="workstyleInfo('specialist', $event)">
+                            <label for="check8" class="page_light_grey openSans_light">Specialist</label>
+                          </p>
+                      
+                </div>
+                <div class="col-md-8 custom_radio_content">
+                    <h3 class="title_short page_dark_grey work_style_heading">Expected work environment</h3>
+                    <div class="work_style_content page_light_grey openSans_light textFour">
+                        {{workstyle.info}}
+                    </div>
+                </div>    
+                <div class="col-md-12 possible_role_box">
+                    <h3 class="title_short page_dark_grey work_style_heading">Possible roles</h3>
+                    <div class="possible_role">
+                        <div class="possible_role_single openSanse_semiBold" *ngFor="let roles of workstyle.roles">
+                            {{roles}}
+                        </div>
+                        <!-- <div class="possible_role_single openSanse_semiBold">Media & Broadcasting</div>
+                        <div class="possible_role_single openSanse_semiBold">Industrial Design & Architecture</div> -->
+                    </div>
+                </div>            
+            </div>
+
+            <div class="section-spacing section_fourth">                
+                    <!-- box heading -->
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="title_short page_black">Career suggestions for you</h3>
+                        </div>                       
+                    </div>
+                    <!-- slick slider -->
+                    <div class="row sliderMarginTop">
+                        <!-- slider -->
+                        <div class="col-12" *ngIf="careerDataVar">
+                            <div class="swiper-container" [swiper]="careeerConfig">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper career_suggestion_wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide career-slide"
+                                        *ngFor="let careerSlide of occupationArray; i as index">                                                    
+                                        <!-- new card layout  -->
+                                        <div class="white-card-box-career text-center">
+                                            <div class="career_single_header openSanse_ragular">
+                                                {{careerSlide.name}} 
+                                            </div>
+                                            <div class="career_img">
+                                                <img src="{{careerSlide.career_icon}}">
+                                            </div>
+                                            <div class="career_detail openSanse_semiBold grey">
+                                                Average Fees: {{careerSlide.avgfess}}
+                                                <br><br>
+                                                Undergraduate Programs: {{careerSlide.up}} <br>
+                                                No. of Colleges: {{careerSlide.nofcollege}}
+                                                <br><br>
+                                                Minimum qualifications: <br>
+                                                10+2 or Equivalent
+                                            </div>
+                                            <div class="career_btn">
+                                                <a [routerLink]="['/course', careerSlide.slug]" class="openSanse_semiBold">KNOW MORE</a>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev arrow_btns">
+                                    <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+                                </div>
+                                <div class="swiper-button-next arrow_btns">
+                                    <img src="assets/images/static/white-right.svg" alt="image" class="imageLeftIcon">
+                                </div>
+                            </div>
+                            <!-- search more -->
+                            <!-- <div class="col-12 d-flex marginTop2">
+                                <div class="col-4"></div>
+                                <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend pinkHeight"> <span class="input-group-text pinkSearch"
+                                                id="basic-addon1"><i class="fa fa-search"></i></span> </div>
+                                        <input type="text" class="form-control borderPinkRadius pinkSearch height44"
+                                            placeholder="Search more career options" aria-label="Username"
+                                            aria-describedby="basic-addon1">
+                                    </div>
+                                    <p class="text-center poweredText">Power by Talent Enterprise UAE</p>
+                                </div>
+                                <div class="col-4"></div>
+                            </div> -->
+                        </div>
+                    </div>                
+            </div>
+
+           
+
+            
+
+            <!-- time line -->
+            
+
+
+            
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>

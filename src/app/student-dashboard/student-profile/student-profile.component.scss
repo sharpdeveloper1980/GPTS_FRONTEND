@@ -1,0 +1,329 @@
+.video {
+  box-shadow: 1px 1px 12px 0px rgba(35, 35, 35, 0.62);
+  height: 400px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: block;
+  background: black;
+  object-fit: contain;
+}
+
+.form-control[readonly] {
+  background: white;
+}
+
+.activitiesHeadOne {
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.activitiesHeadTwo {
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 2em;
+}
+
+.activitiesPara {
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13.5px;
+  text-rendering: geometricPrecision;
+  margin-bottom: 1.5em;
+}
+
+.customFormControl {
+  background: #f8f8f8;
+  border-radius: 0;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.greenRoundBtn {
+  background: #46c38e;
+  border-radius: 21px;
+  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  padding: 6px 50px;
+}
+
+.uniLogoSop {
+  width: 82px;
+  image-rendering: auto;
+}
+
+.goldStar {
+  color: #facb3b;
+  margin-right: 5px;
+}
+
+.greyStar {
+  color: #979797;
+}
+
+.goldRound {
+  color: white;
+  background: #c4a76e;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 11px;
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+
+.sopName {
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 2px;
+  text-rendering: geometricPrecision;
+  position: relative;
+  padding-top: 8px;
+  margin-bottom: 0px;
+}
+
+.sopLocation {
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7em;
+  text-rendering: geometricPrecision;
+}
+
+.rowBorder {
+  border: 1px solid #d4d4d4;
+  margin-bottom: -1px;
+}
+
+.rightLogo {
+  border-right: 1px solid #d4d4d4;
+}
+
+.hollowGreenBtn {
+  position: relative;
+  top: 30px;
+
+}
+
+.custom-primary-btn {
+  margin-top: 1em;
+}
+
+.greyBgTwo {
+  background: #f6f6f6;
+  color: #546170;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  padding: 2em;
+}
+
+.customFormTwo {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  color: #546170;
+  text-rendering: geometricPrecision;
+  border: 1px solid #dadada;
+  border: 0;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 30px;
+}
+
+.remove-padding {
+  padding: 0;
+}
+
+.greyHardBtn {
+
+  color: #ffffff;
+  border-radius: 21px;
+  padding: 9px 45px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  font-size: 0.7em;
+  margin-top: 20px;
+  background: #bebebe;
+}
+
+.greyHollowBtn {
+  color: #546170;
+  border: 1px solid #546170;
+  border-radius: 21px;
+  padding: 9px 45px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  font-size: 0.7em;
+}
+
+.redRoundBtn {
+  color: #ffffff;
+  border-radius: 21px;
+  padding: 9px 45px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  font-size: 0.7em;
+  margin-top: 20px;
+  background: #f25e5e;
+}
+
+.video-button {
+  margin-top: 20px;
+
+  button {
+    margin-top: 0;
+    padding: 9px 45px;
+    height: 36px;
+    margin: 0 10px;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.default-sop {
+  .sopName {
+    padding-top: 0;
+    margin: 0 auto;
+    font-weight: 700;
+  }
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #546170;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-from .custom-checkbox-wrapper .multiple-checkbox-wrapper {
+  width: 56%;
+  justify-content: space-between;
+}
+
+.additionalMarginTp {
+  margin-top: 32px;
+}
+
+.tableHeading {
+  font-family: 'Open Sans', sans-serif;
+  color: #546170;
+  font-size: 13.5px;
+}
+
+.tableData {
+  font-family: 'Open Sans', sans-serif;
+  color: #546170;
+  font-size: 14px;
+}
+
+.checkRight {
+  margin-right: 8px;
+}
+
+.activity-form .custom-input-wrapper input {
+  width: 100%;
+  margin-left: auto;
+  padding: 5px 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 0;
+  height: 38px;
+  margin-bottom: 0px;
+}
+
+.checkbox-container {
+  margin-right: 16%;
+}
+
+.table thead th {
+  vertical-align: middle;
+    border-bottom: 0px solid #dee2e6;
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+}
+
+.activity-form {
+  display: block;
+  margin-top: 2em;
+}
+
+thead {
+  background: #f6faff;
+}
+
+.box-shadow-new {
+  box-shadow: 0 0 8px 0 rgba(44, 41, 41, 0.21);
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.blurred-box {
+  height: 50vh;
+  filter: blur(10px);
+
+  .dummy-box {
+    border-width: 4px;
+  }
+}
+
+.soon-info-wrapper {
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-secondary-btn {
+  margin-top: 1em;
+}
+
+.custom-input-two-wrapper {
+  flex-wrap: inherit;
+}
+
+.edit_ico {
+    width: 25px;
+}
+.eye_ico {
+    width: 25px;
+}
+.sop_ico {
+    margin-top: 30px;
+}
+
+.custom_tab{
+    background: #f8f8f8;
+    padding: 30px;
+    margin-top: 30px;
+}
+.sop_select {
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    padding: 3px 18px;
+    margin-right: 14px;
+    width: 100%;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    //appearance:none;
+}
+

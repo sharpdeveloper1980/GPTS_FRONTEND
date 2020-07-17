@@ -1,0 +1,345 @@
+<app-header></app-header>
+
+<!-- banner -->
+<div class="theme-three">
+
+  <div class="section-padding remove-padding-top  bloglist-bubble">
+    <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12">        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <!-- <li class="nav-item">
+            <a class="nav-link" id="home-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="home" aria-selected="true">RECENT</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="profile" aria-selected="false">POPULAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="contact" aria-selected="false">FEATURED</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!-- <div class="tab-pane fade" id="recent" role="tabpanel" aria-labelledby="home-tab">
+           <div class="row">
+              <div *ngFor="let popular of popularBlogs; let odd = odd" [ngClass]="odd ? 'single_blog' : 'two_column_blog'" class="col-md-3">
+                
+                
+                <div *ngIf="odd"  [ngClass]="odd ? 'full_bg' : 'two_columns'" class="blog_card" [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      JUNE 20, 2020
+                    </div>
+                    <div class="blog_author blog_short">
+                      {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+            
+                <div *ngIf="!odd" [ngClass]="odd ? 'full_bg' : 'two_columns'" class="blog_card">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      {{popular.created_at}}
+                    </div>
+                    <div class="blog_author blog_short">
+                      {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+                 
+
+                <div *ngIf="!odd" class="blog_card two_columns half_bg half_right_section" [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">                  
+                </div>    
+                            
+                <div *ngIf="!odd" class="blog_card two_columns half_bg half_bg_left"  [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">                  
+                </div>
+                <div *ngIf="!odd" class="blog_card two_columns half_right_section">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      {{popular.created_at}}
+                    </div>
+                    <div class="blog_author blog_short">
+                     {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="tab-pane fade" id="popular" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+              <div *ngFor="let popular of popularBlogs; let odd = odd" [ngClass]="odd ? 'single_blog' : 'two_column_blog'" class="col-md-3">
+                
+                
+                <div *ngIf="odd"  [ngClass]="odd ? 'full_bg' : 'two_columns'" class="blog_card" [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      JUNE 20, 2020
+                    </div>
+                    <div class="blog_author blog_short">
+                      {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+            
+                <div *ngIf="!odd" [ngClass]="odd ? 'full_bg' : 'two_columns'" class="blog_card">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      {{popular.created_at}}
+                    </div>
+                    <div class="blog_author blog_short">
+                      {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+                 
+
+                <div *ngIf="!odd" class="blog_card two_columns half_bg half_right_section" [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">                  
+                </div>    
+
+                <div *ngIf="!odd" class="blog_card two_columns half_bg half_bg_left"  [ngStyle]="{'background-image': 'url(' + popular.thumb + ')'}">                  
+                </div>
+                <div *ngIf="!odd" class="blog_card two_columns half_right_section">
+
+                  <div class="blog_content">
+                    <div class="blog_date blog_short">
+                      {{popular.created_at}}
+                    </div>
+                    <div class="blog_author blog_short">
+                     {{popular.author_name}} 
+                    </div>
+                    <div class="blog_title">
+                      {{popular.title}}
+                    </div>
+                    <div class="blog_arrow">
+                      <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="tab-pane show active" id="popular" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+              <ng-container  *ngFor="let popular of popularBlogs; let i = index;">
+                <div *ngIf="poparr1.indexOf(i) > -1" class="col-md-3 two_column_blog">
+                  
+                  <ng-container *ngIf="poparr1.indexOf(i) > -1">
+                    <div class="blog_card two_columns">
+                      <a class="blog-link" [routerLink]="'/bloglist/'+popularBlogs[i].slug">
+                      <div class="blog_content">
+                        <div class="blog_date blog_short">
+                          {{popularBlogs[i].created_at}}
+                        </div>
+                        <div class="blog_author blog_short">
+                          {{popularBlogs[i].author_name}}  
+                        </div>
+                        <div class="blog_title">
+                          {{popularBlogs[i].title}}
+                        </div>
+                        <div class="blog_arrow">
+                          <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="blog_card two_columns half_bg half_right_section" [ngStyle]="{'background-image': 'url(' + popularBlogs[i].thumb + ')'}">                  
+                    </div> 
+                  </ng-container>
+
+                  <ng-container *ngIf="popularBlogs.length > i+1">
+                  <ng-container *ngIf="poparr2.indexOf(i+1) > -1">
+                    <div class="blog_card two_columns half_bg half_bg_left" [ngStyle]="{'background-image': 'url(' + popularBlogs[i+1].thumb + ')'}">                  
+                    </div>
+                    <div class="blog_card two_columns half_right_section">
+                      <a class="blog-link" [routerLink]="'/bloglist/'+popularBlogs[i+1].slug">
+                      <div class="blog_content">
+                        <div class="blog_date blog_short">
+                          {{popularBlogs[i+1].created_at}}
+                        </div>
+                        <div class="blog_author blog_short">
+                          {{popularBlogs[i+1].author_name}} 
+                        </div>
+                        <div class="blog_title">
+                          {{popularBlogs[i+1].title}}
+                        </div>
+                        <div class="blog_arrow">
+                          <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                        </div>
+                      </div>
+                    </a>
+                    </div>
+                  </ng-container>
+                  </ng-container>
+                </div>
+
+              
+                <div class="col-md-3 single_blog" *ngIf="poparr3.indexOf(i) > -1">
+                  <div class="blog_card full_bg" [ngStyle]="{'background-image': 'url(' + popularBlogs[i].thumb + ')'}">
+                    <a class="blog-link" [routerLink]="'/bloglist/'+popularBlogs[i].slug">
+                    <div class="blog_content">
+                      <div class="blog_date blog_short">
+                         {{popularBlogs[i].created_at}}
+                      </div>
+                      <div class="blog_author blog_short">
+                        {{popularBlogs[i].author_name}} 
+                      </div>
+                      <div class="blog_title">
+                        {{popularBlogs[i].title}}
+                      </div>
+                      <div class="blog_arrow">
+                        <a href="#"><img src="assets/images/bloglist/arrow_white.png"></a>
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="contact-tab">
+             <div class="row">
+              <ng-container  *ngFor="let blogCard of blogsCarousel; let j = index">
+                <div *ngIf="arr1.indexOf(j) > -1" class="col-md-3 two_column_blog">
+                  
+                  <ng-container *ngIf="arr1.indexOf(j) > -1">
+                    <div class="blog_card two_columns">
+
+                    <a class="blog-link" [routerLink]="'/bloglist/'+blogCard.slug">
+                      <div class="blog_content">
+                        <div class="blog_date blog_short">
+                          {{blogCard.created_at}} 
+                        </div>
+                        <div class="blog_author blog_short">
+                          {{blogCard.author_name}}  
+                        </div>
+                        <div class="blog_title">
+                          {{blogCard.title}}
+                        </div>
+                        <div class="blog_arrow">
+                          <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                        </div>
+                      </div>
+                       </a>
+                    </div>
+                    <div class="blog_card two_columns half_bg half_right_section" [ngStyle]="{'background-image': 'url(' + blogCard.thumb + ')'}">                  
+                    </div> 
+                    
+                  </ng-container>
+
+                  <ng-container *ngIf="blogsCarousel.length >= j+1">
+                  <ng-container *ngIf="arr2.indexOf(j+1) > -1">
+                    <div class="blog_card two_columns half_bg half_bg_left" [ngStyle]="{'background-image': 'url(' + blogsCarousel[j+1].thumb + ')'}">                  
+                    </div>
+                  
+                    <div class="blog_card two_columns half_right_section">
+                      <a class="blog-link" [routerLink]="'/bloglist/'+blogsCarousel[j+1].slug">
+                      <div class="blog_content">
+                        <div class="blog_date blog_short">
+                          {{blogsCarousel[j+1].created_at}}  
+                        </div>
+                        <div class="blog_author blog_short">
+                          {{blogsCarousel[j+1].author_name}} 
+                        </div>
+                        <div class="blog_title">
+                          {{blogsCarousel[j+1].title}}
+                        </div>
+                        <div class="blog_arrow">
+                          <a href="#"><img src="assets/images/bloglist/arrow.png"></a>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                  </ng-container>
+                  </ng-container>
+                </div>
+
+              
+                <div class="col-md-3 single_blog" *ngIf="arr3.indexOf(j) > -1">
+                  <div class="blog_card full_bg" [ngStyle]="{'background-image': 'url(' + blogCard.thumb + ')'}">
+                    <a class="blog-link" [routerLink]="'/bloglist/'+blogCard.slug">
+                    <div class="blog_content">
+                      <div class="blog_date blog_short">
+                         {{blogCard.created_at}} 
+                      </div>
+                      <div class="blog_author blog_short">
+                        {{blogCard.author_name}} 
+                      </div>
+                      <div class="blog_title">
+                        {{blogCard.title}}
+                      </div>
+                      <div class="blog_arrow">
+                        <a href="#"><img src="assets/images/bloglist/arrow_white.png"></a>
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <!-- pagination -->
+            <div class="custom-container section-padding remove-padding-top">
+              <div class="col-12 d-flex justify-content-center">
+                <!-- <ngb-pagination (pageChange)="getBlogs(page)" [(pageSize)]="pageSize" [(page)]="page" [collectionSize]="blogCount"
+                  [directionLinks]="false">
+                  <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+                </ngb-pagination> -->
+                <ul class="pagination">
+                  <ng-container *ngFor="let blog of blogFor;">
+                   <li class="page-item ng-star-inserted" [ngClass]="page == blog ? 'active' : ''">
+                      <a style="cursor: pointer;" class="page-link ng-star-inserted" (click)="getBlogs(blog)">
+                        {{blog}}
+                      </a>
+                   </li>
+                  </ng-container>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+
+</div> <!-- theme three ends -->

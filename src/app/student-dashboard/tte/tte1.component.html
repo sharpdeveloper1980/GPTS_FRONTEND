@@ -1,0 +1,95 @@
+<!-- main page starts -->
+<div id="page-content-wrapper"> 
+
+    <!-- thriving index box -->
+    <div class="container"> 
+        <!-- box heading -->
+        <div class="row headingCareer">
+            <div class="col-md-6">
+                <div class="page_title">
+                    <p class="headingOne text-uppercase leagueBold">Hi, How are you?</p>
+                    <div class="header_sub openSans_light">You have begun your career journey with a step in the right direction</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="title_right">
+                    <div class="bell">
+                        <img src="assets/images/tte/bell.png">
+                        <div class="dot"></div>
+                    </div>
+                    <div class="search">
+                        <input type="text">
+                        <img src="assets/images/tte/search.png">
+                    </div>                    
+                </div>
+            </div>            
+        </div>
+        <div class="row section_two">
+            <div class="col-md-12">
+                <p class="big openSanse_semiBold">
+                    Life is full of possibilities when you have the freedom make real decisions that affect your future. With the power bestowed upon you by the Career Discovery and Acceleration Programme.
+                </p>
+                <p class="short openSans_light">
+                    Today, your life changes, you will be joining a league of exceptional minds that will conquer the world. ‘The Career Discovery Test’ will swing open the gates of the finest career options and educational institutions for you.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section_three"> 
+        <div class="row" style="padding-left: 30px; padding-right: 30px;">
+            <div class="col-md-12">
+                <div class="grey_box_title">                
+                    Discovering your passion is discovering a part of your soul               
+                </div>
+                <div class="grey_box_sub">
+                    The Thriving Index® (TI) is an exploratory assessment which helps you discover your personal strengths, blind-spots and motivators.
+                </div>
+            </div>
+        </div>
+        <div class="row box_grid">
+            <div class="col-md-3">
+                <div class="grid_icon">
+                    <img src="assets/images/tte/list.png">
+                    <div class="grid_title openSanse_semiBold">
+                        Take the career discovery test
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="grid_icon">
+                    <img src="assets/images/tte/strength.png">
+                    <div class="grid_title openSanse_semiBold">
+                        Identify your strengths
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="grid_icon">
+                    <img src="assets/images/tte/arrow.png">
+                    <div class="grid_title openSanse_semiBold">
+                        Download your detailed report
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="grid_icon">
+                    <img src="assets/images/tte/best.png">
+                    <div class="grid_title openSanse_semiBold">
+                        Get best fit career options
+                    </div> 
+                </div>
+            </div>
+            <div class="custom_check">
+              <label (change)="termsCheck($event)"><input type="checkbox" id="defaultCheck" name="example2">
+              <label for="defaultCheck" class="openSans_light">I agree to the Terms and Conditions and Privacy Policy</label></label>
+            </div>            
+        </div>
+    </div>
+    <div class="submit_btn">
+        <button *ngIf="tteRegisterVar" class="openSanse_semiBold"  [disabled]="!termsVar"  (click)="tteNewUser()">GET STARTED</button>
+        <button *ngIf="!tteRegisterVar" class="openSanse_semiBold"  id="ttetaketest" [disabled]="!termsVar" type="button" (click)="tteTestRedirect()">{{ssoBttonText}}</button>
+    </div>
+    
+
+</div>

@@ -1,0 +1,346 @@
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(assets/fonts/roboto/Roboto-Medium.ttf);
+  }
+  @font-face {
+    font-family: Roboto-Regular;
+    src: url(assets/fonts/roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: Roboto-Light;
+    src: url(assets/fonts/roboto/Roboto-Light.ttf);
+  }
+  @font-face {
+    font-family: League-Spartan;
+    src: url(assets/fonts/league_spartan/LeagueSpartan-Bold.otf);
+  }
+  @font-face {
+    font-family: openSans-semiBold;
+    src: url(assets/fonts/openSans/OpenSans-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: openSans-Ragular;
+    src: url(assets/fonts/openSans/OpenSans-Regular.ttf);
+  }
+  @font-face {
+    font-family: openSans-Light;
+    src: url(assets/fonts/openSans/OpenSans-Light.ttf);
+  }
+
+  .roboto_medium {
+    font-family: Roboto-Medium;
+  }
+  .roboto_regular {
+    font-family: Roboto-Regular;
+  }
+  .roboto_light {
+    font-family: Roboto-Light;
+  }
+  .openSans_light {
+    font-family: openSans-Light;
+  }
+  .openSanse_ragular {
+    font-family: openSans-Ragular;
+  }
+  .openSanse_semiBold {
+    font-family: openSans-semiBold;
+  }
+  
+
+$leagueSpartanBold:'League Spartan Bold';
+.leagueBold{font-family: $leagueSpartanBold!important;}
+.greenText{
+    color: #2b5204;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-top: 1em;
+    margin-bottom: 0px;
+}
+
+.careerParaOne{
+    font-size: 0.8em;
+    color: #000000;
+    font-weight: 400;
+}
+
+.careerParaTwo{
+    background: #eceff3;
+    padding: 1em;
+    position: relative;    
+}
+
+.careerParaSpan{
+    border-left: 8px solid #8a8a8a;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+.careerParaThree{
+    display: block;
+    font-size: 0.84em;
+    padding-top: 1em;
+    margin-bottom: 0;
+    color: #333333;
+}
+
+.careerParaFour{
+    font-size: 0.84em;
+    color: #333333;
+}
+
+.blokRight{
+    padding-right: 5px;
+}
+
+.quoImg{
+    width: 50px;
+    left: 27%;
+    right: auto;
+    top: -17px;
+}
+
+.careerParaFive{
+    color: #333333;
+    font-size: 1.3em;
+    margin-top: 2em;
+
+}
+
+.headingCareer {
+    padding-top: 8px;
+    font-size: 1.2em;
+}
+
+.careerParaSpan~strong {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.whiteBocx{
+    box-shadow: 2px 3px 32px -15px black;
+    margin-top: 3em;
+    padding: 2em;
+    padding-bottom: 4em;
+    margin-bottom: 2em;
+}
+
+.careerParaSix{
+    color: #000000;
+    font-size: 1.1em;
+    padding-top: 2em;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.careerParaSeven{
+    color: #000000;
+    font-size: 0.9em;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+.careerIconText{
+    font-size: 0.8em;
+    color: #000000;
+    font-weight: 500;
+}
+
+.iconImageCareer{
+    width: 45px;
+    margin-top: 3em;
+    padding-bottom: 15px;
+}
+
+.checkFont{
+    font-size: 0.9em;
+    padding-left: 15px;
+    margin-top: 2em;
+}
+
+.greenBtnCareer{
+    padding: 10px 60px;
+    background: #46c38e;
+    border-radius: 30px;
+    color: white;
+    display: block;
+    width: 300px;
+    margin: 58px auto;
+}
+
+.checkFont input[type="checkbox"] {
+    margin-right: 1em;
+    margin-left: 2em;
+}
+
+/*custom css start*/
+@media all and (max-width: 768px) and (min-width: 540px) {
+    .col-md-3 {
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .page_title {
+        margin-top: 70px;
+    }
+    .title_right {
+        margin-top: -150px;
+    }
+    .grid_icon {
+        margin-bottom: 40px;
+    }
+    .custom_check {
+        margin-top: 0px !important;
+
+    }
+}
+@media only screen and (max-width: 480px) {
+    .title_right {
+        margin-top: -170px !important;
+    }
+}
+
+
+
+
+.page_title {
+    background: #273055;
+    color: white;
+    padding: 11px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.headingOne {
+    color:white;
+    font-size: 20px;
+    margin-bottom: 11px;
+}
+.header_sub {
+    font-size: 13px;
+    color: #bbbbbb;
+}
+.search {
+    float: right;
+    position: relative;
+    margin-right: 30px;
+}
+.search input {
+    background: #F5F5F5;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 3px 17px;
+    padding-right: 34px;
+}
+.search img {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 16px;
+}
+.bell {
+    float: right;
+    position: relative;
+}
+.bell img {
+    width: 20px;
+}
+.dot {
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    border: 1px solid white;
+}
+.big {
+    color: #747474;
+    font-size: 15px;
+    max-width: 825px;
+    margin-top: 10px;
+}
+.short {
+    font-size: 13px;
+    color: #adadad;
+    width: 100%;
+    max-width: 850px;
+    margin-top: 27px;
+    margin-bottom: 30px;
+}
+.section_three {
+    background: #F8F8F8;
+    padding: 35px 0px;
+}
+.container-fluid.section_three {
+    margin-left: -30px !important;
+}
+.grey_box_title {
+    margin: 0 auto;
+    font-family: League-Spartan;
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 515px;
+    text-align: center;
+    position: relative;
+}
+.grey_box_sub {
+    color: #585858;
+    font-family: League-Spartan;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    max-width: 545px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.row.box_grid {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 60px;
+}
+.grid_icon {
+    text-align: center;
+}
+.grid_icon img {
+    height: 43px;
+    width: auto;
+    margin-bottom: 12px;
+}
+.grid_title {
+    color: #747474;
+    font-size: 13px;
+}
+.custom_check {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 31px;
+    position: relative;
+}
+.custom_check label {
+    color: #b5b5b5;
+}
+.custom_check input {
+    position: absolute;
+    left: -19px;
+    top: 6px;
+}
+.submit_btn {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.submit_btn button {
+    background: #273055;
+    color: white;
+    font-size: 11px;
+    padding: 8px 30px;
+    border-radius: 25px;
+}
+/*custom css end*/

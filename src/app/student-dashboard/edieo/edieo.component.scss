@@ -1,0 +1,194 @@
+$leagueSpartanBold:'League Spartan Bold';
+//edieo dashboard css start
+//edieo banner
+.edio-banner .edieo-banner-content{ position: absolute; left:60px; top:0px; width:auto; height:auto;top: 50%;color: #ffffff;transform: translateY(-50%);}
+.edio-banner .edieo-banner-content .title .eb{background: #a048e9; padding: 5px 10px; display: inline-block; font-weight: 500; position: relative;z-index: 1;font-size: 30px;line-height:1}
+.edio-banner .edieo-banner-content .title .series{background: #ffffff; padding: 5px 10px;color:#a048e9; display: inline-block; font-weight: 500; margin-left:3px; position: relative; z-index: 1;font-size: 30px;line-height:1}
+.edio-banner .edieo-banner-content .title .eb::before{ content: " ";  position: absolute;  display: block;  width: 52%; height: 100%; left: 0px; z-index: -1; background: #a048e9; -webkit-transform-origin: bottom left; transform-origin: bottom left;
+-webkit-transform: skew(13deg, 0deg); transform: skew(13deg, 0deg);  top: 0;    }
+.edio-banner .edieo-banner-content .title .series::after{  content: " "; position: absolute; display: block;  width: 52%; height: 100%; right: 0px; z-index: -1; background: #ffffff;
+-webkit-transform-origin: bottom left; transform-origin: bottom left;  -webkit-transform: skew(-13deg, 0deg);  transform: skew(-13deg, 0deg); top: 0;  }
+.edieo-banner-content h1{ font-size:46px;font-weight: 600;text-transform: uppercase;margin-top: 20px;}
+.edieo-banner-content p{font-size: 16px; margin-top: 10px; margin-bottom: 30px;}
+.edieo-banner-action .play{font-size: 17px;text-transform: uppercase;margin-right: 10px;font-weight: 600;} 
+.edieo-banner-action .play i{margin-right: 5px;font-size: 10px;vertical-align: top; margin-top: 8px;}
+.edieo-banner-action .my-list{background: #ffffff; color: #17baff; font-size: 17px; border-color: #ffffff;font-weight: 600;}
+.edieo-banner-action .my-list i{    font-size: 12px;    margin-right: 5px;   vertical-align: top;   margin-top: 5px;}
+.edieo-video{position: relative; z-index: 0;}
+.edieo-video::after{position: absolute; top:0px; left:0px; width:100%; height:100%; background: rgba(0,0,0,.4); content:''}
+.edio-banner{position: relative; margin-top:20px;}
+//edio middle section
+.edieo-middle-section h2.hading-title{  color:#333333;margin-bottom: 20px;font-size: 35px; font-weight: 300;}
+.edieo-middle-section .edieo-common{clear: both; display: flex; flex-wrap: wrap;    margin-left: -15px;justify-content: left;width:100%;}
+.edieo-middle-section .edieo-common .box{position: relative; margin-bottom: 20px;margin-left: 15px;   }
+.edieo-middle-section .edieo-common a{ position: absolute; top:0px; left:0px; width:100%; height:100%; color: #ffffff;}
+.edieo-middle-section .edieo-common a .caption{position: absolute; bottom:0px; left:0px; padding:20px;width:100%}
+.edieo-middle-section .edieo-common a .caption span,.edieo-middle-section .edieo-common a .caption strong{display: block; text-transform: uppercase;line-height: 1; margin:3px;}
+.edieo-middle-section .edieo-common a .caption span{ font-size: 24px;}
+.edieo-middle-section .edieo-common a .caption strong{font-size: 45px; font-weight: 600;}
+.edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 30px;}
+.edieo-middle-section .edieo-common .box .image{     border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); overflow: hidden;}
+.dashboard-three .edieo-middle-section .section-spacing { padding-bottom: 50px;}
+//country-eb-series
+.country-eb-series{margin-bottom: 60px;}
+.country-eb-series h2{color:#000000;margin-bottom: 80px;}
+.country-eb-series-content{padding-top: 80px;}
+.country-eb-series h2 > span{font-size: 34px;text-transform: uppercase;color: #333333;}
+.country-eb-series h2 p{font-size: 71px; font-weight: 400;}
+.country-eb-series h2 p strong{font-weight: 800;}
+.country-eb-series-content .edieo-series-action{margin-bottom: 100px;}
+.country-eb-series-content .edieo-series-action .play{font-size: 24px;text-transform: uppercase;margin-right: 10px;} 
+.country-eb-series-content .edieo-series-action .play i{margin-right: 5px;font-size: 10px;vertical-align: top; margin-top: 8px;}
+.country-eb-series-content .edieo-series-action .my-list{background: #ffffff; color: #17baff; font-size: 24px; border-color: #ffffff; box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);}
+.country-eb-series-content .edieo-series-action .my-list i{    font-size: 15px;    margin-right: 5px;   vertical-align: top;   margin-top: 5px;}
+.country-eb-series-content .edieo-series-desc p{margin-bottom: 40px; font-size: 19px;}
+.country-eb-series-content .edieo-series-desc p strong{font-weight: 500;}
+.country-eb-series{display: none;}
+.leagueFont{font-family:$leagueSpartanBold;}
+.dashboard-three.custom-dashboard-three h3{font-family:$leagueSpartanBold;margin-top: 30px; font-size: 35px;}
+
+//responsive css start
+
+
+@media(max-width:767px){
+    .edieo-middle-section .edieo-common{margin-left:0px;}
+}
+@media(min-width:1201px){
+    .edio-banner{margin-bottom: 60px;}
+    .edieo-middle-section .edieo-common .box{width: 15.6%;}
+}
+@media(min-width:1201px) and (max-width:1650px){
+    .edio-banner{margin-bottom: 0;}
+    .edio-banner .edieo-banner-content .title{ margin-top:60px;}
+    .edieo-banner-content h1{line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size: 16px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:50px; padding-bottom: 0px;}
+    .edieo-middle-section .edieo-common .box{width:23%;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:15px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 40px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 25px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size: 20px;}
+    .country-eb-series-content { padding-top: 50px;    }
+    .country-eb-series h2{margin-bottom: 40px;}
+    .country-eb-series-content .edieo-series-action {  margin-bottom: 50px;    }
+
+}
+@media(max-width:1200px){#page-content-wrapper{padding:30px}
+    .edio-banner{margin-bottom: 0;margin-top: 0;}
+    .edio-banner .edieo-banner-content .title{ margin-top:0%;}
+    .edieo-banner-content h1{line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size:16px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:50px; padding-bottom: 0px;}
+    
+    .edieo-middle-section .edieo-common .box{    width: 31.6%;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:10px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 30px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 20px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size:15px;}
+    .country-eb-series-content { padding-top: 10px;    }
+    .country-eb-series h2{margin-bottom: 40px;}
+    .country-eb-series-content .edieo-series-action {  margin-bottom: 50px;    } 
+    .country-eb-series h2 > span{font-size: 20px;}
+    .country-eb-series h2 p{font-size: 40px;}
+    .country-eb-series-content .edieo-series-desc p{    font-size: 17px;margin-bottom: 20px;}
+    .edieo-middle-section h2.hading-title{font-size: 30px;}
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 26px;}
+}
+@media(min-width:1921px) and (max-width:2500px) {
+    .edieo-middle-section .edieo-common .box{width:11%;}
+}
+@media (max-width:1199px){
+
+.edieo-middle-section .edieo-common .box{    width: 31.2%;}
+}
+@media(min-width:768px) and (max-width:992px){
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content h1{font-size: 26px; margin-bottom: 20px;}
+    .edieo-banner-content p{font-size: 13px; display: none;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{    font-size: 14px;
+        padding: 5px 10px;}
+    .edieo-middle-section .edieo-common .box{   width: 45.6%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left: -20px;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .country-eb-series-content .edieo-series-action .my-list,.country-eb-series-content .edieo-series-action .play{font-size: 15px; }
+    .dashboard-three .edieo-middle-section .section-spacing{padding-bottom: 0px;}
+    #page-content-wrapper{padding:30px}
+    
+
+}
+@media(max-width:767px){
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content h1{font-size: 60px;}
+    .edieo-banner-content p{font-size: 17px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 80%;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{font-size: 18px;}
+    .edieo-middle-section .edieo-common .box{    width: 30%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left:0;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .country-eb-series-content .edieo-series-action .my-list,.country-eb-series-content .edieo-series-action .play{font-size: 15px; }
+    .edieo-video, .edieo-thumbnail { height: auto;overflow: hidden; }
+    .edieo-thumbnail img{height:100%;max-width:inherit}
+    .edieo-banner-content h1 { font-size: 25px;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+    .edieo-middle-section .edieo-common .box{width:45%;}
+    .country-eb-series-content{text-align: left;}
+    .country-eb-series-content .edieo-series-action,.country-eb-series h2{margin-bottom: 20px;}
+    .edio-banner .edieo-banner-content .title {  margin-top: -2%;    }
+    .edieo-middle-section h2.hading-title {   font-size: 30px;   display: block;   text-align: center;  width: 100%;  }
+    
+}
+@media(max-width:480px){
+    .edieo-middle-section .edieo-common .box{width:43%;}
+    .edieo-middle-section h2.hading-title{text-align: center;width:100%}
+    .edieo-middle-section .edieo-common a .caption{    padding: 20px;text-align: center;}
+    .country-eb-series-content { text-align: center; margin: 30px 0; }
+    .embed-responsive{height:100%;}
+    .edio-banner .edieo-banner-content{z-index: 900;}
+    .edieo-banner-content p br{display: none;}
+    .edieo-video video{height:100%;}
+    .edio-banner .edieo-banner-content{margin-top:0;}
+    .edio-banner .edieo-banner-content .title{display: none;}
+    .edieo-banner-action .play, .edieo-banner-action .my-list{padding: 1px 10px;}
+
+
+}
+@media(max-width:320px){
+    .edieo-banner-content h1{font-size: 20px;}
+    .edieo-middle-section .edieo-common .box{width:41%;}
+}
+
+span.play-icon {position: absolute; border: none; width: 50px; opacity: .7; transition: all .2s ease; background-color:transparent !important;cursor:pointer !important;}
+
+#dreamuniVideoPopup .modal-header {
+    padding: 0px;
+    height: 0;
+}
+
+#dreamuniVideoPopup .modal-body {
+    padding: 0px;
+    box-shadow: 0 0 10px #333;
+}
+
+#dreamuniVideoPopup .modal-header .close {
+    background: white;
+    width: 40px;
+    height: 40px;
+    line-height: 10px;
+    border-radius: 50%;
+    z-index: 999;
+    opacity: 100%;
+    padding: 0px;
+}
+
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}

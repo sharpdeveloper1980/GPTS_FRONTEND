@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <div id="signUpSection" class="pt-100 pb-100">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center mb-4 pb-3">
+        <h3>Subscribe to our products</h3>
+        <p><em>72% of our customers love the journey of discovery to application</em></p>
+      </div>
+
+      <div class="col-md-12">
+         <!--slider start-->
+      <div class="swiper-container our-product-carousel" [swiper]="gptsProduct">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+            <div class="swiper-slide career-slide" >
+                <div class="video-thumbnail">
+                   <h4 class="color1">Career Discovery & Application Platform</h4>
+                   <p><strong>For Rs. 10,000/year</strong></p>
+                   <div class="thumb">
+                     <img src="assets/images/signup/1.png" class="img-fluid">
+                   </div>
+                   <p class="desc">Take Positive psychology test, career videos library, college search, college application</p>
+                   <p class="mt-5 mb-5"><a href="javascript:void(0)" class="custom-secondary-btn buynow">Buy it now</a> </p>
+                </div>
+         </div>
+         <div class="swiper-slide career-slide" >
+          <div class="video-thumbnail">
+            <h4 class="color2">Humanities Pro</h4>
+            <p><strong>For Rs. 15,000/year</strong></p>
+            <div class="thumb">
+              <img src="assets/images/signup/2.png" class="img-fluid">
+            </div>
+            <p class="desc">Take the video based learning of History, Geography, Psychology, Mythology, Religion, Cultural Studies etc.</p>
+            <p class="mt-5 mb-5"><a href="javascript:void(0)" class="custom-secondary-btn buynow">Buy it now</a> </p>
+             
+          </div>
+   </div>
+   <div class="swiper-slide career-slide" >
+    <div class="video-thumbnail">
+      <h4 class="color3">Nano Classes</h4>
+      <p><strong>From Rs. 7,000/lesson</strong></p>
+      <div class="thumb">
+        <img src="assets/images/signup/3.png" class="img-fluid">
+      </div>
+      <p class="desc">Learn from the experts anywhere, anytime about the subjects that fascinate you</p>
+      <p class="mt-5 mb-5"><a href="javascript:void(0)" class="custom-secondary-btn buynow">Buy it now</a> </p>
+       
+    </div>
+</div>
+
+<div class="swiper-slide career-slide" >
+  <div class="video-thumbnail">
+    <h4 class="color4">Summer School</h4>
+    <p><strong>From Rs. 20,000/ programme</strong></p>
+    <div class="thumb">
+      <img src="assets/images/signup/4.png" class="img-fluid">
+    </div>
+    <p class="desc">Attend a virtual summer program, helping you to gain knowledge about a subject that you wish to pursue from the top Universities in India</p>
+    <p class="mt-5 mb-5"><a href="javascript:void(0)" class="custom-secondary-btn buynow">Buy it now</a> </p>
+     
+  </div>
+</div>
+
+
+          </div>
+        <!-- If we need navigation buttons -->
+        <div class="control-arrow custom-control-arrow">
+          <div class="swiper-button-prev arrow">
+            <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+        </div>
+        <div class="swiper-button-next arrow">
+            <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+        </div>
+        </div>
+    </div>
+    <!--slider end-->
+      </div>
+
+      <div class="col-md-12 mt-4 text-center">
+        <p class="signup" *ngIf="!loggedIn">Are you a new user? If yes, please select the product and Sign Up<br>Already a user? <a href="javascript:void(0)"(click)="openModal()">sign here</a>&nbsp;&nbsp;|&nbsp;&nbsp;Already have a license? <a href="javascript:void(0)"(click)="openSignupModal()">click here</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+

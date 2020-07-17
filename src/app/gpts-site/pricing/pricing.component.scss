@@ -1,0 +1,103 @@
+.removePadding{
+    padding: 0;
+}
+
+.pricing-container .comparison-table-wrapper th,
+.pricing-container .comparison-table-wrapper td {
+    width: 25%;
+    font-weight: 600;
+}
+
+.pricing-container .comparison-table-wrapper .dark-background {
+    background: #dfdfdf;
+}
+
+.pricing-container .comparison-container {
+    margin-top: 6em;
+}
+
+.tick-mark {
+    display: inline-block;
+}
+
+.tick-mark::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 18px;
+    border: solid #546170;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.comparison-table-wrapper .price {
+    font-size: 1.3em;
+}
+
+.plan-card {
+    box-shadow: 0px 0px 50px -23px rgba(0, 0, 0, 0.33), 0px 3px 50px -23px rgba(0, 0, 0, 0.33);
+}
+
+.plan-card:hover {
+    box-shadow: 0px 0px 50px -23px rgba(0, 0, 0, 0.33), 0px 3px 50px -23px rgba(0, 0, 0, 0.33);
+}
+
+.plan-card button {
+    background: transparent;
+}
+
+.plan-card-wrapper {}
+
+.basic-image-wrapper {
+    background-image: linear-gradient(138deg, #19e7da, #5e7be9);
+}
+
+.advanced-image-wrapper {
+    background-image: linear-gradient(138deg, #2ffcb8, #02c693);
+}
+
+.ultimate-image-wrapper {
+    background-image: linear-gradient(138deg, #ba5dd3, #5f23fd);
+}
+
+.plan-image-wrapper {
+    height: 150px;
+    padding: 15px;
+}
+
+.plan-description {
+    padding-top: 20px;
+    margin-bottom: 1.4rem;
+}
+
+.plan-description li {
+    margin-bottom: 10px;
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.plan-card-container h2 {
+    margin-bottom: 0.5em;
+}
+
+.plan-card-container h3 {
+    margin-bottom: 0.5em;
+}
+
+.plan-card-container h4 {
+    margin-bottom: 4em;
+}
+
+.pricing-container .comparison-table-wrapper {
+    margin-bottom: 4em;
+}
+
+.comparison-table-wrapper .price {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.offer-image {
+    width: 96px;
+    top: -10px;
+    left: -10px;
+}

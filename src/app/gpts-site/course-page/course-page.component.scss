@@ -1,0 +1,357 @@
+.customContainer{
+    width: 80%;
+}
+
+.schoolLogoLocation{
+    position: relative;
+    top: -105px;
+    width: 95%;
+}
+
+.schoolName{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 2.2em;
+    text-rendering: geometricPrecision;
+    padding-top: 10px;
+}
+
+.schoolLocation{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 0.5em;
+}
+
+.schoolRating{
+    border-radius: 2px;
+    color: white;
+    background: #c4a76e;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.3em 1em;
+    font-size: 0.5em;
+    position: relative;
+    top: -8px;
+    margin-left: 15px;
+}
+
+.goldStar{
+    color: #facb3b;
+    margin-right: 10px;
+}
+
+.greyStar{
+    color: #979797;
+}
+
+.starSizeLocation{
+    position: relative;
+    top: -5px;
+    font-size: 20px;
+}
+
+.schoolHeading{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 1.2em;
+    text-rendering: geometricPrecision;
+}
+
+.schoolPara{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    text-rendering: geometricPrecision;
+    font-size: 0.85em;
+    line-height: 20px;
+    margin-bottom: 1em;
+}
+
+.marginWhyTop{
+    margin-top: 3em;
+}
+
+.kpiName{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 0.9em;
+    text-rendering: geometricPrecision;
+    margin-bottom: 6px;
+}
+
+.kpiRating{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 1.2em;
+    text-rendering: geometricPrecision;
+    border-top: 1px solid #dadada;
+    padding-bottom: 7px;
+}
+
+.whiteCardSsi{
+    background: white;
+    box-shadow: 1px 2px 20px -8px black;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.whiteCardSsi:hover{
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.kpiLogoWidth{
+    width: 140px;
+    margin-top: 4px;
+    margin-bottom: -4px;
+}
+
+.percentagePara{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 0.9em;
+}
+
+.percentageHead{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 2.5em;
+}
+
+.rightBrTwo{
+    border-right: 1px solid #dadada;
+}
+
+.backgroundGrey{
+    background: #f0f2f5;
+}
+
+.marginTopWord{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.courseIcon{
+    width: 68px;
+}
+
+.borderImg::before{
+    content: " ";
+    /* border-right: 1px solid grey; */
+    display: block;
+    background: #bfbfbf;
+    width: 1px;
+    height: 45px;
+    position: absolute;
+    left: 85px;
+    top: 6px;
+}
+
+.whiteStripCard{
+    background: white;
+    box-shadow: 1px 2px 20px -8px black;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1.5em;
+}
+
+.whiteStripCard:hover{
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.courseNameTextBox{
+    font-size: 12px;
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 5%;
+}
+
+.loadMore{
+    font-family: 'Open Sans', sans-serif;
+    color: #25a2fa;
+    font-size: 14px;
+}
+
+.facilityName{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 12px;
+}
+
+.facilitySize{
+    width: 50px;
+    image-rendering: auto;
+}
+
+.greenBtn{
+    background: #46c38e;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 0px;
+    padding: 10px 23px;
+}
+
+.hollowGreyBtn{
+    border: 1px solid #546170;
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 0px;
+    padding: 10px 23px;
+}
+
+.btnMargin{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 5.5em;
+}
+
+.school-body{
+    background: white;
+}
+
+.wordHeadMatter{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 2em;
+    padding-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.chooseHeading{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    text-rendering: geometricPrecision;
+}
+
+.choosePara{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 0.85em;;
+    text-rendering: geometricPrecision;
+}
+
+.blueBg{
+    background: #007f9f;
+    padding: 5em;
+}
+
+.certifiedLogo{
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    width: 120px;
+    image-rendering: auto;
+}
+
+.customTableGrey{
+    background-color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.smallHeadTable{
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.customTableGrey tr>th {
+    vertical-align: middle;
+}
+
+.shortlisted{
+    font-family: 'Open Sans', sans-serif;
+    color: #9ea9b6;
+    font-size: 13px;
+}
+
+.comparee{
+    font-family: 'Open Sans', sans-serif;
+    color: #2ec5df;
+    font-size: 13px;
+}
+
+.applied{
+    font-family: 'Open Sans', sans-serif;
+    color: #9ea9b6;
+    font-size: 13px;
+}
+
+.shortliste{
+    font-family: 'Open Sans', sans-serif;
+    color: #ff9a1b;
+    font-size: 13px;
+}
+
+.applyee{
+    font-family: 'Open Sans', sans-serif;
+    color: #72ba34;
+    font-size: 13px;
+}
+
+.customTD tr>td {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    text-rendering: geometricPrecision;
+}
+
+i.fa.fa-file-pdf-o.customPdfIcon{
+    text-rendering: auto;
+    font-size: 22px;
+    margin-right: 5px;
+    color: #f58084;
+}
+
+.customTable{
+    box-shadow: 0px 2px 26px -10px black;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 4em;
+}
+
+.customTable:hover{
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.tableAfterText{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 14px;
+    text-rendering: geometricPrecision;
+}
+
+.customUl{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 14px;
+    text-rendering: geometricPrecision;
+    line-height: 30px;
+}
+
+.remove-padding{
+    padding: 0;
+}
+
+.greenBtn{
+    background: #46c38e;
+    color: white;
+    border-radius: 0px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 12px 18px;
+}
+
+.greyBg{
+    background-color: #f0f2f5;
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+}

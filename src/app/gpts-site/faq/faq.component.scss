@@ -1,0 +1,255 @@
+/* new stylingo */
+.faq-back {
+    background-image: url(../../../assets/images/theme-three/instiBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.margin-bottom42 {
+    margin-bottom: 42px;
+}
+
+/* new stylingo ends */
+
+
+.featureHeading {
+    font-weight: 400;
+    color: #343434;
+    font-size: 1.4em;
+    padding-top: 2em;
+    padding-bottom: 7%;
+
+    span.orange {
+        background: #f4941c;
+        color: white;
+        font-weight: 600;
+        padding: 2px;
+    }
+
+}
+
+.featuredBgOne {
+    background: url(../../../assets/images/static/pattern.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.fParaOne {
+    font-weight: 600;
+    font-size: 14px;
+    color: #343434;
+}
+
+.fParaTwo {
+    font-weight: 400;
+    font-size: 14px;
+    color: #343434;
+    margin-bottom: 5em;
+}
+
+.faqBtnTab {
+    border-radius: 0;
+    font-weight: 300;
+    color: #333333;
+    background: transparent;
+    margin-right: 2.5em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.active {
+    color: #2853b5;
+    background: transparent;
+    border-bottom: 2px solid #2853b5;
+}
+
+.bannermarginTop {
+    margin-top: 3em;
+}
+
+.whiteFaqBgTab {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 56px;
+    border: solid 1px #e3e3e3;
+}
+
+.btnBlueActive {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 140px;
+    border-radius: 0;
+    padding: 8px;
+    margin-top: 4.5em;
+    margin-right: 0em;
+    display: inline-block;
+}
+
+.margin-top61 {
+    margin-top: 61px;
+}
+
+.margin-bottom85 {
+    margin-bottom: 85px;
+}
+
+.font-size20 {
+    font-size: 20px;
+    color: #333333;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.margin-top53 {
+    margin-top: 53px;
+}
+
+.timeline-rightborder {
+    position: relative;
+}
+
+.timeline-rightborder::after {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: #17baff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+.timeline-rightborder::before {
+    content: '';
+    height: 104%;
+    width: 2px;
+    background: #d4d4d4;
+    position: absolute;
+    top: -2%;
+    right: 0;
+    left: auto;
+}
+
+.timeline-circle {
+    position: relative;
+}
+
+.timeline-circle::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: solid 2px #17baff;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-circle::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: solid 2px #17baff;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.bubble-right-faq {
+    position: relative;
+}
+
+.bubble-right-faq::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/bubble-right-faq.jpg);
+    background-position: left;
+    width: 100%;
+    height: 115vh;
+    position: absolute;
+    top: 0;
+    left: -240px;
+    right: auto;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+
+
+
+/* == my kungfu == */
+
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+
+    .timeline-circle::before,
+    .timeline-circle::after,
+    .timeline-rightborder::before,
+    .timeline-rightborder::after {
+        display: none;
+
+    }
+}
+
+
+
+
+@media(max-width: 768px) {
+
+    .whiteFaqBgTab {
+
+        padding: 1em;
+    }
+
+    .featureHeading {
+        line-height: 36px;
+    }
+
+    .font-size20 {
+        font-size: 20px;
+        color: #333333;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .timeline-circle::before,
+    .timeline-circle::after,
+    .timeline-rightborder::before,
+    .timeline-rightborder::after {
+        display: none;
+
+    }
+
+    .bubble-right-faq::after {
+        display: none;
+        ;
+    }
+
+
+}

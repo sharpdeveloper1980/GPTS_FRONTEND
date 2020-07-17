@@ -1,0 +1,893 @@
+.pt-100{padding-top:100px}
+.pt-70{padding-top:70px}
+.pb-100{padding-bottom:100px}
+.studentBack {
+    background-image: url(../../../assets/images/discover-college/banner.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+    position: relative;
+    background-position: -200px 0;
+    border-radius: 8px;
+}
+.studentBack h2{
+    font-family: 'League Spartan Bold';
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 62px;
+    margin-top: 105px;
+    margin-left: -22px;
+}
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.margin-top-n45 {
+    margin-top: -35px;
+}
+
+.margin_tp_35 {
+	margin-top: 35px;
+}
+
+.blue-box-search {
+    padding: 12px;
+    border-radius: 2px;
+    background-color: #17baff;
+    max-width: 1109px;
+    margin: auto;
+    flex-wrap: nowrap;
+    padding-right: 4px;
+    box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.55);
+}
+.video_white_thin_border {
+    border: none !important;
+    box-shadow: none !important;
+}
+.size-29{font-size: 29px; font-weight: 600; line-height: 42px;}
+.custom-search-career.ng-select .ng-select-container {
+    background: white;
+}
+
+::ng-deep {
+    .custom-search-career {
+        width: calc(100% - 49px);
+    }
+}
+
+// .grey_bg73 {
+//     background-size: 100% 95%;
+// }
+
+.custom-button {
+    background: white;
+    border-left: 1px solid #dedede;
+}
+
+.cluster-colleges-carousel .swiper-slide {
+    width: 320px;
+    margin-right: 30px;
+}
+
+/*.discover_3_video_text .text-macro {
+	font-size: 22px;
+}*/
+
+.discover_3_video_text {
+	width: 32%;
+}
+
+.cluster_space {
+	justify-content: space-between;
+}
+
+.disc_cluster_width {
+	width: 31.5%;
+    height: 250px;
+    margin-bottom: 45px;
+    border-radius: 6px;
+}
+
+.cluster_text {
+	color: #fff;
+	font-size: 18px;
+}
+
+.cluster_anchor {
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cluster_text_position {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom , rgba(255,0,0,0), rgba(0,0,0,1));
+    padding: 20px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.cluster_1 {
+	background-image: url(../../../assets/images/cluster_videos/creative_design.jpg);
+}
+
+.cluster_2 {
+	background-image: url(../../../assets/images/cluster_videos/media_broadcasting.jpg);
+}
+
+.cluster_bg {
+	background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.justify_cicles {
+	justify-content: space-between;
+}
+
+.cluster_v_area_padding {
+	padding: 30px;
+}
+
+.culster_video_area {
+box-shadow: 0px 2px 5px 1px #eaeaea;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+.cluster_circle_area {
+	width: 120px;
+    max-width: 120px;
+}
+
+.cluster_circles {
+	box-shadow: 0px 2px 5px 1px #eaeaea;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cluster_circle_text {
+	   font-size: 14px;
+    margin-top: 0.75rem;
+    font-weight: 400;
+}
+
+.culster_video_area .sub-text {
+	margin-bottom: 5px;
+	line-height: 35px;
+}
+
+.purple_area {
+	background-color: #f6f6fd;
+}
+
+.featured_uni_box {
+	width: 30%;
+    border: 1px solid #c8c6c6;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.featured_uni_img_1 {
+	background-image: url(../../../assets/images/theme-three/discover-colleges/school_logos/edify_bg.jpg);
+}
+
+.featured_uni_img_2 {
+	background-image: url(../../../assets/images/theme-three/discover-colleges/school_logos/hvb.jpg);
+}
+
+.featured_uni_img_3 {
+	background-image: url(../../../assets/images/theme-three/discover-colleges/school_logos/3_bg.jpg);
+}
+
+.featured_uni_img {
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 260px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.featured_uni_name {
+	padding: 10px 10px 10px 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.quotes_detail {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.quote_name {
+    color: #17baff;
+}
+
+.featured_uni_text {
+	font-size: 18px;
+}
+
+.load-more-button {
+    margin-top: 50px;
+}
+
+.featured_university .custom-text-medium, .process_map .custom-text-medium {
+	margin-bottom: 20px;
+}
+
+.dot_map_bg {
+    background-image: url(../../../assets/images/theme-three/discover-colleges/dotted_map.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-map-height {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.individual_process {
+    height: inherit;
+    width: 20%;
+    padding: 0px 15px;
+    justify-content: space-between;
+}
+
+.process_img {
+    max-width: 200px;
+    min-width:100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.individual_process .custom-text-medium {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.individual_process .sub-text {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.white_process_box {
+    background: #ffffff;
+    box-shadow: 0px 2px 5px 1px #eaeaea;
+    border-radius: 6px;
+}
+
+.height_35_process {
+    height: 35%;
+}
+
+@media (max-width: 1199px) {
+    .banner-height {
+        .text-macro {
+            max-width: 632px;
+            margin: auto;
+        }
+    }
+
+    .culster_video_area .sub-text {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .studentBack{background-position: -450px 0;}
+    .studentBack h2{    margin-left: 0;
+        padding-left: 20px;
+        padding-right: 20px;}
+}
+
+@media (max-width: 992px) {
+    .height_35_process {
+    height: 45%;
+}
+
+.individual_process .custom-text-medium {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.individual_process .sub-text {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.culster_video_area .sub-text {
+    font-size: 22px;
+    line-height:30px;
+}
+
+.disc_cluster_width {
+    width: 47.5%;
+}
+
+.featured_uni_box {
+    width: 32%;
+}
+
+.uni_logo {
+    width: 50px;
+}
+.studentBack {
+    background-position: -650px 0;
+}
+.studentBack h2{    padding-left: 60px;}
+
+}
+
+@media (max-width: 768px) {
+    .discover_3_video_text, .featured_uni_box {
+        width: 48%;
+    }
+
+    .disc_cluster_width {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .process_map {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .cluster_v_area_padding {
+        padding: 15px;
+    }
+
+    .discover_3_video_text, .disc_cluster_width, .featured_uni_box {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media(max-width:767px){
+    .studentBack {background-position: -460px 0;}
+    .studentBack h2{text-shadow: 0 0 3px #000;}
+}
+
+
+.blueBannerhead {
+    color: #2853B5;
+    font-weight: 700;
+    line-height: 65px;
+    font-size: 4em;
+}
+
+.whiteparaBanner {
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.careerLibBackground {
+    background-image: url(../../../assets/images/static/careerbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding-top: 9em;
+    padding-bottom: 7em;
+    margin-bottom: 3em;
+}
+
+.headCareer {
+    color: white;
+    font-size: 1.5em;
+}
+
+.orangeRegister {
+    background: #F7941D;
+    border-radius: 0px;
+    padding: 12px 55px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+}
+
+.inputControl {
+    background: #f2f2f2;
+    height: 53px;
+    border: none;
+    border-left: 0px solid black;
+}
+
+.blueBtnSearch {
+    background: #2853B5;
+    color: white;
+    border-radius: 0;
+    width: 65px;
+    font-size: 20px;
+    padding-top: 2px;
+}
+
+.headOne {
+    font-size: 35px;
+    color: #333333;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.paraOne {
+    color: #333333;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.blueBackgroundVideo {
+    background: #2853B5;
+    color: white;
+    position: relative;
+}
+
+.namevideo {
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nameVideoTxt {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.marginWatch {
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.paraThree {
+    color: #343434;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.paraFour {
+    margin-bottom: 0;
+}
+
+.paraFive {
+    opacity: 0.5;
+}
+
+.morePad {
+    padding: 4%;
+}
+
+.paraSix {
+    padding-top: 10%;
+}
+
+.btnBlueActive {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+    margin-top: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.paraSeven {
+    padding-top: 4%;
+}
+
+.sliderBrowse {
+    font-size: 14px;
+    font-weight: 200;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 5px;
+    margin-bottom: 0;
+}
+
+.contentGreyBackground {
+    max-height: 80em;
+    overflow-y: hidden;
+
+}
+
+.video-conatiner {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border: solid 1px #c2ecff;
+    border-radius: 2px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+    background-color: #f7fdff;
+    margin-top: 0px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.customControlSearch {
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    background: transparent;
+    width: 100px;
+    padding-bottom: 0px;
+    float: right;
+}
+
+.courseHeadEngineer {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 0;
+}
+
+.marginTopBtmCourse {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.marginTopBtmCourseTwo {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.viewBtn {
+    border: 1px solid #262525;
+    border-radius: 0px;
+    font-size: 14px;
+    text-align: center;
+    width: 115px;
+    background: transparent;
+    color: #262525;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+}
+
+.secBrowse {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.customFontBlue {
+    font-size: 2em;
+    color: #919191;
+    letter-spacing: 0.5px;
+    padding-top: 1.5em;
+}
+
+.blueFont {
+    color: #2853B5;
+}
+
+.orangeFont {
+    color: #F7941D;
+}
+
+.careerSizeFooter {
+    width: 72%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.careerlibrary-body .dropdown-menu.show {
+    height: auto;
+}
+
+
+.dropdown-menu.show {
+    display: block;
+    height: 8em;
+    position: absolute !important;
+    transform: none !important;
+    top: 100% !important;
+    border-radius: 0;
+    border: none;
+    background: #F2F2F2;
+    color: black;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.careerThreeText {
+    font-weight: 600;
+    color: #343434;
+    font-size: 15px;
+    padding-top: 5%;
+}
+
+.rightBrCareer {
+    border-right: 1px solid #343434;
+}
+
+.marginThreeLine {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.btnBlueActive {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+    margin-top: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.swiper-slide {
+    width: 410px;
+    margin-right:18px;
+}
+
+.browse-tiles-carousel {
+    .swiper-slide {
+        width: 210px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        &:hover {
+            box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            height: 135px;
+        }
+    }
+}
+
+.input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.careerlibrary-registered-body .input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 0;
+    background: rgb(220, 245, 255);
+    ;
+    color: #343434;
+    padding: 0 1em;
+    font-size: 15px;
+}
+
+.custom-control {
+    border-radius: 0px;
+    border: 0px solid transparent;
+    box-shadow: none;
+    font-weight: 300;
+    color: #343434;
+    border: 0px;
+    outline: none;
+}
+
+.blue-search-box {
+    padding-bottom: 0;
+    padding-top: 15px;
+    border-radius: 2px;
+    background-color: #17baff;
+    margin-top: 108px;
+}
+
+.form-blue-bg {
+    background: rgb(220, 245, 255);
+}
+
+.margin-do-you-swiper {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.new-card {
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    padding: 10px;
+    background: white;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.career-library-bubble {
+    position: relative;
+}
+
+.career-library-bubble::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/career-library-bubble.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -55px;
+    width: 100%;
+    height: 70vh;
+    left: -530px;
+    right: auto;
+    background-position: left bottom;
+    z-index: -1;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+@media(max-width:1200px) {
+
+    .banner-height {
+        .text-macro {
+            max-width: 632px;
+            margin: auto;
+        }
+    }
+
+    .blueBannerhead {
+        font-size: 40px;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    .whiteparaBanner {
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .swiper-button-prev-inspi,
+    .swiper-button-next-inspi {
+        top: initial;
+        bottom: 0;
+    }
+
+    .inspiring-carousel {
+        padding-bottom: 10px;
+    }
+
+    .headOne {
+        font-size: 28px;
+    }
+
+    .courseHeadEngineer {
+        font-size: 18px;
+    }
+
+    .customFontBlue {
+        font-size: 20px;
+    }
+
+    .three-col-text {
+        .col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .responsive-margin-top {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .courseHeadEngineer {
+        text-align: center;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .responsive-margin-top {
+        margin-top: 50px;
+    }
+
+    .whiteBoxVideo .text-macro {
+
+        line-height: 25px;
+    }
+
+    .margin-bottom68 {
+        margin-bottom: 0;
+    }
+
+    .white-border-video.margin-bottom68 {
+        margin-bottom: 30px;
+
+    }
+
+    .margin-top98 {
+        margin-top: -65px;
+    }
+
+    .responsive-margin-bottom {
+        margin-bottom: 30px;
+    }
+
+    .footer-text-width {
+        max-width: 595px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .margin-top98 {
+        margin-top: -23px;
+    }
+
+    .font-size30 {
+        font-size: 25px;
+    }
+
+    .font-size60 {
+        font-size: 35px;
+    }
+
+    .browse-tiles-carousel .swiper-slide {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+@media(max-width:480px){
+    .studentBack h2{text-shadow: 0 0 3px #000;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 40px;
+        line-height: 49px;
+        margin-top: 105px;}
+        .studentBack { background-position: -400px 0;  }
+    
+}

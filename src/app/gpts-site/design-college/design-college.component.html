@@ -1,0 +1,214 @@
+<app-header></app-header>
+
+<!-- body -->
+<div class="theme-three">
+    
+<!--design college section start-->
+<div class="design-colleges pt-100 pb-100">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="coming-soon">
+                            <h2><span>Coming Soon</span>The Design College</h2>
+                            <h1>Playlist<i class="fa fa-play" aria-hidden="true"></i></h1>
+                            <div class="action">
+                                <a href="javascript:void(0)"  class="d-inline-block custom-secondary-btn">Notify Me</a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--design college section end-->
+
+    <!-- <div class="studentBack dynheader">
+        <div class="custom-container banner-height">
+            <div class="row">
+                <div class="col-lg-5 col-12 text-center text-lg-left">
+                    <h2 class="text-big">Discovering the real you!</h2>
+                    <p class="text-macro">&nbsp;</p>
+                </div>
+                <div class="col-lg-7 col-12 text-center text-lg-right">
+                    <img src="assets/images/theme-three/top_banners/design-college-vector.png"
+                        class="img-fluid bannerImgSub" alt="img">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- First Section Design College -->
+    <!-- <div class="gray-background">
+        <div class="custom-container section-padding">
+            <div class="row flex-lg-row flex-column-reverse">
+             
+                <div class="col-xl-6 col-lg-5 col-12 mr-auto">
+                    <div class="white-border-video">
+                        <div class="embed-responsive embed-responsive-16by9 ">
+                           
+                            <vg-player class="embed-responsive-item">
+                                <vg-overlay-play></vg-overlay-play>
+                                <vg-buffering></vg-buffering>
+                                <vg-controls>
+                                    <vg-play-pause></vg-play-pause>
+                                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-scrub-bar [vgSlider]="true">
+                                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                    </vg-scrub-bar>
+                                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-mute></vg-mute>
+                                    <vg-volume></vg-volume>
+                                    <vg-fullscreen></vg-fullscreen>
+                                </vg-controls>
+                                <video preload="auto" [poster]="data[0].cluster_image" [vgMedia]="randomvideo"
+                                    [src]="data[0].cluster_video" class="videoClass" #randomvideo></video>
+                            </vg-player>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="col-xl-5 col-lg-6 col-md-10 col-sm-11 col-12 mb-5">
+                    <div class="custom-text-medium custom-text-light">{{ data[0].name }}</div>
+                    <div class="d-flex flex-wrap mt-3">
+                        <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                            <div class="cluster_circles">
+                                <img src="assets/images/theme-three/discover-colleges/film-studio.png"
+                                    class="img-fluid">
+                            </div>
+                            <p class="text-center cluster_circle_text">{{ data[0].college_no }} Colleges</p>
+                        </div>
+                        <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                            <div class="cluster_circles">
+                                <img src="assets/images/theme-three/discover-colleges/calendar.png" class="img-fluid">
+                            </div>
+                            <p class="text-center cluster_circle_text">{{ data[0].under_programme }} Undergraduate
+                                Programme</p>
+                        </div>
+                       
+                        <div class="mb-3 d-flex flex-column align-items-center cluster_circle_area">
+                            <div class="cluster_circles">
+                                <img src="assets/images/theme-three/discover-colleges/diploma.png" class="img-fluid">
+                            </div>
+                            <p class="text-center cluster_circle_text">{{ data[0].average_fees }}</p>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-small font-color34 margin-top38">{{ data[0].about }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Second Section Playlist -->
+    <!-- <div class="custom-container section-padding">
+        <div class="row">
+            <div class="col-12 text-center custom-text-medium custom-text-light margin-bottom100">
+                {{ data[0].name }} College <span class="orange-text">Playlist</span>
+            </div>
+            <div class="col-12 d-flex flex-wrap flex-lg-row justify-content-between">
+
+                <div class="three_vid_width" *ngFor="let data of colleges">
+              
+                    <div class="margin-bottom68 video_white_thin_border">
+                        <div class="embed-responsive embed-responsive-16by9 ">
+
+                            <vg-player class="embed-responsive-item">
+                                <vg-overlay-play></vg-overlay-play>
+                                <vg-buffering></vg-buffering>
+                                <vg-controls>
+                                    <vg-play-pause></vg-play-pause>
+                                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-scrub-bar [vgSlider]="true">
+                                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                    </vg-scrub-bar>
+                                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-mute></vg-mute>
+                                    <vg-volume></vg-volume>
+                                    <vg-fullscreen></vg-fullscreen>
+                                </vg-controls>
+                                <video preload="auto" [poster]="data.thumb" [vgMedia]="randomvideo" [src]="data.video"
+                                    class="videoClass" #randomvideo></video>
+                            </vg-player>
+
+                        </div>
+                    </div>
+
+                    <div class="vidTextPos_clg">
+                        <p class="vidhead_clg" title="{{ data.user_name }}"> {{ data.user_name }}
+                            <span class="heartPos"><i class="fa fa-heart"></i></span></p>
+                        <p class="font_size12">
+                            <span class="orange-text"><i class="fa fa-map-marker 1x"></i> {{ data.location }}</span>
+                            <a href="#" class="know_more_clg">Know More</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-5 text-center"><a href="javascript:void(0);" class="d-inline-block custom-secondary-btn">Read
+                More</a></div>
+    </div> -->
+
+
+    <!-- <div class="page-footer-section text-center">
+        <div class="custom-container">
+            <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+                Excited be a global league Institute
+            </div>
+            <div class="sub-text">
+                Great Thing happens!
+            </div>
+            <button class="custom-primary-btn">
+                Get Certified
+            </button>
+        </div>
+    </div> -->
+
+</div>
+
+
+ <!--  DESIGN COLLEGE NOTIFICATION MODAL  -->
+ <!-- <div class="modal auth-modal fade noback" id="greatChallengeNotify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog noBlue login-modal"  role="document" >  
+        <div class="modal-content removeBorderRadius">  
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid removePadding" >
+                  <div class="row justify-content-center">
+                        <div class="tab-content w-100">
+                            <div class="tab-pane active" id="student">
+                                <div class=" text-left">                                
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 login-dots-reg">
+                                        <h3 class="sigin-Head-reg">Notify When Available</h3>
+                                        <form #chregform="ngForm" (ngSubmit)="greatChallengeNotify(notify_for,chregform.value)" novalidate>
+                                          
+                                          <div class="form-group">
+                                            <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" name='name' required placeholder="Your Name" ngModel>
+                                          </div>
+                                          <div class="form-group">
+                                              <input type="email" class="form-control removeBorderRadius formHeight custom-form-control" name='email' required placeholder="Your Email Id" ngModel>
+                                            </div>
+                                          <div class="form-group">
+                                          <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" name="contact_no" required placeholder="Contact No" ngModel>
+                                          </div>
+                                          <div class="form-group mb-4 mt-4">
+                                              <input type="submit" class="custom-primary-btn d-flex justify-content-center align-items-center"  value="Notify Me" ngModel>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> -->

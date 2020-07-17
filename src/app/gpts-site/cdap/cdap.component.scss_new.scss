@@ -1,0 +1,573 @@
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(assets/fonts/roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(assets/fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: League-Spartan;
+    src: url(assets/fonts/league_spartan/LeagueSpartan-Bold.otf);
+}
+@font-face {
+    font-family: openSans-Light;
+    src: url(assets/fonts/openSans/OpenSans-Light.ttf);
+}
+
+
+
+.roboto_medium {
+    font-family: Roboto-Medium;
+}
+.roboto_regular {
+    font-family: Roboto-Regular;
+}
+.openSans_light {
+    font-family: openSans-Light;
+}
+
+ 
+ 
+
+
+.cdap-background {
+    background-image: url(../../../assets/images/cdap/header_new.png); 
+    height: 375px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.5);
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.margin-bottom34 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom42 {
+    margin-bottom: 42px;
+}
+
+.light-orange-back {
+    border-radius: 2px;
+    background-color: #fdf3f2;
+}
+
+.margin-top120 {
+    margin-top: 140px;
+}
+
+.font-size30 {
+    font-size: 30px;
+}
+
+
+.d-height {
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+    padding: 25px;
+}
+
+
+.margin-top97 {
+    margin-top: 97px;
+}
+
+.margin-btm36 {
+    margin-bottom: 35px;
+}
+
+.margin-top40 {
+    margin-top: 25px !important;
+}
+
+.head-width-one {
+    max-width: 390px;
+    margin: auto;
+}
+
+.margin-top47 {
+    margin-top: 47px;
+}
+
+.margin-btm135 {
+    margin-bottom: 60px;
+}
+
+.light-grey {
+    background: #f8f8f8;
+}
+
+.max-width897 {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.2;
+    margin-top:0;
+    margin-bottom: 60px;
+}
+
+
+.benefits-head {
+    line-height: inherit;
+}
+
+.light-red-background {
+    border-radius: 2px;
+    background-color: #fbf2f3;
+    padding: 41px;
+    height: 100%;
+
+}
+
+.light-blue-background {
+    background-color: #edf8fa;
+}
+
+.light-violet-background {
+    background-color: #e9eafc;
+}
+
+.light-grey-background {
+
+    background-color: #f7f7f7;
+}
+
+.light-crazy-background {
+    background-color: #e5f5ff;
+}
+
+.red-background {
+    background-color: #f6f3e2;
+}
+
+.padding-top42 {
+    padding-top: 42px;
+}
+
+.margin-bottom30 {
+    margin-bottom: 30px;
+}
+
+.width65 {
+    width: 65px;
+    margin-bottom: 20px;
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.max-width-video {
+    max-width: 736px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* snake layout */
+.home_ourApproach_body {
+    height: 1300px;
+    max-width: 1036px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 72px;
+}
+
+.home_ourApproach_body_image {
+    position: absolute;
+    left: 375px;
+    top: 0px;
+    height: 1368px;
+}
+
+.home_ourApproach_body_image.mobile {
+    display: none;
+}
+
+.home_ourApproach_body_descriptionWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 163px;
+}
+
+.home_ourApproach_body .descriptionItem {
+    width: 360px;
+    text-align: right;
+}
+
+.home_ourApproach_body .descriptionItem .title {
+    font-weight: 400;
+    font-size: 25px;
+    color: #333333;
+    letter-spacing: -.5px;
+    line-height: 36px;
+}
+
+.home_ourApproach_body .descriptionItem .content {
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+    line-height: 24px;
+    margin-top: 5px;
+}
+
+.home_ourApproach_body_descriptionWrapper:nth-child(2n) .descriptionItem {
+    text-align: left;
+    margin-left: auto;
+}
+
+
+
+@media only screen and (max-width: 1025px) and (min-width: 768px) {
+    .home_ourApproach_body_descriptionWrapper {
+        height: 110px;
+    }
+
+    .home_ourApproach_body .descriptionItem .title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .home_ourApproach_body .descriptionItem {
+        width: 240px;
+    }
+
+    .home_ourApproach_body .descriptionItem .content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .home_ourApproach_body_image {
+        top: 4px;
+        left: 266px;
+        height: 895px;
+    }
+
+    .home_ourApproach_body {
+        width: 703px;
+        height: 917px;
+        margin-top: 57px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home_ourApproach_body_descriptionWrapper {
+        height: 165px;
+    }
+
+    .home_ourApproach_body_image.mobile {
+        display: block;
+    }
+
+    .home_ourApproach_body_image {
+        top: 0;
+        left: 35px;
+        height: auto;
+        width: 250px;
+    }
+
+    .home_ourApproach_body .descriptionItem {
+        width: 204px;
+        text-align: left;
+    }
+
+    .home_ourApproach_body .descriptionItem .title {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .home_ourApproach_body .descriptionItem .content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .home_ourApproach_body_image.web {
+        display: none;
+    }
+
+    .home_ourApproach_body {
+        width: 350px;
+        margin-top: 40px;
+        height: 1300px;
+    }
+
+}
+
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px) {
+    .font-size30 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 540px) {}
+
+
+
+/*custom css start*/
+@media screen and (max-width: 990px) and (min-width: 574px) {
+    .section_fourth .col-md-3 {
+        min-width: 50% !important;
+        max-width: 50% !important;
+    }
+    .section_five .col-md-3 {
+        min-width: 50% !important;
+        max-width: 50% !important;
+    }
+} 
+@media screen and (max-width: 990px) and (min-width: 767px) {
+    .section_six .col-md-2 {
+        min-width: 33.33% !important;
+        max-width: 33.33%;
+    }       
+}
+@media screen and (max-width: 768px) and (min-width: 574px) {
+    .block_section.section_six .col-md-2 {
+        min-width: 50% !important;
+        max-width: 50% !important;
+    }       
+}
+
+
+
+
+@media only screen and (min-width: 990px) {
+    .section_two p {
+        padding: 0px 199px;
+    }   
+    .section_six {
+        height: 325px !important;
+    } 
+}
+
+@media only screen and (min-width: 1250px) {
+    .section_title {
+        margin-top: 70px;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    .col-md-6.section_left {
+        padding-left: 100px !important;
+    }
+    .section_desc {
+        font-size: 15px !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 990px) {
+    .section_six {
+        padding-bottom: 0px !important;
+        height: auto !important;
+    }
+    .benifits_box img {
+        margin-top: 40px;
+    }
+    .section_six .theme_heading2 {
+        margin-bottom: 0px !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .col-md-6.section_left {
+        padding-left: inherit !important;
+        padding: 40px !important;
+    }
+}
+@media only screen and (max-width: 574px) {
+    .tool_inner {
+        height: 275px !important;
+    }
+}
+
+
+
+
+
+
+
+
+.theme-three .banner-height .text-big {
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: League-Spartan;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin: 130px 0px;    
+}
+.custom-container {
+    max-width: 1070px;
+}
+.section_two {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.section_two p {
+    font-size: 15px !important;
+}
+.section_three {
+    background: #F8F8F8;
+    margin-bottom: 65px;
+}
+.section_left {
+    padding-left: 180px !important;
+    padding: 25px 0px;
+}
+.section_title {
+    font-size: 31px;
+    line-height: 35px;
+    font-family: "League Spartan Bold";
+    margin-bottom: 15px;
+    text-align: center;
+}
+.section_desc {
+    text-align: center;
+    font-size: 24px;
+}
+.number {
+    color: #d7d7d7;
+    font-size: 35px;
+}
+.custom_heading {
+    color: #283879;
+    font-family: "League Spartan Bold";
+    margin: 5px 0px;
+}
+.custom_content {
+    font-size: 12px;
+}
+.section_fourth .col-md-3 {
+    padding: 0px 38px;
+    margin-bottom: 30px;
+}
+.custom_btn {
+    cursor: pointer;
+    margin-top: 25px;
+    text-align: center;
+    a {
+        background: #283879;
+        color: white;
+        padding: 12px 38px;
+        font-size: 11px;
+        border-radius: 25px;
+    }
+}
+.section_five {
+    background: #F8F8F8;
+    padding: 45px 0px !important;
+}
+.section_fourth .section-padding {
+    padding-bottom: 55px;
+}
+.theme_heading {
+    font-size: 35px;
+    line-height: 35px;
+    font-family: "League Spartan Bold";
+    color:black;
+}
+.section_five .theme_heading {
+    margin: 0 auto;
+}
+.tool_icon img {
+    height: 60px;
+}
+.toolbox {
+    text-align: center;
+}
+.tool_inner {
+    background: white;
+    margin: 8px;
+    padding: 24px 15px;
+    border-radius: 9px;
+    height: 300px;
+    box-shadow: 0px 3px 20px #C3C3C329;
+}
+.tool_title {
+    font-size: 15px;
+    margin: 17px 0px;
+    height: 45px;
+    overflow: hidden;
+}
+.tool_short_disc {
+    font-size: 15px;
+    margin-top: -5px;
+    overflow: hidden;
+    height: 133px;
+}
+.custom_btn.custom_btn2 {
+    cursor: pointer;
+    margin-top: 65px !important;
+    margin: 0 auto;
+}
+.section_five .section-padding {
+    padding-bottom: 30px;
+}
+.section_six  {
+    background-image: url(../../../assets/images/cdap/benifits_bg.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.5);
+    background-color: #283879;
+    padding: 70px 0px;
+}
+.theme_heading2 {
+    margin: 0 auto;
+    color: white;
+    margin-top: -10px;
+    margin-bottom: 45px;
+}
+.benifits_box img {
+    height: 55px;
+    margin-bottom: 15px;
+}
+.section_six .col-md-2 {
+    text-align: center;
+    color: white;
+}
+.benifits_title {
+    font-size: 14px;
+}
+/*custom css end*/

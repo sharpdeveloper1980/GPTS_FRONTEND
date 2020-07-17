@@ -1,0 +1,325 @@
+.studentBack {
+    background-image: url(../../../assets/images/theme-three/top_banners/nano-classes-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner_macro {
+	max-width: 85%;
+}
+
+.nano_student {
+	display: flex;
+}
+
+.margin-btm36 {
+    margin-bottom: 36px;
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.available_img {
+	max-width: 50%;
+}
+
+.font_avail {
+	font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.subtext_avail {
+	font-size: 14px;
+}
+
+.margin_20_minus {
+	margin-left: -20px;
+}
+
+.grey_bg73 {
+    background-size: 100% 73%;
+}
+
+.cluster_space {
+	justify-content: space-between;
+}
+
+.disc_cluster_width {
+	width: 22.5%;
+    height: 450px;
+    padding: 10px;
+    margin-bottom: 45px;
+    border-radius: 6px;
+}
+
+.cluster_1 {
+	background-image: url(../../../assets/images/cluster_videos/creative_design.jpg);
+}
+
+.cluster_2 {
+	background-image: url(../../../assets/images/cluster_videos/media_broadcasting.jpg);
+}
+
+.cluster_bg {
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cluster_text {
+	color: #fff;
+	font-size: 18px;
+}
+
+.cluster_anchor {
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cluster_text_position {
+	bottom: 10px;
+	left: 10px;
+}
+
+.culster_video_area {
+box-shadow: 0px 2px 5px 1px #eaeaea;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+.culster_video_area .sub-text {
+	margin-bottom: 5px;
+	line-height: 35px;
+}
+
+.cluster_v_area_padding {
+	padding: 30px;
+}
+
+.justify_cicles {
+	justify-content: space-between;
+}
+
+.cluster_circle_area {
+	width: 100px;
+    max-width: 100px;
+}
+
+.cluster_circles {
+	box-shadow: 0px 2px 5px 1px #eaeaea;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cluster_circle_text {
+	font-size: 14px;
+    margin-top: 0.75rem;
+    font-weight: 400;
+}
+
+.quotes_detail {
+   font-size: 16px;
+   line-height: 1.4;
+   font-weight: 400;
+}
+
+.purple_area {
+	background-color: #f6f6fd;
+}
+
+.gradient_left_bg {
+	background-image: url(../../../assets/images/theme-three/nano/certify_nano.png);
+	background-repeat: no-repeat;
+    background-size: 40% 110%;
+    background-position: left;
+
+}
+
+.benefits_image {
+	height: 134px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.three_benefits_width {
+	width: 19%;
+	margin-bottom: 20px;
+}
+
+.benefits_width {
+	width: 30%;
+	padding-left: 30px;
+}
+
+.font_22 {
+	font-size: 22px;
+}
+
+.font_14 {
+    font-size: 14px;
+}
+
+.how_it_works_padding {
+	width: 30%;
+	padding: 10px 20px;
+}
+
+.arrow_down {
+    display:block;
+    top: 10px;
+    left: -90px;
+    width: 80px;
+}
+
+.arrow_up {
+    display:block;
+    bottom: 10px;
+    right: -90px;
+    width: 80px;
+}
+
+.inst_benefits_size {
+    height: 400px;
+    margin-bottom: 2rem;
+    padding: 10px 40px;
+}
+
+.inst_benefits_bg {
+    background-image: url(../../../assets/images/theme-three/nano/benefits_bg.png);
+    background-repeat: no-repeat;
+    background-size: 32%;
+    background-position: center center;
+}
+
+.digital {
+    background-image: url(../../../assets/images/theme-three/nano/digital.png);
+}
+
+.webinar {
+    background-image: url(../../../assets/images/theme-three/nano/webinar.png);
+}
+
+.social_media {
+    background-image: url(../../../assets/images/theme-three/nano/social.png);
+}
+
+.direct_mkt {
+    background-image: url(../../../assets/images/theme-three/nano/direct.png);
+}
+
+.grey_two {
+    background-color: #fafafa;
+}
+
+.max_height_145 {
+    max-height: 145px;
+}
+
+.map_row {
+    background-image: url(../../../assets/images/theme-three/nano/dotted_map.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.student_benefits .map_row {
+    background-size: 90% 110%;
+}
+
+/* Media */
+
+@media (max-width: 1199px) {
+    .banner-height {
+        .text-macro {
+            max-width: 632px;
+            margin: auto;
+        }
+    }
+
+    .culster_video_area .sub-text {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+	.disc_cluster_width {
+        width: 30.5%;
+    }
+
+    .culster_video_area .sub-text {
+        font-size: 22px;
+        line-height:30px;
+    }
+
+    .three_benefits_width {
+        width: 30%;
+    }
+
+    .benefits_width {
+        width: 80%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+	.disc_cluster_width {
+        width: 47.5%;
+    }
+
+    .three_benefits_width {
+        width: 33%;
+    }
+
+    .how_it_works_padding {
+        width: 60%;
+        margin: auto;
+    }
+
+    .arrow_down, .arrow_up {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .disc_cluster_width {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cluster_v_area_padding {
+        padding: 15px;
+    }
+
+    .inst_benefits_bg {
+        background-image: none;
+    }
+
+    .three_benefits_width {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .benefits_width {
+        width: 100%;
+    }
+
+    .inst_benefits_size {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .max_height_145 {
+        max-height: auto;
+    }
+
+}

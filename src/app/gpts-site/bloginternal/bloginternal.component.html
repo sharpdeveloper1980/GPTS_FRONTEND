@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="blog-internal-back">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big"> Power your <br>mind</h2>
+          <p class="text-macro"></p>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="blog_title">
+    Bloglist | <span>{{ blogData?.title }}</span>
+  </div>
+
+<div class="bloglist-bubble">
+  <div class="custom-container section-padding" *ngIf="blogVar">
+    <div class="row">
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <!-- <div class="blog_head">
+          <img class="blog_thumb" [src]="blogData?.banner_image!= null ? blogData?.banner_image : assets/images/bloginternal/thumb.png"> 
+          <div class="blog_meta">{{ blogData?.created }} | {{ blogData?.author_name }}</div>
+        </div> -->
+        <div class="blog_content" [innerHTML]="blogData?.description">
+          
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block">
+        <div class="position-sidebar-sticky">
+          <div class="col-12 borderFollow border-follow-new custom_padding">
+            <h5 class="text-uppercase featured_heading">Featured Blog</h5>
+            <img class="blog_featured_thumb" src="assets/images/bloginternal/featured_thumb.png">
+            <div class="blog_meta">MAR 26, 2020 | GRAND TOUR, LIFE</div>
+            <div class="featured_blog_content">
+              <b>How I Was Introduced to the Great North</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla The forces of globalisation are felt in all walks of life and business education is no exception. 
+            </div>
+            <hr class="custom_line">
+            
+          </div>
+          <!-- popular post -->
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <h5>Blogs that may interest you</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div *ngFor="let popular of popularList; i as index" class="postBox d-inline-flex">
+              <div class="imageBox"><img src="{{popular.thumb}}" class="" alt="image">
+              </div>
+              <div class="blogtextpara">
+                <a [routerLink]='["/bloglist",popular.slug]'>
+                  <p>{{popular.title}}</p>
+                  <p class="nameBlog">{{popular.author_name}}</p>
+                </a>
+              </div>              
+            </div>
+            <hr class="custom_line">
+          </div>
+
+          
+ 
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <h5>Social Media</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div class="blog_social_media">
+              <a href="https://facebook.com/GPTSindia/"><img src="assets/images/bloginternal/001-facebook.svg"></a>
+              <a href="https://twitter.com/Gptsglobal"><img src="assets/images/bloginternal/002-twitter.svg"></a>
+              <a href="http://instagram.com/greatplacetostudy"><img src="assets/images/bloginternal/003-instagram.svg"></a>
+              <a href="https://in.linkedin.com/company/great-place-to-study"><img src="assets/images/bloginternal/004-youtube.svg"></a>          
+            </div>
+          </div>
+
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <hr class="custom_line">
+            <h5>Stay Updated</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div class="blog_search">
+             <input type="email" placeholder="Enter your mail">   
+             <img src="assets/images/bloginternal/mail.png">     
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- theme three ends-->

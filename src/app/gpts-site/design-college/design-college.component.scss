@@ -1,0 +1,281 @@
+$colorWhite:#ffffff;
+$leagueSpartanBold:'League Spartan Bold';
+
+.pt-100{padding-top:100px;}
+.pb-100{padding-bottom: 100px;}
+.design-colleges{
+    background-image: url(../../../assets/images/design-college/designCollegeBg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    min-height: calc(100vh - 50px);  
+    color: $colorWhite;
+    font-family: $leagueSpartanBold;
+    
+}
+.coming-soon h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
+    text-shadow: 0 0 18px #000;
+}.coming-soon h2 span {
+    font-size: 39px;
+    color: #f0ff00;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 7px;
+}
+.coming-soon h1{ font-size: 100px;
+    text-transform: uppercase;text-shadow: 0 0 18px #000;
+    letter-spacing: 7px;margin-bottom: 50px;}
+    .coming-soon h1 i{margin-left: 30px;
+        border: solid 1px #fff;
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+        font-size: 44px;
+        text-align: center;
+        padding: 24px 32px;
+        vertical-align: top}
+        .coming-soon .action a.custom-secondary-btn{
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+            background: $colorWhite; border-color: $colorWhite;
+            color: #000000; font-weight: 400;
+            min-width: 150px; text-align: center;
+        }
+        .coming-soon {
+            margin-top: 10%;
+        }
+// .studentBack {
+//     background-image: url(../../../assets/images/theme-three/top_banners/design-college-bg.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+// .justify_cicles {
+// 	justify-content: space-between;
+// }
+
+// .cluster_circle_area {
+// 	width: 100px;
+//     max-width: 100px;
+//     margin-right: 40px;
+// }
+
+// .cluster_circles {
+// 	box-shadow: 0px 2px 5px 1px #eaeaea;
+//     width: 70px;
+//     height: 70px;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .cluster_circle_text {
+// 	font-size: 12px;
+// 	margin-top: 0.75rem;
+// }
+
+// .margin-bottom50 {
+//     margin-bottom: 50px;
+// }
+
+// .margin-bottom100 {
+//     margin-bottom: 100px;
+// }
+
+// .three_vid_width {
+//     width: 30%;
+//     margin-bottom: 20px;
+// }
+
+// .font_size12 {
+//     font-size: 12px;
+// }
+
+// .know_more_clg {
+//     margin-left: 20px;
+//     color: #17baff;
+// }
+
+// .vidTextPos_clg {
+//    background: #fff;
+//    border-radius: 1px;
+//    box-shadow: 0 0 8.8px 0.2px rgba(0,0,0,.19);
+//    margin-top: 10px;
+//    position: relative;
+//    margin-bottom: 30px;
+//    padding: 7px 17px;
+// }
+
+// .vidhead_clg {
+//    margin-bottom: 0;
+//    margin-top: 0;
+//    font-size: 1em;
+//    position: relative;
+//    white-space: nowrap;
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//    padding-right: 40px;
+// }
+
+//for modal popup
+#greatChallengeNotify .modal-dialog{min-width: 1px;}
+#greatChallengeNotify .login-dots-reg{padding-right: 30px; padding-left:30px; }
+.login-dots-reg{
+    content: "";
+    background-image: url(../../../assets/images/theme-three/login-dots.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: 0px solid #dee2e6;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.auth-modal .close{
+    background: none;
+    padding: 1px;
+    float: right;
+    opacity: 1;
+    color: #333333;
+    right: 20px;
+    position: absolute;
+    z-index: 9;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    top: 16px;
+    box-shadow: none;
+}
+
+.sigin-Head-reg {
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'League Spartan Bold';
+}
+.login-dots-reg {
+    position: relative;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+.custom-primary-btn {
+    border-radius: 50px;
+    background-color: #153b93;
+    border: 1px solid #153b93;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 18px;
+    min-width: 150px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: .4s ease-in-out;
+    margin-bottom: 10px;
+}
+.custom-form-control {
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+}.form-control {
+    height: 45px;
+}
+.modal-body{padding-bottom: 2rem;}
+
+
+
+
+/* Media */
+
+@media (max-width: 1199px) {
+    
+}
+
+@media (max-width: 991px) {
+    .three_vid_width {
+        width: 46%;
+    }
+    .coming-soon h2{font-size: 50px;}
+    .coming-soon h1{font-size: 80px;}
+    .coming-soon h1 i{padding: 20px 28px;    font-size: 40px;    width: 80px;
+        height: 80px;margin-left: 20px;}
+}
+
+@media (max-width: 768px) {
+    .coming-soon h2 span{font-size: 30px;}
+    .coming-soon h2{font-size: 40px;}
+    .coming-soon h1{font-size: 60px;}
+    
+}
+@media(max-width:767px){
+    .coming-soon{text-align: center;}
+    .coming-soon h2 span{margin-bottom: 20px;}
+    .coming-soon h2{font-size: 50px;}
+    .coming-soon h1 i{    padding: 17px 22px;
+        font-size: 25px;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;}
+}
+@media (max-width: 576px) {
+    .three_vid_width {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .coming-soon h2 span {
+        font-size: 17px;
+    }
+    .coming-soon h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .coming-soon h1 {
+        font-size: 40px;
+    }
+    .coming-soon {
+        margin-top: 0;
+    }
+    .coming-soon h2{margin-bottom: 50px;}
+    .pt-100{padding-top:60px;}
+.pb-100{padding-bottom: 60px;}
+}
+@media(max-width:320px){
+    .coming-soon h2 span {
+        font-size: 17px;
+    }
+    .coming-soon h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .coming-soon h1 {
+        font-size: 40px;
+    }
+    .coming-soon {
+        margin-top: 0;
+    }
+    .coming-soon h2{margin-bottom: 50px;}
+}

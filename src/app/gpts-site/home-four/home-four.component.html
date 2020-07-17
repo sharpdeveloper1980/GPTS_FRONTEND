@@ -1,0 +1,280 @@
+<app-header></app-header>
+
+<div class="home-page theme-three">
+    <div class="">
+        <div class="custom-container pt-60 pb-100 top-slogan">
+            <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+              <div class="col-lg-6 col-xl-5">
+                  <h1 class="home-head-text text-big custom-text-light banner-title">
+                        Leading Colleges.<br>
+                        Prime Careers. <br>
+                        Essential Must-Knows.<br>
+                     <!-- Your Future is<br>Streaming Here. -->
+<span class="text-very-heavy"> All in Videos. </span>
+<!-- <p>Find out careers, colleges and<br>get all the know-how.</p> -->
+                  </h1>
+                  <a routerLink="/edieo" class="d-inline-block custom-primary-btn">Explore</a>
+                  <a href="javascript:void(0)" *ngIf="!loggedIn"  (click)="openSignupModal()" class="d-inline-block custom-secondary-btn registerNow">Sign Up</a>
+
+              </div>
+              <div class="col-lg-6 col-xl-7">
+                  <div *ngIf="videoLoad" class="white-border-video margin-bottom68">
+                      <div class="embed-responsive embed-responsive-16by9 " (click)="stopAllVid('firstvideo')">
+                          <!-- removed this "big-video-container" class from here-->
+                          <vg-player class="embed-responsive-item">
+                              <vg-overlay-play></vg-overlay-play>
+                              <vg-buffering></vg-buffering>
+                              <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                                  <vg-play-pause></vg-play-pause>
+                                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                  <vg-scrub-bar [vgSlider]="true">
+                                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                      <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                  </vg-scrub-bar>
+                                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                  <vg-mute></vg-mute>
+                                  <vg-volume></vg-volume>
+                                  <vg-fullscreen></vg-fullscreen>
+                              </vg-controls>
+                              
+                              <video  #homeVideo  poster="{{homeVideoThumb}}" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="homeVideoUrl">
+                              </video>
+                          </vg-player>
+                      </div>  </div>
+                    </div>
+
+            </div>
+            <!-- Video Section -->
+            <!-- Old -->
+            <!-- <div class="row side inner-side-spacing align-items-center flex-column-reverse flex-xl-row video-wrapper"
+        data-aos="fade-up" data-aos-duration="1000"> -->
+
+            <!-- New -->
+            <div class="row side video-wrapper flex-wrap flex-xl-row pt-100" data-aos="fade-up" data-aos-duration="1000">       
+           <div class="col-md-12">
+             <div class="row">            
+                    <!-- 1 -->
+                    <div class="col-md-4">
+
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('nanovideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video  poster="{{homeNanoVideoThumb}}" id="nanovideo" [vgMedia]="homeVideo" [src]="homeNanoVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">Nano Classes</p> -->
+                            <p class="text-macro text-center"><a routerLink="/edieo">{{homeNanoVideoTitle}}</a></p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-md-4">
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('collagevideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video  poster="{{homeCollegeVideoThumb}}" id="collagevideo" [vgMedia]="homeVideo" [src]="homeCollegeVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">College Video</p> -->
+                            <p class="text-macro text-center"><a routerLink="/discover-colleges">{{homeCollegeVideoTitle}}</a></p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-md-4">
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('cvideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video poster="{{homeCareerVideoThumb}}" id="cvideo" [vgMedia]="homeVideo" [src]="homeCareerVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">Career Video</p> -->
+                            <p class="text-macro text-center"> <a routerLink="/careerlibrary">{{homeCareerVideoTitle}}</a></p>
+                        </div>
+                    </div>
+                </div>
+              </div>   
+            </div>
+        </div>
+    </div>
+<!--get discover start-->
+<div class="get-discover pt-100 pb-100">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 col-lg-6 col-xl-6">
+        <div class="get-discover-content">
+          <h2 class="newhome-title">Delve Deeper</h2>
+          <p>Get all the download about the trendiest career options and most happening colleges. Broadcast your ideas and get discovered by top-notch institutes. Begin your journey of success with CDAP!</p>
+          <!-- <a href="javascript:void(0);"  class="d-inline-block custom-secondary-btn know-more d-none">Know More</a> -->
+          <a href="javascript:void(0);" *ngIf="!loggedIn" (click)="openSignupModal()"class="d-inline-block custom-secondary-btn">Sign Up</a>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-6 col-xl-6">
+          <div class="get-discover-search">
+              <div class="form-group position-relative mb-0">
+                  <ng-select class="custom-search-career" [items]="careerList" bindValue="id" bindLabel="name" class="homeSearch" [searchable]="true" placeholder="Search Career" (change)="searchVideo($event.slug)">
+                  </ng-select>
+                  <i class="search-icon fa fa-search" aria-hidden="true"></i>
+              </div>
+              <div class="discover-link">
+                <a href="/CDAP">CDAP</a>                
+                <a href="/edieo-detail/career/2">Astronaut</a>
+                <a href="/dalham">DALHAM</a>
+                <a href="/edieo-detail/career/19">Fashion Designer</a>
+                <a href="/city-tour">10 City Tour</a>
+                <a href="/certifiedschool">Certified School</a>
+                <a href="/featuredinstitute#tab-1-panel">Great Indian School</a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--get discover end-->
+
+    <!-- New -->
+    <div class="">
+                <div class="pt-100 pb-100">
+            <!-- Special Initiatives -->
+            <div class="custom-container  initiatives">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="custom-head home-text-heading custom-text-light newhome-title mb-5">Beyond Discovery</div>
+                       </div>
+                </div>
+                <div class="row ">
+                  <div class="col-md-12">
+                        <div class="col-12 fixed_blocks_height pl-0 pr-0 mt-0">
+                            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 roychand_init">
+                                <div  class="d-flex height_100">
+                                    <!-- <p class="roy_text">The Roychand Scholarship</p> -->
+                                    <p class="roy_text"><a routerLink="/great-challenge">The Great Challenge</a></p>
+                                    <!-- <img src="assets/images/theme-three/jain_university_logo_white.png" class="img-fluid position-absolute jain_logo"> -->
+                                    <ul class="position-absolute roy_bottom_ul">
+                                        <li class="roy_bottom_li"><a href="https://rc.greatplacetostudy.com/">Roychand Scholarship</a></li>
+                                        <li class="roy_bottom_li"><a href="https://rc.greatplacetostudy.com/">Robotics for Humanity</a></li>
+                                        <li class="roy_bottom_li"><a href="https://rc.greatplacetostudy.com/">Design Lords</a></li>
+                                    </ul>
+                                    <a routerLink="/great-challenge" class="position-absolute roychand_arrow">
+                                        <i class="fa fa-arrow-circle-o-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12 special_img_double">
+                                <div class="amrita_box_bg">
+                                    <a routerLink="/city-tour" class="d-flex height_100">
+                                    <!-- <p class="common_img_text_init width_init_img2">Study in Amrita University</p> -->
+                                        <p class="common_img_text_init width_init_img2">Future Readiness Summit <span>A 10 City Tour</span></p>
+                                    </a>
+                                </div>
+                                <div class="gpts_ns_bg">
+                                    <a routerLink="/dalham" class="d-flex height_100">
+                                        <!-- <p class="common_img_text_init width_init_img3">GPTS Republic Non Stem Listing</p> -->
+                                        <p class="common_img_text_init width_init_img3">Explore the world of DALHAM</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6 col-12 design_box_bg">
+                                <a routerLink="/design-college" class="d-flex height_100">
+                                    <!-- <p class="common_img_text_init width_init_img4">Design Colleges Of India</p> -->
+                                    <p class="common_img_text_init width_init_img4">The Design College Playlist - 2020</p>
+                                </a>
+                            </div>
+                        </div>
+                  </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+    <div class="blogs-section section-padding custom-container  pt-0">
+        <div class="custom-head custom-text-medium custom-text-light text-center newhome-title">
+           Blogs
+        </div>
+        <div class="row blog-card-section mb-60">
+            <div *ngFor="let blogCard of blogsCarousel | slice: 0:3; index as i" class="col-12 col-md-4 col-xl-4" [ngClass]="{'d-none': i>0,
+          'd-md-block': i>0 && i<=2,
+           'd-xl-block': i>2}">
+                <div class="card">
+                    <a class="blog-link" [routerLink]="['/bloglist', blogCard.slug ]"></a>
+                    <img class="card-img-top" [src]="blogCard.thumb" alt="Card image cap">
+                    <h6 class="card-subtitle text-muted ">
+                        <span>{{blogCard.author_name}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="date">{{blogCard.created_at}}</span>
+                    </h6>
+                    <div class="card-body">
+                        <h5 class="card-title" [title]="blogCard.title">{{blogCard.title}}</h5>
+                       
+                        <p class="card-text">{{blogCard.description}}...</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center d-xl-block mt-6">
+            <a routerLink="/bloglist" class="custom-secondary-btn">Read More</a>
+        </div>
+        <!-- <div class="text-center d-block d-xl-none mt-5">
+        <button class="custom-primary-btn">View More</button>
+      </div> -->
+    </div>
+    <!-- <div class="page-footer-section text-center">
+        <div class="custom-container ">
+            <div class="custom-text-medium custom-text-light footer-text-width">
+                Find your Passion! 
+            </div>
+            <div class="sub-text">
+        Great Thing happens!
+      </div>
+            <button *ngIf="!loggedIn" (click)="openSignupModal()" class="custom-primary-btn">
+                Get Started
+            </button>
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,73 @@
+<div id="page-content-wrapper" *ngIf="favVideoExist">
+
+  <!-- trending videos -->
+  <div class="container-fluid whiteBox">
+    <!-- box heading -->
+    <div class="row headingBorder d-flex pt-3 pb-3 mb-3">
+      <div class="col-6">
+        <p class="headingOne text-uppercase leagueFont mb-0">my favourite</p>
+      </div>
+      <div class="col-6">
+
+      </div>
+    </div>
+
+
+    <!-- only videos -->
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12" id="fav{{i}}"
+        *ngFor="let video of videoArray;let i = index">
+        <div (click)="stopAllVid(i)" *ngIf="videoLoad">
+          <!-- videoHover -->
+          <!-- <video class="videoRadius" width="100%" height="100%" controls>
+                    <source src="http://d2cl25kt4lljhe.cloudfront.net/rina_dhaka.mp4#t=4" type="video/mp4">
+                  </video> -->
+          <!-- <a class="playIcon"><img src="assets/images/common/play-icon.png" class="img-fluid" alt="image"></a>
+                  <p class="videoTextOne">Concept of Fashion Desinging - Part1</p>
+                  <p class="videoTextTwo">By Design Studio</p>
+                  <p><a href="#" class="heartActive"><i class="fa fa-heart"></i></a></p> -->
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <vg-player class="embed-responsive-item">
+              <vg-overlay-play></vg-overlay-play>
+              <vg-buffering></vg-buffering>
+
+              <vg-controls>
+                <vg-play-pause></vg-play-pause>
+                <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+                <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                <vg-mute></vg-mute>
+                <vg-volume></vg-volume>
+                <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+
+              <video id="" [vgMedia]="media" #media id="favideo{{i}}" [src]="video.video" [poster]="video.video_thumb">
+              </video>
+            </vg-player>
+
+          </div>
+          <div class="vidTextPos">
+
+            <!-- heading -->
+            <p class="vidhead">
+              {{video.title}} <span (click)="addToFav(i, video.video_id, $event, video.type)" class="heartPos"><i
+                  class="fa fa-heart"></i></span>
+            </p>
+            <!-- video by -->
+            <p class="vidBy"></p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- trending videos -->
+</div>
+
+<app-empty-myfav *ngIf="!favVideoExist"></app-empty-myfav>

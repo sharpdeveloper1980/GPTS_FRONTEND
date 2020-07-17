@@ -1,0 +1,389 @@
+.sortBy {
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    color: #919eae;
+    font-size: 13px;
+}
+
+
+/* star */
+
+.star-ratings-css {
+    unicode-bidi: bidi-override;
+    color: #c5c5c5;
+    font-size: 16px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+.star-ratings-css-top {
+    color: #e6bb0c;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.star-ratings-css-bottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+}
+
+.star-ratings-sprite {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    font-size: 0;
+    height: 21px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.star-ratings-sprite-rating {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display: block;
+}
+
+.star-ratings-css-top span {
+    margin-right: 3px;
+}
+
+.star-ratings-css-bottom span {
+    margin-right: 3px;
+}
+
+.instituteName {
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-top: 1em;
+    font-weight: 600;
+}
+
+.instituteLocation {
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.blueAbout {
+    color: #2cb5d7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding-top: 15px;
+    display: block;
+}
+
+.programText {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #546170;
+    margin-bottom: 6px;
+}
+
+.programInfo {
+    color: #546170;
+    margin-top: 1.5em;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.programIcon {
+    width: 13px;
+    margin-right: 5px;
+}
+
+.rightBorder {
+    border-right: 1px solid #d4d4d4;
+}
+
+.instituteImage {
+    width: 180px;
+    margin: 45px auto;
+    display: block;
+}
+
+.statusProgram {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #546170;
+    margin-bottom: 0;
+    margin-top: 0.6em;
+}
+
+.applicationViewed {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #828e9b;
+}
+
+.statusPercentage {
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 29%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.deleteApplication {
+    font-family: 'Open Sans', sans-serif;
+    color: #08b3e7;
+    font-size: 15px;
+    display: block;
+    
+}
+
+.contactGreen {
+    font-family: 'Open Sans', sans-serif;
+    color: #08b3e7;
+    font-size: 15px;
+    display: block;
+}
+
+.viewMore {
+    font-family: 'Open Sans', sans-serif;
+    color: #777777;
+    font-size: 15px;
+    display: block;
+    bottom: 0;
+}
+
+.deleteApplication:hover {
+    text-decoration: none;
+    color: #ea4849;
+}
+
+.contactGreen:hover {
+    text-decoration: none;
+    color: #81bc48;
+}
+
+.viewMore:hover {
+    text-decoration: none;
+    color: #2cb5d7;
+}
+
+.statusBox {
+    border: 1px solid #d4d4d4;
+    margin-top: 1em;
+}
+
+.statusBoxPadding {
+    padding: 15px;
+}
+
+.statusProgramPer {
+    margin-top: 1em;
+    margin-bottom: -10px;
+    padding-bottom: 0px;
+}
+
+.headDetails {
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 16px;
+    padding-top: 1em;
+    margin-bottom: 5px;
+}
+
+.paragraphStatus {
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 14px;
+}
+
+.bs-wizard {
+    margin-top: 40px;
+}
+
+
+/*Form Wizard*/
+
+.bs-wizard {
+    border-bottom: solid 1px #e0e0e0;
+    padding: 0 0 10px 0;
+}
+
+.bs-wizard > .bs-wizard-step {
+    padding: 0;
+    position: relative;
+}
+
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    color: #595959;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #999;
+    font-size: 14px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #4ab17f;
+    top: 19px;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    background: #fbbd19;
+    border-radius: 50px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: none;
+}
+
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 8px;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width: 0px;
+    box-shadow: none;
+    background: #4ab17f;
+}
+
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: #f5f5f5;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+    opacity: 0;
+}
+
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+    left: 50%;
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+
+.checkBlue {
+    width: 20px;
+    height: 20px;
+    background: #16b5e3;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 103px;
+    color: white;
+    padding-left: 4px;
+    font-size: 9px;
+    padding-top: 2px;
+    border: 1px solid white;
+}
+
+.checkOrange {
+    width: 20px;
+    height: 20px;
+    background: #e7a839;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 103px;
+    color: white;
+    padding-left: 6px;
+    font-size: 9px;
+    padding-top: 2px;
+    border: 1px solid white;
+}
+
+.uploadBtnGreen {
+    background: #46c38e;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.progress {
+    width: 100%;
+}
+
+.progress .progress-bar{
+    border-radius: 0px;
+}
+
+
+
+/*END Form Wizard*/
+
+.starUser{
+    position: absolute;
+    left: 9px;
+    font-size: 10px;
+    top: 9px;
+}
+
+.sizeFontIcon{
+    font-size: 17px;
+    margin-right: 8px;
+}

@@ -1,0 +1,244 @@
+<app-header></app-header>
+
+<!-- body -->
+
+
+<div class="theme-three">
+    <!-- banner section -->
+    <div class="studentBack dynheader">
+      <div class="custom-container banner-height">
+        <div class="row">
+          <div class="col-lg-5 col-12 text-center text-lg-left">
+            <h2 class="text-big">Trust your instincts</h2>
+            <p class="text-macro">&nbsp;</p>
+          </div>
+          <div class="col-lg-7 col-12 text-center text-lg-right">
+            <img src="assets/images/theme-three/banner/student.png" class="img-fluid bannerImgSub" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- search section -->
+    <div class="custom-container">
+      <!-- search -->
+      <div class="row margin-top-n45">
+        <div class="col-12">
+          <div class="input-group blue-box-search">
+            <ng-select (change)="goToCareer($event.slug)" class="custom-search-career bg-white" [items]="careerList"
+              bindValue="career_id" bindLabel="name" [searchable]="true"
+              placeholder="Browse through Diverse Career Profiles">
+            </ng-select>
+            <div class="input-group-append">
+              <button class="btn custom-button" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-12 text-center">
+          <h3 class="font-size50 custom-text-light margin-bottom18">The Stage is set for you to conquer the world</h3>
+          <p class="orange-text font-size25">It is time begin your journey as a thought leader of tomorrow.
+          </p>
+        </div>
+      </div> -->
+  
+    </div>
+  
+    <!-- solutions for you -->
+    <div class="section-padding custom-container">
+      <div class="row margin-btm135">
+        <div class="col-12 text-center">
+          <h3 class="font-size50 custom-text-light ">Our Solutions</h3>
+        </div>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-12 text-center margin-bottom-resp20">
+          <img src="assets/images/theme-three/career-discovery-student.png" class="img-fluid" alt="image" width="437px">
+          <p class="font-size30 font-color33 margin-top40 head-width-one">Career Discovery Assessment</p>
+          <p class="text-macro font-color33 margin-top40 head-width-one">“The Thriving Index” is an innovative
+            specifically designed to help students discover their passion, dreams, strengths and
+            areas of improvement on the basis of positive psychology. It is a robust
+            tool made simple through world-class technology.</p>
+          <a class="micro-text link text-center d-block margin-top20" routerLink="/careerlibrary"> Learn more</a>
+          <!-- <button class="d-inline-block custom-primary-btn margin-top47" (click)="openSignupModal()">Start</button> -->
+        </div>
+        <div class="col-md-6 col-12 text-center margin-bottom-resp20">
+          <img src="assets/images/theme-three/video-career-student.png" class="img-fluid" alt="image" width="437px">
+          <p class="font-size30 font-color33 margin-top40 head-width-one">Career Video Library</p>
+          <p class="text-macro font-color33 margin-top40 head-width-one">Get insights from the industry giants on
+            your favourite career
+            stream. With deep understanding about the inner workings of a profession and informed opinions about market
+            realities.</p>
+          <a class="micro-text link text-center d-block margin-top20" routerLink="/careerlibrary"> Learn more</a>
+          <!-- <button class="btn d-inline-block custom-primary-btn margin-top47" (click)="openSignupModal()">Start</button> -->
+        </div>
+        <div class="col-md-6 col-12 text-center margin-bottom-resp20">
+          <img src="assets/images/theme-three/nano-laptop.png" class="img-fluid" alt="image" width="437px">
+          <p class="font-size30 font-color33 margin-top40 head-width-one">Discover College</p>
+          <p class="text-macro font-color33 margin-top40 head-width-one">Find educational institutes that offer programmes to suit your interests and passion. CDAP allows you to simplify and navigate the complex task of choosing the right college; it empowers you to follow your dreams.</p>
+          <a class="micro-text link text-center d-block margin-top20" routerLink="/discover-colleges"> Learn more</a>
+          
+        </div>
+        <div class="col-md-6 col-12 text-center margin-bottom-resp20">
+          <img src="assets/images/theme-three/edieo-laptop.png" class="img-fluid" alt="image" width="437px">
+          <p class="font-size30 font-color33 margin-top40 head-width-one text-uppercase">Edieo</p>
+          <p class="text-macro font-color33 margin-top40 head-width-one">Short, interesting and highly informative, Edieo is a research-led edutainment platform that offers inspiring videos on various careers, educational institutions, destinations to study abroad in order to make an informed decision.</p>
+          <!-- <p class="micro-text link text-center d-block margin-top20 color_link_soon orange-text">Coming Soon</p> routerLink="/careerlibrary" -->
+          <!-- <button class="d-inline-block custom-primary-btn margin-top47" (click)="openSignupModal()">Start</button> -->
+          <a class="micro-text link text-center d-block margin-top20" routerLink="/edieo"> Learn more</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+            <button class="d-inline-block custom-secondary-btn margin-top47" (click)="openSignupModal()">Start</button>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- video section from home page -->
+  <div class="bubble-left-student">
+    <div class="custom-container start-section-padding">
+  
+      <div class="row side video-wrapper">
+        <div class="col-12">
+          <div class="orange-text custom-text-medium margin-bottom50 text-center">
+            "Your Search Begins Here”
+          </div>
+        </div>
+        <div class="col-12 video-width6">
+          <div class="white-border-video margin-bottom68">
+            <div class="embed-responsive embed-responsive-16by9 ">
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video [poster]="homeVideoThumb" [src]="homeVideoUrl" [vgMedia]="media" #media class="videoClass"></video>
+              </vg-player>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- text -->
+      <div class="row">
+        <div class="col-12 video-width6 text-center">
+          <div class="video-section-text">
+  
+            <div class=" custom-text-light margin-bottom50 font-size25">
+              The first video career library platform designed and engineered to help students to navigate the intricacies
+              of career search in the modern education system.
+            </div>
+            <button *ngIf="!loggedIn" class="d-inline-block custom-secondary-btn" (click)="openSignupModal()">Get All
+              Access</button>
+            <a *ngIf="loggedIn" routerLink="/careerlibrary" class="d-inline-block custom-secondary-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- video section from home page ends -->
+  
+  
+  
+    <!-- watch latest -->
+    <div class="custom-container section-padding border-top-light">
+      <!-- r1 -->
+      <div class="row margin-bottom68">
+        <div class="col-12 text-center">
+          <!-- <h3 class=" custom-text-light margin-btm36">Watch Latest Videos in our Career Library
+          </h3> -->
+          <p class="font-color33 font-size50">Listen to the experts, learn from the best</p>
+          <h3 class=" custom-text-light margin-btm36">
+          </h3>
+        </div>
+      </div>
+      <!-- r2 -->
+      <div class="row mx-0 trending-video-container">
+        <!-- video -->
+        <div class="custom-col">
+  
+          <h2 class="orange-text font-size30 custom-text-light margin-bottom16 ">Watch and get inspired!
+          </h2>
+          <p class=" text-macro margin-bottom12"></p>
+          <p class="text-small font-color34 margin-top38 extra-padding55">Watch beginners, professionals and experts of
+            various
+            industries share their experiences and invaluable insights in our Video Career Library. It’s time to take
+            your
+            first step and discover the world.</p>
+        </div>
+        <!-- para + video -->
+  
+        <!-- s1 -->
+  
+  
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 margin-bottom44"
+          *ngFor="let data of greatMindsArr | slice: 0:6">
+          <div class="embed-responsive embed-responsive-16by9 ">
+            <!-- remove this "video-container" class from here -->
+            <vg-player class="embed-responsive-item" (click)="checkLoggedIn($event)">
+              <vg-overlay-play></vg-overlay-play>
+              <vg-buffering></vg-buffering>
+              <vg-controls>
+                <vg-play-pause></vg-play-pause>
+                <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                <vg-scrub-bar [vgSlider]="true">
+                  <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                  <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+                <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                <vg-mute></vg-mute>
+                <vg-volume></vg-volume>
+                <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+              <video [poster]="data.video_thumb" [vgMedia]="media" [src]="data.video" #media
+                class="videoClass"></video>
+            </vg-player>
+          </div>
+  
+          <!-- whitebox for video with heart -->
+          <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+            <p class="text-macro">{{data.video_name}}</p>
+            <p class="font-size14">{{data.designation}}</p>
+            <!-- <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.inactive]="!data.fav"
+              (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p> -->
+          </div>
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  
+  
+    <!-- <div class="page-footer-section text-center">
+      <div class="custom-container">
+        <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+          Begin your journey
+        </div>
+        <div class="sub-text">
+          Great things coming your way!
+        </div>
+        <button *ngIf="!loggedIn" class="custom-primary-btn" (click)="openSignupModal()">
+          Start
+        </button>
+      </div>
+    </div> -->
+  </div>
+
+<app-query-modal #queryModal></app-query-modal>

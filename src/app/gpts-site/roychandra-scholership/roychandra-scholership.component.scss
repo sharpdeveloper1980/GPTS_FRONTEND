@@ -1,0 +1,460 @@
+$leagurSpartanBold:'League Spartan Bold';
+.leagurSpartanBold{ font-family: $leagurSpartanBold;}
+.pt-100{padding-top: 100px;}
+.pb-100{padding-bottom: 100px;}
+.roychand_banner {
+    background-image: url(../../../assets/images/royal-chand/hero-banner-royalchand.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+background-position: center bottom;
+    min-height:900px; color: #ffffff;margin-bottom: 180px;
+}
+.banner-content{padding-top:300px ;}
+.banner-content h1{font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 3px #000;}
+    .royal-chand-logo {
+        position: relative;
+        bottom: -190px; 
+    }
+.banner-content h3{font-size: 35px;text-shadow: 0 3px 3px #000; }
+.banner-content button.custom-primary-btn{
+    font-family: "Open Sans", sans-serif;
+    color: #2853b5;
+    background: #ffffff; border-color: #ffffff;
+}
+.banner-content button.custom-primary-btn:hover{color: #ffffff;
+    background: #2853b5; border-color: #2853b5;}
+.about h2{font-size: 50px;color: #333333;  text-transform: uppercase;}
+.about h2 span{display: block; margin-top:20px;color: #ed6f13; font-weight: 300; font-size: 24px;}
+.about a{text-decoration: underline; color: #3b5998;}
+.benefit .benefit-box {
+    text-align: center;
+    margin-bottom:0px;color: #ffffff; min-height: 592px;padding: 20px;
+    border-radius: 8px;
+}.benefit .benefit-box span.icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;    padding: 30px 10px;
+    margin-bottom: 20px;
+    background: #fef9e5;
+    border-radius: 50px;
+}.benefit .benefit-box h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.benefit .benefit-box span.bgcolor1{background: #fef9e5;}
+.benefit .benefit-box span.bgcolor2{background: #e5fbef;}
+.benefit .benefit-box span.bgcolor3{background: #f3f1ff;}
+.benefit .benefit-box span.bgcolor4{background: #ddefff;}
+.benefit .benefit-box span.bgcolor5{background: #ffeadf;}
+.benefit .benefit-box span.bgcolor6{background: #ffe2e2;}
+.benefit .benefit-box.jain{
+    background-image: url(../../../assets/images/royal-chand/jain-univ.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    
+}
+.benefit .benefit-box.scle{
+    background-image: url(../../../assets/images/royal-chand/SCLE.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+.benefit .benefit-box.chenrajRoay{
+    background-image: url(../../../assets/images/royal-chand/drRoychand.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.how-to-apply{
+    background-image: url(../../../assets/images/royal-chand/how-toapply-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    background-attachment: fixed;
+}
+.eligibility{background: #f6f4f5;}
+.eligibility h2,.eligibility em{ font-size: 50px;}
+.eligibility h3 {
+    font-size: 24px;
+}.eligibility em {
+    font-style: normal;
+    font-size: 50px;
+}
+.eligibility p{font-size:15px;}
+
+//how to apply
+.how-to-apply h2{font-size: 50px; }
+.how-to-apply .how-to-apply-box{margin-bottom: 15px; text-align: center;}
+.how-to-apply .how-to-apply-box span.icon{margin-bottom: 30px;}
+.how-to-apply .how-to-apply-box h3{font-size: 24px; font-weight: 300; margin-bottom: 20px;}
+.how-to-apply .how-to-apply-box p{font-size: 15px;}
+
+//process step
+.process-step{text-align: center;margin-bottom: 50px;}
+.process-step span.icon{margin-bottom: 10px;}
+.process-step h3{    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;}
+.process-step p{font-size: 13px;}
+
+
+//scholarship-award
+.scholarship-award span.icon{font-family: $leagurSpartanBold; font-size: 70px;}
+.how-to-apply .scholarship-award .how-to-apply-box span.icon {
+    font-family: "League Spartan Bold";
+    font-size: 45px;
+    line-height: normal;
+    margin-bottom: 10px!important;
+}
+.how-to-apply .scholarship-award .how-to-apply-box h3{text-transform: uppercase; font-size: 18px;margin-bottom: 0px;}
+.selection-process {
+    border-top: solid 1px rgba(255,255,255,.5);
+    margin-top: 100px; position: relative;
+}
+
+.scholarship-award{padding-top: 100px;border-top: solid 1px rgba(255,255,255,.5);}
+.height_content_banner {
+	height: 300px;
+}
+
+.yellow_color {
+	color: #eec129;
+}
+
+.white_color {
+	color: #ffffff;
+}
+
+.roy_banner_text {
+	font-size: 54px;
+}
+
+.blue_check-style-list {
+    div {
+        padding-left: 40px;
+        position: relative;
+        margin-bottom: 20px;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            background-size: contain;
+            background-image: url(../../../assets/images/common/blue_check.gif);
+        }
+    }
+}
+
+.margin_t60 {
+	margin-top: 60px;
+}
+
+.map_gray {
+    background-image: url(../../../assets/images/theme-three/discover-colleges/dotted_map.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.timeline .custom-text-medium {
+	font-size: 34px;
+}
+
+.timeline {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.timeline:before {
+	content: "";
+    width: 0.5px;
+    height: 100%;
+    border: 1px solid #f0eff5;
+    position: absolute;
+    top: 0;
+    /* left: 50%; */
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 0%;
+    line-height: 50px;
+}
+
+.timeline_img_max {
+    max-width: 260px;
+}
+
+.time_dots {
+	color: #ffffff;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #18baff;
+    font-size: 0px;
+    height: 13px;
+    width: 12px;
+    z-index: 9;
+}
+
+.time_dots_odd {
+	right: -5px;
+}
+
+.time_dots_even {
+	left: -7px;
+}
+
+.odd_margin_auto {
+	margin-right: auto;
+}
+
+.even_margin_auto {
+	margin-left: auto;
+}
+
+.odd_padding {
+	padding-right: 70px;
+}
+
+.even_padding {
+	padding-left: 70px;
+}
+
+.margin-top38 {
+	margin-top: 38px;
+}
+
+.purple_box {
+	background-color: #c5c3f4;
+    padding: 4px 20px;
+    color: #ffffff;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.margin-bottom50 {
+    margin-bottom: 50px;
+}
+
+//roychand popup css start
+#roychandScholarshipReg .modal-dialog{min-width: 1px;}
+#roychandScholarshipReg .login-dots-reg{padding-right: 30px; padding-left:30px; }
+.login-dots-reg{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: 0px solid #dee2e6;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.auth-modal .close{
+    background: none;
+    padding: 1px;
+    float: right;
+    opacity: 1;
+    color: #333333;
+    right: 20px;
+    position: absolute;
+    z-index: 9;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    top: 16px;
+    box-shadow: none;
+}
+
+.sigin-Head-reg {
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'League Spartan Bold';
+}
+.login-dots-reg {
+    position: relative;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+.custom-primary-btn {
+    border-radius: 50px;
+    background-color: #153b93;
+    border: 1px solid #153b93;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 18px;
+    min-width: 150px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: .4s ease-in-out;
+    margin-bottom: 10px;
+}
+.custom-form-control {
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+}.form-control {
+    height: 45px;
+}
+.modal-body{padding-bottom: 2rem;}
+ngb-datepicker-navigation-select > .custom-select{margin-right:5px;}
+.roychandScholarshipReg .form-check label a,.roychandScholarshipReg .form-check label{ color: #495057; font-size: 14px;}
+.roychandScholarshipReg .form-check input[type="checkbox"]{vertical-align: middle;}
+.roychandScholarshipReg .form-group select{cursor: pointer;}
+.banner-content p.note {font-weight: normal;font-family: "Open Sans", sans-serif;font-size: 15px; text-shadow: 0 1px 3px #000;}
+
+//roychand popup css end
+
+@media (max-width: 991px) {
+    .timeline_img_max {
+        max-width: 200px;
+    }
+
+    .odd_padding {
+        padding-right: 40px;
+    }
+
+    .even_padding {
+        padding-left: 40px;
+    }
+    .benefit .row .row div[class*="col-md-"] {  margin-bottom: 30px;   }
+    .roychand_banner{margin-bottom: 50px;}
+    .royal-chand-logo {    bottom: 0;  width: 150px;  margin: auto; 
+        margin-left: 0; }
+    .banner-content h3{text-align: left;}
+    .roychand_banner.dynheader .text-right {text-align: left!important;}
+    .banner-content {  padding-top: 200px; }
+    .eligibility .border-right{border-right:none!important}
+    .eligibility div[class*="col-md-"]{margin-bottom: 20px;}
+    .selection-process {  text-align: center;  }
+}
+
+@media (max-width: 768px) {
+
+    .timeline_container .custom-text-medium {
+        text-align: left !important;
+    }
+
+    .timeline:before {
+        left: 13.5px;
+    }
+
+    .time_dots_odd {
+        right: auto;
+        left: -7px;
+    }
+
+    .odd_padding, .even_padding {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .timeline_img_max {
+        max-width: 250px;
+    }
+
+    .roychand_banner {
+    	background-position: center left;
+	}
+
+	.roy_banner_text {
+    	font-size: 46px;
+	}
+
+	.logos_width {
+		width: 125px;
+		height: auto;
+	}
+
+	.height_content_banner {
+    	height: 240px;
+	}
+
+	.link_gpts_roy {
+		font-size: 12px;
+    }
+    
+    .banner-content {
+        padding-top: 130px;
+        text-align: center;
+    }
+    .roychand_banner{margin-bottom: 50px;}
+    .royal-chand-logo {    bottom: 0;  width: 150px;  margin: auto;  }
+    .banner-content h3{text-align: center;}
+    .roychand_banner.dynheader .text-right {text-align: center!important;}
+    .about {  text-align: center;   }
+    .how-to-apply .how-to-apply-box{margin-bottom: 50px;}
+    .selection-process {   text-align: center;  }
+    .process-step {   margin-bottom: 50px!important; }
+    .process-step p {  font-size: 16px;  }
+    .process-step h3 {  font-size: 24px; margin-bottom: 15px; margin-top: 15px; }
+    .how-to-apply h2 {  font-size: 40px; }
+    .eligibility {  text-align: center;  }
+    .eligibility .border-right{border-right: none!important;  margin-bottom: 30px;}
+   
+}
+
+
+@media (max-width: 576px) {
+
+    .odd_padding, .even_padding {
+        padding-right: 0px;
+    }
+
+    .roy_banner_text {
+    	font-size: 46px;
+	}
+
+	.timeline_img_max {
+        max-width: 200px;
+    }
+
+    .roy_banner_text {
+    	font-size: 34px;
+	}
+
+	.logos_width {
+		width: 100px;
+	}
+    .banner-content h1{font-size: 40px;   margin-bottom: 30px;}
+    .royal-chand-logo{margin-bottom: 30px;}
+    .roychand_banner{min-height:800px}
+    .about h2{font-size: 40px;}
+    .how-to-apply .how-to-apply-box p{font-size: 16px;}
+    .benefit .benefit-box{width:70%; margin:auto; background-position: bottom!important;}
+}
+
+
+@media(max-width:480px){
+    .banner-content h3{font-size: 25px;}
+    .banner-content h1,.about h2,.banner-content h1,.how-to-apply h2,.eligibility h2, .eligibility em{font-size: 30px;}
+    .about h2 span{font-size: 20px;}
+    .how-to-apply .scholarship-award .how-to-apply-box span.icon{font-size: 30px;}
+    .benefit .benefit-box{width:100%; margin:auto;}
+    
+}

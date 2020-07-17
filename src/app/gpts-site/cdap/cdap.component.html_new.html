@@ -1,0 +1,287 @@
+<app-header></app-header>
+
+<div class="theme-three">
+
+  <!-- banner section -->
+  <div class="cdap-background dynheader">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-6 col-12 text-center text-lg-left">
+          <h2 class="text-big">DISCOVER YOUR <br>DREAM CAREER</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>        
+      </div>
+    </div> 
+  </div>
+
+
+
+
+  <!-- cdap career discovery -->
+  <div class="gray-background">
+    <div class="section-padding custom-container section_two">
+      <div class="row">
+        <!-- image -->
+        
+        <!-- text -->
+        <div class="col-md-12">
+          <h3 class="font-size50 custom-text-light margin-bottom34">Career Discovery & Acceleration Platform</h3>
+          <p class="text-macro margin-bottom30 roboto_regular">CDAP is a student
+            engagement platform
+            that facilitates career discovery and college search. It
+            brings the world class cinematic content with verified information on various career fields and helps you to
+            make the right career choice.</p>
+          <p class="text-macro roboto_regular">CDAP is one stop solution for the students right from the start of their
+            decision making years till they end up in a college. It serves as a platform that gives students everything
+            they need beginning from discovering their career's on the basis of their inherent strengths, counselling
+            and video career library to inspire them to take the best decision on the basis of verified information.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="section_three">
+      <div class="row">
+        <div class="col-md-6 section_left">
+          <div class="section_title">A step closer to your dreams</div>
+          <div class="section_desc openSans_light">
+            A visual content platform designed and engineered for you to navigate the ever-evolving career streams and learn about the dynamics of these careers.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="white-border-video margin-bottom68 max-width-video">
+            <div class="embed-responsive embed-responsive-16by9 " *ngIf="homeVideoUrl.length">
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video [poster]="homeVideoThumb" [src]="homeVideoUrl" [vgMedia]="media" #media
+                  class="videoClass"></video>
+              </vg-player>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block_section section_fourth">
+      <div class="custom-container section-padding pt-0">
+        <div class="row">
+          <div class="col-12 text-center custom_title">
+            <h3 class="font-size50 custom-text-light margin-btm36 theme_heading">How does it work?</h3>
+          </div>
+          <div class="col-md-3">
+            <div class="number">01</div>
+            <div class="custom_heading">This journey starts here</div>
+            <div class="custom_content">
+              Enrol into CDAP by signing up and building your profile.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="number">02</div>
+            <div class="custom_heading">Fill in personal details</div>
+            <div class="custom_content">
+              Fill your personal information to get access to your dashboard and enter the world of opportunities.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="number">03</div>
+            <div class="custom_heading">Get access to your dashboard</div>
+            <div class="custom_content">
+              The dashboard is tailor made basis your profile and information.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="number">04</div>
+            <div class="custom_heading">Take the Career Discovery Assessment</div>
+            <div class="custom_content">
+              We push ourselves beyond our abilities when faced with tough times. When we foresee uncertainty, we address it only with flexibility.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="number">05</div>
+            <div class="custom_heading">Check your career reports</div>
+            <div class="custom_content">
+              We push ourselves beyond our abilities when faced with tough times. When we foresee uncertainty, we address it only with flexibility.
+            </div>
+          </div>  
+          <div class="col-md-3">
+            <div class="number">06</div>
+            <div class="custom_heading">Explore your career options</div>
+            <div class="custom_content">
+              Dig deep into career library and it’s visual content to learn about your suitable careers.
+            </div>
+          </div> 
+          <div class="col-md-3">
+            <div class="number">07</div>
+            <div class="custom_heading">Notifications on fresh content</div>
+            <div class="custom_content">
+              Get regular updates on any content that will help you understand your career better.
+            </div>
+          </div> 
+          <div class="col-md-3">
+            <div class="number">08</div>
+            <div class="custom_heading">Discover your best fit college</div>
+            <div class="custom_content">
+              Upcoming
+            </div>
+          </div>       
+        </div>
+        <div class="custom_btn"><a href="javascript:void(0)" (click)="openSignupModal()">START HERE</a></div>
+        <!-- flow chart line -->
+      </div>
+    </div>
+
+
+    <div class="block_section section_five">
+      <div class="custom-container section-padding pt-0">
+        <div class="row theme_heading">
+          <div class="theme_heading">More than just a tool</div>
+        </div><br><br>
+        <div class="row">
+          <div class="col-md-3 toolbox">
+            <div class="tool_inner">
+              <div class="tool_icon">
+                <img src="assets/images/cdap/1.png">
+              </div>
+              <div class="tool_title roboto_medium">Take the Career Discovery Assessment</div>
+              <div class="tool_short_disc roboto_regular">
+                Get a step closer to what fits you the best and take the opportunity to opt for the career that matches your passion.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 toolbox">
+            <div class="tool_inner">
+              <div class="tool_icon">
+                <img src="assets/images/cdap/7.png">
+              </div>
+              <div class="tool_title roboto_medium">Explore your dreams through videos</div>
+              <div class="tool_short_disc roboto_regular">
+                Watch videos where industry experts share their experiences and guide you to make the right career choice.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 toolbox">
+            <div class="tool_inner">
+              <div class="tool_icon">
+                <img src="assets/images/cdap/8.png">
+              </div>
+              <div class="tool_title roboto_medium">Knowledge Videos</div>
+              <div class="tool_short_disc roboto_regular">
+                These are research-led edutainment videos that offers inspiring videos on various careers, educational institutions, destinations to study abroad.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 toolbox">
+            <div class="tool_inner">
+              <div class="tool_icon">
+                <img src="assets/images/cdap/3.png">
+              </div>
+              <div class="tool_title roboto_medium">Discover College</div>
+              <div class="tool_short_disc roboto_regular">
+                CDAP allows you to simplify and navigate the complex task of choosing the right college
+              </div>
+            </div>
+          </div>
+          <div class="custom_btn custom_btn2"><a href="javascript:void(0)">VIEW ALL FEATURES</a></div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="block_section section_six">
+      <div class="custom-container section-padding pt-0">
+        <div class="row">
+          <div class="theme_heading theme_heading2">Benefits of CDAP</div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="benifits_box">
+              <img src="assets/images/cdap/psychology.png">
+            </div>
+            <div class="benifits_title roboto_regular">
+              Positive Psychology Enabled Career Assessment
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="benifits_box">
+              <img src="assets/images/cdap/marketing.png">
+            </div>
+            <div class="benifits_title roboto_regular">
+              Detailed & Insightful Career Report
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="benifits_box roboto_regular">
+              <img src="assets/images/cdap/guidance.png">
+            </div>
+            <div class="benifits_title">
+              Focussed Career Guidance
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="benifits_box roboto_regular">
+              <img src="assets/images/cdap/play-button.png">
+            </div>
+            <div class="benifits_title">
+              First Video Career Library
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="benifits_box roboto_regular">
+              <img src="assets/images/cdap/dashboard.png">
+            </div>
+            <div class="benifits_title">
+              Personalised Dashboard
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="benifits_box roboto_regular">
+              <img src="assets/images/cdap/portfolio.png">
+            </div>
+            <div class="benifits_title">
+              College Application
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+   
+
+  <!-- footer -->
+
+  <!-- <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        Begin here to get closer to your dream
+      </div>
+      <div class="sub-text">
+
+      </div>
+      <button *ngIf="!loggedIn" class="custom-secondary-btn" (click)="openSignupModal()">
+        Begin your journey
+      </button>
+    </div>
+  </div> -->
+
+
+</div><!-- theme three ends -->

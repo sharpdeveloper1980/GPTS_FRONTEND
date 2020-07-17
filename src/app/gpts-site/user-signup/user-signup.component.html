@@ -1,0 +1,629 @@
+<app-header></app-header>
+
+<div class="theme-three">
+    <!-- banner section -->
+    <div class="user-sign-back">
+        <div class="custom-container banner-height">
+            <div class="row align-items-center justify-content-center">
+                <h3 class="font-size50 custom-text-light font-color33">Registration</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- benefits of registration -->
+    <div class="section-padding custom-container pt-0">
+        <!-- 2 benefits -->
+        <div class="row margin-bottom72 d-none">
+            <div class="col-md-6 col-12 d-xl-flex d-lg-dlex d-md-flex align-items-center">
+                <!-- image -->
+                <div class="col-md-4 col">
+                    <img src="assets/images/theme-three/cd-benefits.jpg" class="img-fluid" alt="image">
+                </div>
+                <!-- text -->
+                <div class="col-md-8 col">
+                    <h3 class="font-color33 font-size30 margin-bottom25 custom-text-light">Career Discovery</h3>
+                    <p class="text-small font-color33">“The Thriving Index” is an innovative strength based
+                        psychological assessment that is specifically designed to understand students passion, dreams,
+                        strengths and limitations. </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 d-xl-flex d-lg-dlex d-md-flex align-items-center">
+                <!-- image -->
+                <div class="col-md-4 col">
+                    <img src="assets/images/theme-three/cl-benefits.jpg" class="img-fluid" alt="image">
+                </div>
+                <!-- text -->
+                <div class="col-md-8 col">
+                    <h3 class="font-color33 font-size30 margin-bottom25 custom-text-light">Career Library</h3>
+                    <p class="text-small font-color33">The ‘Career Library’ initiative by Great Place To Study has been
+                        conceptualised with the focussed goal of inspiring students to explore their passion and
+                        understand different career streams. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- form benefits -->
+        <div class="row box-shadow justify-content-center">
+
+            <!-- form -->
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+                <div class="tab-content">
+
+                   
+
+                    <!-- student -->
+                    <div class="tab-pane active" *ngIf="userType == 1" id="student">
+                        <!-- form -->
+                        <form class="formMargintp" [formGroup]="signUpFormStudent" (ngSubmit)="registerForm()">
+                            <div class="headingTwo headingLeft text-center d-none">Account Information</div>
+                            <div class="orange-text text-macro text-center  mb-4  mt-5">Welcome to the Great Place
+                                to Study! Before we start, we would like to customize your account for making it your
+                                personal space of great exploration for a better tomorrow. </div>
+                                <div #errorContainer class="mb-5">
+                                    <div *ngIf="errMessage.length" class="alert alert-danger" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        <p *ngFor="let eval of errMessage">{{eval}}</p>
+                                    </div>
+                                </div>
+
+                            <div class="form-group border-bottom-option">
+                                <label class="regiPara">I am a(n): </label>
+                                <label class="checkbox-inline rightMarginLabel">
+                                    <input type="radio" value="1" name="student_type"
+                                        formControlName="student_type" [checked]="true">School
+                                    Student</label>
+                                <label class="checkbox-inline rightMarginLabel">
+                                    <input type="radio" value="2" name="student_type"
+                                        formControlName="student_type">First
+                                    Year Student</label>
+                                <label class="checkbox-inline rightMarginLabel">
+                                    <input type="radio" value="3" name="student_type"
+                                        formControlName="student_type">Transfer
+                                    Student</label>
+                                <label class="checkbox-inline rightMarginLabel">
+                                    <input type="radio" value="4" name="student_type"
+                                        formControlName="student_type">Career
+                                    Coach</label>
+                                <label class="checkbox-inline rightMarginLabel">
+                                    <input type="radio" value="5" name="student_type"
+                                        formControlName="student_type">Parent
+                                    or Other Adult</label>
+                            </div>
+
+
+                            <div class="">
+                                <div class="row">
+                                <!-- left  -->
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+
+                                        <input type="text" class="form-control removeBorderRadius" readonly
+                                            formControlName="student_FirstName" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input type="text" [minDate]="startDate" [maxDate]="today" ngbDatepicker
+                                            #d="ngbDatepicker" class="form-control removeBorderRadius"
+                                            formControlName="student_dob_dp" (change)="console.log(student_dob_dp.value)" (click)="d.toggle()"
+                                            placeholder="Date of Birth">
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <input class="form-control removeBorderRadius" formControlName="student_address"
+                                            placeholder="Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <select #country (change)="getStates(country.value)"
+                                            class="form-control removeBorderRadius" formControlName="student_country"
+                                            placeholder="Country">
+                                            <option value="" disabled selected>Country</option>
+                                            <option *ngFor="let country of countries" [value]="country.id">
+                                                {{country.country_name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- right -->
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control removeBorderRadius"
+                                            formControlName="student_LastName" placeholder="Last Name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <!-- <div class="input-group-prepend">
+                                                <div class="input-group-text removeBorderRadius">+91</div>
+                                            </div> -->
+                                            <input type="text" appOnlyNumber maxlength="10"
+                                                class="form-control removeBorderRadius" placeholder=""
+                                                formControlName="student_contact" placeholder="Contact Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" maxlength="6" appOnlyNumber class="form-control removeBorderRadius"
+                                            formControlName="student_pincode" placeholder="Pincode"> </div>
+                                    <div class="form-group">
+                                        <select formControlName="student_state" class="form-control removeBorderRadius"
+                                            placeholder="State">
+                                            <option value="" disabled selected>{{statesVar}}</option>
+                                            <option *ngFor="let state of states" value="{{state.id}}">{{state.name}}</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                            <div class="white-Back-round margin-bottom72">
+                                <div class="headingTwo headingLeft">Terms & Conditions</div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="termsandCondition"
+                                        formControlName="termsandCondition">
+                                    <label class="form-check-label smallCheckText" for="defaultCheck1">By checking this
+                                        box, I represent that (i) I am 11 years old or above and (ii) I have read,
+                                        understood and agreed to the terms and conditions of Terms of Use and Privacy
+                                        Policy. (Unless I am over the age of 11 but under the age of 18, in which case,
+                                        my
+                                        parent or legal guardian has also read, understood and agreed to the terms and
+                                        conditions of the Privacy Policy and Terms of Use section </label>
+                                </div>
+                                <div class="form-check termsMargin">
+                                    <input class="form-check-input" type="checkbox" value="" id="privacyPolicy"
+                                        formControlName="privacyPolicy">
+                                    <label class="form-check-label smallCheckText" for="defaultCheck1">I agree to the <a
+                                            href="/terms" target="_blank" class="termsColor">Terms and Conditions</a> and <a
+                                            href="/privacy" target="_blank">Privacy Policy</a> </label>
+                                </div>
+                            </div>
+                            <!-- button -->
+                            <div class="form-group text-center">
+                                <button [disabled]="!signUpFormStudent.valid" id="sinupbtn_stepsec" type="submit"
+                                    class="btn btn-success btn-customSuccess registrationBtn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- institutions -->
+                    <div class="tab-pane container active" *ngIf="userType == 2" id="institution">
+                        <div class="row">
+                            <!-- form -->
+                            <form class="formMargintp" [formGroup]="regFormInstitue" (ngSubmit)="instituteRegForm()">
+                                <div class="headingTwo headingLeft">Account Information</div>
+                                <div class="form-group">
+                                    <label class="regiPara">Welcome to the Great Place to Study! Before we start, we
+                                        would
+                                        like to customize your account for making it your personal space of great
+                                        exploration for a better tomorrow. I am a(n): </label>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Name of College</label>
+                                    <input type="text" class="form-control removeBorderRadius" readonly
+                                        formControlName="collegeName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Location</label>
+                                    <input type="text" class="form-control removeBorderRadius"
+                                        formControlName="location" placeholder="Location">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">University Affiliated to</label>
+                                    <ng-select class=" custom changeSelect" [items]="departmentList" bindValue="id"
+                                        bindLabel="name" [searchable]="false" placeholder="University affiliated to"
+                                        formControlName="university_affiliated"></ng-select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Type of College</label>
+                                    <ng-select class="custom changeSelect" [items]="collegeTypeList" bindValue="id"
+                                        bindLabel="name" [searchable]="false" placeholder=""
+                                        formControlName="college_type"></ng-select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Dean's Name</label>
+                                    <input type="text" class="form-control removeBorderRadius"
+                                        formControlName="dean_name" placeholder="Dean's Name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Dean's Email Id</label>
+                                    <input type="email" class="form-control removeBorderRadius"
+                                        formControlName="dean_email_id" placeholder="Dean's email id">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">User name</label>
+                                    <input type="text" class="form-control removeBorderRadius"
+                                        formControlName="username" placeholder="User Name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">User Email ID</label>
+                                    <input type="text" class="form-control removeBorderRadius" readonly
+                                        formControlName="emailId" placeholder="User Email ID">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Phone No.</label>
+                                    <input type="text" appOnlyNumber class="form-control removeBorderRadius"
+                                        formControlName="phone_no" placeholder="Phone No.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Mobile No.</label>
+                                    <input type="text" appOnlyNumber minlength="10" maxlength="10"
+                                        class="form-control removeBorderRadius" formControlName="mobile_no"
+                                        placeholder="Mobile No.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Department</label>
+                                    <ng-select class=" custom changeSelect" [items]="departmentList" bindValue="id"
+                                        bindLabel="name" [searchable]="false" placeholder="Department"
+                                        formControlName="department"></ng-select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Designation</label>
+                                    <ng-select class=" custom changeSelect" [items]="departmentList" bindValue="id"
+                                        bindLabel="name" [searchable]="false" placeholder="Designation"
+                                        formControlName="designation"></ng-select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Address</label>
+                                    <textarea class="form-control removeBorderRadius"
+                                        formControlName="college_address"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Pincode</label>
+                                    <input type="text" appOnlyNumber maxlength="6" class="form-control removeBorderRadius"
+                                        formControlName="college_pincode" placeholder="110092"> </div>
+                                <div class="form-group">
+                                    <label class="text-uppercase label-customLogin">Country</label>
+                                    <select class="form-control removeBorderRadius" formControlName="college_country"
+                                        placeholder="Country">
+                                        <option selected disabled hidden>Choose here</option>
+                                        <option *ngFor="let country of countries" [value]="country.id">
+                                            {{country.country_name}}</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="headingTwo">Password</div> -->
+                                <!-- password -->
+                                <!-- <div class="form-group">
+                                                <label>Create Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName=""> </div>
+                                            <div class="form-group">
+                                                <label>Retype Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName=""> </div> -->
+                                <!-- terms -->
+                                <div class="headingTwo headingLeft">Terms & Conditions</div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="termsandCondition"
+                                        formControlName="termsandCondition">
+                                    <label class="form-check-label smallCheckText" for="defaultCheck1">By checking this
+                                        box, I represent that (i) I am 13 years old or above and (ii) I have read,
+                                        understood and agreed to the terms and conditions of Terms of Use and Privacy
+                                        Policy. (Unless I am over the age of 13 but under the age of 18, in which case,
+                                        my
+                                        parent or legal guardian has also read, understood and agreed to the terms and
+                                        conditions of the Privacy Policy and Terms of Use section </label>
+                                </div>
+                                <div class="form-check termsMargin">
+                                    <input class="form-check-input" type="checkbox" value="" id="privacyPolicy"
+                                        formControlName="privacyPolicy">
+                                    <label class="form-check-label smallCheckText" for="defaultCheck1">I agree to the
+                                        <a href="#" target="_blank" class="termsColor">Terms and Conditions</a> and <a
+                                            href="#" target="_blank">Privacy Policy</a> </label>
+                                </div>
+                                <!-- button -->
+                                <div class="form-group">
+                                    <button type="submit" [disabled]="!regFormInstitue.valid"
+                                        class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase registrationBtn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- university -->
+                    <div class="tab-pane container active" *ngIf="userType == 3" id="university">
+                        <!-- form -->
+                        <form class="formMargintp" [formGroup]="signUpFormUniv" (ngSubmit)="unviRegForm()">
+                            <div class="headingTwo headingLeft">Account Information</div>
+                            <div class="form-group">
+                                <label class="regiPara">Welcome to the Great Place to Study! Before we start, we would
+                                    like to customize your account for making it your personal space of great
+                                    exploration for a better tomorrow. I am a(n): </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Name of The University</label>
+                                <input type="text" class="form-control removeBorderRadius" readonly
+                                    formControlName="univName" placeholder="Name of the university">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Location</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="location"
+                                    placeholder="Location">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Year of Establishment</label>
+                                <input type="text" appOnlyNumber maxlength="4" class="form-control removeBorderRadius"
+                                    formControlName="year_of_build" placeholder="Year of establisment">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Name of Vice Chancellor</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="vc_name"
+                                    placeholder="Name of Vice Chancellor">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Email id of VC</label>
+                                <input type="email" class="form-control removeBorderRadius"
+                                    formControlName="vc_email_id" placeholder="Email id of VC">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">User Name</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="username"
+                                    placeholder="User Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">User Email ID</label>
+                                <input type="email" class="form-control removeBorderRadius" formControlName="univEmail"
+                                    placeholder="User Email id">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Department</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="department"
+                                    placeholder="Department">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Phone No.</label>
+                                <input type="text" appOnlyNumber class="form-control removeBorderRadius"
+                                    formControlName="phone_no" placeholder="Phone No.">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Mobile No.</label>
+                                <input type="text" appOnlyNumber maxlength="10" class="form-control removeBorderRadius"
+                                    formControlName="mobile_no" placeholder="Mobile No.">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Designation</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="designation"
+                                    placeholder="Designation">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Website Address</label>
+                                <input type="text" class="form-control removeBorderRadius" formControlName="website"
+                                    placeholder="Website Address">
+                            </div>
+
+                            <!-- <div class="form-group">
+                                        <label class="text-uppercase label-customLogin">Address</label>
+                                        <textarea class="form-control removeBorderRadius" formControlName="student_address"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-uppercase label-customLogin">Pincode</label>
+                                        <input type="number" appOnlyNumber class="form-control removeBorderRadius"
+                                            formControlName="student_pincode" placeholder="110092"> </div>
+                                    <div class="form-group">
+                                        <label class="text-uppercase label-customLogin">Country</label>
+                                        <select class="form-control removeBorderRadius" formControlName="student_country"
+                                            placeholder="Country">
+                                            <option selected disabled hidden>Choose here</option>
+                                            <option *ngFor="let country of countries" [value]="country.id">{{country.country_name}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-uppercase label-customLogin">contact number</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text removeBorderRadius">+91</div>
+                                            </div>
+                                            <input type="text" appOnlyNumber maxlength="10" class="form-control removeBorderRadius"
+                                                placeholder="9999999999" formControlName="student_contact">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>By which year do you plan to start college?</label>
+                                        <select class="form-control removeBorderRadius" formControlName="student_collage_year">
+                                            <option selected disabled hidden>Choose here</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Prefferred location for Education</label>
+                                        <input type="text" class="form-control removeBorderRadius" placeholder="First Location"
+                                            formControlName="student_prefferred_Firstlocation">
+                                        <input type="text" class="form-control removeBorderRadius" placeholder="Second Location"
+                                            formControlName="student_prefferred_Secondlocation">
+                                        <input type="text" class="form-control removeBorderRadius" placeholder="Third Location"
+                                            formControlName="student_prefferred_Thirdlocation">
+                                        <input type="text" class="form-control removeBorderRadius" placeholder="Fourth Location"
+                                            formControlName="student_prefferred_Fourtlocation">
+                                    </div>
+                                    <div class="headingTwo headingLeft">Notification</div> -->
+                            <!-- terms -->
+                            <!-- <div class="form-group">
+                                        <label>Please review and consider the following before continuing. The colleges that I
+                                            am considering for applications may communicate with me by, check atleast one (you
+                                            can change this response later within your account settings)</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="mail">Mail</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="e_mail">E-mail</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="phone">Phone</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="sms">Text</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="any">Any of the above</label>
+                                    </div> -->
+                            <!-- <div class="headingTwo headingLeft">Communication</div> -->
+                            <!-- terms -->
+                            <!-- <div class="form-group">
+                                        <label>The colleges wherein I have submitted my 1Application may communicate with me
+                                            for my application and other information relevant to admission application process
+                                            (you can change this response later within your account settings) </label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="comunication_mail">Mail</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="comunication_e_mail">E-mail</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="comunication_phone">Phone</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="comunication_sms">Text</label>
+                                        <label class="checkbox-inline rightMarginLabel">
+                                            <input type="checkbox" value="" formControlName="comunication_any">Any of the above</label>
+                                    </div> -->
+                            <!-- <div class="headingTwo">Password</div> -->
+                            <!-- password -->
+                            <!-- <div class="form-group">
+                                                <label>Create Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName=""> </div>
+                                            <div class="form-group">
+                                                <label>Retype Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName=""> </div> -->
+                            <!-- terms -->
+                            <div class="headingTwo headingLeft">Terms & Conditions</div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termsandCondition"
+                                    formControlName="termsandCondition">
+                                <label class="form-check-label smallCheckText" for="defaultCheck1">By checking this
+                                    box, I represent that (i) I am 13 years old or above and (ii) I have read,
+                                    understood and agreed to the terms and conditions of Terms of Use and Privacy
+                                    Policy. (Unless I am over the age of 13 but under the age of 18, in which case, my
+                                    parent or legal guardian has also read, understood and agreed to the terms and
+                                    conditions of the Privacy Policy and Terms of Use section </label>
+                            </div>
+                            <div class="form-check termsMargin">
+                                <input class="form-check-input" type="checkbox" value="" id="privacyPolicy"
+                                    formControlName="privacyPolicy">
+                                <label class="form-check-label smallCheckText" for="defaultCheck1">I agree to the <a
+                                        href="#" target="_blank" class="termsColor">Terms and Conditions</a> and <a
+                                        href="#" target="_blank">Privacy Policy</a> </label>
+                            </div>
+                            <!-- button -->
+                            <div class="form-group">
+                                <button type="submit" [disabled]="!signUpFormUniv.valid"
+                                    class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase registrationBtn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- school -->
+                    <div class="tab-pane container active" *ngIf="userType == 4" id="school">
+                        <!-- form -->
+                        <form class="formMargintp" [formGroup]="signUpFormSchool" (ngSubmit)="schoolRegForm()">
+                            <div class="headingTwo headingLeft">Account Information</div>
+                            <div class="form-group">
+                                <label class="regiPara">Welcome to the Great Place to Study! Before we start, we would
+                                    like to customize your account for making it your personal space of great
+                                    exploration for a better tomorrow. I am a(n): </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Name of School</label>
+                                <input type="text" class="form-control removeBorderRadius" readonly
+                                    formControlName="schoolName" placeholder="Name of School">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Year of Establishment</label>
+                                <input type="text" appOnlyNumber maxlength="4" class="form-control removeBorderRadius"
+                                    formControlName="school_year_of_build" placeholder="Year of establisment">
+                            </div>
+
+                            <div class="form-group">
+                                <label>School Type</label>
+                                <select class="form-control removeBorderRadius" formControlName="school_type">
+                                    <option selected disabled hidden>Choose here</option>
+                                    <option>Public ( Central, State or Local)</option>
+                                    <option>Private</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Board Type</label>
+                                <select class="form-control removeBorderRadius" formControlName="school_board_type">
+                                    <option selected disabled hidden>Choose here</option>
+                                    <option>Central Board of Secondary Education (CBSE)</option>
+                                    <option>Council for the Indian School Certificate Examination (CISCE-ICSE/ISC)
+                                    </option>
+                                    <option>International Baccalaureate (IB)</option>
+                                    <option>Cambridge Assessment International Education (Cambridge International)
+                                    </option>
+                                    <option>State Board</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Location</label>
+                                <input type="text" appOnlyNumber maxlength="4" class="form-control removeBorderRadius"
+                                    formControlName="school_location" placeholder="Indian States">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Name of the Principal/Head of the
+                                    School</label>
+                                <input type="text" class="form-control removeBorderRadius"
+                                    formControlName="school_head_name"
+                                    placeholder="Name of the Principal/Head of the School">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Email Address of the Principal/Head of
+                                    the School</label>
+                                <input type="email" class="form-control removeBorderRadius"
+                                    formControlName="school_head_email_id"
+                                    placeholder="Email Address of the Principal/Head of the School">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">School Contact Details</label>
+                                <input type="text" class="form-control removeBorderRadius"
+                                    formControlName="school_contact" placeholder="School Contact Details">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">School Email</label>
+                                <input type="email" class="form-control removeBorderRadius"
+                                    formControlName="school_email" placeholder="School Email Address">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Website Address</label>
+                                <input type="text" class="form-control removeBorderRadius"
+                                    formControlName="school_website" placeholder="Website Address">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Admin Name</label>
+                                <input type="text" appOnlyNumber class="form-control removeBorderRadius"
+                                    formControlName="school_admin_name" placeholder="Admin Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-uppercase label-customLogin">Admin Email</label>
+                                <input type="email" appOnlyNumber maxlength="10" class="form-control removeBorderRadius"
+                                    formControlName="school_Admin_email" placeholder="Admin Email">
+                            </div>
+                            <div class="headingTwo headingLeft">Terms & Conditions</div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termsandCondition"
+                                    formControlName="termsandCondition">
+                                <label class="form-check-label smallCheckText" for="defaultCheck1">By checking this
+                                    box, I represent that (i) I am 13 years old or above and (ii) I have read,
+                                    understood and agreed to the terms and conditions of Terms of Use and Privacy
+                                    Policy. (Unless I am over the age of 13 but under the age of 18, in which case, my
+                                    parent or legal guardian has also read, understood and agreed to the terms and
+                                    conditions of the Privacy Policy and Terms of Use section </label>
+                            </div>
+                            <div class="form-check termsMargin">
+                                <input class="form-check-input" type="checkbox" value="" id="privacyPolicy"
+                                    formControlName="privacyPolicy">
+                                <label class="form-check-label smallCheckText" for="defaultCheck1">I agree to the <a
+                                        href="#" target="_blank" class="termsColor">Terms and Conditions</a> and <a
+                                        href="#" target="_blank">Privacy Policy</a> </label>
+                            </div>
+                            <!-- button -->
+                            <div class="form-group">
+                                <button type="submit" [disabled]="!signUpFormUniv.valid"
+                                    class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase registrationBtn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,116 @@
+<div id="page-content-wrapper">
+  <!-- == start main code for body == -->
+  <!-- search box -->
+  <div class="container-fluid whiteBox">
+    <div class="row">
+      <div class="col-12 d-flex">
+        <p class="headingTwo headingTwoAdjust col-xl-1 col-lg-1 col-md-2 col-sm-12 col-12">Search
+          for </p>
+        <div class="dropdown collegeOrangeTop  col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <button class="btn btn-secondary dropdown-toggle drpDownBtn" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Colleges
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+        <div class="form-group  col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
+          <input type="text" class="form-control customSearch" placeholder="Search" /> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- set5 -->
+  <div class="container-fluid p-0">
+    <div class="row removePadding">
+      <!-- calendar -->
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <!-- heading -->
+        <div class="col-12 headingBorder whiteBoxThree">
+          <div class="row border-bottom mb-3">
+            <div class="col-6">
+              <p class="headingOne text-uppercase">Career Library</p>
+            </div>
+            <div class="col-6">
+              <p class="scoreText"><i class="fa fa-ellipsis-v"></i></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-7">
+              <div class="custom-datepicker">
+                <ng-template #t let-date let-currentMonth="currentMonth">
+                  <div class="custom-date">
+                    <div class="date-content w-100 text-center d-flex justify-content-center align-items-center h-100"
+                      [class.notification-date]="date.day == 4 && date.month == 12 && date.year == 2018" [class.muted]="date.month !== currentMonth"
+                      (click)="getClickedDay(date)" [class.custom-today]="date.day === today.day && date.year === today.year && date.month === today.month">{{date.day}}</div>
+                    <div class="notification-calender" *ngIf="date.day == 4 && date.month == 12 && date.year == 2018">
+                      <div class="notification-item">Delete</div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ngb-datepicker [dayTemplate]="t" [displayMonths]="displayMonths" class="w-100" #dp [(ngModel)]="model"
+                  (navigate)="date = $event.next"></ngb-datepicker>
+              </div>
+            </div>
+            <div class="col-5 divider-left">
+              <div class="notification-info" *ngIf="showSelectedDate">
+                <h5>
+                  {{selectedDate}}th {{selectedMonth}} {{selectedYear}}
+                </h5>
+                <p>
+                  Your entrance exam for Delhi University is on 8th September, 2018
+                </p>
+                <p>
+                  Timings: 10:00AM to 1:00PM
+                </p>
+                <div class="text-center">
+                  <button class="custom-green-button">
+                    Notify me again
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- calendar -->
+        </div>
+      </div>
+      <!-- important notice -->
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 notice-wrapper">
+        <!-- heading -->
+        <div class="col-12 whiteBoxThree removePadding">
+          <div class="col-12 d-flex headingBorder removePadding">
+            <div class="col-6">
+              <p class="headingOne text-uppercase">Important Notice</p>
+            </div>
+            <div class="col-6">
+              <p class="scoreText"></p>
+            </div>
+          </div>
+          <!-- section one -->
+          <div class="col-12">
+            <div class="notice-content">
+              <p class="nameInsititute"><strong>Cambridge International School</strong></p>
+              <p class="nameInsitituteLocation">Australia</p>
+              <p class="instituteText">You need to provide your experience certificate along
+                with your releaving letter from the last firm. for more information you can
+                message us here.</p>
+              <p><a href="#" class="blueBtnTxt border-0">Upload Documents</a> | <a href="#" class="blueBtnTxt border-0">Contact
+                  us</a></p>
+            </div>
+            <div class="notice-content">
+                <p class="nameInsititute"><strong>Cambridge International School</strong></p>
+                <p class="nameInsitituteLocation">Australia</p>
+                <p class="instituteText">You need to provide your experience certificate along
+                  with your releaving letter from the last firm. for more information you can
+                  message us here.</p>
+                <p><a href="#" class="blueBtnTxt border-0">Upload Documents</a> | <a href="#" class="blueBtnTxt border-0">Contact
+                    us</a></p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

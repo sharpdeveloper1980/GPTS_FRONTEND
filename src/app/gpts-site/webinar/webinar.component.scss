@@ -1,0 +1,601 @@
+
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+//global css
+.p-t-60{padding-top: 100px;}
+.p-b-60{padding-bottom: 100px;}
+.m-b-30{margin-bottom: 30px;}
+.m-b-60{margin-bottom: 60px;}
+.p-t-100{padding-top: 100px;}
+.p-b-100{padding-bottom: 100px;}
+.pb-80{padding-bottom: 80px;}
+.pt-80{padding-top: 80px;}
+.pb-100{padding-bottom: 100px;}
+.pt-100{padding-top: 100px;}
+.pb-120{padding-bottom: 120px;}
+.pt-120{padding-top: 120px;}
+.pb-150{padding-bottom: 150px;}
+.pt-150{padding-top: 150px;}
+
+$colorWhite:#ffffff;
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+
+
+//hero section
+.hero-banner h3{font-size: 40px; font-family: $roboto-family; font-weight: 600; text-transform: uppercase;}
+.hero-banner{ color: #0D0D0D;position: relative;}
+.hero-banner .hero-content h1{font-size: 100px; margin-bottom: 0px;  font-family: $leagueSpartanBold;    line-height: 1; position: relative;letter-spacing: 12px;margin-top: 30px;
+  z-index: 2;}
+.hero-banner .hero-content h1 span{color: #ffffff;display: inline; margin-left: 15px;}
+.hero-banner .hero-content p{font-size: 16px;
+  margin-bottom: 20px;
+  padding-right: 17px;}
+.hero-banner .hero-content a{text-transform: uppercase;background: #D52267; font-size: 14px; font-weight: 600; border-color: #D52267; min-width:150px;text-align: center;}
+#heroBannerImages .box{overflow-y: hidden; vertical-align: bottom;}
+.enhancePadd{padding-right: 40px;}
+
+//enhanceKnowledge
+.speaker-desc ul li, .speaker-desc ol li {
+  list-style: disc;
+  margin-left: 17px;
+  font-size: 15px;
+  color: #070707;
+  opacity: .82;
+}
+.banner-title{
+  font-size: 35px;line-height: 1; font-family: $leagueSpartanBold;color: #D52267;margin-bottom: 20px;
+}
+.banner-title strong{color: #D1D1D1; display:block;margin-bottom: 5px;
+  font-size:75px; text-transform: uppercase;opacity: 0.35;}
+  .banner-title span{color: #000000;}
+
+//topics css start
+#topics{background: url(../../../assets/images/webinar/topics-bg.jpg) no-repeat 0 0; background-size: cover;}
+#topics ul li span.icon .hover{display: none;}
+#topics ul li:hover span.icon .hover{display: inline-block;}
+#topics ul li:hover span.icon .default{display: none;}
+#topics ul li{color: #ffffff;}
+#topics ul li span.icon {
+  display:block;
+  width: 110px; margin:auto;
+  height: 110px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 68px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#topics .banner-title strong{color: #ffffff70;opacity: 1;}
+#topics .banner-title span{color: #ffffff;}
+
+//topics css end
+
+//schedule time table html start
+.calendar-box h2{  font-weight: bold; color: #808285; text-transform: uppercase; font-size: 50px;margin-bottom: 20px;}
+.calendar-box h2 span {color: #d9eafe; font-size: 80px;margin-left:20px}
+
+.speaker-desc p b {
+  color: #191919;
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 15px;
+}
+//schedule time table html end
+
+//city date section
+.city-date .about-heading{
+    font-weight: 400;background: #fcfcfd; padding: 20px 150px;  display: inline-block; margin:auto;
+}
+
+.sponsorShip span:last-child { width: auto;}
+.calendar-content thead {
+    color: #ffffff;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    font-weight: 600;
+}.calendar-content td {
+    background: #FFFFFF;font-weight: 400;color: #717171;
+}.calendar-content th, .calendar-content td {
+    border: solid 1px #70707047;     vertical-align: top;position: relative;
+    text-align: right;
+}.calendar-content thead {
+    color: #ffffff;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    font-weight: 600;
+}.calendar-content thead th.weekend {
+  background: #152044;
+  color: #ffffff;
+}.calendar-content thead th {
+    text-align: center;color: #333333;padding: 10px!important;
+    border:solid 1px transparent;
+    background: #F3F3F3;text-transform: uppercase;
+
+}
+.calendar-content thead th,.calendar-content td{    min-width: 73px;padding:0px;}
+.calendar-content td.empty{background: #ffffff;}
+.calendar-content td span {
+  display: block;
+  background: #C6C6C6;
+  cursor: pointer;
+  padding: 5px 4px;
+  color: #333333;
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  min-height:55px;  
+  -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+.calendar-content td span:empty{
+  background: transparent;
+}
+.calendar-content td div {
+  padding: 10px;    font-weight: 400; 
+}
+.calendar-content td.active div{color: #D52267;}
+.calendar-content td.active span{background: #D42267; color: #ffffff;}
+// .calendar-content td span.delhi{background: #d4170d;}
+// .calendar-content td span.chandigarh{background: #17c887;}
+// .calendar-content td span.jaipur{background: #ea00ff;}
+// .calendar-content td span.kolkata{background: #f29216;}
+// .calendar-content td span.bhopal{background: #4e91f4;}
+// .calendar-content td span.bangalore{background: #15ceba;}
+// .calendar-content td span.mumbai{background: #eac80f;}
+// .calendar-content td span.hyderabad{background: #a615d5;}
+// .calendar-content td span.chennai{background: #7f3b20;}
+// .calendar-content td span.ahmedabad{background: #1243b3;}
+// .calendar-content td span.pune{background: #f44236;}
+// .calendar-content td span.dehradun{background: #673bb7;}
+.speaker-desc h3{letter-spacing: 0px;
+  color: #070707;margin-bottom: 15px;
+  opacity: 1; font-size: 20px; font-weight: 400;}
+.speaker-desc h3 span{letter-spacing: 0px;
+  color: #070707;display: block;
+  margin-top: 5px;
+  opacity: 0.82;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;}
+.speaker-desc p{letter-spacing: 0px;
+  color: #333333;margin-bottom: 20px;
+  opacity: 0.9;    font-size: 15px;
+  line-height: 1.4;}
+.speaker-desc a{background: #D52267 0% 0% no-repeat padding-box;font-weight: 600;
+  border-radius: 40px; border-color: #D52267;  text-transform: uppercase; 
+  opacity: 1; font-size: 14px;}
+//contactForm css start
+  #contactForm .contact-form{background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 20px 25px #0000000D;
+  border-radius: 30px;    padding: 40px;
+  opacity: 1;}
+#contactForm label.control-label{    color: #333333;
+  opacity: 0.75;
+  margin-bottom: 0;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 400;
+  letter-spacing: 0;}
+  #contactForm label.control-label em{color: #f00; font-style: normal;}
+#contactForm .form-control{    border: 1px solid #70707047;
+  border-radius: 40px;
+  margin-bottom: 0px;
+  /* opacity: 0.35; */
+  color: #333333;
+  }
+  #contactForm   .checkbox-container input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 7px;
+}
+#contactForm .checkbox-container {
+  margin-right: 20px;    display: inline-block;
+}
+#contactForm .checkbox-container label {
+  cursor: pointer;color: #333;
+}
+#contactForm .col-lg-6.bdrRight { 
+  border-right: solid 1px #f9f9f9;
+}
+#contactForm .cust-submit{background: #D52267 0% 0% no-repeat padding-box;
+  border-radius: 40px;text-transform: uppercase;font-weight: 600;
+  opacity: 1; cursor: pointer; border-color: #D52267; min-width:150px}
+//contactForm css end
+
+//agenda
+.agenda{background: #fcfcfd;}
+.agenda h2{font-weight: 600;}
+.agenda .agenda-box { margin-bottom: 30px; padding: 0 50px 0 50px;}
+.p-r-0{padding-right:0px!important;}
+.p-l-0{padding-left:0px!important;}
+.agenda h3 { font-size: 24px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px;}
+
+//cityTourRegistration
+.cityTourRegistration .registration-form{background: #3e3063;min-height: 600px; padding:60px 150px; color: #ffffff;}
+.cityTourRegistration .registration-image{background-image:url('../../../assets/images/city-tour/register-image.jpg');
+background-repeat: no-repeat;background-size: cover;}
+.registration-form h3{font-size: 30px; text-transform: uppercase;font-weight: 600; margin-bottom: 30px;}
+.registration-form .form-control{    border-radius: 4px;
+    background-color: #3e3063;
+    border: 1px solid rgba(255,255,255,.3);color:#c3c3c3;
+    height: 42px;}
+    .registration-form .custom-primary-btn {width:100%;height:45px}
+    .registration-form .custom-primary-btn.download{background: #a2a2a2;border-color:#a2a2a2;color:#ffffff;}
+    .registration-form .custom-secondary-btn{width:100%;height:45px}
+    .registration-form .form-control::-webkit-input-placeholder {
+        color: rgba(255,255,255,.3);;
+      }
+      .alert.alert-danger ul {
+        margin-bottom: 0;
+    }
+    .registration-form select.form-control {  cursor: pointer; }
+
+      /* with the :focus here, we would show grey when not using the element */
+      .registration-form select.form-control {
+    color: #c3c3c3;
+  }
+  /* with the :focus here, we show grey when using the element */
+  .registration-form select.form-control:focus,.registration-form select.form-control:visited {
+    color: #c3c3c3;
+  }
+  .registration-form select.form-control option {
+    color: #ffffff;
+  }
+  .registration-form select.form-control option:not(:first-of-type) {
+    color: #c3c3c3;
+  }
+      //supprt start
+
+      .support .support-image{background-image:url('../../../assets/images/city-tour/support-image.jpg');
+        background-repeat: no-repeat;background-size: cover;height:600px}
+      .support .support-content{ color:#ffffff;background: #000000;min-height: 600px;text-align: center;padding: 150px 150px;}
+      .support .support-content h3{font-size: 35px;line-height: 30px;font-weight: 600;text-transform: uppercase; line-height: 1;font-family: $leagueSpartanBold;}
+      .support .support-content p{ font-size: 16px;line-height: 30px;font-weight: 300;text-align: center;      }
+      .support .support-content p a{color: #ffffff;}
+      .support .support-content p span{display: block;}
+
+      //partner logo
+      .partner-logo{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,ffffff+100 */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,f2f2f2+59,ffffff+100 */
+background: #f2f2f2; /* Old browsers */
+background: -moz-linear-gradient(top,  #f2f2f2 0%, #f2f2f2 59%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f2f2f2 0%,#f2f2f2 59%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f2f2f2 0%,#f2f2f2 59%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+        }
+        //speaker
+        .our-speaker .spaker-box{    min-height: 343px;}
+
+        .our-speaker .spaker-box.speaker-1 {background-image:url('../../../assets/images/city-tour/speaker-1.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-2 {background-image:url('../../../assets/images/city-tour/speaker-2.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-3 {background-image:url('../../../assets/images/city-tour/speaker-3.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-4 {background-image:url('../../../assets/images/city-tour/speaker-4.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-5 {background-image:url('../../../assets/images/city-tour/speaker-5.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-6 {background-image:url('../../../assets/images/city-tour/speaker-6.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-7 {background-image:url('../../../assets/images/city-tour/speaker-7.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-8 {background-image: url('../../../assets/images/city-tour/speaker-8.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-9 {background-image: url('../../../assets/images/city-tour/speaker-9.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-10 {background-image: url('../../../assets/images/city-tour/speaker-10.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-11 {background-image: url('../../../assets/images/city-tour/speaker-11.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-12 {background-image: url('../../../assets/images/city-tour/speaker-12.jpg'); background-size: cover;}
+        .our-speaker .spaker-box.speaker-13 {background-image: url('../../../assets/images/city-tour/speaker-13.jpg'); background-size: cover;}
+        .our-speaker .spaker-box .speaker-content{opacity: 0; transition: all 0.3s ease 0.2s;overflow: hidden; position: absolute; left:0px;top:0px;width:100%; height:100%; background: rgba(0,0,0,.8);}
+        .our-speaker .spaker-box .speaker-content .title {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%; font-size: 0;letter-spacing: .3; overflow: hidden;
+            left: -100%;transition: all 0.3s ease 0.2s;
+            z-index: 2;
+        }
+        .our-speaker .spaker-box:hover .speaker-content,.our-speaker .spaker-box:hover .speaker-content .title{ opacity: 1; font-size: 24px;}
+        .our-speaker .spaker-box:hover .speaker-content .title{ left: 0;display: block;transition: all 0.3s ease 0.2s;
+            text-align: center;}
+            .our-speaker .spaker-box .speaker-content .title h3{       margin-bottom: 3px;
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 3.5px;}
+                .our-speaker .spaker-box .speaker-content .title p{font-style: italic; font-size: 14px;}
+                .calendar-content td span.completed{color: #17c887;
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: capitalize;}
+  .calendar-content td span.scheduled{
+    color:#4171f9;
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: capitalize; display: none;
+  }
+//testimonial section start
+.testimonial{    background: #fcfcfd;}
+.carousel-caption2 {border: solid 2px #153b932e;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: unset;
+    margin-top: 0;
+    background: #edf2ff;}
+.testimonial .carousel-caption2 h3{
+    font-family: $roboto-family;
+    position: relative;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    background: #edf2ff;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 35px; 
+} 
+.testimonial .carousel-caption2 p{margin-bottom: 15px;}
+.testimonial .carousel-control-prev, .testimonial .carousel-control-next{display: none;}
+.testimonial .title{ margin-top:50px;}
+.testimonial .title span.image{width:60px; height:60px; border-radius: 50px;overflow: hidden;    display: inline-block;}
+.testimonial .title p{font-size: 14px; margin-bottom: 0px;}
+
+//previous webinar css start
+#previousWebinar .video-thumbnail .thumb{
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 45px; }
+#previousWebinar .video-thumbnail .thumb img.img-fluid{    width: 100%; }
+#previousWebinar .video-thumbnail div.topic{position: absolute;border-radius: 45px; left:0px; top:0px; width:100%;height:100%; z-index: 2; opacity: 0; transition: all .3s ease-in-out; background: #d522678c;color: #ffffff;}
+#previousWebinar .video-thumbnail:hover .thumb div.topic{opacity: 1;}
+#previousWebinar .video-thumbnail div.topic span{
+  position: absolute;
+  content: '';
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  font-size: 18px; text-transform: uppercase; text-align: center;
+  font-family: $leagueSpartanBold;
+}
+#previousWebinar .video-thumbnail .des {
+  text-align: center;
+  margin: 20px 0;
+}
+.des span.date{display: block; font-family: $leagueSpartanBold; font-size: 20px;color: #152044;}
+.des h4{font-family: $leagueSpartanBold; font-size: 18px;color: #333333;}
+.des p{font-size: 14px; color: #333333;}
+.des .custom-primary-btn{
+  border: 1px solid #D52267!important;background: #ffffff!important;
+border-radius: 40px;
+opacity: 1;color: #D52267;font-size: 13px; text-transform: uppercase;
+}
+#previousWebinar .custom-control-arrow .arrow {
+  display: inline-block;
+  width: 40px;
+  background: #ffffff94;
+  box-shadow: 0px 1px 6px #00000060;
+  text-align: center;
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px;
+  height: 40px;
+  line-height: 30px;
+}
+#previousWebinar .control-arrow.custom-control-arrow {
+  position: absolute;
+  top: 100px;
+  width: 100%;}
+  #previousWebinar .custom-control-arrow .arrow img{width:auto}
+
+//responsive css start
+@media(min-width:1201px){
+  .calendar-content td span{min-height: 41px;}
+}
+      @media(min-width:1201px) and (max-width:1600px){
+        .cityTourRegistration .registration-form{padding: 60px 100px;;}
+        .hero-banner{min-height: 700px;}
+        .support .support-content{padding: 180px 100px;}
+        .support .support-content{padding: 150px 20px;}
+        .sponsorShip{bottom: -140px;}
+        #previousWebinar .video-thumbnail .thumb{
+          height: 240px;
+        }
+      }
+      @media(max-width:1300px){
+        .hero-banner .hero-content h1{font-size: 90px;}
+      }
+@media(max-width:1200px){
+  .banner-title{font-size: 30px;}
+  .hero-banner .hero-content h1{font-size: 85px; }
+  .enhancePadd{ padding-right: 15px;}
+}
+@media(min-width:1024px) and(max-width:1200px){
+  #previousWebinar .video-thumbnail .thumb{
+    height: 240px;
+  }
+}
+@media(max-width:1024px){
+  .hero-banner h3{margin-top: 50px;}
+  .hero-banner .hero-content h1{font-size: 63px;}
+  .banner-title strong{font-size: 60px;}
+  .banner-title{font-size: 25px;}
+
+}
+
+      @media(min-width:992px) and (max-width:1200px){
+        .cityTourRegistration .registration-form{ padding: 50px 50px;}
+        .object-outcome .about-heading{padding-left:50px}
+        .agenda .agenda-box{padding: 0 20px 0 20px;}
+        .agenda h3{font-size: 22px;}
+        .support .support-content{padding: 150px 20px;}
+        #scheduled .pl-5 {  padding-left: 15px!important;   }
+        .calendar-content thead th, .calendar-content td{
+          min-width: 65px;
+        }
+        
+        // .calendar-content td span{word-break: break-all;}
+      }
+         
+   
+@media(max-width:991px){
+  #heroBannerImages{display: none;}
+  .hero-banner .hero-content h1 span {
+    color: #0e0e0e;
+    margin-left: 0;
+}
+.calendar-content td span{ min-height: 45px;}
+#scheduled .pr-5 {  padding-right: 15px!important;}
+.contact-form p br {
+  display: none;
+}
+#contactForm label.control-label{margin-bottom: 10px;}
+.enhance-image {
+  margin-top: 40px;
+}
+.enhancePadd{padding-right:0px}
+.hero-banner .hero-content h1{margin-top: 20px;}
+    .cityTourRegistration .registration-image{height:600px;}
+    .calendar-content thead th,.calendar-content td{    min-width: 93px;}
+    .calendar-content{overflow-x: scroll; padding-bottom: 20px;margin-bottom: 40px;}
+    .hero-banner .hero-content p {
+      font-size: 16px;
+      margin-top: 10px;
+  }
+}
+      @media(min-width:768px) and (max-width:991px){
+      .hero-banner{min-height: 1px;}
+      .hero-banner .hero-content h1{    font-size: 60px;}
+      
+      .agenda .agenda-box{padding:0px;}
+      .agenda h3{font-size: 16px;}
+      .object-outcome .about-heading{padding-left: 8px; padding-right:8px;  display: block;    text-align: center;}
+      .object-outcome .about-heading br{display: none;}
+      .object-outcome ul li{text-align: center; list-style:none;}
+      .sponsorShip{    bottom: -180px;}
+      .sponsorShip span{    width: 23%;}
+      .sponsorShip span.sessionPartner{   font-size: 17px;
+        margin-right: 20px;
+        padding-right: 20px;
+        width: auto;}
+
+    }
+   
+    @media(max-width:767px){
+
+            .calendar-content th{font-size: 15px;}
+            .city-date .calendar-box h2{font-size: 35px;}
+            .city-date .calendar-box h2 span{    font-size: 50px; margin-left: 5px;}
+            .cityTourRegistration .registration-form{padding: 60px 50px;}
+            .support .support-content{    min-height: 1px;    padding: 100px 50px;}
+            .city-date .about-heading{    padding: 20px;}
+            .object-outcome ul li{text-align: center; list-style:none;}
+            .partner-logo img.img-fluid{margin:20px 0;}
+            .agenda .border-right{border-right:none!important;}
+            .object-outcome .about-heading{display: block; text-align: center;    padding-left: 10px;  padding-right: 10px;}
+            .object-outcome .about-heading br{display: none;}
+            .sponsorShip{    bottom: -180px;}
+      .sponsorShip span{    width: 23%;}
+      .sponsorShip span.sessionPartner{   font-size: 17px; margin-right: 20px; padding-right: 20px; width: auto;}
+        #heroBannerImages {   margin-top: 60px;  }
+        #heroBannerImages .box{margin-top:0px!important}
+        .hero-banner h3{margin-top:0px}
+        .hero-banner .hero-content h1{margin-top:20px}
+        .hero-banner .hero-content h1 span{color: #0e0e0e; margin-left: 0;}
+        .enhance-image {   margin-top: 50px;  }
+        .calendar-content th, .calendar-content td{vertical-align: top;}
+        #contactForm .contact-form{padding:20px}
+    }
+    @media(max-width:767px){
+      .navbar-brand{left: 90px;}
+      #mobileView{    padding-right: 58%!important; background: url(../../../assets/images/webinar/web-3.jpeg) no-repeat 94% -100px;
+        background-size: 54%; min-height: 430px;}
+        .hero-banner h3{font-size: 29px;}
+      .hero-banner #mobileView{text-align: left;}
+      .hero-banner #mobileView h1 {
+        font-size: 58px;
+        letter-spacing: 19px;
+    }
+    .hero-banner #mobileView h1 span {
+      color: #ffffff;
+      margin-left: 14px;
+  }
+    }
+    
+    @media(max-width:480px){
+      .hero-banner #mobileView h1{ letter-spacing: 17px;}
+      #mobileView{    padding-right: 37%!important; background: url(../../../assets/images/webinar/web-3.jpeg) no-repeat 95% 0;
+        background-size: 34%; min-height: 1px;}
+        .hero-banner .hero-content h1{    font-size: 50px;}
+        .object-outcome .about-heading{padding: 20px; padding-left: 20px;  display: block;text-align: center;}
+        .city-date .calendar-box h2 span{font-size: 40px;}
+        .city-date .calendar-box h2 {  font-size: 30px;    }
+        .cityTourRegistration .registration-form {  padding: 30px 30px;        }
+        .city-date .calendar-box h2 span{font-size: 40px;}
+        .city-date .calendar-box h2 {font-size: 25px;  text-align: center; }
+        .about-heading{font-size: 30px;}
+        .hero-banner .hero-content{text-align: center;}
+        .partner-logo img.img-fluid {margin:20px 0; }
+        .amrita-logo {  margin-top: 0;  }
+        .agenda .agenda-box{padding: 0 20px 0 20px;}
+        .city-date .about-heading{display: block;}
+        .sponsorShip span {
+          width: 37%;
+          margin-right: 10px;
+          margin-left: 10px;
+          margin-bottom: 15px;
+      }
+        .sponsorShip span.sessionPartner{
+          width: 100%;
+          border-right: none;
+          margin-bottom: 20px;margin-left: 0;
+          margin-right: 0;
+        }
+        .sponsorShip {  bottom: -250px;   left: 0;   }
+        section#enhanceKnowledge {
+          text-align: center;
+      }
+      .calendar-content thead th, .calendar-content td{
+        min-width:85px;
+      }
+      .speaker-image {
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .speakers {
+      text-align: center;
+  }
+  #scheduled .pl-5 {
+    padding-left: 15px!important;
+}
+    }
+
+    @media(max-width:414px){
+      .hero-banner #mobileView h1 { font-size: 60px; letter-spacing: 7px; }
+    }
+    @media(max-width:375px){
+      .hero-banner #mobileView h1 {   font-size: 52px;}
+   
+    }
+    @media(max-width:320px){
+      .banner-title strong{font-size: 50px;text-align: center;}
+      .banner-title{line-height: 1.3; font-size: 25px; text-align: center;}
+      section#enhanceKnowledge {  text-align: center; padding-top:0px}
+      #heroBannerImages{display: none;}
+      .hero-banner .hero-content h1{letter-spacing: 2px;}
+      .hero-banner h3{font-size: 30px;}
+      .hero-banner .hero-content h1{font-size: 40px;}
+      .hero-banner #mobileView h1 {  font-size: 42px; }
+      .hero-banner h3 { font-size: 20px;    }
+    }

@@ -1,0 +1,163 @@
+<app-empty-mustwatch *ngIf="!tteTestTaken"></app-empty-mustwatch>
+
+<div id="page-content-wrapper" *ngIf="tteTestTaken">
+  <div class="dashboard-three">
+    <!-- your video library -->
+    <div class="container-fluid whiteBox">
+      <!-- box heading -->
+      <div class="row headingBorder d-flex">
+        <div class="col-6">
+          <p class="headingOne text-uppercase leagueFont">Your Video Library</p>
+        </div>
+      </div>
+
+      <!-- filter tabs close -->
+      <div class="row marginTabTop greyFilter">
+        <div class="col-12">
+          <!-- <div class="col-1"><strong>SEARCH :</strong></div> -->
+          <div class="input-group">
+            <ng-select (change)="searchVideo($event)" class="custom-search-career border-status" [items]="careerList"
+              bindValue="career_id" bindLabel="name" [searchable]="true"
+              placeholder="Search your favourite career stream">
+            </ng-select>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+            </div>
+          </div>
+          <!-- <tag-input [(ngModel)]="videoSerachList" [onlyFromAutocomplete]="true" [maxItems]='1'
+            (onAdd)="searchVideo(videoSerachList[0])" [secondaryPlaceholder]="'Search Video'" class="border-blue">
+            <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="careerList" [identifyBy]="'id'"
+              [displayBy]="'name'">
+            </tag-input-dropdown>
+          </tag-input> -->
+
+        </div>
+      </div>
+
+      <!-- video tabs start -->
+      <!-- set 1 -->
+      <div class="row d-xl-flex d-lg-flex d-md-flex videoMarginTop padLftRgt">
+         <div *ngIf="noVideo.length" class="col-12 text-center mt-5">
+            {{noVideo}}
+         </div>
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 custom-width-video"
+          *ngFor="let video of videoArray; let i = index">
+          <div class="" (click)="stopAllVid(i,'singleVideo')" *ngIf="videoLoad">
+            <!-- arrow -->
+            <div class="d1 {{video.type}}">
+              <p class="d2 ">{{video.type}}</p>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+
+                <video id="" [vgMedia]="media" #media id="singleVideo{{i}}" [src]="video.video"
+                  [poster]="video.video_thumb">
+                </video>
+              </vg-player>
+            </div>
+            <div class="vidTextPos">
+
+              <!-- heading -->
+              <p class="vidhead" [title]='video.title'>
+                {{video.title}} <span (click)="addToFav(video.video_id, $event)" [class.inactive]="!video.fav"
+                  class="heartPos"><i class="fa fa-heart"></i></span>
+              </p>
+              <!-- video by -->
+              <p class="vidBy">
+                By {{video.name}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- know  more button -->
+      <div class="row" *ngIf="careerSlug">
+        <a [routerLink]="['/course/', careerSlug]" class="greenLoadBtn">Know More</a>
+      </div>
+    </div>
+
+
+    <!-- set1 ends -->
+    <!-- your video library ends-->
+
+    <!-- recommend for you -->
+    <div class="container-fluid whiteBox">
+      <!-- box heading -->
+      <div class="row headingBorder d-flex">
+        <div class="col-6">
+          <p class="headingOne text-uppercase leagueFont">Recommend for you</p>
+        </div>
+      </div>
+      <!-- video tabs start -->
+      <!-- set 1 -->
+      <div class="row d-xl-flex d-lg-flex d-md-flex videoMarginTop padLftRgt">
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12" *ngFor="let video of recVidArray; let i = index">
+          <div class="" (click)="stopAllVid(i,'recVid')" *ngIf="videoLoad">
+            <!-- arrow -->
+            <div class="d1 {{video.type}}">
+              <p class="d2 ">{{video.type}}</p>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+
+                <video [vgMedia]="media" #media id="recVid{{i}}" [src]="video.video" [poster]="video.video_thumb">
+                </video>
+              </vg-player>
+            </div>
+
+            <div class="vidTextPos">
+
+              <!-- heading -->
+              <p class="vidhead" [title]='video.title'>
+                {{video.title}} <span (click)="addToFav(video.video_id, $event)" [class.inactive]="!video.fav"
+                  class="heartPos"><i class="fa fa-heart"></i></span>
+              </p>
+              <!-- video by -->
+              <p class="vidBy">
+                By {{video.name}}
+              </p>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+      <!-- set1 ends -->
+
+    </div>
+    <!-- recommend for you end-->
+  </div>
+</div>

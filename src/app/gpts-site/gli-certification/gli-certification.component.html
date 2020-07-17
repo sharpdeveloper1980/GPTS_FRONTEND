@@ -1,0 +1,587 @@
+<app-header></app-header>
+
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="gli-certification-banner">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-6 col-12 text-center text-lg-left">
+          <h2 class="text-big">Be a thought leader</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-6 col-12 text-center text-center">
+          <img src="assets/images/theme-three/banner/gli.svg" class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gray-background">
+    <!-- gpts -->
+    <div class="section-padding">
+      <div class="custom-container alingCenterVer">
+        <div class="row border-bottom-gli">
+          <div class="col-lg col-12 max-width-customized">
+            <h2 class="font-size50 custom-text-light headSpacing text-uppercase">great place to study</h2>
+            <p class="paraInsitSpacing orange-text font-size25 gpts-gli">You have the chance to find your ‘greatness
+              factor’ by participating in Global League Institute (GLI) Certification.
+            </p>
+            <p class="text-small font-color33 margin-bottom40">{{gliBout | slice: 0: sliceVar}} <span
+                *ngIf="!(sliceVar == gliBout.length)">...</span></p>
+            <button *ngIf="!(sliceVar == gliBout.length)" class="d-inline-block custom-secondary-btn"
+              (click)="sliceVar = gliBout.length">Read More</button>
+            <button *ngIf="sliceVar == gliBout.length" class="d-inline-block custom-secondary-btn"
+              (click)="sliceVar = 200">View Less</button>
+          </div>
+          <div class="col-md col-12">
+            <img src="assets/images/theme-three/sfi-step5.png" class="img-fluid" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- gli certification -->
+    <div class="custom-container section-padding remove-padding-top">
+      <div class="row margin-bottom70">
+        <div class="col-12 text-center">
+          <h4 class="font-size50 custom-text-light font-color33 margin-bottom20">GLI ceremony 2018</h4>
+          <p class="font-size25 orange-text custom-text-light">House of Commons, London</p>
+        </div>
+      </div>
+      <!-- video -->
+      <div class="row justify-content-center">
+        <div class="col"></div>
+        <div class="col-xl-6 col-lg-6 col-12">
+          <div class="white-border-video">
+            <div class="embed-responsive embed-responsive-16by9 " *ngIf="homeVideoUrl.length">
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video [poster]="homeVideoThumb" [src]="homeVideoUrl" #media [vgMedia]="media" class="videoClass"></video>
+              </vg-player>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <!-- para -->
+      <div class="row margin-top55">
+        <div class="col-12">
+          <p class="text-center font-color33 text-small">In a ceremony hosted by GPTS, educational institutions
+            were honoured with the title of a ‘Great place to study’. The Global League Institutes Certification
+            ceremony is held at the illustrious House of Commons, UK. The finest Indian schools and colleges were
+            honoured for their
+            dedication to bring forth progressive measures to the educational institutes in India.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- benefits of gli -->
+  <div class="custom-container section-padding benifits-container">
+    <div class="row margin-bottom112">
+      <div class="col-12 text-center">
+        <p class="font-size50 custom-text-light font-color33">Benefits of GLI Certification</p>
+      </div>
+    </div>
+    <!-- time-line -->
+    <div class="row justify-content-center benefits-timeline-wrapper">
+      <div class="col-12">
+        <section class="timeline">
+          <div>
+            <!-- left -->
+            <div class="timeline-item">
+              <div class="timeline-img">
+
+              </div>
+
+              <div class="timeline-content">
+                <img src="assets/images/theme-three/timeline-1.jpg" class="img-fluid" alt="image">
+                <h2>Branding and national
+                  recognition</h2>
+                <div class="date">ONE</div>
+                <p>Stand tall and proud in a league of exceptional educational institutions in India, get recognised as
+                  a ‘great place to study’. Your institute will be awarded this great honour among your peers in the
+                  industry. Within the framework of happiness quotient, pre-eminent institutes will be recognised for
+                  their outstanding contribution to education. They will be recognised for their contribution in
+                  uplifting the education system in the 21st century by ensuring a great learning environment for
+                  budding young minds. </p>
+
+              </div>
+            </div>
+
+            <!-- right -->
+            <div class="timeline-item">
+
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content">
+                <img src="assets/images/theme-three/timeline-2.jpg" class="img-fluid" alt="image">
+                <h2>Grand ceremony in London,
+                  House of Commons</h2>
+                <div class="date">TWO</div>
+                <p>The stage is set for your institution to get the recognition that it deserves, the chance to enhance
+                  brand visibility in the education fraternity. At a prestigious ceremony to be held at the House of
+                  Commons, London, your institute will bestowed with the ‘great place to study’ certification. The event
+                  will be attended by top academics, educationist, ministers, Lords and business barons from India and
+                  the UK. </p>
+
+              </div>
+            </div>
+
+
+            <!-- left -->
+            <div class="timeline-item">
+              <div class="timeline-img">
+
+              </div>
+
+              <div class="timeline-content">
+                <img src="assets/images/theme-three/timeline-3.jpg" class="img-fluid" alt="image">
+                <h2>Opportunity to network
+                  with peers</h2>
+                <div class="date">THREE</div>
+                <p>You will have the chance to share ideas and help the educational community implement progressive
+                  education models that will help bring in an era of cognizance in the education sector. You will be in
+                  the company of the finest institutions that have pioneered student happiness and satisfaction in the
+                  educational landscape. Panel discussions will include talks on new ways to adopt and implement
+                  student-centric policies and creating a clear road map to build a strong and dynamic education system.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- right -->
+            <div class="timeline-item">
+
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content">
+                <img src="assets/images/theme-three/timeline-4.jpg" class="img-fluid" alt="image">
+                <h2>Global exposure through
+                  video profiling</h2>
+                <div class="date">FOUR</div>
+                <p>The certification ceremony offers an opportunity for prestigious institutes to be showcased as the
+                  beacon of academia and representing the ideal of exceptionalism in the field of education. It presents
+                  an opportunity for top educators to build strong and long lasting relationships that could become the
+                  bedrock for future developments in the field of education. </p>
+
+              </div>
+            </div>
+
+
+            <!-- left -->
+            <div class="timeline-item">
+              <div class="timeline-img">
+              </div>
+              <div class="timeline-content last-timeline-content">
+                <img src="assets/images/theme-three/timeline-5.jpg" class="img-fluid" alt="image">
+                <h2>Create a global brand recognition</h2>
+                <div class="date">FIVE</div>
+                <p>GPTS certification offers national and international recognition with its offerings, a chance to be a
+                  part of an esteemed league of educational institutes. Certified as great place to study on the basis
+                  of students voice. It shows students, parents and teachers think
+                  alike that your institute is an excellent place to receive quality education.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- what people say -->
+  <div class=" lightgreyBg">
+    <div class="custom-container section-padding">
+      <div class="row margin-bottom130">
+        <div class="col-12 text-center">
+          <h3 class="font-size50 font-color33 custom-text-light">Take a look at how we are impacting lives</h3>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="swiper-container testimonial-container" [swiper]="testConfig">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col-xl-5 col-12">
+                <div>
+                  <!--                <img src="assets/images/static/quot.png" class="img-fluid quot" alt="image">-->
+                  <p class="font-size30 font-color33">Wynberg Allen School</p>
+                  <p class="font-size25 orange-text margin-bottom88">Mussoorie </p>
+                  <p class="font-color33 text-small">Results, achievements, accolades and ubiquitous rankings are all
+                    pervading influences. The Great Place To Study concept was actually breath taking in its simplicity
+                    and resonated with “correctness”. What better way (or perhaps the only way) is there to judge a
+                    school than have the main stakeholders - the students, decide how happy and how satisfied they are.
+                </div>
+              </div>
+              <div class="col-xl-5 col-12 texEnd">
+                <img src="assets/images/theme-three/school-images/wynberg-allen.png" class="img-fluid" alt="image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="col-xl-5 col-12">
+                <div>
+                  <!--                <img src="assets/images/static/quot.png" class="img-fluid quot" alt="image">-->
+                  <p class="font-size30 font-color33">ST. GEORGE’S COLLEGE</p>
+                  <p class="font-size25 orange-text margin-bottom88">Mussoorie </p>
+                  <p class="font-color33 text-small">We sincerely commend the team of Great Place To Study’s team for
+                    their effort in bringing out the telecast depicting the essence of St. George’s College as a happy
+                    school. Thank you very much.
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-5 col-12 texEnd">
+                <img src="assets/images/theme-three/school-images/St_Georges.png" class="img-fluid" alt="image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="col-xl-5 col-12">
+                <div>
+                  <!--<img src="assets/images/static/quot.png" class="img-fluid quot" alt="image">-->
+                  <p class="font-size30 font-color33">THE HYDERABAD PUBLIC SCHOOL</p>
+                  <p class="font-size25 orange-text margin-bottom88">Begumpet</p>
+                  <p class="font-color33 text-small">It was a pleasure to collaborate with Great Place To Study. This is
+                    a highly professional organisation which looks at each aspect of educational growth very critically
+                    and scientifically. I wish Great Place To Study all the very best in making positive contributions
+                    to Indian education.
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-5 col-12 texEnd">
+                <img src="assets/images/theme-three/school-images/hps.png" class="img-fluid" alt="image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="col-xl-5 col-12">
+                <div>
+                  <!--                <img src="assets/images/static/quot.png" class="img-fluid quot" alt="image">-->
+                  <p class="font-size30 font-color33">CAO BIRLA INTERNATIONAL SCHOOL </p>
+                  <p class="font-size25 orange-text margin-bottom88">Kishangar, Ajmer </p>
+                  <p class="font-color33 text-small"> A wonderful team. Every person who where part of the team. Special
+                    kudos to Ms Kakoli and Ms Anjali for the wonderful shoot. Anis and Abdul deserves a special mention
+                    for the smooth coordination and execution.
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-5 col-12 texEnd">
+                <img src="assets/images/theme-three/school-images/BIS.png" class="img-fluid" alt="image">
+              </div>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev swiper-button-prev-test">
+            <img src="assets/images/static/white-left.svg" alt="image" class="">
+          </div>
+          <div class="swiper-button-next swiper-button-next-test">
+            <img src="assets/images/static/white-right.svg" alt="image" class="">
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- listed college -->
+  <div class="section-padding custom-container">
+    <div class="row margin-bottom88">
+      <div class="col-12 text-center">
+        <h4 class="font-size50 font-color33 custom-text-light">Certified School List</h4>
+      </div>
+    </div>
+
+    <!-- ng tabset -->
+    <ngb-tabset type="pills" justify='center' class="border-margin">
+      <ngb-tab title="SCHOOLS">
+        <ng-template ngbTabContent>
+          <!-- slider repeat -->
+          <div class="row d-xl-flex d-lg-flex custom-swiper-wrapper">
+            <div class="swiper-container blogs-carousel w-100 pb-2" [swiper]="popularConfig">
+              <div class="swiper-wrapper">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/mayo.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Mayo College</p>
+                    <p class="collegeLocation">Rajasthan</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/assam.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Assam Valley</p>
+                    <p class="collegeLocation">Assam</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/rajkumar.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Rajkumar College</p>
+                    <p class="collegeLocation">Rajkot</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/george.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">St. Georges College</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/punjab.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Punjab Public SChool</p>
+                    <p class="collegeLocation">Punjab</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/sherwood.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Sherwood College</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/pauls.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">St. Pauls</p>
+                    <p class="collegeLocation">Darjeeling</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/hyderabad.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Hyderabad Public SChool</p>
+                    <p class="collegeLocation">Hyderabad</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/wynberg.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Wynberg Allen</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-popular">
+              <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+            </div>
+            <div class="swiper-button-next swiper-button-next-popular"><img src="assets/images/static/white-right.svg"
+                alt="image" class="imageRightIcon">
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <!-- <ngb-tab>
+        <ng-template ngbTabTitle>HIGHER-ED</ng-template>
+        <ng-template ngbTabContent>
+          
+          <div class="row d-xl-flex d-lg-flex custom-swiper-wrapper">
+            <div class="swiper-container blogs-carousel w-100 pb-2" [swiper]="popularConfig">
+              <div class="swiper-wrapper">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/mayo.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Mayo College</p>
+                    <p class="collegeLocation">Rajasthan</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/assam.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Assam Valley</p>
+                    <p class="collegeLocation">Assam</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/rajkumar.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Rajkumar College</p>
+                    <p class="collegeLocation">Rajkot</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/george.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">St. Georges College</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/punjab.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Punjab Public SChool</p>
+                    <p class="collegeLocation">Punjab</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/sherwood.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Sherwood College</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/pauls.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">St. Pauls</p>
+                    <p class="collegeLocation">Darjeeling</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGrey"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/hyderabad.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Hyderabad Public SChool</p>
+                    <p class="collegeLocation">Hyderabad</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 swiper-slide">
+                  <div class="borderCollege">
+                    <img src="assets/images/static/featured/wynberg.png" class="img-fluid collegeIcon" alt="image">
+                    <p class="collegeName">Wynberg Allen</p>
+                    <p class="collegeLocation">Uttrakhand</p>
+                    <p class="starSize"><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGold"><i class="fa fa-star"></i></span><span class="starGold"><i
+                          class="fa fa-star"></i></span><span class="starGold"><i class="fa fa-star"></i></span><span
+                        class="starGrey"><i class="fa fa-star"></i></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-popular">
+              <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+            </div>
+
+            <div class="swiper-button-next swiper-button-next-popular"><img src="assets/images/static/white-right.svg"
+                alt="image" class="imageRightIcon">
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab> -->
+
+    </ngb-tabset>
+  </div>
+
+  <!-- footer -->
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        Great adventures are on the horizon.
+      </div>
+      <!-- <div class="sub-text">
+        Great Thing happens!
+      </div> -->
+      <button *ngIf="!loggedIn" (click)="queryModal.openModal()" class="custom-secondary-btn">
+        Get Certified
+      </button>
+    </div>
+  </div>
+
+  <app-query-modal #queryModal></app-query-modal>
+</div> <!-- theme three-->

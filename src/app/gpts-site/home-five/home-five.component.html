@@ -1,0 +1,443 @@
+<app-header></app-header>
+
+<div class="home-page theme-three">
+    
+
+        <div class="container-fluid pl-0 pr-0 pb-150" id="homeTopSection">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-5">
+                    <div class="home-banner-content" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="home-head-text text-big custom-text-light banner-title">
+                           What do you want to become <span class="text-very-heavy">in Future? </span>
+                        </h1>
+                       
+                        <div id="get-search">
+                            
+                            <div class="form-group position-relative mb-0">
+                                <ng-select class="custom-search-career" [items]="careerList" bindValue="id" bindLabel="title" class="homeSearch" [searchable]="true"   placeholder="Search Career" (change)="searchVideo($event.id)" notFoundText="we are adding this course soon and rest should be listed below">
+                                </ng-select>
+                                <i class="search-icon fa fa-search" (click)="test4()" aria-hidden="true"><img src="assets/images/home-five/home-search-icon.png" alt="search icon"></i>
+                            </div>
+                        </div>
+                      <p class="mb-4">Great Place to Study is a video guide for learners of every age. Our unique platform lets students pick their curious brains as they browse to explore future career prospects, dream institutions, and in the process, learn interesting stories about the universe.</p>
+
+                        <!-- <a routerLink="/edieo" class="d-inline-block custom-primary-btn">Explore</a> -->
+                  <a routerLink="/signup" *ngIf="!loggedIn"   class="d-inline-block custom-default-btn registerNow mr-3">Sign up</a>
+                        <a routerLink="/edieo" class="d-inline-block custom-primary-btn text-link">Explore</a>
+                    </div> 
+                </div>
+            <div class="col-md-12 col-lg-7"> 
+                <div class="home-top-video-section" *ngIf="homeTopVideoList">
+                    <video playsinline="playsinline" class="bg-video"  autoplay [muted]="true"  loop   src="assets/images/home-five/top-bg-video.mp4">
+                    </video>
+                    <div class="video-carousel">
+                        <!--slider start-->
+                        <div class="swiper-container" [swiper]="careeerConfig">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+                              
+                              <ng-container *ngFor="let video of homeTopVideoList; let i=index">
+                                <div *ngIf="video.cover !=''" class="swiper-slide career-slide" (click)="homeVideoPopupTop($event,i);">
+                                    <div class="video-thumbnail">
+                                        <div class="thumb"><img [src]="video.cover" alt="thumbnail"></div>
+                                        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                                        <!-- <span class="caption">{{video.name}}</span> -->
+                                    </div>
+                             </div>
+                            </ng-container>
+       
+
+                    
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            
+                            <div class="swiper-button-prev">
+                                <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+                            </div>
+
+                        </div>
+                        <!--slider end-->
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+
+
+
+<!--country institution html start-->
+<div class="country-institution">
+    <div class="container-fluid pl-0 pr-0" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row mb-4">
+            <div class="col-md-7 col-lg-5 col-sm-12">
+                <div class="home-banner-content pt-0">
+                    <h3 class="home-head-text text-big custom-text-light banner-title">
+                        Bookmark your dream. Choose from the finest institutions that could lead to your path of glory.
+                    </h3>
+                    <a routerLink="/univeristy-list" class="d-inline-block text-link ml-0">View all Institutes<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-11 offset-md-1" id="country-institution-video"> 
+            <div class="">
+                <div class="video-carousel">
+                    <!--slider start-->
+
+                 
+
+                    <div class="swiper-container" [swiper]="blogsConfig">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+                         
+                      
+                            <!-- <div *ngFor="let institute of institutionList; let i=index" class="swiper-slide career-slide" (click)="homeVideoPopup($event,i);">
+                                <div class="video-thumbnail">
+                                  
+                                    <div class="thumb"><img [src]="institute.cover" alt="thumbnail"></div>
+                                    <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                                
+                                </div>
+                         </div> -->
+                        
+                        
+                        <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,0);">
+                            <div class="video-thumbnail">
+                              
+                                <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577096669.jpg" alt="thumbnail"></div>
+                                <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                            
+                            </div>
+                     </div>
+                     <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,1);">
+                        <div class="video-thumbnail">
+                          
+                            <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577097443.jpg" alt="thumbnail"></div>
+                            <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                        
+                        </div>
+                 </div>
+                 <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,2);">
+                    <div class="video-thumbnail">
+                      
+                        <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577097989.jpg" alt="thumbnail"></div>
+                        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                    
+                    </div>
+             </div>
+             <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,3);">
+                <div class="video-thumbnail">
+                  
+                    <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098012.jpg" alt="thumbnail"></div>
+                    <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                
+                </div>
+         </div>
+         <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,4);">
+            <div class="video-thumbnail">
+              
+                <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098176.jpg" alt="thumbnail"></div>
+                <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+            
+            </div>
+     </div>
+     <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,5);">
+        <div class="video-thumbnail">
+          
+            <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098366.jpg" alt="thumbnail"></div>
+            <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+        
+        </div>
+ </div>
+ <div class="swiper-slide career-slide" (click)="homeVideoPopup($event,6);">
+    <div class="video-thumbnail">
+      
+        <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1586928877.jpg" alt="thumbnail"></div>
+        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+    
+    </div>
+</div>
+<div class="swiper-slide career-slide" (click)="homeVideoPopup($event,7);">
+    <div class="video-thumbnail">
+      
+        <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098446.jpg" alt="thumbnail"></div>
+        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+    
+    </div>
+</div>
+<div class="swiper-slide career-slide" (click)="homeVideoPopup($event,8);">
+    <div class="video-thumbnail">
+      
+        <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098467.jpg" alt="thumbnail"></div>
+        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+    
+    </div>
+</div>
+       
+<div class="swiper-slide career-slide" (click)="homeVideoPopup($event,9);">
+    <div class="video-thumbnail">
+      
+        <div class="thumb"><img src="https://gpts-portal.s3-eu-west-1.amazonaws.com/career/career-video/edieo1577098498.jpg" alt="thumbnail"></div>
+        <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+    
+    </div>
+</div>                
+
+                        </div>
+                      
+                       <div id="instituteArrow">
+                        <div class="swiper-button-prev-blogs arrow">
+                            <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+                        </div>
+                        <div class="swiper-button-next-blogs arrow">
+                            <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+                        </div>
+                       </div>
+                    </div>
+                    <!--slider end-->
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+</div>
+
+<!--country institution html end-->
+
+
+
+        <div class="container-fluid pt-150 pb-150 top-schools d-none">           
+            <!-- <div class="row side inner-side-spacing align-items-center flex-column-reverse flex-xl-row video-wrapper"
+        data-aos="fade-up" data-aos-duration="1000"> -->
+            <!-- New -->
+            <div class="row side video-wrapper flex-wrap flex-xl-row" data-aos="fade-up" data-aos-duration="1000">       
+               <div class="col-lg-11 offset-lg-1">
+                   <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-5 mobile-school">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-sm-4 mb-4 lg-flex-42 col-6">
+                                <a href="javascript:void(0)" class="d-inline-block school-logo"><img src="assets/images/home-five/summer-school.png" class="img-fluid" alt="Summer School"></a>
+                            </div>
+                            <div class="col-md-6 col-lg-6 mb-5 col-sm-4 lg-flex-42 col-6">
+                                <a href="javascript:void(0)" class="d-inline-block school-logo mt-5"><img src="assets/images/home-five/jain-logo.png" class="img-fluid" alt="Dr. Roychand Scholarship"></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-sm-4 lg-flex-42 col-6"><a href="javascript:void(0)" class="d-inline-block school-logo mmt-5"><img src="assets/images/home-five/amrita.png" class="img-fluid" alt="amrita"></a></div>
+                            <div class="col-md-6 col-lg-6 col-sm-4 lg-flex-42 col-6"><a href="javascript:void(0)" class="d-inline-block  school-logo"><img src="assets/images/home-five/great-challenge.png" class="img-fluid" alt="great challenge"></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="top-schools-content">
+                            <h3 class="banner-title mb-4">Beyond Books</h3>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Get all the download about the trendiest career options and most happening colleges. Broadcast your ideas and get discovered by
+                                top-notch institutes. Begin your journey of success with CDAP!</p>
+                                <a href="javascript:void(0)" *ngIf="!loggedIn"  (click)="openSignupModal()" class="d-inline-block custom-default-btn registerNow">Sign Up</a>
+                                <a routerLink="/edieo" class="d-inline-block text-link">View More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    
+<!--upcoming trending start-->
+        <div class="upcoming-trending pt-150 pb-150" id="trendingSection"> 
+            <h3 class="banner-title mobile mb-5 d-none">You are a curious genius, aren’t you? <span>Explore the curious world of career exploration, college discovery, learning, revision & beyond.</span></h3>
+            <div class="swiper-container" [swiper]="upcomingShowcase">
+                <!-- Additional required wrapper -->
+              
+                <div class="swiper-wrapper upcoming-treding-wrapper">
+                    <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+            <div class="swiper-slide career-slide" >
+                <a class="video-thumbnail d-block" href="https://summer.greatplacetostudy.com/">
+                    <div class="thumb" >
+                      <img src="assets/images/home-five/upcoming-trending/summer-school.jpg" alt="university thumbanil">
+                     </div>                           
+                    </a>
+         </div>
+         <div class="swiper-slide career-slide" >
+            <a class="video-thumbnail" href="/knowledge-webinar">
+                <div class="thumb" >
+                  <img src="assets/images/home-five/upcoming-trending/knowledge-series.jpg" alt="university thumbanil">
+                 </div>                           
+                </a>
+     </div>
+     
+<div class="swiper-slide career-slide" >
+    <a class="video-thumbnail" routerLink="/interview">
+        <div class="thumb" >
+          <img src="assets/images/home-five/upcoming-trending/master-stories.jpg" alt="university thumbanil">
+         </div>                           
+        </a>
+</div>
+
+<div class="swiper-slide career-slide" >
+        <a class="video-thumbnail" href="javascript:void(0)">
+        <div class="thumb" >
+        <img src="assets/images/home-five/upcoming-trending/aap.jpg" alt="university thumbanil">
+        </div>                           
+    </a>
+        </div>
+
+<div class="swiper-slide career-slide" >
+<a class="video-thumbnail" href="javascript:void(0)">
+<div class="thumb" >
+<img src="assets/images/home-five/upcoming-trending/great-indian-school-season-3.jpg" alt="university thumbanil">
+</div>                           
+</a>
+</div>
+
+<div class="swiper-slide career-slide" >
+ <a class="video-thumbnail" href="javascript:void(0)">
+                <div class="thumb" >
+                  <img src="assets/images/home-five/upcoming-trending/knowledge-studio.jpg" alt="university thumbanil">
+                 </div>                           
+                </a>
+</div>
+
+
+
+    <div class="swiper-slide career-slide" >
+           <a class="video-thumbnail" href="https://ku.greatplacetostudy.com/" target="_blank">
+            <div class="thumb" >
+              <img src="assets/images/home-five/upcoming-trending/the-great-challenge.jpg" alt="university thumbanil">
+             </div>                           
+            </a>
+     </div>
+     <div class="swiper-slide career-slide" >
+        <a class="video-thumbnail" href="javascript:void(0)">
+            <div class="thumb" >
+              <img src="assets/images/home-five/upcoming-trending/indias-top-10.jpg" alt="university thumbanil">
+             </div>                           
+            </a>
+ </div>
+</div>
+                  <div id="trendingArrow">
+                    <div class="swiper-button-prev arrow">
+                        <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+                    </div>
+                    <div class="swiper-button-next arrow">
+                        <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+                    </div>
+                   </div>
+                <!-- If we need navigation buttons -->
+                <div id="custom-swiper-pagination">
+                    <h3 class="banner-title">You are a curious genius, aren’t you? <span>Explore the curious world of career exploration, college discovery, learning, revision & beyond.</span></h3>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+<!--upcoming trending end-->
+
+<!--the expert html start-->
+<section class="the-expert-bg pt-150 pb-150 in_desktop">
+    <div class="expert-content" data-aos="fade-up" data-aos-duration="1000">
+        <!-- <h2 class="banner-title mb-3">Master<br> Stories</h2> -->
+        <a routerLink="/interview" class="d-block text-center text-link">View all Interviews<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    </div>
+</section>
+<a routerLink="/interview" class="in_mobile">
+    <section class="the-expert-bg pt-150 pb-150">
+    <div class="expert-content" data-aos="fade-up" data-aos-duration="1000">
+        <!-- <h2 class="banner-title mb-3">Master<br> Stories</h2> -->
+        <a routerLink="/interview" class="d-block text-center text-link">View all Interviews<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    </section>
+</a>
+<!--the expert html end-->
+</div> 
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="homeVideoPopup" *ngIf="homeTopVideoList" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog noBlue login-modal"  role="document" >  
+        <div class="modal-content ">  
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9 ">
+                    <!-- removed this "big-video-container" class from here-->
+                    <vg-player class="embed-responsive-item">
+                        <vg-overlay-play></vg-overlay-play>
+                        <vg-buffering></vg-buffering>
+                        <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                            <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                        </vg-controls>
+                        <ng-container *ngFor="let video of homeTopVideoList; let i=index">                            
+                        <video  *ngIf="video.cover !='' && i==idValue"  #homeVideo  [poster]="video.cover" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="video.video">
+                        </video>
+                      </ng-container>
+                    </vg-player>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" *ngIf="institutionList" id="homeVideoPopup2" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog noBlue login-modal"  role="document" >  
+        <div class="modal-content ">  
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal2('test-01')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9 ">
+                    <!-- removed this "big-video-container" class from here-->
+                    <vg-player class="embed-responsive-item">
+                        <vg-overlay-play></vg-overlay-play>
+                        <vg-buffering></vg-buffering>
+                        <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                            <vg-play-pause></vg-play-pause>
+                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                            <vg-scrub-bar [vgSlider]="true">
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                            <vg-mute></vg-mute>
+                            <vg-volume></vg-volume>
+                            <vg-fullscreen></vg-fullscreen>
+                        </vg-controls>
+                        
+                       
+                     
+                        <ng-container *ngFor="let institute of institutionList; let i=index">
+                            <video *ngIf="i==idValues"  #homeVideo  [poster]="institute.video_cover" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="institute.video">
+                            </video>
+                       </ng-container>
+                    
+                    </vg-player>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

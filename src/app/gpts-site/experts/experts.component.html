@@ -1,0 +1,179 @@
+ <!-- header -->
+ <app-header></app-header>
+ <!-- header ends -->
+<div class="theme-three expert-container">
+
+<!--expert testimonial section start-->
+<div class="expert-testimonial pt-80 pb-80" data-aos="fade-up" data-aos-duration="1000">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="swiper-container" [swiper]="careeerConfig">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+             
+
+                 <!-- Slides start-->
+                 <div class="swiper-slide">               
+                  <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-5">
+                      <div class="thumb-img rounded-circle" (click)="destinyVideo()">
+                        <img class="img-fluid" src="assets/images/experts/master-story-thumbnail.jpeg" alt="flimmaking"/>
+                        <span  class="play-icon"><img _ngcontent-c17="" class="play icon" src="assets/images/home-five/play-button.png"></span>
+                      </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                  <!-- whitebox for video with heart -->
+                  <div class="whiteBoxVideo mb-0">
+                    <h1 class="banner-title uppercase mb-3">Great Talks: What does the expert say?</h1>
+                    <p class="leagueFont mb-3">Listen to what the experts have to say! Learn from the stalwarts of every profession in demand as they unearth the secrets of being successful in their respective fields. As they give you the fundamentals of a staggering career, get inspired by their stories and invaluable teaching, and get professional, first-hand knowledge of your most desired career.</p>
+                   <!-- <p class="mb-4"><span class="name">Danny Boyle</span></p>  -->
+                    <a href="javascript:void(0);" *ngIf="!loggedIn" (click)="openSignupModal()" class="custom-default-btn d-inline-block registerNow">Sign Up</a>
+                  </div>
+                    </div>
+                  </div>               
+                    </div>
+                <!--slide end-->
+
+               
+                 
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--expert testimonial section end-->
+
+<!--experts filter start-->
+<!-- <p *ngFor="let careerInfo of listCareer">{{careerInfo.name}} and {{careerInfo.slug}}</p> -->
+
+<div class="custom-container experts-list pb-80" data-aos="fade-up" data-aos-duration="1000">
+  <div class="row mb-5 pb-4">
+    <div class="col-md-8 offset-md-2" id="expertSearch">
+      <!-- <input type="search" class="form-control" placeholder="Search for an expert’s advice on your favourite career"> -->
+        <!-- <ng-select class="custom-search-career" [items]="career" bindValue="title" bindLabel="title"  [searchable]="false" placeholder="Search Career" [(ngModel)]="searchName">
+        </ng-select> -->
+        <ng-select class="custom-search-career" [items]="listCareer" [(ngModel)]="selectedAccount"  bindValue="name" bindLabel="name" [searchable]="false" (change)="clusterInterviewVideo($event.career_id)">
+        </ng-select>
+       
+    </div>
+  </div>
+
+  <div class="row" *ngIf="interviewList.length>0; else notFound">
+
+
+    <div class="col-md-6 mb-5" *ngFor="let interview of interviewList; let i=index">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <div class="thumb">
+            <img [src]="interview.video_thumb" alt="expert image" class="img-fluid">
+            <span class="play_icon" (click)="expertVideoPopup(i);">
+              <img src="assets/images/experts/play.svg" class="img-fluid" alt="play icon">
+            </span>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h3>{{interview.name}}</h3>
+         <span class="name d-block">{{interview.designation}}</span>
+         <!-- <p title="{{interview.about}}">{{interview.about | slice: 0: aboutLength}}  <span *ngIf="!(aboutLength === interview.about.length)">...</span></p> -->
+        </div>
+      </div>
+    </div></div>
+
+    <ng-template #notFound>
+      <h1 class="notDataFound">Not Data Found</h1>
+    </ng-template>
+
+<div class="row mt-5">
+  <div class="col-md-12 text-center">
+    <a routerLink="/edieo" class="custom-primary-btn d-inline-block registerNow mr-3">Go to Career Playlist</a>
+    <a routerLink="/univeristy-list" class="custom-default-btn d-inline-block registerNow">Go to College Playlist</a>
+  </div>
+</div>
+
+</div>
+<!--experts filter end-->
+
+
+</div>
+
+
+
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="expertVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9 ">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item">
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                      <ng-container  *ngFor="let media of interviewList; let i=index">
+                  <video *ngIf="i==idValue" #homeVideo  [poster]="media.video_thumb" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="media.video">
+                      </video>
+                    </ng-container>
+                  </vg-player>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="distinyVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9 ">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item">
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                    
+                  <video #homeVideo  poster="assets/images/experts/master-story-thumbnail.jpeg" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" src="https://d33umu47ssmut9.cloudfront.net/home-video/1575962623.mp4">
+                      </video>
+                  
+                  </vg-player>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

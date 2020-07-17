@@ -1,0 +1,309 @@
+<div class="homeTwoContainer">
+
+  <!-- heading top -->
+  <app-header></app-header>
+
+  <!-- slider image -->
+  <div class="container-fluid removePadding blueBack">
+    <div class="row">
+      <!-- heading -->
+      <div class="col-12">
+        <h1 class="homeHeading text-center">What does it mean<br>to be truly great ?</h1>
+      </div>
+      <!-- selector -->
+      <div class="col-12 d-flex">
+        <div class="d-flex marginCenter">
+          <div class="text-center orangeBack">I am</div>
+          <div class="d-inline-flex">
+            <div class="btnOne borderRightSmall"><button>Student</button></div>
+            <div class="btnOne borderRightSmall"><button>Teachers</button></div>
+            <div class="btnOne btnOneLast"><button>Institute</button></div>
+          </div>
+        </div>
+      </div>
+      <!-- arrow -->
+      <div class="col-12">
+        <a>
+          <div class="containerArrow" [ngx-scroll-to]="homePageSecondSec">
+            <p class="whiteScroll">scroll</p>
+            <div class="arrow-down">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- latest in career library -->
+  <div class="container-fluid" #homePageSecondSec>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="headingHomeOne padCareer">Latest in Career Library</h3>
+        </div>
+        <!-- slider -->
+        <div class="col-12">
+          <div class="container-fluid">
+            <div class="small-swiper-container swiper-container career-carousel" [swiper]="careerCarousel">
+              <div class="swiper-wrapper">
+                <div *ngFor="let slide of productsCarousel; i as index" class="swiper-slide career-carousel-slide">
+                  <div class="w-100 h-100">
+                    <div class="home-video-container">
+                      <img class="img-fluid careerShadow" src="assets/images/homepage/careeer-lib-home.png">
+                    </div>
+                    <div class="text">
+                      <h4 class="titleCareer">RJ Raunak, 93.5 FM</h4>
+                      <span class="paraCareer">Watch RJ Raunak to learn insights about radio jockey as a career and the
+                        path to become India’s top RJ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev swiper-button-prev-products "></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next swiper-button-next-products"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/common/careerText.png" class="img-fluid solutionTextIm" alt="image">
+  </div>
+
+  <!-- solutions by gpts-->
+  <div class="container-fluid blueBackOne">
+    <div class="container">
+      <div class="row">
+        <!-- heading -->
+        <div class="col-12">
+          <h3 class="headingHomeTwo">Solutions by GPTS</h3>
+        </div>
+        <!-- two section -->
+        <div class="small-swiper-container swiper-container solutionGpts" [swiper]="config">
+          <div class="swiper-wrapper">
+            <div *ngFor="let slide of productsCarousel; i as index" class="swiper-slide">
+              <div class="w-100">
+                <div class="w-100 d-flex">
+                  <!-- left side -->
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                    <h6 class="paraTwo">Career Discovery</h6>
+                    <p class="paraOne">In career discovery the Thriving
+                      Index is a self-report
+                      psychometric assessment which
+                      helps students understand their
+                      personal strengths, blind-spots
+                      and motivators. These are further
+                      mapped to 8 different Work
+                      Styles which help accessing
+                      their suitability across numerous
+                      Occupational Clusters and give
+                      them insights about 750+ leading
+                      careers.</p>
+                    <!-- register button -->
+                    <button class="btn whiteBorderBtn">REGISTER</button>
+                  </div>
+                  <!-- right side -->
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mobileImage">
+                    <img src="assets/images/common/Mslider-1.jpg" class="img-fluid sOneImage" alt="image" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-products solPrev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next swiper-button-next-products solNext"></div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/common/ Solutions-text.png" class="img-fluid solutionTextIm" alt="image">
+  </div>
+
+
+  <!-- frequently asked question -->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <!-- heading -->
+        <div class="col-12">
+          <h3 class="headingHomeOne">Frequently Asked Question</h3>
+        </div>
+      </div>
+
+      <div class="row accordionMarginTop">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+
+          <div id="accordion" class="accordion">
+            <div class="card mb-0">
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                <a class="card-title">
+                  Will it be an online or offline survey?
+                </a>
+              </div>
+              <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                  wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                  eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                  butcher vice lomo. Leggings occaecat
+                  craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                  accusamus labore sustainable VHS.
+                </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title">
+                  Where do we start
+                </a>
+              </div>
+              <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                  wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                  eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                  butcher vice lomo. Leggings occaecat
+                  craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                  accusamus labore sustainable VHS.
+                </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title">
+                  What does my thriving index score mean?
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                  richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                  quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore
+                  sustainable VHS.
+                </div>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title">
+                  Does GPTS takes the responsibility of my admission?
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                  richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                  quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore
+                  sustainable VHS.
+                </div>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title">
+                  What is the fees for signing up in www.greatplacetostudy.com?
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                  richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                  quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore
+                  sustainable VHS.
+                </div>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title">
+                  What does star rating of an institution mean?
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                  richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                  quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore
+                  sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+      </div>
+    </div>
+    <img src="assets/images/common/FAQs-text.png" class="img-fluid faqTextIm" alt="image">
+  </div>
+
+
+  <!-- testimonials -->
+  <div class="container-fluid testimonialBlueImage">
+    <div class="container">
+      <div class="row">
+        <!-- heading -->
+        <div class="col-12">
+          <h3 class="headingHomeTwo">Testimonials</h3>
+        </div>
+      </div>
+
+      <!-- slider -->
+      <div class="row">
+        <div class="col-12">
+          <div class="small-swiper-container swiper-container testimonial-carousel" [swiper]="testimonialCarousel">
+            <div class="swiper-wrapper">
+              <div *ngFor="let slide of productsCarousel; i as index" class="swiper-slide testimonial-slide">
+                <div class="w-100">
+                  <div class="w-100">
+                    <div class="col-12 d-xl-flex d-lg-flex d-md-flex removePadding">
+                      <!-- image -->
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <img src="assets/images/common/testimonialOne.jpg" class="img-fluid testimonialImageBorder"
+                          alt="testimonial">
+                      </div>
+                      <!-- para -->
+                      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 testimonialPadding">
+                        <img src="assets/images/common/quotetestimonial.png" class="img-fluid quoteTesti" alt="image">
+                        <p class="testimonialText">“It really changed how
+                          students could discover
+                          & learn about various
+                          careers and find their best
+                          suited college”</p>
+                        <p class="testimonialBy"> - Devyani Kapoor</p>
+                        <p class="testimonialByDesignation">Principal, Heritage School</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-products testPrev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next swiper-button-next-products testNext"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/common/testimonials-text.png" class="img-fluid testimonialTextIm" alt="image">
+  </div>
+
+
+  <!-- excited -->
+  <div class="container-fluid excitedMargin">
+    <div class="container">
+      <div class="row">
+        <!-- image -->
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+          <img src="assets/images/common/excited.png" class="img-fluid excitedImage" alt="image">
+        </div>
+        <!-- button-->
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <h4 class="excitedHead text-uppercase">create your account now</h4>
+          <button class="btn excitedBtn">I am in!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,512 @@
+<app-header></app-header>
+<div class="theme-three">  
+
+<!--edieo banner start-->
+<section class="edio-banner">
+   <!--slider start-->
+   <div class="swiper-container" [swiper]="edieoBanner">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+        <div class="swiper-slide career-slide">
+          <video playsinline="playsinline"  autoplay [muted]="true"  loop   src="assets/video/amrita.mp4">
+
+          </video>
+          <div class="edieo-banner-content">    
+            <div class="custom-container">
+              <div class="row">
+                <div class="col-lg-8 col-md-8">
+                  <div class="title"><span class="eb">EB</span><span class="series">Colleges</span></div>
+                  <h1>Amrita University</h1>
+                  <p>Explore, how Amrita University is nurturing young minds for better tomorrow</p>
+                  <div class="edieo-banner-action">
+                    <a href="#" class="btn custom-secondary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                    <a class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
+
+     <div class="swiper-slide career-slide active">
+      <video playsinline="playsinline"  autoplay [muted]="true"  loop   src="assets/video/samar-singh.mp4">
+    
+      </video>
+      <div class="edieo-banner-content">    
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-8 col-md-8">
+              <div class="title"><span class="eb">EB</span><span class="series">Master Stories</span></div>
+              <h1>Samar Singh Jodha</h1>
+              <p class="mb-1">Discover the difference between Art & Photography in our master stories.</p>
+              <p class="mt-0 fontB">- By Samar Singh Jodha</p>
+              <div class="edieo-banner-action">
+                <a href="#" class="btn custom-secondary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="swiper-slide career-slide">
+      <video playsinline="playsinline"  autoplay [muted]="true"  loop   src="assets/video/fashion.mp4">
+
+      </video>
+      <div class="edieo-banner-content">    
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-8 col-md-8">
+              <div class="title"><span class="eb">EB</span><span class="series">Career</span></div>
+              <h1>Fashion Designer</h1>
+              <p>A Fashion Designer designs, decorates and adds accessories to clothes which turns out to be fashion</p>
+              <div class="edieo-banner-action">
+                <a href="#" class="btn custom-secondary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+  </div>
+   
+  <div class="swiper-pagination edieoTopPeg"></div>
+</div>
+<!--slider end-->
+</section>
+
+
+<!-----------------Edieo new middle section start-------------------->
+<section class="edieo-section d-none">
+<div class="container-fluid position-relative">
+  <!-- <div *ngIf="listCareer" #scrollContainer [class.sticky-class]="stickyPosition" [class.remove-sticky]="removeSticky"
+    [style.top.px]="removeSticky ? stopScrollTop : '0'" class="sticky-sidebar atricle-menu desktop" (scrollerStop)="stopScroll($event)"
+    [ElementStop]="pageFooter" appScrollDetect (scrolledOver)="changeUI($event)">
+    <h3>Selections and choices of all career streams.</h3>
+        <ul>
+          <li *ngFor="let car of listCareer"  id="{{car.career_id}}"  (click)="showClusterDive($event,car.slug,car.career_id)"><a href="javascript:void(0)">{{car.name}}</a></li>
+        </ul>
+  </div> -->
+   <div class="row">
+    <div class="col-lg-4 col-md-4 pr-0">
+      <!-- <div class="atricle-menu mobile" *ngIf="listCareer"> -->
+        <div class="atricle-menu" *ngIf="listCareer">
+        <h3 class="mobile-none">Selections and choices of all career streams.</h3>
+        <h3 class="mobile-select-grop" (click)="careerSectionMenu($event);"><span>Selections and choices of all career streams</span><i class="fa fa-chevron-down" aria-hidden="true"></i> </h3>
+        <ul id="careerMenu">
+          <li *ngFor="let car of listCareer" (click)="showClusterDive($event,car.slug,car.career_id)" id="{{car.career_id}}"><a href="javascript:void(0);">{{car.name}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 pr-0">
+<div class="aside-section" id="careerAsideSection">
+      <h2>Career in {{pname}} <a routerLink="/university-list" class="d-inline-block custom-default-btn">College Playlist</a></h2>
+      <div class="career-video">
+        <div class="row align-item-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="video-thumbnail">
+              <div class="thumb" (click)="videoPopup($event)">
+                <!-- <img [src]="university.master_cover!= null ? university.master_cover : 'assets/images/university/university-list/h-img-01.jpg'" alt="university thumbanil"> -->
+                <img [src]="exp_video_thumb" alt="{{exp_video_thumb}}}">
+                <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+              </div>
+             
+          </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <p [innerHTML]="pabout | slice: 0: careerAbout"> </p>
+            <span *ngIf="!(careerAbout === paboutLength)">...</span>
+            <a href="javascript:void(0)" *ngIf="!(careerAbout === paboutLength) else loadLess"
+            class="d-inline-block viewMore mt-0" (click)="careerAbout = paboutLength">
+             Load More
+          </a>
+          <ng-template #loadLess>
+            <a href="javascript:void(0)" class="d-inline-block viewMore  mt-0 mb-0" (click)="careerAbout = 500">
+              View Less
+            </a>
+          </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-list">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h4>Professional Careers in {{pname}}</h4>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="subCareerList; else notFound">
+            <div class="col-lg-4 col-md-6 col-6" *ngFor="let val of subCareerList  | slice:0:show; let i=index">
+              <a class="box mb-4 d-block"  [routerLink]="[ '/edieo-detail/career',val.id]">
+                <div class="image">
+                  <img [src]="val.thumb" class="img-fluid"/>
+                </div>
+               <!-- <div class="caption">{{val.title}}</div> -->
+             </a>
+            </div>
+          
+          </div>
+          <ng-template #notFound>
+            <h3 class="notDataFound">Not data Found</h3>
+          </ng-template>
+      </div>
+</div>
+
+
+    </div>
+   </div>
+
+   <div class="row" #pageFooter>
+     <div class="col-md-12 pr-0">
+
+<!--related master story start html-->
+<div id="relatedMasterStory" class="pb-100">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <h3 class="suggested-heading"><span>Related Master Stories</span></h3>
+      </div>
+      <div class="col-md-12">
+          <!--slider start-->
+          <div class="swiper-container" [swiper]="relatedUniversityConfig">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+                <div class="swiper-slide career-slide">
+                    <div class="video-thumbnail">
+                        <div class="thumb" ><img src="assets/images/university/university-list/h-img-01.jpg" class="img-fluid" alt="thumbnail">
+                        </div>
+                        <a class="caption d-block" routerLink="/university">Art and Design
+                          <em>Nandita Das</em>
+                          <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                          </a>
+                          
+                    </div>
+             </div>
+
+             <div class="swiper-slide career-slide">
+                <div class="video-thumbnail">
+                    <div class="thumb"><img src="assets/images/university/university-list/h-img-02.jpg" alt="thumbnail" class="img-fluid">
+                    </div>
+                    <a class="caption d-block" routerLink="/university">Art and Design
+                      <em>Nandita Das</em>
+                      <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                      </a>
+                </div>
+         </div>
+         <div class="swiper-slide career-slide">
+            <div class="video-thumbnail">
+                <div class="thumb"><img src="assets/images/university/university-list/h-img-03.jpg" alt="thumbnail" class="img-fluid">
+                  </div>
+                  <a class="caption d-block" routerLink="/university">Art and Design
+                    <em>Nandita Das</em>
+                    <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </a>
+            </div>
+     </div>
+     <div class="swiper-slide career-slide">
+        <div class="video-thumbnail">
+            <div class="thumb"><img src="assets/images/university/university-list/h-img-01.jpg" alt="thumbnail" class="img-fluid">
+              </div>
+              <a class="caption d-block" routerLink="/university">Art and Design
+                <em>Nandita Das</em>
+                <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </a>
+        </div>
+ </div>
+ <div class="swiper-slide career-slide">
+    <div class="video-thumbnail">
+        <div class="thumb"><img src="assets/images/university/university-list/h-img-02.jpg" alt="thumbnail" class="img-fluid">
+          </div>
+          <a class="caption d-block" routerLink="/university">Art and Design
+            <em>Nandita Das</em>
+            <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+            </a>
+    </div>
+</div>  </div>
+           
+        </div>
+        <!--slider end-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--related relatedMasterStory end html-->
+     </div>
+   </div>
+</div>
+</section>
+<!-----------------Edieo new middle section end-------------------->
+
+
+  <!--edieo middle section start-->
+  <div class="edieo-middle-section">    
+<!--must know start-->
+  <div class="custom-container" *ngIf="career">
+      <h2 class="hading-title">Careers
+
+        <div id="edioSearch" *ngIf="signedUp">
+          <!-- <ng-select class="custom-search-career" [items]="career" bindValue="title" bindLabel="title"  [searchable]="false" placeholder="Search Career" [(ngModel)]="searchName">
+          </ng-select> -->
+          <ng-select class="custom-search-career" [items]="career" bindValue="id" bindLabel="title"  [searchable]="true" placeholder="Search Career" (change)="searchVideo($event.id)" >
+          </ng-select>
+        </div>
+      </h2>
+
+     
+      <!-- <input type="text" placeholder="Search by email address..." [(ngModel)]="searchName" class="form-control" /> -->
+
+    <div class="edieo-common must-know">    
+     
+      <!-- <div class="box" *ngFor="let val of career | filter:searchName | slice:0:show; let i=index"> -->
+        <div class="box" *ngFor="let val of career  | slice:0:show; let i=index">
+        <div class="image">
+          <div class="lock_box" *ngIf="!signedUp">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <img src="assets/images/career_library/lock_bg.png" class="lock">            
+          </div>
+          <img src="{{val.thumb}}" class="img-fluid" />  
+        </div>
+       <a  class=""   *ngIf="signedUp" [routerLink]="[ '/edieo-detail/career',val.id]"><div class="caption"></div></a>
+       <a  class=""  *ngIf="!signedUp"  (click)="showSignInModal()" style="cursor: pointer !important;"><div class="caption"></div></a>
+      </div>
+
+      <div class="col-12 text-center mt-4">
+          <button class="d-inline-block custom-secondary-btn margin-top45"
+            *ngIf="career.length > 10 &&  show <= career.length else lessBtn"
+            (click)="show = show+10">VIEW MORE</button>
+          <ng-template #lessBtn>
+            <button class="d-inline-block custom-secondary-btn margin-top45" (click)="show = 10">
+              VIEW LESS
+            </button>
+          </ng-template>
+        </div>
+
+     </div>
+  </div>
+
+<!--must know end-->
+
+<!--Colleges start-->
+<div class="custom-container" *ngIf="college">
+    <h2 class="hading-title">Colleges</h2>
+  <div class="edieo-common must-know">    
+      <div class="box" *ngFor="let val of college">
+          <div class="image">
+           <img src="{{val.thumb}}" class="img-fluid"/>
+          </div>
+          <a class="" [routerLink]="[ '/edieo-detail/college',val.id]"><div class="caption"></div></a>
+        </div>
+        
+  </div>
+</div>
+<!--Colleges end-->
+
+<!--country EB series start-->
+<div class="custom-container d-none">
+<div class="country-eb-series">
+<div class="row">
+  <div class="col-md-4">
+    <img src="assets/images/edieo/countries-series-1.png"  class="img-fluid" alt="country series">
+  </div>
+  <div class="col-md-4 text-center">
+<div class="country-eb-series-content">
+    <h2><span>Countries</span>
+    <p><strong>EB</strong>-Series</p>
+    </h2>
+    <div class="edieo-series-action">
+        <a href="javascript:void(0);" class="btn custom-secondary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+        <a href="javascript:void(0);" class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+      </div>
+      <div class="edieo-series-desc">
+        <p><strong>Lium dolor sit amet, consectetur adipis cing 
+            elit,, consectetur adipiscing elit.</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+</div>
+  </div>
+  <div class="col-md-4">  <img src="assets/images/edieo/countries-series-2.png" class="img-fluid" alt="country series"></div>
+  
+</div>
+
+</div>
+</div>
+<!--country EB series end-->
+
+
+<!--must know start--> 
+<div class="custom-container" *ngIf="mustknow">
+    <h2 class="hading-title">Top Colleges</h2>
+  <div class="edieo-common must-know">    
+      <div class="box" *ngFor="let university of universityList">
+          <div class="image" (click)="InstituteVideoPopup(university.id);">
+            <img style="cursor: pointer !important;" [src]="university.thumbnail || 'assets/images/university/university-list/h-img-01.jpg'" class="img-fluid"/>
+            <span class="play-icon" style="border: none !important;"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+          </div>
+          <!-- <a class="" ><div class="caption"></div></a> -->
+      </div>
+    </div>
+  </div>
+
+<!--country institution html start-->
+<!-- <div class="custom-container">
+      <div class="row">
+         <div class="col-md-12 col-md-6" id="country-institution-video">
+            <div class="">
+               <h2 class="hading-title">Top 5 Colleges</h2>
+               <div class="video-carousel">
+                  <div class="swiper-container" [swiper]="dreamConfig">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide career-slide" *ngFor="let university of universityList">
+                           <div class="video-thumbnail">
+                              <div class="thumb" (click)="InstituteVideoPopup(university.id);">
+                                 <img [src]="university.thumbnail || 'assets/images/university/university-list/h-img-01.jpg'" alt="university thumbanil">
+                                 <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                                 <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                              </div>
+                              <a class="caption d-block" [routerLink]="['/university',university.id]">
+                                 <h3>{{university.name}}</h3>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+</div> -->
+
+  <div class="custom-container" *ngIf="country">
+      <h2 class="hading-title">Beyond Boundaries</h2>
+    <div class="edieo-common must-know">    
+        <div class="box" *ngFor="let val of country">
+            <div class="image">
+              <img src="{{val.thumb}}" class="img-fluid"/>
+            </div>
+            <a class="" [routerLink]="[ '/edieo-detail/country',val.id]"><div class="caption"></div></a>
+        </div>
+      </div>
+    </div>
+<!--must know end-->
+</div>
+<!--edieo middle section end-->
+</div>
+
+
+
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback"  *ngIf="exp_video_thumb" id="dreamVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar [vgSlider]="true">
+                          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                          <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                      </vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  
+                  <video  #homeVideo   id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [poster]="exp_video_thumb" [src]="exp_video">
+                  </video>
+              </vg-player>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="clusterVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeDreamBootstrapModal('test-02')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9" *ngIf="clusterdetail">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item">
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                      
+                      <video  #homeVideo  [poster]="clusterdetail.video_thumb" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="clusterdetail.cluster_video">
+                      </video>
+                  </vg-player>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback"  *ngIf="universityVideoThumb" id="dreamuniVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeDreamBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar [vgSlider]="true">
+                          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                          <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                      </vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  
+                  <video  #homeVideo   id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [poster]="universityVideoThumb" [src]="universityVideoVideo">
+                  </video>
+              </vg-player>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+

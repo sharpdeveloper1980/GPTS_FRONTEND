@@ -1,0 +1,31 @@
+.errorImage{
+    margin-top: 2%;
+    margin-bottom: -16%;
+}
+
+.errorHead{
+font-size: 2.5em;
+color: #343434;
+    ~p{
+        font-weight: 400;
+        font-size: 1em;
+        color: #343434;
+        padding-top: 4px;
+        letter-spacing: 0.5px;
+        margin-bottom: 3em;
+    }
+}
+
+.blueErrorBtn{
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 170px;
+    border-radius: 0;
+    padding: 10px;
+    margin-top: 2.5em;
+    margin-right: 1em;
+    display: block;
+    font-size: 14px;
+    margin: 0 auto;
+}

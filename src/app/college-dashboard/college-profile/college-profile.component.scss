@@ -1,0 +1,224 @@
+.blueAdd{
+    color: #00aceb;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    display: block;
+}
+
+.greenEdit{
+    color: #69bd3b;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.borderHeight{
+    border: 1px solid #dadada;
+    max-height: 20em;
+    overflow-y: scroll;
+    
+}
+
+.borderRow{
+    border: 1px solid #dadada;
+    margin-top: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0.5em;
+}
+
+.usernameProfile{
+    color: #546170;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.emailProfile{
+    color: #919eae;
+    font-size: 0.9em;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.customSave{
+    padding: 8px 12px;
+    margin-top: 0;
+}
+
+.tableBgProgram{
+    background: #ebebeb;
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.tdProgram{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+
+}
+
+.excludeGst{
+    color: #94a3b5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+}
+
+.tableBgProgram td {
+    width: 185px;
+}
+
+.boxUpload{
+    border: 1px solid #dadada;
+    display: block;
+    text-align: center;
+    width: 220px;
+    margin-right: 10px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+}
+
+.boxUpload p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #919eae;
+}
+
+.topPadding{
+    padding-top: 35px;
+}
+
+.topPaddingTwo{
+    padding-top: 55px;
+}
+
+.boxUploadImage{
+    border: 1px solid #dadada;
+    display: block;
+    text-align: center;
+    width: 160px;
+    margin-right: 10px;
+    height: 160px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    
+    float: left;
+}
+
+.buttonImagePosition{
+    position: relative;
+    top: 81px;
+}
+
+.addMorePosition{
+    position: relative;
+    top: 60px;
+}
+
+.alumniPara{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 13px;
+
+}
+
+.boxUploadWidth{
+    width: 45%;
+}
+
+
+.greenBtnUpload{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    background: #50b945;
+}
+
+.uploadBtnBack{
+    background: #f7f7f7;
+    padding-top: 2em;
+    margin-top: 0em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1.2em;
+    border: 1px solid #d6d6d6;
+}
+
+.customTextarea{
+    resize: none;
+    border: 1px solid #d6d6d6;
+    height: 106px;
+}
+
+.customFormKnowledge{
+    border: 1px solid #d6d6d6;
+    background: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+
+.blueGradientSubmit{
+    background-image: linear-gradient(90deg, #01e4ef, #04adfa);
+    border-radius: 20px;
+    padding: 7px 37px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 0px solid #e9ecef; 
+}
+
+.editBtn {
+    color: #919eae;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+    padding: 6px 5px;
+    display: block;
+    border: 1px solid #919eae;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    right: 15px;
+    top: -7px !important;
+    background: white;
+}
+
+.modaCustomCenter{
+    display: block;
+}
+
+.whiteBox {
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+}
+
+.custom-tabset.college-dashboard-profile .nav-item{
+    width: 24%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}

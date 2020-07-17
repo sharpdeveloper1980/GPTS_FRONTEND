@@ -1,0 +1,307 @@
+.cdap-background {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.margin-bottom34 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom42 {
+    margin-bottom: 42px;
+}
+
+.light-orange-back {
+    border-radius: 2px;
+    background-color: #fdf3f2;
+}
+
+.margin-top120 {
+    margin-top: 140px;
+}
+
+.font-size30 {
+    font-size: 30px;
+}
+
+
+.d-height {
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+    padding: 25px;
+}
+
+
+.margin-top97 {
+    margin-top: 97px;
+}
+
+.margin-btm36 {
+    margin-bottom: 73px;
+}
+
+.margin-top40 {
+    margin-top: 25px !important;
+}
+
+.head-width-one {
+    max-width: 390px;
+    margin: auto;
+}
+
+.margin-top47 {
+    margin-top: 47px;
+}
+
+.margin-btm135 {
+    margin-bottom: 60px;
+}
+
+.light-grey {
+    background: #f8f8f8;
+}
+
+.max-width897 {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.2;
+    margin-top:0;
+    margin-bottom: 60px;
+}
+
+
+.benefits-head {
+    line-height: inherit;
+}
+
+.light-red-background {
+    border-radius: 2px;
+    background-color: #fbf2f3;
+    padding: 41px;
+    height: 100%;
+
+}
+
+.light-blue-background {
+    background-color: #edf8fa;
+}
+
+.light-violet-background {
+    background-color: #e9eafc;
+}
+
+.light-grey-background {
+
+    background-color: #f7f7f7;
+}
+
+.light-crazy-background {
+    background-color: #e5f5ff;
+}
+
+.red-background {
+    background-color: #f6f3e2;
+}
+
+.padding-top42 {
+    padding-top: 42px;
+}
+
+.margin-bottom30 {
+    margin-bottom: 30px;
+}
+
+.width65 {
+    width: 65px;
+    margin-bottom: 20px;
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.max-width-video {
+    max-width: 736px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* snake layout */
+.home_ourApproach_body {
+    height: 1300px;
+    max-width: 1036px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 72px;
+}
+
+.home_ourApproach_body_image {
+    position: absolute;
+    left: 375px;
+    top: 0px;
+    height: 1368px;
+}
+
+.home_ourApproach_body_image.mobile {
+    display: none;
+}
+
+.home_ourApproach_body_descriptionWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 163px;
+}
+
+.home_ourApproach_body .descriptionItem {
+    width: 360px;
+    text-align: right;
+}
+
+.home_ourApproach_body .descriptionItem .title {
+    font-weight: 400;
+    font-size: 25px;
+    color: #333333;
+    letter-spacing: -.5px;
+    line-height: 36px;
+}
+
+.home_ourApproach_body .descriptionItem .content {
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+    line-height: 24px;
+    margin-top: 5px;
+}
+
+.home_ourApproach_body_descriptionWrapper:nth-child(2n) .descriptionItem {
+    text-align: left;
+    margin-left: auto;
+}
+
+
+
+@media only screen and (max-width: 1025px) and (min-width: 768px) {
+    .home_ourApproach_body_descriptionWrapper {
+        height: 110px;
+    }
+
+    .home_ourApproach_body .descriptionItem .title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .home_ourApproach_body .descriptionItem {
+        width: 240px;
+    }
+
+    .home_ourApproach_body .descriptionItem .content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .home_ourApproach_body_image {
+        top: 4px;
+        left: 266px;
+        height: 895px;
+    }
+
+    .home_ourApproach_body {
+        width: 703px;
+        height: 917px;
+        margin-top: 57px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home_ourApproach_body_descriptionWrapper {
+        height: 165px;
+    }
+
+    .home_ourApproach_body_image.mobile {
+        display: block;
+    }
+
+    .home_ourApproach_body_image {
+        top: 0;
+        left: 35px;
+        height: auto;
+        width: 250px;
+    }
+
+    .home_ourApproach_body .descriptionItem {
+        width: 204px;
+        text-align: left;
+    }
+
+    .home_ourApproach_body .descriptionItem .title {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .home_ourApproach_body .descriptionItem .content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .home_ourApproach_body_image.web {
+        display: none;
+    }
+
+    .home_ourApproach_body {
+        width: 350px;
+        margin-top: 40px;
+        height: 1300px;
+    }
+
+}
+
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px) {
+    .font-size30 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 540px) {}

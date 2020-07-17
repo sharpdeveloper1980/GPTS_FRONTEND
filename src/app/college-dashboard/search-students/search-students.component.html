@@ -1,0 +1,542 @@
+<!-- app header -->
+<app-header></app-header>
+<!-- search students -->
+
+<div class="container-fluid whiteBox">
+    <!-- header -->
+    <div class="row">
+        <div class="col-12 headingSpacing">
+            <h3 class="boxHeading">Search Students</h3>
+        </div>
+    </div>
+    <!-- header -->
+    <div class="row">
+        <div class="col-12 subheadingSpacing">
+            <h3 class="boxHeading">Basic Search</h3>
+        </div>
+    </div>
+    <!-- form -->
+    <div class="container-fluid customContainer">
+        <!-- set1 -->
+        <div class="row">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Region</label>
+                    <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Student" ></ng-select>
+                </div>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group removeMargin">
+                    <label class="dashLabel">Gender</label>
+                </div>
+                <div>
+                    <div class="d-xl-inline-flex d-lg-inline-flex d-md-inline-flex">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <input id="i10" type="checkbox">
+                            <label for="i10">Male</label>
+                        </div>
+                    </div>
+                    <div class="d-xl-inline-flex d-lg-inline-flex d-md-inline-flex">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <input id="i11" type="checkbox">
+                            <label for="i11">Female</label>
+                        </div>
+                    </div>
+                    <div class="d-xl-inline-flex d-lg-inline-flex d-md-inline-flex">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <input id="i12" type="checkbox">
+                            <label for="i12">Others</label>
+                        </div>
+                    </div>
+                    <div class="d-xl-inline-flex d-lg-inline-flex d-md-inline-flex">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <input id="i13" type="checkbox">
+                            <label for="i13">All</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- set2 -->
+        <div class="row">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Grades</label>
+                </div>
+                <!-- 10th -->
+                <div class="d-xl-flex d-lg-flex d-md-flex">
+                    <!-- left toggle -->
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div>
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"><span>10<sup>th</sup></span></label>
+                        </div>
+                    </div>
+                    <!-- right range slider -->
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+                    </div>
+                </div>
+                <!-- 12th -->
+                <div class="d-xl-flex d-lg-flex d-md-flex">
+                    <!-- left toggle -->
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div>
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-2" checked>
+                            <label for="toggle-2"><span>12<sup>th</sup></span></label>
+                        </div>
+                    </div>
+                    <!-- right range slider -->
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- entrance -->
+                <div class="d-xl-flex d-lg-flex d-md-flex">
+                    <!-- left toggle -->
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div>
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-3" checked>
+                            <label for="toggle-3"><span>Entrance Test</span></label>
+                        </div>
+                    </div>
+                    <!-- right range slider -->
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                    </div>
+                </div>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="col-12 removePadding">
+                    <div class="form-group">
+                        <label>Age<span class="absoluteRight">16 to 26%</span></label>
+                    </div>
+                    <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                </div>
+                <div class="col-12 removePadding familyTop">
+                    <div class="form-group">
+                        <label>Family Earnings <a data-toggle="popover" data-container="body" data-placement="right"
+                                type="button" data-html="true" href="#" id="logout"><span class="fa fa-info-circle"></span></a>
+                        </label>
+                        <div class="col-12 removePadding">
+                            <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder=" " ></ng-select>
+                        </div>
+                    </div>
+                    <!-- popover -->
+                    <div id="popover-content-logout" class="hide">
+                        <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius,
+                            augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.</p>
+                        <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- set3 -->
+        <div class="row">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Languages</label>
+                    <div class="d-xl-flex d-lg-flex d-md-flex">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 removePadding">
+                            <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="Select Language" ></ng-select>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="Level" ></ng-select>
+                            <a href="#" class="addMore text-right">+ Add more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex removePadding familyTop">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                        <label>Candidate with Video Profile </label>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <!-- 1 -->
+                <div class="d-flex familyTop">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                        <label>Candidate with Video Profile </label>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="d-flex">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                        <label>Candidate with Video Profile </label>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="d-flex">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                        <label>Candidate with Video Profile</label>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="d-flex">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                        <label>Candidate with Video Profile </label>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                            <label for="toggle-1"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tags -->
+        <div class="row">
+            <div class="col-12 tagMargin">
+                <label>Tags</label>
+                <div class="tagBorder">
+
+                    <p><span class="tagsCollege">India <i class="fa fa-close"></i></span> <span
+                        class="tagsCollege">India <i class="fa fa-close"></i></span> <span class="tagsCollege">India <i
+                            class="fa fa-close"></i></span> <span class="tagsCollege">India <i class="fa fa-close"></i></span>
+                        <span class="tagsCollege">India <i class="fa fa-close"></i></span> </p>
+                </div>
+                <p class="text-right redFont">Hobbies, Likes, Projects, Extra Curricular, Certifications etc ...
+                    (maxium 10)</p>
+            </div>
+        </div>
+        <!-- button -->
+        <div class="row">
+            <div class="col-12 text-center"> <a href=# class="btn blueBtn">In a Blink</a> </div>
+        </div>
+        <!-- advanced search -->
+        <div class="row">
+            <div class="col-12 text-center"> <a href="#collapseExample" class="advancedSearch" data-toggle="collapse"
+                    role="button" aria-expanded="false" aria-controls="collapseExample" (click)="advanceSearch()">Advanced
+                    Search</a> </div>
+        </div>
+        <!-- advanced search section -->
+        <div class="row collapse" id="collapseExample">
+            <!-- heading -->
+            <div class="col-12 subheadingSpacing">
+                <h3 class="boxHeading">Advanced Search</h3>
+            </div>
+            <!-- signature + developmental -->
+            <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex familyTop">
+                <!-- left -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+                    <div id="popover-content-logout" class="hide">
+                        <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius,
+                            augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.</p>
+                        <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                    </div>
+                    <div class="col-12 removePadding">
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Analytical</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Community</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options">
+                                    class="custom-slider"</ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Creative</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Enterprising</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+                    <div id="popover-content-logout" class="hide">
+                        <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius,
+                            augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula justo ac
+                            est.</p>
+                        <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                    </div>
+                    <div class="col-12 removePadding">
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Relational</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Persuasive</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Practical</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                        <div class="d-xl-flex d-lg-flex d-md-flex form-group">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div> <span class="sliderTextRange">Specialist</span> </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- toggle switches -->
+            <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex familyTop">
+                <!-- left -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- 1 -->
+                    <div class="d-flex familyTop">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>Have pre approved Education Loan <a data-toggle="popover" data-container="body"
+                                    data-placement="right" type="button" data-html="true" href="#" id="logout"><span
+                                        class="fa fa-info-circle"></span></a> </label>
+                            <!-- popover -->
+                            <div id="popover-content-logout" class="hide">
+                                <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                    varius, augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula
+                                    justo ac est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum
+                                    ligula justo ac est.</p>
+                                <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 ">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="d-flex">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>Are looking for Scholarship<a data-toggle="popover" data-container="body"
+                                    data-placement="right" type="button" data-html="true" href="#" id="logout"><span
+                                        class="fa fa-info-circle"></span></a> </label>
+                            <!-- popover -->
+                            <div id="popover-content-logout" class="hide">
+                                <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                    varius, augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula
+                                    justo ac est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum
+                                    ligula justo ac est.</p>
+                                <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 ">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="d-flex">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>DALHAM Test<a data-toggle="popover" data-container="body" data-placement="right"
+                                    type="button" data-html="true" href="#" id="logout"><span class="fa fa-info-circle"></span></a></label>
+                            <!-- popover -->
+                            <div id="popover-content-logout" class="hide">
+                                <p class="popText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                    varius, augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum ligula
+                                    justo ac est.augue sit amet luctus aliquet, velit nunc volutpat velit, eu dictum
+                                    ligula justo ac est.</p>
+                                <p class="text-uppercase"><a href="#" class="popKnow">Know More</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 ">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TOEFL -->
+                    <div class="col-12 removePadding familyTop">
+                        <div class="d-xl-flex d-lg-flex d-md-flex">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div class="md-checkbox">
+                                    <input id="i15" type="checkbox">
+                                    <label for="i15"> TOEFL</label>
+                                </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 md-checkbox">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IELTS -->
+                    <div class="col-12 removePadding">
+                        <div class="d-xl-flex d-lg-flex d-md-flex">
+                            <!-- left toggle -->
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                                <div class="md-checkbox">
+                                    <input id="i16" type="checkbox">
+                                    <label for="i16"> IELTS</label>
+                                </div>
+                            </div>
+                            <!-- right range slider -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 md-checkbox">
+                                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" class="custom-slider"></ng5-slider>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prefered Programs -->
+                    <div class="col-12">
+                        <label>Preferred Programs</label>
+                        <div class="tagBorder">
+                            <input type="text" value="İstanbul, Adıyaman, Adana, Urfa" data-role="tagsinput" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- 1 -->
+                    <div class="d-flex familyTop">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>Passport Holder</label>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="d-flex">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>Any Criminal History (Applicant) </label>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="d-flex">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 removePadding">
+                            <label>Any Criminal History (Family) </label>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 removePadding">
+                            <div class="display-content-end">
+                                <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                                <label for="toggle-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Work Ex -->
+                    <div class="col-12 removePadding familyTop">
+
+                        <div class="form-group">
+                            <label>Work Experience</label>
+                            <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="Years" ></ng-select>
+                        </div>
+
+                    </div>
+                    <!-- Prefered Location -->
+                    <div class="col-12 removePadding familyTop">
+                        <div class="form-group">
+                            <label>Preffered Location</label>
+                            <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="Location" ></ng-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- button -->
+            <div class="col-12">
+                <div class="col-12 text-center"> <a href=# class="btn blueBtn">In a Blink</a> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- search students end -->

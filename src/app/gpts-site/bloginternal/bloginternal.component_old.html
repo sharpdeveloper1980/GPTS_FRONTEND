@@ -1,0 +1,100 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="blog-internal-back">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big"> Power your <br>mind</h2>
+          <p class="text-macro"></p>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="blog_title">
+    Bloglist | <span>{{ blogData?.title }}</span>
+  </div>
+
+<div class="bloglist-bubble">
+  <div class="custom-container section-padding" *ngIf="blogVar">
+    <div class="row">
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="blog_head">
+          <img class="blog_thumb" src="assets/images/bloginternal/thumb.png"> 
+          <div class="blog_meta">MAR 26, 2020 | GRAND TOUR, LIFE</div>
+        </div>
+        <div class="blog_content">
+          <b>How I Was Introduced to the Great North</b><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla The forces of globalisation are felt in all walks of life and business education is no exception. Mentoring by worldclass management schools like Harvard Business School and Sloan School in the 1960s provided a solid foundation for management education in India. Management professors like Howard Baumgartel, Warren Haynes, John Dearden, Warren Bennis, Shiv Gupta and others from the US provided leadership in developing serious management programmes at IIM, Ahmedabad and IIM, Calcutta. 
+          <br><br>Prior to 1962, in the field of management education, XLRI was the first institute set up in 1949 with Jesuit initiative by Fr. Quinn Enright, SJ and later joined by Fr. Bill Tome, SJ and Fr. EH McGrath, SJ, in Jamshedpur to offer programmes on industrial relation and labour. 
+          <br><br>Subsequently it started a two-year full-time management programme. In 1987, Xavier Institute of Management (XIMB), which is now a unit of Xavier University Bhubaneswar (XUB), was set up and a two-year postgraduate programme in Business Management was started. XUB is a state university with two campuses, and six different schools, offering postgraduate and doctoral programmes through six faculty groups. Both XLRI and XIMB have earned a high reputation and have been consistently ranked in India among the top business schools. Besides, these institutes are known for their commitment to social causes and social transformations. As India’s economic importance is being increasingly felt and it has the highest number of B-schools, they are expected to prepare leaders who can effectively manage the complexities of international business. Except FMS, Jamnalal Bajaj Institute, and IISWBM, no university-sponsored management programme has really made a mark in the field of management education. With the setting up of AICTE in 1987, and freedom granted under the system, the number of institutes have grown to more than 4,500, which is more than the number of schools in Europe and the US! However, only about thirty institutes have delivered outstanding performance. 
+          <br><br>Some institutes such as IMT, Gaziabad and S P Jain Institute, Mumbai, also have opened centres abroad to tap regional students aspiring for management education. In 1997, a major development took place with the establishment of ISB at Hyderabad at the initiative from Mc Kinsey consultants with support from Wharton and Kellogg Schools. In the global era, Indian B-schools are in the process of evolving and learning from their national and global peers. There are innovations in several areas such as student exchange, faculty exchange, establishment of global centres, etc. Globalisation of B-school education from a student’s perspective is a one-way path where students from developing countries are moving in large numbers to developed countries. Globalisation in its true sense should also pave the way for student movement from developed to developing countries. For this to happen, Indian B-schools should offer something unique which will give the international students an advantage whereby they will be attracted. The schools would require faculty of international standing with capacity to connect with peers in other countries. 
+          <br><br>Restrictive rules and regulations for Indian institutions to go to foreign countries and set up campuses, the government’s excessive control on matters relating to fees and emphasis on quantitative parameters and not on quality have also been some of the obstacles. The enactment of the Education Providers Bill, 2013, along with its quick implementation to build trust with foreign investors will bring management education of global standard to India. Similarly, Indian B-schools should be in a position to open off-country centres, so that a ‘level playing field’ is created for both Indian and foreign students.
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block">
+        <div class="position-sidebar-sticky">
+          <div class="col-12 borderFollow border-follow-new custom_padding">
+            <h5 class="text-uppercase featured_heading">Featured Blog</h5>
+            <img class="blog_featured_thumb" src="assets/images/bloginternal/featured_thumb.png">
+            <div class="blog_meta">MAR 26, 2020 | GRAND TOUR, LIFE</div>
+            <div class="featured_blog_content">
+              <b>How I Was Introduced to the Great North</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla The forces of globalisation are felt in all walks of life and business education is no exception. 
+            </div>
+            <hr class="custom_line">
+            
+          </div>
+          <!-- popular post -->
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <h5>Blogs that may interest you</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div *ngFor="let popular of popularList; i as index" class="postBox d-inline-flex">
+              <div class="imageBox"><img src="{{popular.thumb}}" class="" alt="image">
+              </div>
+              <div class="blogtextpara">
+                <a [routerLink]='["/bloglist",popular.slug]'>
+                  <p>{{popular.title}}</p>
+                  <p class="nameBlog">{{popular.author_name}}</p>
+                </a>
+              </div>              
+            </div>
+            <hr class="custom_line">
+          </div>
+
+          
+ 
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <h5>Social Media</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div class="blog_social_media">
+              <a href="https://facebook.com/GPTSindia/"><img src="assets/images/bloginternal/001-facebook.svg"></a>
+              <a href="https://twitter.com/Gptsglobal"><img src="assets/images/bloginternal/002-twitter.svg"></a>
+              <a href="https://in.linkedin.com/company/great-place-to-study"><img src="assets/images/bloginternal/003-instagram.svg"></a>
+              <a href="http://instagram.com/greatplacetostudy"><img src="assets/images/bloginternal/004-youtube.svg"></a>          
+            </div>
+          </div>
+
+          <div class="col-12 borderFollow oneMarginEm custom_padding blog_popular">
+            <hr class="custom_line">
+            <h5>Stay Updated</h5>
+          </div>
+          <div class="col-12 borderFollowList custom_padding">
+            <!-- set repeat -->
+            <div class="blog_search">
+             <input type="email" placeholder="Enter your mail">   
+             <img src="assets/images/bloginternal/mail.png">     
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- theme three ends-->

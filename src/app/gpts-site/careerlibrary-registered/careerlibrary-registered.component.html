@@ -1,0 +1,391 @@
+<app-header></app-header>
+
+<!-- career library -->
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="career-library-back">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big"> The world is your playground</h2>
+          <p class="text-macro"></p>
+        </div>
+        <div class="col-lg-7 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/career-library.svg"
+            class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- search -->
+  <!-- <div class="container">
+  <div class="row">
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">All</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+        <input type="text" class="form-control inputControl" aria-label="Text input with dropdown button">
+        <button class="btn blueBtnSearch">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+  </div>
+</div> -->
+
+
+  <!-- inspiring -->
+  <div class="gray-background">
+    <div class="custom-container section-padding border-top-light">
+      <!-- r1 -->
+      <div class="row margin-bottom68">
+        <div class="col-12 text-center">
+          <h3 class="font-size50 custom-text-light margin-btm36">Inspiring Videos
+          </h3>
+          <p class="orange-text font-color33 tagline-orange">Discovering the real you through the lens of the ideal
+            career
+          </p>
+        </div>
+      </div>
+      <!-- r2 -->
+      <div class="row mx-0 trending-video-container">
+        <!-- video -->
+        <div class="custom-col">
+
+          <h2 class="font-color33 font-size30 custom-text-light margin-bottom16">Choosing the right career path has
+            never been this exciting
+          </h2>
+          <p class="orange-text text-macro margin-bottom12">The first video career library that will transform your life
+          </p>
+          <p class="text-small font-color34 margin-top38">Bring your passion to life with the all-new virtual Career
+            Library by GPTS. It is a unique collection of careers with the world's most advanced assessment and guidance
+            platform. Our team of experts has spent years developing a list of the most viable careers for you. Our vast
+            library has industry-specific career maps to help you identify and navigate towards your career goals..</p>
+        </div>
+        <!-- para + video -->
+
+        <!-- s1 -->
+
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 margin-bottom44"
+          *ngFor="let data of greatMindsArr | slice: 0:6">
+          <div class="embed-responsive embed-responsive-16by9 ">
+            <!-- remove this "video-container" class from here -->
+            <vg-player class="embed-responsive-item" (click)="checkLoggedIn($event)">
+              <vg-overlay-play></vg-overlay-play>
+              <vg-buffering></vg-buffering>
+              <vg-controls>
+                <vg-play-pause></vg-play-pause>
+                <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                <vg-scrub-bar [vgSlider]="true">
+                  <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                  <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+                <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                <vg-mute></vg-mute>
+                <vg-volume></vg-volume>
+                <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+              <video [poster]="data.video_thumb" [vgMedia]="media" [src]="data.video" #media class="videoClass"></video>
+            </vg-player>
+          </div>
+
+          <!-- whitebox for video with heart -->
+          <div class="whiteBoxVideo" (click)="checkLoggedIn($event)">
+            <p class="text-macro">{{data.video_name}}</p>
+            <p class="font-size14">{{data.designation}}</p>
+            <!-- <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.inactive]="!data.fav"
+              (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p> -->
+          </div>
+        </div>
+
+
+      </div>
+      <!-- r3 -->
+      <!-- <div class="row margin-top30">
+        <div class="col-12 text-center">
+          <a class="d-inline-block custom-secondary-btn" href="/">Load More</a>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+
+  <!--- button for latest recommended latest -->
+
+
+  <!-- previously viewed -->
+  <!-- <div *ngIf="prevVar" class="container">
+    <div class="row marginTopBtmCourse">
+      <div class="col-6">
+        <h4 class="courseHeadEngineer courseHeadEngineerMargin">Previously Viewed</h4>
+      </div>
+      <div class="col-6">
+
+      </div>
+      <div class="col-12 d-flex removePadding marginTopBtmCourseTwo">
+        <div class="swiper-container blogs-carousel w-100" [swiper]="careeListConfig">
+          <div class="swiper-wrapper">
+            <div *ngFor="let prevVid of prevVidArr; i as index"
+              class="swiper-slide col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <div class="embed-responsive embed-responsive-16by9">
+                <vg-player [id]="prevVid.video_id" class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+
+                  <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                    <vg-scrub-bar [vgFor]="prevVid.video_id+'video'" [vgSlider]="true">
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+                    <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  <video  id="{{prevVid.video_id}}video" [poster]="prevVid.video_thumb" [vgMedia]="media"
+                    [src]="prevVid.video" #media class="videoClass"></video>
+                </vg-player>
+              </div>
+              <div class="blueBackgroundVideo">
+                <h5 class="namevideo">{{prevVid.name}} </h5>
+                <p class="text-uppercase nameVideoTxt">{{prevVid.designation}}</p>
+                <span [class.inactive]="!prevVid.fav" (click)="addToFav(prevVid.video_id, $event)" class="heartPos"><i
+                    class="fa fa-heart"></i></span>
+              </div>
+              <div class="text-center">
+                <p class="paraThree">| {{prevVid.title}} |</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-career">
+            <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+          </div>
+          <div class="swiper-button-next swiper-button-next-career"><img src="assets/images/static/white-right.svg"
+              alt="image" class="imageRightIcon"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Recommended -->
+  <!-- <div *ngIf="recomVidArr.length" class="container-fluid contentGreyBackground">
+    <div class="">
+      <div class="row marginTopBtmCourse">
+        <div class="col-6">
+          <h4 class="courseHeadEngineer">Recommended Career videos</h4>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-12 d-flex marginTopBtmCourseTwo swiper-custom-container">
+          <div *ngIf="recomVar" class="swiper-container blogs-carousel w-100" [swiper]="careeListConfig">
+            <div class="swiper-wrapper">
+              <div *ngFor="let recomVid of recomVidArr; i as index"
+                class="swiper-slide col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                  
+                  <vg-player [id]="recomVid.video_id" class="embed-responsive-item">
+                    <vg-overlay-play></vg-overlay-play>
+                    <vg-buffering></vg-buffering>
+
+                    <vg-scrub-bar>
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+
+                    <vg-controls>
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+
+                      <vg-fullscreen></vg-fullscreen>
+                    </vg-controls>
+                    <video [poster]="recomVid.video_thumb" [vgMedia]="media" [src]="recomVid.video" #media
+                      class="videoClass"></video>
+                  </vg-player>
+
+                </div>
+                <div class="blueBackgroundVideo">
+                  <h5 class="namevideo">{{recomVid.name}}</h5>
+                  <p class="text-uppercase nameVideoTxt">{{designation}}</p>
+                  <span [class.inactive]="!recomVid.fav" (click)="addToFav(recomVid.video_id, $event)"
+                    class="heartPos"><i class="fa fa-heart"></i></span>
+                </div>
+                <div class="text-center">
+                  <p class="paraThree">| {{recomVid.title}} |</p>
+                </div>
+
+              </div>
+            </div>
+           
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-career">
+            <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+          </div>
+          <div class="swiper-button-next swiper-button-next-career"><img src="assets/images/static/white-right.svg"
+              alt="image" class="imageRightIcon"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="custom-container section-padding blue-search-box">
+    <div class="row">
+      <div class="col-6 removePadding">
+        <div class="input-group mb-3">
+          <ng-select (change)="focusCareer($event.career_id)" class="custom-search-career" [items]="careerList"
+            bindValue="career_id" bindLabel="career_name" [searchable]="true" placeholder="Explore Our Career Library">
+          </ng-select>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+          </div>
+
+        </div>
+      </div>
+      <div #tagsInputContainer class="col-6 removePadding">
+        <div class="input-group mb-3">
+          <tag-input [secondaryPlaceholder]="'Browse through Career'" [(ngModel)]="videoSerachList"
+            [onlyFromAutocomplete]="true" [maxItems]='1' (onAdd)="searchVideo(videoSerachList[0])" class="custom-input">
+            <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="careerList" [identifyBy]="'career_id'"
+              [displayBy]="'career_name'" [appendToBody]="false">
+            </tag-input-dropdown>
+          </tag-input>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <div class="custom-container video-conatiner" #videoSetContainer>
+      <div class="contentGreyBackground" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+        <div *ngFor="let video of videoList | slice:0:10; i as index" class="row justify-content-center">
+          <div class="col-12 margin-bottom404" [id]="'careerId'+video.career_id">
+            <h4 class="font-size30 font-color33 custom-text-light text-center">{{video.career_name}}</h4>
+          </div>
+          <!-- video list -->
+          <!-- 1 -->
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12" *ngFor="let data of video.videolist">
+            <div class="embed-responsive embed-responsive-16by9 ">
+              <!-- remove this "video-container" class from here -->
+              <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                  <vg-scrub-bar [vgSlider]="true">
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+                  <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                <video [poster]="data.video_thumb" [vgMedia]="media" [src]="data.video" #media
+                  class="videoClass"></video>
+              </vg-player>
+            </div>
+
+            <!-- whitebox for video with heart -->
+            <div class="whiteBoxVideo">
+              <p class="text-macro" [title]=data.video_title>{{data.video_name}}</p>
+              <p class="font-size14 ellipsis-padding" [title]="data.designation">{{data.designation}}</p>
+              <p *ngIf="this.loggedIn" class="text-right heartPosition" [class.activeHeart]="data.fav"
+                (click)="addToFav(data.video_id, $event, data.fav)"><i class="fa fa-heart-o"></i></p>
+            </div>
+          </div>
+          <!-- <div
+        class="col-12 d-flex flex-wrap justify-content-center justify-content-lg-start removePadding marginTopBtmCourseTwo">
+        <div *ngFor="let videoObj of video.videolist;index as i" class="col-xl-4 col-lg-4 col-md-6 col-8">
+          <div *ngIf="videoObj != undefined">
+            <img class="w-100" [src]="videoObj.video_thumb">
+          </div>
+          <div class="blueBackgroundVideo">
+            <h5 class="namevideo">{{videoObj.video_name}}</h5>
+            <p class="text-uppercase nameVideoTxt">{{videoObj.designation}}</p>
+          </div>
+          <div class="text-center">
+            <p class="paraThree">| {{videoObj.video_title}} |</p>
+          </div>
+        </div>
+      </div> -->
+          <!--btn-->
+          <div class="col-12 d-flex justify-content-center border-blue-btm margin-btm137">
+            <a [routerLink]="['/course', video.slug]"
+              class="d-inline-block custom-secondary-btn margin-top38  margin-top53">Load
+              More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- do you like to know -->
+  <!-- <div class="custom-container section-padding career-library-bubble">
+    <div class="swiper-custom-container">
+      <div class="row margin-do-you-swiper">
+        <div class="col-12 text-center">
+          <h4 class="font-size50 custom-text-light">Do you like to know more</h4>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12 swiper-custom-container">
+          <div *ngIf="careerList.length" class="swiper-container browse-tiles-carousel w-100"
+            [swiper]="browseListConfig">
+            <div class="swiper-wrapper">
+              <div *ngFor="let career of listCareer; i as index" class="text-center swiper-slide new-card">
+                <a class="position-absolute w-100 h-100 cursor-pointer" [routerLink]="['/course',career.slug]"></a>
+                <img [src]="career.career_thumb" class="w-100" alt="image">
+                <p class="sliderBrowse">{{career.name}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-browse custom-swiper-button">
+            <img src="assets/images/static/white-left.svg" alt="image" class="imageLeftIcon">
+          </div>
+          <div class="swiper-button-next swiper-button-next-browse custom-swiper-button"><img
+              src="assets/images/static/white-right.svg" alt="image" class="imageRightIcon"></div>
+
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- footer -->
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        The stage is set, your destiny awaits
+      </div>
+      <div class="sub-text">
+        Embark on your journey
+      </div>
+      <!-- <button (click)="openSignupModal()" class="custom-primary-btn">
+        Get Started
+      </button> -->
+    </div>
+  </div>
+</div>

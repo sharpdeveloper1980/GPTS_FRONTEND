@@ -1,0 +1,1163 @@
+<div id="page-content-wrapper">
+  
+  <div class="dashboard-three">
+    <div class="container-fluid p-0" id="customStudentProfile">
+      <div class="custom-tabset">
+        <!-- Tabs structure for profile forms -->
+        <div #alertBox class="custom-alert alert d-none" role="alert">
+          {{alertText}}
+          <button type="button" class="close" (click)="hideAlert()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- <ngb-tabset [justify]="currentJustify" [activeId]="activeTab" (tabChange)="checkActiveTab($event)"> -->
+        <ngb-tabset [justify]="currentJustify" [activeId]="activeTab" >
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">COMPLETED</div>
+              <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">INCOMPLETE</div>
+              <div class="tab-title">PERSONAL INFO
+                <!-- <span class="mandatory-aestrik"> *</span> -->
+              </div>
+
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="profile-form dashboard-from">
+                  <div #errorContainer>
+                      <div *ngIf="errMessage.length" class="alert alert-danger" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          <p *ngFor="let eval of errMessage">{{eval}}</p>
+                      </div>
+                  </div>
+                  
+                <form [formGroup]="profileBasicForm" (ngSubmit)="personalInfoSubmit()">
+                  <p class="info-text-gray">All the fields are mandatory except mentioned optional</p>
+                  <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <h6>Basic Personal Information</h6>
+                      <div class="form-wrapper bdr-bottom">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-4">
+                              <label class="" for="student_name">First Name</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                              <input name="student_name" readonly type="text" placeholder=""
+                                formControlName="student_fname">
+                              <p class="preview d-none">{{ userInformation.student_fname }}</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                          <div class="custom-input-wrapper row  align-item-center">
+                            <div class="col-lg-4 col-md-4">
+                            <label class="" for="student_lname">Last Name</label></div>
+                            <div class="col-lg-8 col-md-8">
+                          <input class="" name="student_lname" type="text" placeholder=""
+                            formControlName="student_lname">
+                            <p class="preview d-none">{{ userInformation.lastname }}</p>
+                          </div>
+                        </div>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-4">
+                              <label class="" for="student_suffix">Suffix</label></div>
+                              <div class="col-lg-8 col-md-8">
+                              <ng-select class="custom" [items]="suffixLsit" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="" formControlName="student_suffix"></ng-select>
+
+                              <p *ngIf="personalInformation.suffix == 1" class="preview d-none">{{ suffixLsit[0].name }}</p>
+                              <p *ngIf="personalInformation.suffix == 2" class="preview d-none">{{ suffixLsit[1].name }}</p>
+                              <p *ngIf="personalInformation.suffix == 3" class="preview d-none">{{ suffixLsit[2].name }}</p>
+                            </div>
+
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <div class=" row  align-item-center">
+                              <div class="col-lg-4 col-md-4">
+                              <label class="custom-checkbox-label">Gender</label></div>
+                              <div class="col-lg-8 col-md-8">
+                              <div class="d-flex ml-auto multiple-checkbox-wrapper">
+                                <div class="checkbox-container">
+                                  <input type="radio" value="male" id="male" name="student_gender" formControlName="student_gender">
+                                  <label for="male">Male</label>
+                                  <div class="custom-checkbox"></div>
+                                </div>
+                                <div class="checkbox-container">
+                                  <input type="radio" value="female" id="female" name="student_gender" formControlName="student_gender">
+                                  <label for="female">Female</label>
+                                  <div class="custom-checkbox"></div>
+                                </div>
+                                <div class="checkbox-container">
+                                  <input type="radio" value="others" id="others" name="student_gender" formControlName="student_gender">
+                                  <label for="others">Others</label>
+                                  <div class="custom-checkbox"></div>
+                                </div>
+                                <p class="preview d-none">{{ personalInformation.gender | titlecase }}</p>
+                              </div></div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="student_dob">Date of Birth</label></div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" readonly placeholder="" name="dp" formControlName="student_dob">
+                                <p class="preview d-none">{{ personalInformation.dob }}</p>
+                            </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                          <div class="row mt-4 mb-4">
+                            <div class="col-md-12">
+                              <h3>Current Address</h3>
+                            </div>
+                          </div>
+                          
+
+
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">Street Address</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <input class="d-block w-100" name="student_c_address" type="text" placeholder="Street/Flat"
+                                  formControlName="student_current_address">
+                                  <p class="preview d-none">{{ personalInformation.address }}</p>
+                              </div>  
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">Country</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <ng-select class="custom" [items]="countries" bindValue="id" bindLabel="country_name"
+                              [searchable]="false" placeholder="Country" formControlName="student_current_country"
+                              (change)="currentCountryChanged($event.id)"></ng-select>
+                              <p class="preview d-none">{{ currentCountryChanged }}</p>
+                              </div>  
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">State</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <ng-select class="custom" [items]="currentStates" bindValue="id" bindLabel="name"
+                                  [searchable]="false" placeholder="State" formControlName="student_current_state">
+                                </ng-select>
+                              </div>  
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_current_pincode">Pincode</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <input class="" maxlength="6" appOnlyNumber placeholder="" name="" readonly
+                                  formControlName="student_current_pincode">
+                              </div>  
+                              </div>
+                            </div>
+
+                          </div>
+
+                     
+                          <div class="row mt-4 mb-4">
+                            <div class="col-lg-6 col-md-12">
+                             <div class="row">
+                              <div class="col-lg-4 col-md-4">
+                                <h3 class="mt-0 mb-0">Permanent Address</h3>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <div class="multiple-checkbox-wrapper">
+                                  <div class="checkbox-container">
+                                      <input type="checkbox" name="same_adresss" id="same-address" (click)="copyAddress()"
+                                        formControlName="same_adresss">
+                                    <label for="same-address">Same as current address</label>
+                                    <div class="custom-checkbox"></div>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">Street Address</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <input [readonly]="sameAddr" class="d-block w-100" name="student_c_address" type="text"
+                              placeholder="Street/Flat" formControlName="student_permanent_address">
+                              </div>  
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">Country</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <ng-select class="custom" [class.disable-dropdown]="sameAddr" [items]="countries"
+                                  bindValue="id" bindLabel="country_name" [searchable]="false" placeholder="Country"
+                                  formControlName="student_permanent_country" (change)="permanentCountryChanged($event.id)">
+                                </ng-select>
+                              </div>  
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_dob">State</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <ng-select class="custom" [class.disable-dropdown]="sameAddr" [items]="permanenetStates"
+                                  bindValue="id" bindLabel="name" [searchable]="false" placeholder="State"
+                                  formControlName="student_permanent_state">
+                                </ng-select>
+                              </div>  
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                              <div class="custom-input-wrapper row  align-item-center">
+                                <div class="col-lg-4 col-md-4">
+                                  <label class="" for="student_current_pincode">Pincode</label></div>
+                                <div class="col-lg-8 col-md-8">
+                                  <input [readonly]="sameAddr" class="" maxlength="6" appOnlyNumber placeholder="" name=""
+                            formControlName="student_permanent_pincode">
+                              </div>  
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <h6>Contact Details</h6>
+                      <div class="form-wrapper">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-12">
+                                <label class="" for="student_name">Mob. Number</label>
+                                <p class="small-info-text relative">Must be atleast 10 Digits</p>
+                              </div>
+                              <div class="col-lg-8 col-md-12">
+                                <input class="" readonly maxlength="10" appOnlyNumber name="student_middle_name" type="text"
+                                placeholder="" formControlName="student_contact">
+                            </div>  
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-12">
+                                <label class="" for="student_name">Landline</label>
+                                <p class="small-info-text relative">(Optional)</p>
+                              </div>
+                              <div class="col-lg-8 col-md-12">
+                                <div class="row">
+                                  <div class="col-lg-4 col-md-12">
+                                    <input class="w-100" maxlength="3" appOnlyNumber name="student_name" type="text"
+                                placeholder="" formControlName="student_phone_code">
+                                  </div>
+                                  <div class="col-lg-8 col-md-12">
+                                    <input class="w-100" style="width:85%!important" maxlength="8" appOnlyNumber name="student_name" type="text"
+                                    placeholder="" formControlName="student_home_contact">
+                                  </div>
+                                </div>
+                            </div>  
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-12">
+                                <label class="" for="student_middle_name">Email</label>
+                              </div>
+                              <div class="col-lg-8 col-md-12">
+                                <input class="" readonly name="student_last_name" type="text" placeholder=""
+                            formControlName="student_email">
+                              
+                            </div>  
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row  align-item-center">
+                              <div class="col-lg-4 col-md-12">
+                                <label class="" for="student_middle_name">Skype</label>
+                              <p class="small-info-text relative">(Optional)</p>
+                              </div>
+                              <div class="col-lg-8 col-md-12">
+                                <input class="" name="student_last_name" type="text" placeholder=""
+                            formControlName="student_skype_id">
+                            </div>  
+                            </div>
+                          </div>
+
+                        </div>
+                        
+                      </div>
+                      <!-- <h6>Ethnic Details</h6>
+                          <div class="form-wrapper">
+                            <div class="custom-input-wrapper">
+                              <label class="" for="student_suffix">Religious Preference</label>
+                              <ng-select class="custom" [items]="religiousPrefArray" [searchable]="false" placeholder=""
+                                formControlName="student_religious"> </ng-select>
+                            </div>
+                          </div> -->
+                    </div>
+                    <div class="col-12 text-center mt-5">
+                      <button  type="submit"
+                        class="custom-secondary-btn">Submit</button>
+
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <span class="mandatory"></span>
+              <div *ngIf="familyInfoCompleteStatus" class="completed-tab profile-tab-status">COMPLETED</div>
+              <div *ngIf="!familyInfoCompleteStatus" class="incomplete-tab profile-tab-status">INCOMPLETE</div>
+              <div class="tab-title">FAMILY
+                <!-- <span class="mandatory-aestrik">*</span> -->
+              </div>
+
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="profile-form dashboard-from">
+                  <div #ferrorContainer>
+                      <div *ngIf="ferrMessage.length" class="alert alert-danger" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          <p *ngFor="let eval of ferrMessage">{{eval}}</p>
+                      </div>
+                  </div>
+                <form [formGroup]="FamilyForm" (ngSubmit)="familyInfoSubmit()">
+                  <p class="info-text-gray">All the fields are mandatory except mentioned optional</p>
+                  <div class="row">
+                    <!-- left -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <h6>Father Information</h6>
+                      <div class="form-wrapper bdr-bottom">
+                        
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="father_name">Father Name</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" name="father_name" type="text" placeholder="" formControlName="father_name">
+                                </div>   </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="occupation">Occupation</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" name="occupation" type="text" placeholder=""
+                                formControlName="father_occupation">
+                                </div>  </div>
+                          </div>
+
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="highest-education">Highest Qualification</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <ng-select class="custom" [items]="highestQualificationList" bindValue="id" bindLabel="name"
+                            [searchable]="false" placeholder="" formControlName="father_highest_education">
+                          </ng-select>
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="avg-family-income">Family Income <br>(annualy)</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" name="avg-family-income" type="text" placeholder=""
+                                formControlName="family_income">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="highest-education">Parent's Email Id</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" name="parents-email" type="text" placeholder=""
+                                formControlName="father_email_id">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="highest-education">Parent's Contact</label>
+                                <p class="small-info-text relative">Must be atleast 10 Digits</p>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" appOnlyNumber maxlength="10" name="parents-email" type="text" placeholder=""
+                                formControlName="father_contact_no">
+                                </div>  </div>
+                          </div>
+
+                          
+
+
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                       
+                       
+                       
+                      </div>
+                    </div>
+                    <!-- right -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <h6>Mother Infromation</h6>
+                      <div class="form-wrapper bdr-bottom">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="mother_name">Mother Name</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="w-100" name="mother_name" type="text" placeholder=""
+                                formControlName="mother_name">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="occupation">Occupation</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <input class="" name="occupation" type="text" placeholder=""
+                                formControlName="mother_occupation">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="highest-education">Highest Qualification</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <ng-select class="custom" [items]="highestQualificationList" bindValue="id" bindLabel="name"
+                            [searchable]="false" placeholder="" formControlName="mother_highest_education">
+                          </ng-select>
+                                </div>  </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12"></div>                      
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="form-wrapper mt-0">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4">
+                                <label class="" for="Do you have Sibling">Do you have Sibling</label>
+                              </div>
+                              <div class="col-lg-8 col-md-8">
+                                <div class="d-flex multiple-checkbox-wrapper responsiveRadio">
+                                  <div class="checkbox-container ">
+                                    <input type="radio" name="any_sibling" value="no"  checked id="no" formControlName="any_sibling">
+                                    <label for="no">No</label>
+                                    <div class="custom-checkbox"></div>
+                                  </div>
+                                  <div class="checkbox-container">
+                                    <input type="radio" name="any_sibling" value="yes" id="yes" formControlName="any_sibling">
+                                    <label for="yes">yes</label>
+                                    <div class="custom-checkbox"></div>
+                                  </div>
+                                </div>
+                                </div>  </div>
+                          </div>
+                        </div></div></div>
+
+
+
+
+
+
+                    <div class="col-12 text-center mt-5">
+                      <button type="submit" class="custom-secondary-btn">Submit</button>
+                    </div>
+
+                  </div>
+
+                </form>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <div *ngIf="eduInfoCompleteStatus" class="completed-tab profile-tab-status">COMPLETED</div>
+              <div *ngIf="!eduInfoCompleteStatus" class="incomplete-tab profile-tab-status">INCOMPLETE</div>
+              <div class="tab-title">EDUCATION
+                <!-- <span class="mandatory-aestrik"> *</span> -->
+              </div>
+
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="profile-form custom-profile-form dashboard-from">
+                  <div #serrorContainer>
+                      <div *ngIf="serrMessage.length" class="alert alert-danger" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          <p *ngFor="let eval of serrMessage">{{eval}}</p>
+                      </div>
+                  </div>
+                <form [formGroup]="educationForm" (ngSubmit)="eduSubmit()">
+                  <p class="info-text-gray">All the fields are mandatory except mentioned optional</p>
+                  <div class="row">
+                    <!-- left -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <h6>Basic Educational Information</h6>
+                      <div class="form-wrapper">
+                        <div class="row">
+                         
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="current-school">Current School</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="current-school" type="text" placeholder=""
+                            formControlName="current_school">
+                                </div>  </div>
+                          </div>
+
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="type-of-school">Type of School</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <ng-select class="custom" [items]="schoolType" bindValue="name" bindLabel="name"
+                            [searchable]="false" placeholder="" formControlName="type_of_school"></ng-select>
+                                </div>  </div>
+                          </div>
+
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="board">Board</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <ng-select class="custom" [items]="boardType" bindValue="name" bindLabel="name"
+                                [searchable]="false" placeholder="" formControlName="board"></ng-select>
+                                </div>  </div>
+                          </div>
+
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="grade">Grade</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <ng-select class="custom" [items]="gradeList" bindValue="id" bindLabel="name"
+                                [searchable]="false" placeholder="" formControlName="grade"></ng-select>
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12" *ngIf="gradeValue > 3">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="grade-10">Grade - CGPA/% 10<sup>th</sup></label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="grade-10" type="text" placeholder="" formControlName="grade_in_cgpa_10">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12" *ngIf="gradeValue > 6">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="grade-12">Grade - CGPA/% 12<sup>th</sup></label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="grade-12" type="text" placeholder="" formControlName="grade_in_cgpa_12">
+                                </div>  </div>
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- right -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="form-wrapper mt-0">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="row mb-4">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="schooling">Done schooling through same school</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <div class="d-flex multiple-checkbox-wrapper">
+                                  <div class="checkbox-container">
+                                      <input type="radio" name="schooling_with_same_day" value="false" id="yes"
+                                formControlName="schooling_with_same_day" (click)="schoolChanged(false)">
+                             <label for="yes">yes</label>  <div class="custom-checkbox"></div>
+                                  </div>
+                                  <div class="checkbox-container">
+                                    <input type="radio" name="schooling_with_same_day" value="true" id="no"
+                                formControlName="schooling_with_same_day" (click)="schoolChanged(true)">
+                                    <label for="no">No</label> <div class="custom-checkbox"></div>
+                                  </div>
+      
+                                </div>
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12"></div>
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="previous-school-name">Previous School Name</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="previous-school-name" type="text" placeholder=""
+                            formControlName="previous_school" [readonly]="!schoolNotChanged">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="grade-transfer">Grade in which you took the transfer</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="grade-transfer" type="text" placeholder=""
+                            formControlName="grade_in_transfer" [readonly]="!schoolNotChanged">
+                                </div>  </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-12">
+                            <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12">
+                                <label class="" for="reason-for-shifting-school">Reason for shifting school</label>
+                              </div>
+                              <div class="col-lg-7 col-md-12">
+                                <input class="" name="reason-for-shifting-school" type="text" placeholder=""
+                            [readonly]="!schoolNotChanged" formControlName="reason_for_shifting_school">
+                                </div>  </div>
+                          </div>
+
+                          
+
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <!-- education more -->
+                  <div class="row">
+                    <div class="d-flex">
+                      <div class="col-12 col-lg-6 col-xl-6">
+                        <div class="custom-checkbox-wrapper">
+                          <div class="custom-checkbox-label">If you have received any honors related to your academic
+                            achievements beginning with your 9<sup>th</sup> grade or international equivalent. Please
+                            indiacate no. of honors (if any)</div>
+
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6 col-xl-6">
+
+                        <div class="d-flex ml-auto multiple-checkbox-wrapper">
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="0" formControlName="no_of_honors" (click)="numberOfHonor()
+                                          ">
+                            <div class="custom-checkbox"></div>
+                            <label for="schooldone" class="ml-0">0</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="1" formControlName="no_of_honors" (click)="numberOfHonor()
+                                      ">
+                            <div class="custom-checkbox"></div>
+                            <label for="schooldone" class="ml-0">1</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="2" formControlName="no_of_honors"
+                              (click)="numberOfHonor()">
+                            <div class="custom-checkbox"></div>
+                            <label for="no" class="ml-0">2</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="3" formControlName="no_of_honors"
+                              (click)="numberOfHonor()">
+                            <div class="custom-checkbox"></div>
+                            <label for="schooldone" class="ml-0">3</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="4" formControlName="no_of_honors"
+                              (click)="numberOfHonor()">
+                            <div class="custom-checkbox"></div>
+                            <label for="schooldone" class="ml-0">4</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="radio" name="no_of_honors" value="5" formControlName="no_of_honors"
+                              (click)="numberOfHonor()">
+                            <div class="custom-checkbox"></div>
+                            <label for="schooldone" class="ml-0">5</label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- honor -->
+                    <div formGroupName="honors_group" class="col-12 ">
+                      <div class="row" *ngFor="let honorItem of honorArray; let i = index;">
+                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                          <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12"><label class="" for="honor-title">Honor Title</label></div>
+                              <div class="col-lg-7 col-md-12"><input class="" name="honor-title" type="text" placeholder=""
+                                [formControlName]='honorItem[0]'></div>
+                            
+                          </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                          <div class="custom-input-wrapper row">
+                              <div class="col-lg-5 col-md-12"><label class="" for="level-of-recognition">Grade Level</label></div>
+                              <div class="col-lg-7 col-md-12"> <ng-select class="custom" [items]="gradeList" bindValue="name" bindLabel="name"
+                                [searchable]="false" placeholder="" [formControlName]="honorItem[1]"></ng-select></div>
+                            
+                          </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                          <div class="custom-input-wrapper custom-input-two-wrapper row">
+                              <div class="col-lg-5 col-md-12"> <label class="" for="level-of-recognition">Level of Recognition</label></div>
+                              <div class="col-lg-7 col-md-12"> <ng-select class="custom" [items]="leveOfRecogList" bindValue="name" bindLabel="name"
+                                [searchable]="false" placeholder="" [formControlName]="honorItem[2]"></ng-select></div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="custom-secondary-btn">Submit</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <div class="incomplete-tab profile-tab-status" *ngIf="!activityStatus">INCOMPLETE</div>
+              <div *ngIf="activityStatus" class="completed-tab profile-tab-status">COMPLETED</div>
+              <div class="tab-title text-uppercase">Activities
+                <!-- <span class="mandatory-aestrik"> *</span> -->
+              </div>
+
+            </ng-template>
+            <ng-template ngbTabContent>
+              <h6 class="head">Activities</h6>
+              <div class="">
+                <form [formGroup]="activitiesForm" (ngSubmit)="activitySubmit()">
+                  <!-- <div class="col-12">
+                            <h3 class="activitiesHeadTwo">Activities</h3>
+                            <p class="activitiesPara">Excepteur anim cupidatat est dolore. Veniam, officia proident, amet,
+                              eiusmod.
+                              Aliquip eu et nostrud tempor deserunt. Exercitation est ipsum incididunt non. Dolore in qui
+                              exercitation. Et sint sit adipiscing est deserunt. In tempor cupidatat eu ex.</p>
+                          </div> -->
+
+                  <!-- table layout -->
+                  <div class="">
+                    <div class="table-responsive activity-form box-shadow-new">
+                      <table class="table">
+                        <thead>
+                          <tr class="tableHeading">
+                            <th>Activity Type</th>
+                            <th>Participation Grade Level</th>
+                            <th>Describe Activity Including Your Role</th>
+                            <th>Recognition Received</th>
+                          </tr>
+                        </thead>
+                        <tbody formGroupName="activity" class="tableData">
+                          <tr *ngFor="let activity of activityList;let i = index">
+                            <td>
+                              <div class="custom-input-wrapper">
+                                <input class="" type="text" [formControlName]='activity[0]'>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-input-wrapper">
+                                <ng-select class="custom" [items]="activityGrade" bindValue="id" bindLabel="name"
+                                  [searchable]="false" placeholder="gaga" [formControlName]='activity[1]'></ng-select>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-input-wrapper">
+                                <input class="" type="text" [formControlName]='activity[2]'>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-input-wrapper">
+                                <input class="" type="text" [formControlName]='activity[3]'>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                       <!-- checkbox -->
+                    <div class="col-12 removePadding text-center"  *ngIf="activitiesVar || activityList.length > 0">
+                        <div class="checkbox">
+                          <label><input type="checkbox" class="checkRight" formControlName="accept_activity" >I intend to participate in a similar
+                            activity in
+                            college</label>
+                        </div>
+                      </div>
+                      <div class="col-12 text-center">
+                        <button  type="submit" [disabled]="!activitiesForm.valid && activitiesVar"
+                          class="mr-3 custom-primary-btn" *ngIf="activitiesVar || activityList.length > 0">Submit</button>
+                          
+                        <button type="button" class="mr-3 custom-secondary-btn" (click)="addActivites()">Add
+                          activities</button>
+                          <a href="javascript:void(0)" routerLink="/student-dashboard/career-discovery-test"  class="custom-primary-btn takeAssesment" style="display: none;">Take Assesment</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </form>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab id="sop">
+            <ng-template ngbTabTitle>
+              <div class="completed-tab profile-tab-status" *ngIf="defaultSopAnswer">COMPLETE</div>
+              <div class="tab-title">SOP</div>
+              <div class="red-tab profile-tab-status" *ngIf="!defaultSopAnswer">INCOMPLETE</div>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <!-- Tabs structure for profile forms -->
+              <div #alertBox class="custom-alert alert d-none" role="alert">
+                {{alertText}}
+                <button type="button" class="close" (click)="hideAlert()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- <div class="position-relative">
+                <div class="position-absolute soon-info-wrapper text-center">
+                  <p class="">Video and written statement of purpose will enable shortly</p>
+                </div>
+                <div class="blurred-box d-flex justify-content-center align-items-center">
+                  <div class="dummy-box w-50 h-50 border border-primary"></div>
+                </div>
+              </div> -->
+
+              <!-- <h4 class="activitiesHeadOne">Statement Of Purpose</h4> -->
+              <!-- <div class="profile-form dashboard-from">
+                    <label class="d-block">{{sopQuestion}}</label>
+                    <textarea #defaultSopQuestionList></textarea>
+                    <button (click)="defaultQuestionSubmit()" [disabled]="defaultSopAnswer">submit</button> -->
+              <!-- <form [formGroup]="sopForm" (ngSubmit)="sopSubmit()">
+                      <label></label>
+
+                    </form> -->
+              <!-- </div> -->
+              <div class="container-fluid custom_tab">
+                <!-- set 1-->
+                <div class="row rowBorder default-sop">
+                  <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                    <!-- image -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center rightLogo">
+                      <img src="assets/images/common/gpts-logo.png" class="img-fluid uniLogoSop" alt="image">
+                    </div>
+                    <!-- uni name -->
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center">
+                      <p class="sopName">{{sopTopicList[selectedLevel - 1].name}}</p>
+                    </div>
+                    <!-- write button -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center">
+                      <!-- <a *ngIf="!defaultSopAnswer" href="#collapseEdit" class="btn hollowGreenBtn"
+                        data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEdit"><img src="assets/images/theme-three/plus.svg" class="plus_ico"> Write SOP</a> -->
+                        <select *ngIf="!defaultSopAnswer" [(ngModel)]="selectedLevel" (change)="selectedChange()" class="sop_select">
+                          <option *ngFor="let item of sopTopicList" [ngValue]="item.id">{{item.name}}</option>
+                        </select>
+                        
+                        <a *ngIf="editEnable" href="#collapseUpdate" class="edit_a"
+                        data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseUpdate"><img src="assets/images/theme-three/edit.svg" class="edit_ico sop_ico"></a>
+                        <!-- <a *ngIf="defaultSopAnswer" href="#collapseView" class=""
+                          data-toggle="collapse" role="button" aria-expanded="true"
+                          aria-controls="collapseView"><img src="assets/images/theme-three/eye.svg" class="eye_ico sop_ico"></a> -->
+                    </div>
+                  </div>
+                  <div class="col-12 remove-padding">
+                    <div *ngIf="!defaultSopAnswer" class="collapse show greyBgTwo" id="collapseEdit">
+                      <div class="col-12">
+                        <!-- {{sopQuestion}} -->
+                        <!-- <label class="d-block"></label> -->
+                        <textarea #defaultSopQuestionList class="form-control customFormTwo"
+                          rows="15" placeholder="Write text here ..."></textarea>
+                      </div>
+                      <!-- button -->
+                      <div class="col-12 d-flex" *ngIf="!defaultSopAnswer">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                          <button (click)="defaultQuestionSubmit()" class="custom-secondary-btn">Submit</button>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                      </div>
+
+                    </div>
+
+                    <div *ngIf="editEnable" class="collapse greyBgTwo" id="collapseUpdate">
+                      <div class="col-12">
+                        <!-- {{sopQuestion}} -->
+                        <!-- <label class="d-block"></label> -->
+                        <textarea #defaultSopQuestionList class="form-control customFormTwo"
+                          rows="15" placeholder="Write text here ...">{{sopAnswer}}</textarea>
+                      </div>
+                      <!-- button -->
+                      <div class="col-12 d-flex" *ngIf="editEnable">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                          <button (click)="questionSubmit()" class="custom-secondary-btn">Update</button>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                      </div>
+
+                    </div>
+
+                    <div *ngIf="defaultSopAnswer" class="collapse show greyBgTwo" id="collapseUpdate">
+                      <div class="col-12">
+                        <!-- {{sopQuestion}} -->
+                        <!-- <label class="d-block">Topic First</label> -->
+                        <p *ngIf="defaultSopAnswer">
+                          {{sopAnswer}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- set 1 ends-->
+                <!-- set 2-->
+                <div class="row rowBorder d-none">
+                  <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                    <!-- image -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center rightLogo">
+                      <img src="assets/images/common/bethel-logo-vertical-color.png" class="img-fluid uniLogoSop"
+                        alt="image">
+                    </div>
+                    <!-- uni name -->
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <p class="sopName">Bethel University, <span class="sopLocation">Mennesota</span></p>
+                      <!-- stars -->
+                      <p><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                          class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                          class="fa fa-star greyStar"></i> <span class="goldRound">4.2</span></p>
+                    </div>
+                    <!-- write button -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center">
+                      <a href="#collapseExample2" class="btn hollowGreenBtn" data-toggle="collapse" role="button"
+                        aria-expanded="false" aria-controls="collapseExample2">Write Sop</a>
+                    </div>
+                  </div>
+                  <div class="col-12 remove-padding">
+                    <div class="collapse greyBgTwo" id="collapseExample2">
+                      <div class="col-12">
+                        Write SOP for Bethel University
+                        <textarea class="form-control customFormTwo" rows="15"
+                          placeholder="Write text here ..."></textarea>
+                        <p>Word limit 500 words</p>
+                      </div>
+                      <!-- button -->
+                      <div class="col-12 d-flex">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                          <a href="#" class="custom-secondary-btn">Submit</a>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+                <!-- set2 ends -->
+                <!-- set 3 -->
+                <div class="row rowBorder  d-none">
+                  <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                    <!-- image -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center rightLogo">
+                      <img src="assets/images/common/bethel-logo-vertical-color.png" class="img-fluid uniLogoSop"
+                        alt="image">
+                    </div>
+                    <!-- uni name -->
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <p class="sopName">Bethel University, <span class="sopLocation">Mennesota</span></p>
+                      <!-- stars -->
+                      <p><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                          class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                          class="fa fa-star greyStar"></i> <span class="goldRound">4.2</span></p>
+                    </div>
+                    <!-- write button -->
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 text-center">
+                      <a href="#collapseExample3" class="btn greyHardBtn" data-toggle="collapse" role="button"
+                        aria-expanded="false" aria-controls="collapseExample3">View</a>
+                    </div>
+                  </div>
+                  <div class="col-12 remove-padding">
+                    <div class="collapse greyBgTwo" id="collapseExample3">
+                      <div class="col-12">
+                        Write SOP for Bethel University
+                        <textarea class="form-control customFormTwo" rows="15"
+                          placeholder="Write text here ..."></textarea>
+                        <p>Word limit 500 words</p>
+                      </div>
+                      <!-- button -->
+                      <div class="col-12 d-flex">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                          <a href="#" class="custom-secondary-btn">Submit</a>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+                <!-- set3 ends -->
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <!-- <ngb-tab id="videoSP">
+            <ng-template ngbTabTitle>
+              <div class="tab-title">VIDEO SOP</div>
+              <div class="red-tab profile-tab-status" *ngIf="!studentVidSopStatus">INCOMPLETE</div>
+              <div *ngIf="studentVidSopStatus" class="completed-tab profile-tab-status">COMPLETED</div>
+            </ng-template>
+            <ng-template ngbTabContent> -->
+              <!-- <div class="position-relative">
+                <div class="position-absolute soon-info-wrapper">
+                  <p class="">Video SOP and written SOP will enable shortly with the college search</p>
+                </div>
+                <div class="blurred-box d-flex justify-content-center align-items-center">
+                  <div class="dummy-box w-50 h-50 border border-primary"></div>
+                </div>
+              </div> -->
+              <!-- <div class="row dashboard-from srcObject">
+                <div class="col-12">
+                  <h6>Video Statement Of Prurpose (V-SOP)</h6>
+                  <h2>Topic</h2>
+                  <label>Excepteur anim cupidatat est dolore. Veniam, officia proident, amet, eiusmod. Aliquip eu et
+                    nostrud tempor deserunt. Exercitation est ipsum incididunt non. Dolore in qui exercitation. Et sint
+                    sit adipiscing est deserunt. In tempor cupidatat eu ex.</label>
+                  <video #video class="video" id="video" controls></video>
+                </div>
+                <div class="col-12 video-button d-flex justify-content-center align-items-center">
+                  <button *ngIf="!videoSubmitted" class="greyHollowBtn" (click)="startRecording()">Record</button>
+                  <button *ngIf="!videoSubmitted" class="redRoundBtn" [disabled]="!videoStarted"
+                    (click)="stopRecording()">Stop</button>
+                  <button *ngIf="!videoSubmitted" class="greenRoundBtn" [disabled]="!videoProcessed"
+                    (click)="download()">
+                    Download</button>
+                  <button *ngIf="!videoSubmitted" class="redRoundBtn" [disabled]="!videoProcessed"
+                    (click)="uploadRecording()">Upload</button>
+                  <button *ngIf="videoSubmitted" class="greenRoundBtn" (click)="play()">Play</button>
+                  <button *ngIf="videoSubmitted" class="redRoundBtn" (click)="pause()">Pause</button>
+                </div>
+
+              </div>
+            </ng-template>
+          </ngb-tab> -->
+        </ngb-tabset>
+      </div>
+    </div>
+    <ng-template #t let-date let-currentMonth="currentMonth">
+      <div class="custom-date">
+        <div class="date-content w-100 text-center d-flex justify-content-center align-items-center h-100">{{date.day}}
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- == start main code for body == -->
+  <!-- search box -->
+  <!-- <div class="container-fluid whiteBox">
+      <div class="row">
+        <div class="col-12 d-flex">
+          <p class="headingTwo headingTwoAdjust col-xl-1 col-lg-1 col-md-2 col-sm-12 col-12">Search
+            for </p>
+          <div class="dropdown collegeOrangeTop  col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+            <button class="btn btn-secondary dropdown-toggle drpDownBtn" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Colleges
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="form-group  col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
+            <input type="text" class="form-control customSearch" placeholder="Search" /> </div>
+        </div>
+      </div>
+    </div> -->
+
+</div>

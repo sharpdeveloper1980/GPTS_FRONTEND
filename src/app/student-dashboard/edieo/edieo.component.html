@@ -1,0 +1,204 @@
+<div id="page-content-wrapper">
+  <div class="dashboard-three">
+<!--edieo component html start-->
+<div class="dashboard-three">
+  <!--edieo banner start-->
+  <section class="edio-banner">
+      <div class="edieo-thumbnail" style="display: none;">
+        <img src="assets/images/edieo/edieo-banner.jpg" alt="edieo thumbnail" class="img-fluid">
+      </div>
+      <div class="edieo-video" >
+          <video playsinline="playsinline"  autoplay [muted]="true"  loop   src="{{bvideo}}">
+
+          </video>
+
+          <!-- <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="edieo-video">
+              <source src="{{bvideo}}" type="video/mp4">
+          </video> -->
+  </div>
+      <div class="edieo-banner-content">
+      <div class="">
+        <div class="row">
+          <div class="col-xl-8 col-lg-12 col-md-12">
+            <div class="title"><span class="eb">EB</span><span class="series">Series</span></div>
+            <h1>{{btittle}}</h1>
+            <p>{{bdescp}}</p>
+            <div class="edieo-banner-action">
+              <a [routerLink]="[ '/student-dashboard/edieo-detail',btype,bid]" class="btn custom-primary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+              <a class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  <!--edieo banner end-->
+
+  <div class="edieo-middle-section">
+  <!--must know start-->
+         <div class="section-spacing" *ngIf="career">
+           <div class="container-fluid pr-0">
+           <div class="row">
+                 <h2 class="hading-title leagueFont">Careers</h2>
+                 <div class="edieo-common must-know">
+
+                    <div class="box" *ngFor="let val of career  | slice:0:show; let i=index">
+                        <div class="image">
+                          <img src="{{val.thumb}}" class="img-fluid"/>
+                        </div>
+                       <a class="" [routerLink]="[ '/student-dashboard/edieo-detail/career',val.id]"><div class="caption"></div></a>
+                      </div>
+
+                      <div class="col-12 text-center mt-4">
+                        <button class="d-inline-block custom-primary-btn margin-top45"
+                          *ngIf="career.length > 12 &&  show <= career.length else lessBtn"
+                          (click)="show = show+6">VIEW MORE</button>
+                        <ng-template #lessBtn>
+                          <button class="d-inline-block custom-primary-btn margin-top45" (click)="show = 12">
+                            VIEW LESS
+                          </button>
+                        </ng-template>
+                      </div>
+                  </div>
+             </div>
+     </div></div>
+ <!--must know end-->
+
+<!--Colleges start-->
+ <div class="section-spacing" *ngIf="college">
+    <div class="container-fluid">
+    <div class="row">
+  <h2 class="hading-title leagueFont">Colleges</h2>
+<div class="edieo-common must-know">
+    <div class="box" *ngFor="let val of college">
+        <div class="image">
+          <img src="{{val.thumb}}" class="img-fluid"/>
+        </div>
+       <a class="" [routerLink]="[ '/student-dashboard/edieo-detail/career',val.id]"><div class="caption"></div></a>
+      </div>
+</div> </div></div>
+  </div>
+<!--Colleges end-->
+
+<!--country EB series start-->
+<div class="section-spacing d-none">
+<div class="container-fluid">
+  <div class="country-eb-series">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="assets/images/edieo/countries-series-1.png"  class="img-fluid" alt="country series">
+    </div>
+    <div class="col-md-4 text-center">
+  <div class="country-eb-series-content">
+      <h2><span>Countries</span>
+      <p><strong>EB</strong>-Series</p>
+      </h2>
+      <div class="edieo-series-action">
+          <a href="javascript:void(0);" class="btn custom-primary-btn play"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+          <a href="javascript:void(0);" class="btn custom-primary-btn my-list"><i class="fa fa-plus" aria-hidden="true"></i>MY LIST</a>
+        </div>
+        <div class="edieo-series-desc">
+          <p><strong>Lium dolor sit amet, consectetur adipis cing
+              elit,, consectetur adipiscing elit.</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+  </div>
+    </div>
+    <div class="col-md-4">  <img src="assets/images/edieo/countries-series-2.png" class="img-fluid" alt="country series"></div>
+  </div>
+  </div>
+  </div></div>
+  <!--country EB series end-->
+<!--must know start-->
+<!-- <div class="section-spacing" *ngIf="mustknow">
+    <div class="container-fluid">
+    <div class="row">
+    <h2 class="hading-title leagueFont">Must Know</h2>
+  <div class="edieo-common must-know">
+      <div class="box" *ngFor="let val of mustknow">
+          <div class="image">
+            <img src="{{val.thumb}}" class="img-fluid"/>
+          </div>
+          <a class="" [routerLink]="[ '/student-dashboard/edieo-detail/mustknow',val.id]"><div class="caption"></div></a>
+      </div>
+    </div>
+  </div> 
+  </div>
+</div> -->
+
+<!--must know start-->
+<div class="section-spacing" *ngIf="mustknow">
+    <div class="container-fluid">
+    <div class="row">
+    <h2 class="hading-title leagueFont">Top Colleges</h2>
+  <div class="edieo-common must-know">    
+      <div class="box" *ngFor="let university of universityList">
+          <div class="image" (click)="InstituteVideoPopup(university.id);">
+            <img style="cursor: pointer !important;" [src]="university.thumbnail || 'assets/images/university/university-list/h-img-01.jpg'" class="img-fluid"/>
+            <span class="play-icon" style="border: none !important;"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+          </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+</div>
+
+<!--must know start-->
+<div class="section-spacing" *ngIf="country">
+  <div class="container-fluid">
+  <div class="row">
+        <h2 class="hading-title leagueFont">Country</h2>
+        <div class="edieo-common must-know">
+
+           <div class="box" *ngFor="let val of country">
+               <div class="image">
+                 <img src="{{val.thumb}}" class="img-fluid"/>
+               </div>
+              <a class="" [routerLink]="[ '/student-dashboard/edieo-detail/career',val.id]"><div class="caption"></div></a>
+             </div>
+         </div>
+    </div>
+</div></div>
+<!--must know end-->
+ </div>
+       </div>
+     <!--edieo component html start-->
+</div>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback"  *ngIf="universityVideoThumb" id="dreamuniVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeDreamBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar [vgSlider]="true">
+                          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                          <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                      </vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  
+                  <video  #homeVideo   id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [poster]="universityVideoThumb" [src]="universityVideoVideo">
+                  </video>
+              </vg-player>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,197 @@
+
+.p-t-80 {padding-top:80px;}
+.p-b-80{padding-bottom: 80px;}
+.pt-80 {padding-top:80px;}
+.pb-80{padding-bottom: 80px;}
+.m-t-80 {margin-top:80px;}
+.m-b-80{margin-bottom: 80px;}
+.mt-60{margin-top:60px;}
+.mb-60{margin-bottom: 60px;}
+.pt-60{padding-top:60px;}
+.pb-60{padding-bottom: 60px;}
+.pt-100{padding-top:100px;}
+.pb-100{padding-bottom: 100px;}
+.pt-150{padding-top:120px;}
+.pb-150{padding-bottom: 120px;}
+$leagueSpartanBold:'League Spartan Bold';
+$lightGrey:#f7f7f7;
+$theme-one:#10A577;
+$theme-three:#091B62;
+$theme-two:#AC2D07;
+$theme-four:#CEB733;
+$roboto-family:'Roboto', sans-serif;
+
+// p{font-family: $roboto-family; font-weight: 300;}
+p{
+    font-weight: 300;
+    font-family:$roboto-family;
+    
+}
+.school-list {
+    height: 500px;
+    overflow-y: scroll;
+    padding-right: 15px;
+}
+
+.video-link {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}.video-link i {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.71);
+}
+#ourSolution{
+    background: $theme-three;
+    color: #ffffff;position: relative;
+}
+#ourSolution h1{    font-family: $leagueSpartanBold;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1.2;}
+#ourSolution .solution-left-content{position: relative; padding-right:70px}
+#ourSolution .solution-left-content:after{position: absolute; right:0px; width:1px; height:100%; margin-top:60px; top:0px; background: #f1f1f117;content:''}
+#ourSolution .solution-right{
+    padding-left:50px;
+}
+#ourSolution .solution-right ul li{margin:30px 0;border-radius: 40px;transition: all .3s ease-in;cursor: pointer;}
+#ourSolution .solution-right ul li span{display: inline-block;}
+#ourSolution .solution-right ul li span.icons{    background: #ffffff;
+    border-radius: 40px;
+    /* width: 225px; */
+    /* height: 125px; */
+    text-align: center;
+    line-height: 90px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 160px;}
+    #ourSolution .solution-right ul li:hover{
+        background: rgba(255,255,255,.1);
+box-shadow: 3px 3px 6px #00000066;
+
+    }
+    #ourSolution .solution-right ul li span.content{
+        font-size: 19px;
+        font-weight: 400;
+        text-transform: capitalize;
+        font-family:$roboto-family;    letter-spacing: 1.3px;
+    }
+    
+    #ourSolution .solution-right ul li span.arrow {
+        border: solid 1px #ffffff;
+        width: 30px;
+        text-align: center;
+        margin-left: 15px;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 40px;
+    }
+    #ourSolution .solution-right ul li:hover span.arrow,#ourSolution .solution-right ul li.active span.arrow{background: #ffffff;color: #283879;}
+    #ourSolution .solution-right ul li span .img{max-width:80px}
+    #ourSolution .solution-right ul li .noActive{display: none;}
+    #ourSolution .solution-right ul li.active .noActive{display: inline-block;}
+    #ourSolution .solution-right ul li.active .dactive{display: none;}
+    #ourSolution .solution-right ul li.active { background: rgba(255,255,255,.1);
+        box-shadow: 3px 3px 6px #00000066;}
+
+    .solutionScrollContent{position: fixed;width:100vw; transition: all .2s ease-in;  right:-100vw; top:0px; height:100%; overflow-y: scroll; z-index: 2;background: #ffffff;color: #000000;}
+   @keyframes slide{
+       0%{right:-100vw}
+       25%{right:-80vw}
+       50%{right:-75vw}
+       75%{right:-50vw}
+       100%{right:0px}
+   }
+    .solutionScrollContent.show{animation:slide .3s ease-in;right:0px}
+.close-icon{color: #f00;}
+.school-list p{text-transform: uppercase; margin-bottom: 20px;}
+.school-list .box{width: 100%;
+    /* height: 120px; */
+    overflow: hidden;
+    border: solid 1px #cccccc;
+    padding: 10px; }
+
+.solutionScrollContent a.close-icon {
+    box-shadow: 0 0 3px #143b937a;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 31px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #143b93;
+}
+.solutionScrollContent span.icon-active {
+    width: 76px;
+    height: 76px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 40px;
+    opacity: 1;
+    text-align: center;
+    display: inline-block;
+    line-height: 70px;
+}
+.solutionScrollContent h3{font-size: 30px; font-weight:600; text-transform: uppercase;font-family: $roboto-family; margin-bottom: 10px;}
+.solutionScrollContent ul{margin:20px 0;}
+
+.solutionScrollContent ul li { margin: 8px;font-family: $roboto-family;}
+.solutionScrollContent .download{text-transform: capitalize; font-size: 15px; font-weight: 500;
+    font-family: $roboto-family;}
+.solutionScrollContent .text-link{margin-left:10px; background: none; text-transform: uppercase; font-size: 15px;font-weight: 500;color: #283879;font-family: $roboto-family;}
+.customBdr:after{    position: absolute;
+    right: 60px;
+    width: 1px;
+    height: 200px;
+    top: 50%;
+    margin-top: -100px;
+    content: '';
+    background: rgba(0, 0, 0, 0.08);
+}
+// #ourSolution .solution-right ul li.s-row:hover span.icon .dactive{display: none;}
+// #ourSolution .solution-right ul li.s-row:hover span.icon  .noActive{display: block;}
+
+//responsive section start
+
+@media(max-width:767px){
+    #ourSolution .solution-right{    padding-left: 0;
+        padding-top: 20px;}
+    .solutionScrollContent span.icon-active{margin-bottom: 20px;}
+    .solutionScrollContent .customBdr {
+        margin-bottom: 50px;
+    }
+    .solutionScrollContent .customBdr:after{display: none;}
+}
+@media(max-width:480px){
+    #ourSolution .solution-left-content{padding-right:0px;}
+    #ourSolution .solution-left-content:after{display: none;}
+    #ourSolution .solution-right{padding-left:0px}
+    #ourSolution .solution-right ul li span.icons{width:140px;}
+    #ourSolution .solution-right ul li span.content{letter-spacing: 0;}
+    .solutionScrollContent span.icon-active{margin-bottom: 20px;}
+    .school-list {
+        margin-top: 40px;
+    }
+    #ourSolution h1{font-size: 40px;}
+    #ourSolution h1 br{display: none;}
+}
+@media(max-width:320px){
+    #ourSolution .solution-right ul li{text-align: center;padding:20px;}
+    #ourSolution .solution-right ul li span.icons{margin-bottom: 20px;}
+    .solutionScrollContent a.close-icon{display: block;margin: auto;}
+    .solutionScrollContent span.icon-active{display: block;margin: auto; margin-bottom: 20px;}
+    .solutionScrollContent h3,.solutionScrollContent p{text-align: center;}
+    .solutionScrollContent a.text-link,.solutionScrollContent a.download{display: block!important;text-align: center; margin-top:15px}
+    .solutionScrollContent ul li,#ourSolution h1,#ourSolution p{text-align: center;}
+    #ourSolution .solution-right ul li span.content{font-size: 18px;}
+
+}
+
+

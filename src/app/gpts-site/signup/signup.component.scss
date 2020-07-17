@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+.pt-100{padding-top: 100px;}
+.pb-100{padding-bottom: 100px;}
+.pt-150{padding-top: 150px;}
+.pb-150{padding-bottom: 150px;}
+.pt-200{padding-top: 200px;}
+.pb-200{padding-bottom: 200px;}
+.pb-60{padding-bottom: 60px;}
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+
+
+#signUpSection h3{
+    color: #1565E6;
+    font-size: 30px;
+    font-family: $leagueSpartanBold;
+}
+#signUpSection p{color: #707070;}
+
+#signUpSection .swiper-slide.career-slide {
+    box-shadow: 6px 3px 30px #00000012;
+    text-align: center;
+    padding: 0;
+}
+#signUpSection .our-product-carousel{
+    padding: 40px 20px;
+}
+#signUpSection .video-thumbnail h4 {
+    padding: 20px 20px;
+    font-size: 17px;
+    color: #707070;
+    text-transform: uppercase;
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 20px;
+}
+#signUpSection .video-thumbnail h4:before{
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background: #87BAE0;
+    width:80%;
+    left:50%;
+    transform: translateX(-50%);
+    content:''
+}
+#signUpSection .video-thumbnail h4.color1:before{background: #E08787;}
+#signUpSection .video-thumbnail h4.color2:before{background: #87E0C1;}
+#signUpSection .video-thumbnail h4.color3:before{background: #87BAE0;}
+#signUpSection .video-thumbnail h4.color4:before{background: #CFE087;}
+#signUpSection .video-thumbnail .thumb {
+    margin: 30px 20px;
+}
+#signUpSection p strong{
+    color: #707070;    
+}
+#signUpSection p{padding: 0 20px;}
+#signUpSection a.buynow{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #444444;
+    border-radius: 32px;
+    opacity: 1;
+    color: #707070;
+    font-size: 14px;
+    display: inline-block;
+    width: 60%;
+}
+#signUpSection .swiper-slide.career-slide:hover{background: #dbe8f245;}
+#signUpSection .swiper-slide.career-slide:hover .video-thumbnail h4{background: #87BAE0; color: #ffffff;}
+#signUpSection .swiper-slide.career-slide:hover .video-thumbnail h4.color1{background: #E08787;}
+#signUpSection .swiper-slide.career-slide:hover .video-thumbnail h4.color2{background: #87E0C1;}
+#signUpSection .swiper-slide.career-slide:hover .video-thumbnail h4.color3{background: #87BAE0;}
+#signUpSection .swiper-slide.career-slide:hover .video-thumbnail h4.color4{background: #CFE087;}
+#signUpSection .swiper-slide.career-slide:hover a.buynow{ background: #1565E6 0% 0% no-repeat padding-box;border: 1px solid #1565E6;color: #ffffff;}
+.control-arrow.custom-control-arrow {
+    display: none;
+}
+#signUpSection .signup{ color: #707070;font-size: 17px; font-weight: 500;}
+#signUpSection .signup a{color: #1565E6;text-decoration: underline;}
+#signUpSection .video-thumbnail  p.desc{min-height:120px;}
+
+
+
+@media(max-width:1100px){
+    #signUpSection .our-product-carousel{
+        padding: 40px 0px;
+    }
+}
+@media(max-width:767px){
+    #signUpSection .our-product-carousel{
+        padding: 40px 0px;
+    }
+}
+
+@media(max-width:480px){
+    #signUpSection .swiper-slide.career-slide{box-shadow: none;}   
+}

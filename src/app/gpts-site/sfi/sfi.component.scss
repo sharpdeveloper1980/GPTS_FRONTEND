@@ -1,0 +1,665 @@
+/* new stylingo */
+.sfi-back {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.remove-padding-top {
+    padding-top: 0;
+}
+
+.margin-btm97 {
+    margin-bottom:50px;
+}
+.theme-three .headSpacing{    padding-bottom: 20px;}
+.margin-bottom53 {
+    margin-bottom: 53px;
+}
+
+.margin-bottom17 {
+    margin-bottom: 17px;
+}
+
+.font-color-blue {
+    color: #0682b7;
+}
+
+.solution-background {
+    position: relative;
+}
+
+.solution-background::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/solution-bubble.png);
+    height: 100vh;
+    width: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 360px;
+    z-index: -1;
+    right: 0px;
+}
+
+.margin-bottom109 {
+    margin-bottom: 109px;
+}
+
+.sfi-league-bubble {
+    position: relative;
+    
+}
+.sfi-league-bubble .custom-container{border-top: 1px solid #dedede;}
+.sfi-league-bubble::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/sfi-league-bubble.jpg);
+    background-repeat: no-repeat;
+    height: 120vh;
+    width: 100%;
+    position: absolute;
+    top: -270px;
+    z-index: -2;
+    left: -220px;
+    right: auto;
+    background-position: left;
+}
+
+.margin-top100 {
+    margin-top: 100px;
+}
+
+.violet-tag {
+    border-radius: 2px;
+    background-color: #c5c3f4;
+    width: fit-content;
+    padding: 3px 7px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.border-margin ul.nav.nav-pills.justify-content-center {
+    margin-bottom: 88px;
+    border-bottom: 1px solid #dedede;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.margin-bottom88 {
+    margin-bottom: 88px;
+}
+
+.collegeName {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+    background: #f7f7f7;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+.collegeLocation {
+    margin-bottom: 2em;
+    font-size: 16px;
+    color: #ff5443;
+}
+
+.starSize {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.starGold {
+    color: #F8A644;
+}
+
+.starGrey {
+    color: #909090;
+}
+
+.starSize i {
+    margin-right: 5px;
+}
+
+.collegeName {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+    background: #f7f7f7;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+.footer-text-width {
+    max-width: 55%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.violet-background {
+    border-radius: 2px;
+    background-color: #eaeffb;
+    text-align: left;
+    padding: 23px;
+    position: relative;
+    margin: auto;
+}
+
+.violet-background::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/sample-report.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    bottom: -14px;
+    right: 0;
+}
+
+.click-text {
+    font-size: 20px;
+    color: #0682b7;
+    font-weight: 300;
+    z-index: 3;
+    position: relative;
+}
+
+.font-size23 {
+    font-size: 23px;
+    margin-bottom: 28px;
+}
+
+/* new stylingo ends */
+
+
+
+
+
+
+
+
+.greysfiBg {
+    background: #f2f2f2;
+    padding-top: 4%;
+
+    h4 {
+        font-weight: 600;
+        font-size: 35px;
+        color: #343434;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        color: #909090;
+        letter-spacing: 0.7px;
+    }
+}
+
+
+
+.laptopImage {
+    position: relative;
+}
+
+.sfi-body .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #343434;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
+
+.courseHeadEngineer {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 2em;
+    margin-top: 6em;
+}
+
+.sfiMeasureHead {
+    font-size: 25px;
+    font-weight: 300;
+    color: #333333;
+    margin-bottom: 20px;
+    margin-top: 19px;
+}
+
+.sfiMeasurePara {
+    font-size: 13px;
+    font-weight: 200;
+    color: #343434;
+    line-height: 23px;
+    width: 90%;
+}
+
+.iconsfi {
+    width: 62px;
+}
+
+.greyBackwork {
+    background: #f2f2f2;
+}
+
+.customFLuid {
+    width: 90%;
+}
+
+.workPara {
+    font-size: 12px;
+    color: #343434;
+    font-weight: 100;
+}
+
+.extraworkPad {
+    padding: 15%;
+}
+
+
+.imgnine {
+    width: 90%;
+}
+
+.fRight {
+    float: right;
+}
+
+.listedpara {
+    color: #909090;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.listedHead {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 0.3em;
+    margin-top: 2em;
+}
+
+.sfiMeasureHeadTwo {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.courseHeadEngineerThree {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    padding-left: 5%;
+}
+
+.borderCollege {
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    padding: 0em;
+}
+
+.starGrey {
+    color: #909090;
+}
+
+.starGold {
+    color: #F8A644;
+}
+
+.starSize {
+
+
+    i {
+        margin-right: 3px;
+    }
+}
+
+.starSize::after {
+    content: '';
+    width: 75%;
+    background: #e2e2e2;
+    height: 2px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -35px;
+}
+
+
+
+
+.collegeIcon {
+    width: 200px;
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
+.sfiLeagueImage {
+    background-image: url(../../../assets/images/static/sfi-league.svg);
+    margin-top: 6em;
+    background-size: cover;
+    padding-top: 25%;
+    padding-bottom: 4em;
+    background-position: top center;
+
+}
+
+.leagSfi {
+    color: white;
+    font-size: 3.4em;
+    font-weight: 700;
+    line-height: 65px;
+}
+
+.btnBlueSfi {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+    margin-top: 3.5em;
+    display: block;
+}
+
+.sfifooterbg {
+    background-image: url(../../../assets/images/static/sfifooterbg.svg);
+    background-size: cover;
+    background-position: bottom center;
+    padding-top: 7em;
+    margin-top: 4em;
+    padding-bottom: 8em;
+    margin-bottom: -45px;
+}
+
+.btnGreySfi {
+    color: #232323;
+    border: 1px solid #232323;
+    padding: 6px;
+    width: 110px;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.endHeadMarginSfi {
+    color: #4D4D4D;
+    font-size: 2em;
+    padding-top: 15%;
+    line-height: 40px;
+}
+
+.blueFont {
+    color: #2853B5;
+}
+
+.orangeFont {
+    color: #F7941D;
+}
+
+.laptopImageStar {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.kpiHead {
+
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 300;
+    color: #333333;
+}
+
+
+.kpiParaTab {
+    color: #333333;
+    font-weight: 200;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 22px;
+}
+
+.btnGreySfi[_ngcontent-c2] {
+    color: #232323;
+    border: 1px solid #232323;
+    padding: 10px;
+    width: 160px;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.laptopImageStar {
+    position: relative;
+    padding-top: 1em;
+    width: 65%;
+}
+
+.kpiIcon {
+    width: 45px;
+}
+
+/* == my kungfu == */
+
+
+@media(max-width: 1200px) {
+    .laptopImage {
+        position: relative;
+        padding-top: 48%;
+    }
+
+    p.tabSfipara {
+        line-height: 21px;
+        text-rendering: optimizeLegibility;
+    }
+
+    .laptopImageStar {
+        position: relative;
+        padding-top: 0px;
+        width: 65%;
+    }
+
+    .kpiIcon {
+        width: 68px;
+    }
+
+    .kpiParaTab {
+        font-size: 14px;
+        width: 85%;
+        margin-bottom: 3em;
+    }
+
+    .kpiHead {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+    }
+
+    .endHeadMarginSfi {
+        padding-top: 0%;
+    }
+
+    .sfifooterbg {
+        margin-top: 4em;
+    }
+
+    .imgnine {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 991px) {
+    .font-size23 {
+        font-size: 23px;
+        margin-bottom: 28px;
+        max-width: 360px;
+    }
+
+    .sfi-league-bubble::after {
+        content: '';
+        background-repeat: no-repeat;
+        height: 145vh;
+        width: 100%;
+        position: absolute;
+        top: 210px;
+        z-index: -2;
+        left: -220px;
+        right: auto;
+        background-position: left;
+        background-size: cover;
+    }
+
+    // .blueBoxreve{
+    //     display: flex;
+    // flex-direction: column-reverse;
+    // }
+    .extraworkPad {
+        padding: 4%;
+    }
+
+    .lightGreyCareer {
+        background: #F5F5F5;
+        padding-bottom: 6em;
+        padding-top: 2em;
+        margin-top: 0em;
+    }
+
+    .borderCollege {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .violet-tag {
+        border-radius: 2px;
+        background-color: #c5c3f4;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: 80px;
+        padding: 3px 7px;
+        font-size: 16px;
+        color: white;
+        margin-bottom: 30px;
+        margin: 30px auto;
+    }
+
+    .sfiMeasurePara {
+        font-size: 13px;
+        font-weight: 200;
+        color: #343434;
+        line-height: 23px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .footer-text-width {
+        max-width: 740px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+
+@media(max-width: 768px) {
+    .borderCollege {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .violet-tag {
+        border-radius: 2px;
+        background-color: #c5c3f4;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: 80px;
+        padding: 3px 7px;
+        font-size: 16px;
+        color: white;
+        margin-bottom: 30px;
+        margin: 30px auto;
+    }
+
+    .sfiMeasurePara {
+        font-size: 13px;
+        font-weight: 200;
+        color: #343434;
+        line-height: 23px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .sfi-league-bubble::after {
+        content: '';
+        background-repeat: no-repeat;
+        height: 120vh;
+        width: 100%;
+        position: absolute;
+        top: 210px;
+        z-index: -2;
+        left: -220px;
+        right: auto;
+        background-position: left;
+        background-size: contain;
+    }
+
+    .violet-background::after {
+        bottom: -2px;
+        background-size: 150px;
+        display: none;
+    }
+
+    .footer-text-width {
+        max-width: 740px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+}

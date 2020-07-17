@@ -1,0 +1,792 @@
+<app-header></app-header>
+
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="faq-back">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-6 col-12 text-center text-lg-left">
+          <h2 class="text-big">Do you have a question?</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-6 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/faqs.svg" class="img-fluid bannerImgSub banner-icon-position"
+            alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-container section-padding bubble-right-faq">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3 class="font-size50 custom-text-light mb-3">Frequently Asked Questions</h3>
+        <p class="orange-text font-size25 margin-bottom42">We are sure that you have many questions for us, and we are
+          all about finding the right answers for you. </p>
+        <p class="text-small font-color33">We have listed out many frequently asked questions that will help you better
+          understand the process and navigate through the steps that will help you become a part of Great Place To
+          Study. We recognise that coming on board with our organisation is just the beginning of a long-lasting
+          relationship, and our team will guide you every step of the way.</p>
+      </div>
+    </div>
+    <!-- tabs -->
+    <div class="row margin-top61">
+      <div class="col-12 d-flex justify-content-center">
+        <button (click)="cdapVar=true;sfiVar= false" [class.active]="cdapVar" class="faqBtnTab">CDAP</button>
+        <button (click)="sfiVar=true;cdapVar= false" [class.active]="sfiVar" class="faqBtnTab">SFI</button>
+      </div>
+
+
+    </div>
+    <!-- first level tab content -->
+    <div *ngIf="cdapVar" class="row">
+
+      <div class="col-12 removePadding whiteFaqBgTab">
+        <div class="text-center margin-bottom85 font-size20">
+          <p>“ A content platform designed and engineered to aid students to navigate the ever-evolving career streams
+            and
+            learn about dynamic job profiles.”</p>
+        </div>
+        <ngb-tabset type="pills" [justify]="'center'" class="center-icon">
+          <ngb-tab title="FOR STUDENTS">
+            <ng-template ngbTabContent>
+              <!-- body accordion -->
+              <div class="d-xl-flex d-lg-flex timeline-circle">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 timeline-rightborder">
+                  <ngb-accordion [closeOthers]="true" activeIds="static-1">
+                    <ngb-panel id="static-1">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do I create my account on gpts.com?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Visit greatplacetostudy.com, click on the login tab and fill in the desired
+                        credentials to create your account on greatplacetostudy.com.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-2">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Where can I get my unique ID?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Your unique ID will be shared by school authorities to every student.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-3">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can I get access to my dashboard?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        After creating your account, click on registration and fill in your details to
+                        get complete access to your dashboard.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-4">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Is it necessary to fill in all the credentials in my profile section?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        It is necessary to fill in all the required personal, family and education
+                        details in the ‘My profile section’ within your personalised dashboard.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-5">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Is my personal information protected?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes, we assure you that your information is safe with us.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-6">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do I take the Career Discovery Test?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Click on the left menu bar on your dashboard and select the Career Discovery
+                        Test option to take the test.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-7">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          When will I get my test results?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You will get your results within 48 hours of completing your test. We will send
+                        you an email notification as soon as the result are uploaded.
+                      </ng-template>
+                    </ngb-panel>
+
+                  </ngb-accordion>
+
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <ngb-accordion [closeOthers]="true">
+
+                    <ngb-panel id=" static-8">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What is the significance of each work style?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Each of the 8 Work Styles is built as a combination of your score amongst 24
+                        sub-factors (strengths) of the Thriving Index. Strengths relate to patterns of
+                        thought and behaviours that can be productively applied. When these are refined
+                        with practice and combined with skills and knowledge that you acquire, they give
+                        you a powerful means of moving your career forward.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-9">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Where can I find my Career Analysis Report?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You can find your report on your dashboard under the 'My report' section. We
+                        will also send you a copy of your Career Analysis Report via email.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-10">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do I get access to career-related videos in the must watch section?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Take the Thriving Index Career Discovery Test to identify your inherit
+                        strengths. The robust platform will recommend a set of careers that are best
+                        suited for you. As per suggested career options, you will get access to highly
+                        informative career videos in the must watch section.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-11">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do I bookmark my favourite videos?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Click on the ___ icon to add multiple videos to your 'My favourite' section.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-12">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can I get access to all the career-related videos?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Post registration, you can get access to all career-related videos through the
+                        video career library. You can also view the entire video career library through
+                        the dashboard by clicking on the career library icon.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-13">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do I get to know more about the career I wish to opt for?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You can directly search for different careers through the dashboard in the ‘Must
+                        watch’ section post registration. After you watch the career, you can click on
+                        ‘Know more’ to visit the dedicated career page.
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+
+                </div>
+              </div>
+              <!-- register button -->
+              <div class="col-12 text-center margin-top53">
+
+                <button class="d-inline-block custom-secondary-btn" *ngIf="!loggedIn" (click)="openSignupModal()">Register
+                  now</button>
+
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>FOR PARENTS</ng-template>
+            <ng-template ngbTabContent>
+              <!-- body accordion -->
+              <div class="d-xl-flex d-lg-flex timeline-circle">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 timeline-rightborder">
+                  <ngb-accordion [closeOthers]="true" activeIds="static-11">
+                    <ngb-panel id="static-11">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can I make an account on gpts.com for my child?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Visit gpts.com and click on 'New user-sign up', fill in your child's details to
+                        create an account on gpts.com.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-21">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Is it important to fill all the details in 'My profile' section?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        It is mandatory to fill in the basic profile information and education details.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-31">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Can we edit and upload video SOP again?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes, you can edit your video SOP after recording, but once uploaded, you will
+                        not be able to edit it.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-41">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How will CDAP benefit my child?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The Career Discovery and Acceleration Platform is designed to guide young minds
+                        choose a career that is compatible with their intrinsic abilities. Through
+                        psychometric assessment of their strengths, motivators and blind spots, students
+                        can set off on a path that is defined purely by their passion. The Career
+                        Library is the first-of-its-kind new-age visual platform that has been designed
+                        to inspire young minds to discover their passion and explore intriguing career
+                        paths. Engineered by Great Place To Study, the video library offers students
+                        expert guidance and dedicated support to navigate career streams and job
+                        profiles across all sectors.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-42">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What is the Career Discovery Test all about?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The Thriving Index Career Report offers insight into student suitability towards
+                        work styles, occupations and career profiles, enabling them to explore diverse
+                        career prospects at a very young age. Budding minds get access to inside
+                        information on a plethora of career paths from experienced industry experts to
+                        create a roadmap for a promising future. The programme offers students an
+                        opportunity to seek focused guidance from experienced counsellors, inspiring
+                        them to embark on a journey to realise their dreams.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-20">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What will be the duration of the Career Discovery Test?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The duration of the Career Discovery Test is approx. 20 minutes.
+                      </ng-template>
+                    </ngb-panel>
+
+                  </ngb-accordion>
+
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <ngb-accordion [closeOthers]="true">
+
+                    <ngb-panel id="static-21">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          By when can I get a detailed career report for my child?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You will get a detailed and insightful career report within 48 hours of giving
+                        the test.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-22">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Are students restricted to the 5 best-fit career options as suggested by the
+                          report or they can explore more career paths?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Each student will get 5 career options as per his/her report but they can
+                        explore endless careers through our platform.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-23">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Can we give the Career Discovery Test more than once?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The student can undertake the Career Discovery Test only once through each
+                        account. He/she cannot give the career test more than once from the same
+                        account.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-24">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can we get full access to career library?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Student can access the career library through his/her dashboard. In the ‘Much
+                        watch’ section, click on get complete access button to visit the main career
+                        library page.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-25">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can we see videos for specific careers?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You will find the 'Must watch' section on your dashboard. Here, click on 'Know
+                        more' and you will get to see the career specific videos
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-26">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How relevant is the content in the career library?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        We have a dedicated content team who is continuously researching and updating
+                        the website and career content with information gained from trusted sources.
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+
+                </div>
+              </div>
+              <!-- register button -->
+              <!-- register button -->
+              <div class="col-12 text-center margin-top53">
+
+                <button class="d-inline-block custom-primary-btn" *ngIf="!loggedIn" (click)="openSignupModal()">Register
+                  now</button>
+
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>FOR SCHOOLS</ng-template>
+            <ng-template ngbTabContent>
+              <!-- body accordion -->
+              <div class="d-xl-flex d-lg-flex timeline-circle">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 timeline-rightborder">
+                  <ngb-accordion [closeOthers]="true" activeIds="static-13">
+                    <ngb-panel id="static-13">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How many students can create an account on gpts.com?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Up to 5000 students from a particular school can create their account on
+                        gpts.com.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-23">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do we get access to student licenses?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        As soon as a school comes on board with us, we send out a welcome email with
+                        details of student licenses given in an Excel sheet.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-33">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Do schools have to share the CDAP licenses with the students?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes, school authorities will have to share CDAP license details with the
+                        students. Students will need their license numbers to create their account on
+                        gpts.com.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-43">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Do schools have access to students career reports?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Each student’s career report will be shared with the school through email.
+                        Reports will be shared after majority of students have completed their Career
+                        Discovery Test.
+
+                      </ng-template>
+                    </ngb-panel>
+
+                  </ngb-accordion>
+
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <ngb-accordion [closeOthers]="true" activeIds="static-13">
+
+                    <ngb-panel id="static-44">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What are the benefits of the Career Discovery and Acceleration Programme?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The Thriving Index Career Report offers insight into student suitability towards
+                        work styles, occupations and career profiles, enabling them to explore diverse
+                        career prospects at a very young age. Budding minds get access to inside
+                        information on a plethora of career paths from experienced industry experts to
+                        create a roadmap for a promising future. The programme offers students an
+                        opportunity to seek focused guidance from experienced counsellors, inspiring
+                        them to embark on a journey to realise their dreams
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-45">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Do schools get an update on the progress of its students on CDAP?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes, we will be sharing your students’ activity status weekly, monthly or
+                        yearly, as per the school’s requirements.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-46">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Is the student’s data safe on the dashboard?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes, the student’s data on the dashboard is completely safe.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-46">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How can we get access to the CDAP platform?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Payment Details
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+
+                </div>
+              </div>
+              <!-- register button -->
+              <div class="col-12 text-center margin-top53">
+
+                <button *ngIf="!loggedIn" class="d-inline-block custom-primary-btn" (click)="openSignupModal()">Register
+                  now</button>
+
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+
+
+    </div>
+
+    <div *ngIf="sfiVar" class="row">
+      <div class="col-12 removePadding whiteFaqBgTab">
+        <ngb-tabset type="pills" [justify]="'center'">
+          <ngb-tab title="FOR ALL">
+            <ng-template ngbTabContent>
+              <!-- body accordion -->
+              <div class="d-xl-flex d-lg-flex timeline-circle">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 timeline-rightborder">
+                  <ngb-accordion [closeOthers]="true" activeIds="static-1">
+                    <ngb-panel id="static-1">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Will I be given the flexibility to choose survey dates?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Yes. One survey cycle is of 3 months, you can choose any dates within this
+                        stipulated time. You are allowed to choose a window of 5 working days for
+                        completion of the survey.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-2">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How long will the entire process take?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The entire process takes 45 calendar days, including on-boarding of institutes,
+                        survey completion and report generation.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-3">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How many responses are required from parents, teachers & students?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        At least 70% of the total population. But maximum response collection should be
+                        the aim.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-4">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Will it be an online or offline survey?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Currently it is only available online but can be implemented off-line too. , in
+                        case the school doesn't have sufficient technical capacity or internet
+                        connections then the survey can be done in pen and paper format but for that,
+                        the cycle will increase to 60 days and an additional cost of Rs. 25,000/- will
+                        also be applicable to the s
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-5">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Do I get to add or modify questions in the Student & Parent Satisfaction
+                          Survey as per my school’s requirement?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You can give suggestions which will be sent to our test team and if that is
+                        something which is very relevant and cannot be omitted we can make an exception,
+                        but in most of the cases we discourage such activity as it hampers the score
+                        calculations and mathematics in the system.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-6">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Will GPTS take care of the travel and stay in London?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The payment is towards the tools and service package and does not include any
+                        travel, stay expenses. GPTS will provide the participating schools with two
+                        invites and visa invitation letter(s).
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-7">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          Will GPTS initiate the visa process of the attendees of the London event?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        No. GPTS will only be responsible for issuing the visa invitation letters to the
+                        attendees. But we can definitely refer and connect attendees to people who can
+                        help them in the process.
+                      </ng-template>
+                    </ngb-panel>
+
+                  </ngb-accordion>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <ngb-accordion [closeOthers]="true">
+                    <ngb-panel id="static-8">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          How do we (the clients) know that the tabulated scores are authentic?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Technically to give the authentic response is more of the client’s
+                        responsibility as we do not use any supervision tools due to our own privacy
+                        policies. But all the collected data is statistically tested for data validity
+                        and reliability and if any problem is found the school will be notified about
+                        it. In case of any further confusion, you can write to
+                        learn@greatplacetostudy.org with the query and we will share the complete data
+                        received and computation for your perusal. But the email has to be sent via
+                        registered email id.
+                      </ng-template>
+                    </ngb-panel>
+
+                    <ngb-panel id="static-9">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          If we (the clients) get the rating below 2.0 will the deliverables change?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The school will receive the full report but won’t be certified as 'Great Place
+                        to Study'.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-10">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          In which all platforms can we (the clients) promote ourselves before & past
+                          the event?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        You can promote all the platforms across digital and mainline, and you would
+                        have to take care of the branding guidelines of the intellectual property. In
+                        case you don't have them please make sure you ask from the respective client
+                        servicing manager.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-11">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What is the process for certification?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Step 1: Filling the application form on the website. Post which a welcome mail
+                        is received. Step 2: Registration and data update on SFI Portal(Welcome mail
+                        will have details about the portal).Step 3: Receiving Satisfaction survey links
+                        and successfully conducting the survey in the institute. (Generating minimum 80%
+                        responses). Step 4: Receiving a detailed in-depth report on the collected data.
+                        Step 5: If the set certification criteria of 3 out of 5 rating are achieved, the
+                        institute is qualified to be called a “Great Place To Study”.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-12">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          If an institution applies to get Great Place to Study Certification, will it
+                          certainly get certified?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        Any institute achieving the 3 out of 5 rating is qualified for the
+                        certification. But there is no guarantee that all the institutes applying will
+                        get the certificate, depends on how the *stakeholders' rate it. *Stakeholders
+                        are participants in the survey. Students, their Parents and Teachers.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-13">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What happens in case an institution does not meet the certification criteria
+                          post the assessment?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        In this case, the school is not qualified for the certificate. It will still
+                        receive the detailed report and branding material.
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-14">
+                      <ng-template ngbPanelTitle>
+                        <div>
+                          What happens when an institute meets the certification criteria post the
+                          assessment?
+                          <i class="fa fa-plus"></i> <i class="fa fa-minus"></i>
+                        </div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        The institution will be informed and will be issued a certificate along with the
+                        brand guidelines. The certificate will be valid for a period of one year.
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+                </div>
+              </div>
+
+              <!-- register button -->
+              <!-- register button -->
+              <div class="col-12 text-center margin-top53">
+                <button *ngIf="!loggedIn" class="d-inline-block custom-secondary-btn" (click)="openSignupModal()">Register
+                  now</button>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+
+        </ngb-tabset>
+      </div>
+
+    </div>
+  </div>
+
+
+</div><!-- theme three ends -->

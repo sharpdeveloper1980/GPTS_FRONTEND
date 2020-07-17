@@ -1,0 +1,77 @@
+.removePadding{
+    padding: 0;
+}
+
+.comparison-table-wrapper {
+    margin-top: 2.2em;
+}
+
+.comparison-table-wrapper td {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.comparison-table-wrapper h3 {
+    margin-bottom: 0;
+}
+
+.comparison-table-wrapper table {
+    border-color: #d7d7d7;
+    margin-top: 32px;
+}
+
+.comparison-table-wrapper td,
+.comparison-table-wrapper th {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.comparison-table-wrapper th,
+.comparison-table-wrapper .column-head,
+.column-head {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.comparison-table-wrapper th {
+    vertical-align: middle;
+    background: #ededed;
+    color: #546170;
+}
+
+.comparison-table-wrapper td {
+    color: #546170;
+    position: relative;
+}
+
+.comparison-table-wrapper .disclaimer-text {
+    position: relative;
+    margin: auto;
+    bottom: -8px;
+    font:'Open Sans', sans-serif;
+}
+
+.table-button td {
+    background: #46c38e;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.single-quotes {
+    position: absolute;
+    top: -24px;
+    left: -26px;
+    width: 100px;
+}
+
+.comparison-container .quoted-text {
+    margin-top: 6em;
+}
+
+.comparison-container .quoted-text button {
+    margin-top: 3em;
+}
+
+.comparison-table-wrapper .cost {
+    font-size: 1.5em;
+}

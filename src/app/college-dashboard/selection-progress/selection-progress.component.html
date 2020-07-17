@@ -1,0 +1,63 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- 5 process -->
+<div class="container-fluid whiteBox">
+  <!-- header -->
+  <div class="row headingSpacing">
+    <div class="col-6">
+      <h3 class="boxHeading">Selection process</h3>
+    </div>
+
+    <div class="col-6">
+      <a href="#" class="editBtn">Add Now Process</a>
+    </div>
+  </div>
+
+  <!-- process -->
+  <div class="row">
+    <div class="col-12">
+      <div class="process-wrapper" cdkDropListGroup>
+        <div class="process-container" *ngFor="let processName of processList; index as i">
+          <h2 [id]="i" class="process-name orangeGradient" (click)="processClicked($event)">Incoming Applications</h2>
+          <div cdkDropList [cdkDropListData]="todo" class="process-list" (cdkDropListDropped)="drop($event)">
+            <div class="process-box" *ngFor="let item of todo" cdkDrag >
+
+              <div class="col-12 d-flex">
+                <a href="#" class="rightPos"><i class="fa fa-ellipsis-v"></i></a>
+                <!-- image -->
+                <div class="col-5">
+                  <img src="../../../assets/images/common/alumniPhoto.jpg" class="img-fluid customImageSelection"
+                    alt="image">
+                </div>
+                <!-- username -->
+                <div class="col-7 removePadding">
+                  <p class="selectionUser">{{item}}</p>
+                  <p class="selectionExam">IELTS: 7.2 | CAT</p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <p class="emailSelection">username@g.com</p>
+                <p class="emailSelection">+91-999-999-9999</p>
+              </div>
+
+              <div class="col-12 d-flex twoOptionBorder">
+                <div class="col-6 gBorder">
+                  <a href="#" class="greenSelection">Shortlist</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="redRejection">Reject</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

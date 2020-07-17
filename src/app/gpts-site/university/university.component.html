@@ -1,0 +1,643 @@
+ <!-- header -->
+ <app-header></app-header>
+ <!-- header ends -->
+<div class="theme-three universityContainer">
+<!--hero banner start-->
+<div class="hero-banner  pt-100 pb-0" *ngIf="universityInfo">
+  <div class="custom-container">
+   <div class="row">
+     <div class="col-lg-12">
+      <h1 class="heading-title text-center mb-4">{{universityInfo.name}}<a routerLink="/univeristy-list" class="viewAll"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>View all institutes</a></h1>
+      <div class="hero-content" *ngIf="universityInfo.master_cover != ''" (click)="universityVideoPopup($event);" [style.background-image]="'url(' + universityInfo.master_cover + ')'">
+        <div class="thumb">
+          <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+        </div>
+   </div>
+   <div class="hero-content hero-default-content" *ngIf="universityInfo.master_cover == ''"  style="background:url('assets/images/university/master-default.jpg');">
+    <h4>No master Video Available</h4>  
+  </div>
+   
+
+     </div>
+   </div>
+</div>
+</div>
+<!--hero banner end-->
+
+
+<!--university content section start-->
+<div class="university-content pt-80 pb-0" id="universityContent" *ngIf="universityInfo">
+  <ngb-tabset class="sfi-tab-conatiner  " type="pills" [justify]="'center'" data-aos="fade-up" data-aos-duration="1000">
+    <ngb-tab title="About">
+      <ng-template ngbTabContent>
+          <!--university-info-n-galley start-->
+  <div class="university-info-wrapper">
+    <div class="custom-container pb-80" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row">      
+          <div class="col-md-12 col-lg-7">
+            <h1 class="university-heading leagueFont">{{universityInfo.name}} <span class="add-fav">
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
+            </span><span>{{universityInfo.address}}</span>  
+              <div class="clearfix"></div>
+            
+            <!-- <div class="other-link">
+              <a href="javascript:void(0);" class="btn favourite"><img src="assets/images/university/favourite.png" ><span class="cust-tooltip">Add to Favourites</span></a>
+              <a href="javascript:void(0);" class="btn resume"><img src="assets/images/university/resume.png" ></a>
+            </div>  -->
+            </h1>
+            <div class="university-content">
+             <!-- <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqa. </strong></p> -->
+             <div [innerHtml]="universityInfo.about | slice: 0: aboutLength" style="display: inline;"></div>
+             <span *ngIf="!(aboutLength === universityInfo.about.length)">...</span>
+             <div class="clearfix"></div>             
+                  <button *ngIf="!(aboutLength === universityInfo.about.length) else loadLess"
+              class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = universityInfo.about.length">
+              Load More
+            </button>
+            <ng-template #loadLess>
+              <button class="d-inline-block custom-secondary-btn mt-4" (click)="aboutLength = 500">
+                View Less
+              </button>
+            </ng-template>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 university-skills">
+            <h3>Overview</h3>
+              <ul>
+                <li class="public">
+                  <span class="image"></span>
+                  <p>Public</p>
+                </li>                
+                <li class="calendar">
+                    <span class="image"></span>
+                    <p>{{universityInfo.foundation_year}}</p>
+                  </li>                  
+                <li class="en-student">
+                    <span class="image"></span>
+                    <p>{{universityInfo.total_students}} Students</p>
+                  </li>                  
+                <li class="diploma">
+                    <span class="image"></span>
+                    <p>Diploma</p>
+                  </li>                  
+                <li class="location">
+                    <span class="image"></span>
+                    <p>India</p>
+                  </li>                  
+                <li class="area">
+                    <span class="image"></span>
+                    <p>{{universityInfo.area}} Sq. Feet</p>
+                  </li>
+              </ul>
+          </div>
+        </div>        
+    </div>
+
+    <!--Facilities section start-->
+<div class="facilities pt-80 pb-80" data-aos="fade-up" data-aos-duration="1000" *ngIf="facilitiesList">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="university-heading leagueFont text-center ">Facilities
+        </h1>
+        <ul>
+          <!-- *ngIf="this.facilitiesList.indexOf('1') > -1" -->
+          <li *ngIf="facilitiesList.indexOf('1') > -1"><span class="icon seminar"></span>Seminar Room</li>
+          <li *ngIf="facilitiesList.indexOf('2') > -1"><span class="icon swimming"></span>Swimming Pool</li>
+          <li *ngIf="this.facilitiesList.indexOf('3') > -1"><span class="icon hostel"></span>Girls/Boys Hostel</li>
+            <li *ngIf="facilitiesList.indexOf('4') > -1"><span class="icon air"></span>Air Conditioned</li>
+            <li *ngIf="this.facilitiesList.indexOf('5') > -1"><span class="icon library"></span>Resource Centre</li>
+            <li *ngIf="this.facilitiesList.indexOf('6') > -1"><span class="icon cafeteria"></span>Cafeteria</li>
+            <li *ngIf="this.facilitiesList.indexOf('7') > -1"><span class="icon playGround"></span>Play Ground</li>
+            <li *ngIf="this.facilitiesList.indexOf('8') > -1"><span class="icon labo"></span>laboratory</li>
+            <li *ngIf="this.facilitiesList.indexOf('9') > -1"><span class="icon wifi"></span>internet</li>
+            <li *ngIf="this.facilitiesList.indexOf('10') > -1"><span class="icon medical"></span>Medical</li>
+            <li *ngIf="this.facilitiesList.indexOf('11') > -1"><span class="icon gym"></span>Gym</li>
+            <li *ngIf="this.facilitiesList.indexOf('12') > -1"><span class="icon parking"></span>Parking</li>
+            <li *ngIf="this.facilitiesList.indexOf('13') > -1"><span class="icon transportation"></span>Transportation</li>
+            <li *ngIf="this.facilitiesList.indexOf('14') > -1"><span class="icon classRoom"></span>Class Room</li>
+            <li *ngIf="this.facilitiesList.indexOf('15') > -1"><span class="icon exchangePro"></span>Exchange Program</li>
+            <li *ngIf="this.facilitiesList.indexOf('16') > -1"><span class="icon scholarship"></span>Scholarship</li>
+            
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Facilities section end-->
+    <!--why we use section start-->
+    <div class="why-use pt-100 pb-100" *ngIf="whyChooseUs != '' && whyChooseUs != null">
+      <div class="custom-container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-12">
+            <img src="assets/images/university/why-choose-image.png" style="max-width:260px;margin-bottom: 30px;" class="img-fluid" alt="why choose image">
+            <h2 class="leagueFont">Why Choose Us?</h2>
+            <p class="mt-3">Some of the major reasons are &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-8 col-md-12 pl-5">
+            <div class="row">
+              
+              <div class="col-lg-6 col-md-6" *ngFor="let whyChoose of whyChooseUs">
+                <div class="d-block text-macro p-position-white border-bottom pb-3 mb-3 pt-2 mt-2 ng-star-inserted ">
+                  <h3>{{whyChoose.heading}}</h3>
+                  <p class="desktop" [class.show]="whyChoose.visible">{{whyChoose.description}}  </p>
+                   <a *ngIf="whyChoose.description.length>400" href="javascript:void(0)" class="viewMore" [class.show]="whyChoose.visible" (click)="whyChoose.visible = !whyChoose.visible">{{ whyChoose.visible ? 'Show less': '... Show More' }}</a> 
+                   <!-- <p class="mobile d-none" title="{{whyChoose.description}}">{{whyChoose.description}} </p> -->
+                 
+                     
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--why we use section end-->
+<div class="testimonial pb-80" *ngIf="testimonials != '' && testimonials != null">
+  <div class="custom-container" data-aos="fade-up" data-aos-duration="1000">
+    <ngb-carousel config="config">
+       <ng-container *ngFor="let testi of testimonials; let i=index">
+      <ng-template ngbSlide id="testi{{i}}">          
+            <div class="carousel-caption2 text-center">
+                <h3>Testimonials</h3>
+                <p class="description">{{testi.statement}}</p>
+                  <div class="title">
+                    <span class="image"><img src="{{testi.profile_pic}}" ></span>
+                    <p>{{testi.full_name}}<br>
+                     {{testi.designation}}</p>
+                  </div>
+            </div>
+        </ng-template>
+</ng-container>
+       
+    </ngb-carousel>
+  </div>
+</div>
+
+<div id="videoTestimonial" class="pb-80 pt-80 mb-100" *ngIf="testimonialsVideo != '' && testimonialsVideo != null">
+  <div class="custom-container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="col-md-12 text-center mb-4">  <h1 class="university-heading leagueFont">Words that matter</h1></div>
+     <!--slider start-->
+ <div class="swiper-container" [swiper]="videoTestiConfig">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+      <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+      <div class="swiper-slide career-slide">                
+        <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('brodcasting01')">
+          <vg-player class="embed-responsive-item">
+            <vg-overlay-play></vg-overlay-play>
+            <vg-buffering></vg-buffering>              
+            <vg-controls>
+              <vg-play-pause></vg-play-pause>
+              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+              <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+              <vg-mute></vg-mute>
+              <vg-volume></vg-volume>              
+              <vg-fullscreen></vg-fullscreen>
+            </vg-controls>              
+            <video [vgMedia]="brodcasting01" #brodcasting01 id="brodcasting01" [src]="testimonialsVideo1" poster="assets/images/university/videoTesti01.jpg">
+            </video>
+          </vg-player>              
+        </div> 
+
+          </div>
+
+<div class="swiper-slide career-slide">
+  <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('brodcasting02')">
+    <vg-player class="embed-responsive-item">
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>              
+      <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>              
+        <vg-fullscreen></vg-fullscreen>
+      </vg-controls>              
+      <video [vgMedia]="brodcasting02" #brodcasting02 id="brodcasting02" [src]="testimonialsVideo2" poster="assets/images/university/videoTesti02.jpg">
+      </video>
+    </vg-player>              
+  </div> 
+    </div>
+
+    <div class="swiper-slide career-slide">
+      <div class=" embed-responsive embed-responsive-16by9" (click)="stopAllVid('brodcasting03')">
+        <vg-player class="embed-responsive-item">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>              
+          <vg-controls>
+            <vg-play-pause></vg-play-pause>
+            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>              
+            <vg-fullscreen></vg-fullscreen>
+          </vg-controls>              
+          <video [vgMedia]="brodcasting03" #brodcasting03 id="brodcasting03" [src]="testimonialsVideo3" poster="assets/images/university/videoTesti03.jpg">
+          </video>
+        </vg-player>              
+      </div> 
+        </div>
+
+       
+
+    </div>
+  <!-- If we need navigation buttons -->
+  <div class="control-arrow">
+    <div class="swiper-button-prev arrow">
+      <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+  </div>
+  <div class="swiper-button-next arrow">
+      <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+  </div>
+  </div>
+</div>
+<!--slider end-->
+  </div>
+</div>
+
+  </div>
+<!--university-info-n-galley and-->
+      </ng-template>
+    </ngb-tab>
+
+    <!--KPI start-->
+<ngb-tab title="Know Your College" *ngIf="videoLibrary !='' && videoLibrary != null">
+  <ng-template ngbTabContent>
+    <div class="learning-experience">
+      <!--quick info start-->
+      <div class="custom-container pb-80" data-aos="fade-up" data-aos-duration="1000">
+     <div class="row">
+       <div class="col-lg-10 offset-lg-1">
+        <div class="row mb-4">
+          <div class="col-md-12">
+           <h3 class="university-heading leagueFont">Key Performance<br> Indicators</h3>
+          </div>
+
+
+          <div class="col-md-6 mb-5" *ngFor="let video of videoLibrary; let i=index">
+         <div class="key-performance-video" (mouseover)="classAdd($event);" (mouseout)="stopOtherVideo($event);">
+          <div class="video-overlay" [style.background-image] ="'url(' + video.banner + ')'"><span class="title">{{video.name}}</span></div>
+         
+          <div class="video">
+            <div class="embed-responsive removeBorderRadius embed-responsive-16by9 " (click)="stopAllVid('firstvideo'+i)">
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar [vgSlider]="true">
+                          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                          <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                      </vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>                  
+                  <video  #homeVideo2  [poster]="video.vcover" id="firstvideo{{i}}" [vgMedia]="homeVideo2" class="videoClass" [src]="video.video">
+                  </video>
+              </vg-player>
+          </div> </div>
+          <div class="content">
+            <!-- aboutLength = universityInfo.about.length -->
+            <h3>{{video.name}} </h3>          
+            <!-- [class.show]="video.visible" -->
+              <div [innerHtml]="video.about"  class="text-left video-content" id="{{video.kpi_id}}" ></div>
+              <!-- <a href="javascript:void(0)" class="viewMore" [class.show]="video.visible" (click)="video.visible = !video.visible">{{ video.visible ? 'Show less': '... Show More' }}</a>            -->
+              
+            </div>
+         </div>
+          </div>
+      </div>
+        
+
+        
+       </div>
+     </div>
+    </div>
+<!--quick info end-->
+</div>
+  </ng-template>
+</ngb-tab>
+<!--KPI end-->
+<!-- *ngIf="courseStream !='' && courseStream != null" -->
+    <ngb-tab title="Courses" *ngIf="courseStream !='' && courseStream != null" >
+      <ng-template ngbTabContent>
+<!--University course section start-->
+<div class="university-info-wrapper course-info-wrapper">
+  <div class="custom-container pb-80 pl-0 pr-0" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mobile-select-grop"(click)="courseSectionMenu($event);"><span>Select Your Course</span><i class="fa fa-chevron-down" aria-hidden="true"></i> </h3>
+      </div>
+      <div class="col-md-4" > 
+        <div id="course-section">
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" *ngFor="let course of courseStream" (click)="closeSubmenu($event)"> 
+            <a class="nav-link" [ngClass]="{'active': (settingActive == i+1)}" data-toggle="tab" href="javascript:void(0)"  (click)="courseDetailTab(course.id)" role="tab" aria-controls="one">{{course.name}}</a> 
+          </li>
+         </ul>
+      </div> 
+      
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content">
+         <!--tab one start-->
+          <div class="tab-pane active" id="one" role="tabpanel">
+            <div class="course-tab-content">
+              <h2 class="university-heading leagueFont">{{streamName}}</h2>
+              <!--accordion html start-->
+             <ngb-accordion [closeOthers]="true" activeIds="static-1" *ngIf="streamCourseDetail != '' && streamCourseDetail;else dataNotFound;">
+
+              <ng-container *ngFor="let courseList of streamCourseDetail;  let i=index">
+              <ngb-panel id="static-{{i+1}}">
+                <ng-template ngbPanelTitle>
+                  <div>
+                    {{courseList.sub_stream}}
+                    <i class="fa fa-plus"><img src="assets/images/university/plus.svg" alt="plus-icon"></i> <i class="fa fa-minus"><img src="assets/images/university/minus.svg" alt="minus-icon"></i>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <!--course tab start-->
+               <div class="course-tab-secion" >
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" *ngFor="let coursetab of courseList.courses; let i=index">
+                    <a class="nav-link" id="bba-tab" data-toggle="tab" [ngClass]="{'active': (settingActive == i+1)}" href="#test{{i+1}}" role="tab" aria-controls="bba" >{{coursetab.course_name}}</a>
+                  </li>                
+               </ul>
+                <div class="tab-content pt-3 pb-3" id="myTabContent">
+                <div *ngFor="let course of courseList.courses; let i=index" class="tab-pane fade show courses-content-box theme-0{{i+1}}"  [ngClass]="{'active': (settingActive == i+1)}" id="test{{i+1}}" role="tabpanel" aria-labelledby="bba-tab">
+                  <h3 class="heading-title">{{course.course_name}}<span>
+                    Duration - {{course.duration}} | Fees - {{course.total_fees}} per semester | Mode of study - {{course.study_mode}}</span></h3>
+                  <p class="stream-detail" [class.show]="course.visible">{{course.about}}</p>
+                   <a *ngIf="course.about.length>500" href="javascript:void(0)" class="viewMore" [class.show]="course.visible" (click)="course.visible = !course.visible">{{ course.visible ? 'Show less': '... Show More' }}</a>
+                   
+                  <h4 class="subHeading-title">Eligibility Criteria:</h4>
+                  <div [innerHTML]="course.eligibility"></div>
+                 <div class="course-footer">
+                   <div class="row">
+                    <div class="col-md-12"> <h4 class="subHeading-title">Accepted entrance exams:</h4></div>
+                     <div class="col-md-12 col-lg-6">                        
+                       <p><strong>{{course.entrance_exam}}</strong></p>
+                       <span>(Minimum accepted score)</span>
+                     </div>
+                    
+                   </div>
+                 </div>
+                </div>
+              </div>
+             </div>
+                <!--course tab end-->
+                </ng-template>
+              </ngb-panel>
+            </ng-container>
+             </ngb-accordion>
+           
+             <ng-template #dataNotFound>
+               <h4 class="dataNotAbailabel">Data Not Available</h4>
+             </ng-template>
+            <!--accordion html end-->
+            </div>
+          </div>
+         <!--tab one end-->
+        
+        </div>
+        <p class="text-right mt-4"><a href="{{universityInfo.brochure}}" class="d-block custom-secondary-btn mt-3" id="downloadBrochure" target="_blank">Download Brochure</a></p>
+      </div>
+    </div>
+       
+  </div>
+
+<!--Prominent Recruiters section start-->
+<div class="prominent-recruiters pt-80 pb-80 mb-100" *ngIf="recruiters" data-aos="fade-up" data-aos-duration="1000">
+<div class="custom-container">
+<div class="row">
+  <div class="col-md-12 text-center"><h2 class="university-heading mb-5">Prominent Recruiters</h2></div>
+  <div class="col-md-12">
+    <div class="row justify-content-center">
+      
+      <div class="col-md-4" *ngFor="let recru of recruiters | slice:0:showRec">
+          <div class="recruiter-list">
+              <div class="row align-items-center ">
+                <div class="col-md-12 col-lg-4"><div class="image"><img src="{{recru.logo}}" alt="recruiter image thumbnail"></div></div>
+                <div class="col-md-12 col-lg-8">
+                  <span class="orange-text d-block">Company Name</span>
+                  <h3>{{recru.name}}</h3>                 
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button class="d-inline-block custom-secondary-btn margin-top45"
+          *ngIf="recruiters.length > 6 &&  showRec <= recruiters.length else lessBtn"
+            (click)="showRec = showRec+3">VIEW MORE</button>
+          <ng-template #lessBtn>
+            <button *ngIf="recruiters.length > 6" class="d-inline-block custom-secondary-btn margin-top45" (click)="showRec = 6">
+              VIEW LESS
+            </button>
+          </ng-template>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--Prominent Recruiters section end-->
+
+</div>
+<!--University course section end-->
+        
+
+      </ng-template>
+</ngb-tab>
+<!--Scholarship section start-->
+<ngb-tab title="Scholarship" *ngIf="scholarShips != '' && scholarShips != null">
+  <ng-template ngbTabContent>
+    <div class="scholarship-container">
+      <div class="custom-container pb-80">
+       
+        <!--repeat bos for looping start-->
+          <div class="scholarship-box mb-5" data-aos="fade-up" data-aos-duration="1000" *ngFor="let scholarship of scholarShips">
+            <div class="row">      
+              <div class="col-lg-8">
+                <h3 class="university-heading leagueFont">{{scholarship.name}}</h3>
+                <p>{{scholarship.about}}</p>
+                <div class="h-t-apply">
+                  <h3  class="mb-5 font-roboto-family mt-5 size24">How To Apply</h3>
+                  <ul>
+                    <li *ngFor="let apply of scholarship.process; let i=index">
+                      <span>{{i+1}}</span>
+                      <p [class.show]="apply.visible">{{apply.title}} </p>
+                      <a *ngIf="apply.title.length>100" href="javascript:void(0)" class="viewMore" [class.show]="apply.visible" (click)="apply.visible = !apply.visible">{{ apply.visible ? 'Show less': '... Show More' }}</a> 
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <h3  class="mb-4 font-roboto-family mt-0 size24">Eligibility Criteria</h3>
+                <div [innerHtml]="scholarship.eligibility"  id="dice"></div>
+                <h3  class="mb-3 font-roboto-family mt-5 size24">Deadline</h3>
+                <p *ngIf="scholarship.deadline; else notApplicable">{{scholarship.deadline}}</p>
+                <ng-template #notApplicable>
+                  <p>NA</p>
+                </ng-template>
+              <div class="detail mb-5">
+                  <!-- <a href="#" class="custom-primary-btn d-inline-block">Apply</a> -->
+                  <a href="{{scholarship.brochure}}" target="_blank" class="custom-secondary-btn d-inline-block" [ngClass]="{'disabled': !scholarship.brochure}">Download Brochure</a>
+                 </div>
+                </div>      
+            </div>
+            </div>
+          
+         
+<!--repeat bos for looping end-->
+
+
+</div>
+    </div>
+  </ng-template>
+</ngb-tab>
+<!--Scholarship section end-->
+
+</ngb-tabset>
+</div>
+<!--university content section end-->
+
+<!--related university start html-->
+<div id="related-university" class="pb-100" *ngIf="suggestData">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <h3 class="suggested-heading"><span>Suggested Institution</span></h3>
+      </div>
+      <div class="col-md-12">
+          <!--slider start-->
+          <div class="swiper-container" [swiper]="relatedUniversityConfig">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+              
+                <div class="swiper-slide career-slide" *ngFor="let data of suggestData;let i=index">
+                    <div class="video-thumbnail">
+                        <div class="thumb" ><img [src]="data.image || 'assets/images/university/university-list/h-img-01.jpg'" class="img-fluid" alt="thumbnail">
+                        </div>
+                        <a class="caption d-block" (click)="loaderPage(data.institute_id)" href="javascript:void(0);">{{data.name}}
+                          <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                          </a>
+                          
+                    </div>
+             </div>
+ 
+
+</div>
+           
+        </div>
+        <!--slider end-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--related university end html-->
+
+</div>
+
+
+ <!--course model popup start-->
+ <div id="schoolOfDesign" class="modal fade school-entrance-model" role="dialog">
+  <div class="modal-dialog modal-md">            
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Design Entrance Exams</h4>
+        <button type="button" class="close" data-dismiss="modal"><img src="assets/images/university/cross.png" alt="close-icon" class="img-fluid">
+        </button>      
+      </div>
+      <div class="modal-body">
+        <h2>IPU CET 2020</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel neque ut enim imperdiet sollicitudin. Integer aliquam vulputate ante, at consectetur urna tincidunt fringilla. Curabitur eros diam, tincidunt quis elementum vitae, ultrices at lorem. Morbi vehicula ex diam, at elementum quam egestas vitae.</p>
+        <h3>Eligibility Criteria</h3>
+        <ul>
+          <li>Nulla sed turpis faucibus, condimentum risus vel, vulputate quam.</li>
+          <li>Pellentesque porta tellus ut bibendum scelerisque.</li>
+          <li> Phasellus convallis mi id eros euismod, in accumsan ipsum maximus.</li>
+          <li>Quisque ut ipsum eget velit ultricies posuere eu et metus.</li>
+          <li>Integer viverra nibh eu felis sodales congue ac quis quam.</li>
+        </ul>
+        <h3>Process</h3>
+        <div class="process">
+          <span>Lorem ipsum dolor sit amet</span>
+          <span>Lorem ipsum dolor sit amet</span>
+          <span>Lorem ipsum dolor sit amet</span>
+          <span>Lorem ipsum dolor sit amet</span>
+          <span>Lorem ipsum dolor sit amet</span>          
+        </div>
+
+        <h3>Application Form Link:</h3>
+        <a href="#" class="app-form">https://www.greatplacetostudy.com/application/form</a>
+        <h3>Exam Pattern</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel neque ut enim imperdiet sollicitudin. Integer aliquam vulputate ante, at consectetur urna tincidunt fringilla. Curabitur eros diam, tincidunt quis elementum vitae, ultrices at lorem. Morbi vehicula ex diam, at elementum quam egestas vitae.</p>
+        <h3>Fees</h3>
+        <div class="row fee">
+          <div class="col-lg-6">
+            <p><strong>GN</strong> - <i class="fa fa-inr" aria-hidden="true"></i>1800 | SC/ST - <i class="fa fa-inr" aria-hidden="true"></i>800 | PWD - <i class="fa fa-inr" aria-hidden="true"></i>800</p>
+          </div>
+          <div class="col-lg-6 text-right">
+            <a href="#" class="download-btn">Download Full Syllabus&nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+  </div>
+</div>
+<!--course model popup end-->
+
+
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="universityVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9 " *ngIf="universityInfo">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item" (click)="stopAllVid('universityVideo01')" >
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="universityVideo01"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                      
+                      <video  #universityVideo01  [poster]="universityInfo.master_cover" id="universityVideo01" [vgMedia]="universityVideo01" class="videoClass" [src]="universityInfo.master_video">
+                      </video>
+                  </vg-player>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

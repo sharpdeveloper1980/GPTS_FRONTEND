@@ -1,0 +1,398 @@
+<!-- app header -->
+<app-header></app-header>
+
+<!-- search box -->
+<div class="container-fluid whiteBox">
+    <div class="row">
+        <!-- search text -->
+        <div class="col-xl-1 col-lg-2 col-md-2 col-sm-12 col-12">
+            <p class="searchFr">Search For</p>
+        </div>
+        <!-- input text -->
+        <div class="col-xl-11 col-lg-10 col-md-10 col-sm-12 col-12">
+            <input type="text" class="form-control customSearchResult" placeholder="search">
+        </div>
+    </div>
+</div>
+<!-- search box ends -->
+
+<!-- search filter  row 1 -->
+<div class="container-fluid whiteBox">
+    <!-- header -->
+    <div class="row headingSpacing">
+        <div class="col-6">
+            <h3 class="boxHeading"><i class="fa fa-sliders nineRotate"></i> Filters</h3>
+        </div>
+
+        <div class="col-6">
+            <h3 class="boxHeading text-right">120 Results Found <i class="fa fa-arrow-down"></i></h3>
+        </div>
+    </div>
+
+    <!-- search filter -->
+
+
+    <!-- search filter  row 2 -->
+    <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+            <a href="#" class="btn greyBtnEdit">Edit Filters</a>
+        </div>
+    </div>
+
+    <!-- 4 cards = set1 -->
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-sm-12 col-12"
+            *ngFor="let studentCard of studentList;let i = index">
+            <div class="borderCardDashboard text-center">
+                <img src="../../../assets/images/common/bethel-logo-vertical-color.png" class="img-fluid logoDash"
+                    alt="image">
+                <a href="#" class="positionEllipsis"><i class="fa fa-ellipsis-v"></i></a>
+                <!-- name of student -->
+
+                <p class="dashUniName">{{studentCard.name}}</p>
+
+                <p class="dashDivi">IELTS: 7.2 | CAT</p>
+                <!-- <p class="dashStudentEmail">test@test.com</p>
+                <p class="dashStudentNumber">+91-999999999</p> -->
+                <p class="paraStudent text-center">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec at magna vitae
+                    mi eleifend condimentum...</p>
+
+                <!-- click btns -->
+                <div class="col-12 remove-padding d-flex borderView">
+                    <div class="col-6 text-center">
+                        <a href="#" class="viewGreen customView">Shortlist</a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a class="viewMore customView" (click)="openStudentModal(content, i)">More</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 4 cards = set1 -->
+</div>
+
+
+
+<!-- modal for more -->
+<ng-template #content let-c="close" let-d="dismiss" class="student-bio-modal">
+    <div>
+        <h4 class="modal-title" id="modal-basic-title"></h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+                <img src="../../../assets/images/common/profile.jpg" class="img-fluid imgSearchProfile" alt="image">
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <!-- username -->
+                <p class="searchUser">{{studentModalInfo.name}}</p>
+                <!-- exams and score -->
+                <p class="text-uppercase searchExam">IELTS: 7.0 | CAT, MAT</p>
+                <!-- course and passout -->
+                <p class="searchExam">B.Tech in Computer Science | Passed in 2017</p>
+                <!-- university name -->
+                <p class="searchExam">Amity University</p>
+                <!-- shortlist and review -->
+                <p><span class="searchShortlist"><a href="#"><i class="fa fa-star iconShortlist"></i>
+                            Shortlist</a></span>
+                    <span class="searchReview"><a href="#"><i class="fa fa-bookmark iconReview"></i> Review
+                            later</a></span> </p>
+            </div>
+        </div>
+        <!-- bio + objective -->
+        <div class="row">
+            <!-- left Bio -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 rightBrSignature">
+                <p class="bioSearch">Bio</p>
+                <p class="searchPara">
+                    Consequat cupidatat sunt laborum sed adipiscing tempor incididunt cillum laboris proident,
+                    officia qui adipiscing velit ut labore ullamco Lorem cillum do Ut dolore Lorem Excepteur
+                    ipsum enim velit fugiat velit Excepteur Duis sunt proident, qui sint cupidatat in Lorem
+                    nostrud. Non incididunt pariatur proident, laboris nisi sunt reprehenderit aliquip aute in
+                    magna velit nostrud dolore sed sunt et elit.
+                </p>
+            </div>
+            <!-- right Objective -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <p class="bioSearch">Objective</p>
+                <p class="searchPara">
+                    {{studentModalInfo.objective}}
+                </p>
+            </div>
+
+        </div>
+        <!-- signature + developmental -->
+        <div class="row">
+            <!-- left signature -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Signature Strength <a data-toggle="popover" data-container="body" data-placement="right"
+                            type="button" data-html="true" href="#" id="logout"><span
+                                class="fa fa-info-circle"></span></a>
+                    </label>
+                </div>
+                <!-- ethics -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Ethics</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="value1" [options]="options1" class="custom-slider greyCustomSlider">
+                        </ng5-slider>
+                    </div>
+                </div>
+                <!-- energy -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Energy</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- empathy -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Empathy</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- resuance -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Resuance</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- creative -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Creative</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- right developmental -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="form-group">
+                    <label>Developmental Strength <a data-toggle="popover" data-container="body" data-placement="right"
+                            type="button" data-html="true" href="#" id="logout"><span
+                                class="fa fa-info-circle"></span></a>
+                    </label>
+                </div>
+                <!-- mastery -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Mastery</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- values -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Values</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- extra role -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Extra Role</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- analytical -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Analytical</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+                <!-- zest -->
+                <div class="col-12 d-flex">
+                    <!-- heading -->
+                    <div class="col-3">
+                        <label class="modalSearchSlider">Zest</label>
+                    </div>
+                    <!-- slider -->
+                    <div class="col-9">
+                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                            class="custom-slider greyCustomSlider"></ng5-slider>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- toggle switches -->
+        <div class="row marginToggleTop">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <!-- 1 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>Have pre approved Education Loan <a data-toggle="popover" data-container="body"
+                                data-placement="right" type="button" data-html="true" href="#" id="logout"><span
+                                    class="fa fa-info-circle"></span></a></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-12" checked>
+                            <label for="toggle-12"></label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>Are looking for Scholarship <a data-toggle="popover" data-container="body"
+                                data-placement="right" type="button" data-html="true" href="#" id="logout"><span
+                                    class="fa fa-info-circle"></span></a> </label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-112">
+                            <label for="toggle-112"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>DALHAM test <a data-toggle="popover" data-container="body" data-placement="right"
+                                type="button" data-html="true" href="#" id="logout"><span
+                                    class="fa fa-info-circle"></span></a></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-121" checked>
+                            <label for="toggle-121"></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <!-- 1 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>Passport Holder </label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-123" checked>
+                            <label for="toggle-123"></label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>Any Criminal History<span class="applicant">(Applicant)</span> <a data-toggle="popover"
+                                data-container="body" data-placement="right" type="button" data-html="true" href="#"
+                                id="logout"><span class="fa fa-info-circle"></span></a> </label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1121">
+                            <label for="toggle-1121"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="d-flex">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 removePadding">
+                        <label>Any Criminal History<span class="applicant">(Family)</span> <a data-toggle="popover"
+                                data-container="body" data-placement="right" type="button" data-html="true" href="#"
+                                id="logout"><span class="fa fa-info-circle"></span></a></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 removePadding">
+                        <div class="display-content-end">
+                            <input type="checkbox" name="toggle" class="sw" id="toggle-1212" checked>
+                            <label for="toggle-1212"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- view more -->
+        <div class="row">
+            <div class="col-12 text-right">
+                <a href="#" class="viewBlue">View Full Profile</a>
+            </div>
+        </div>
+
+        <!-- button -->
+        <div class="row d-xl-flex d-lg-flex d-md-flex text-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <button value="Select" class="btn violetBtn">Select</button>
+                <button value="Reject" class="btn reedBtn">Reject</button>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+        </div>
+    </div>
+
+</ng-template>
+
+
+
+
+<!-- search filter ends -->

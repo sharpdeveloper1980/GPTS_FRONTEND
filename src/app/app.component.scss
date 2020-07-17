@@ -1,0 +1,19 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100000;
+    background: white;
+    opacity: 1;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

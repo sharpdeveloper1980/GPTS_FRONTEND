@@ -1,0 +1,29 @@
+.customCardHeader{
+    background: white;
+    color: #546170;
+    border-radius: 0;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -1px;
+}
+
+.customBtnLink{
+    color: #546170;
+}
+
+.customBtnLink:focus{
+    color: #546170;
+    text-decoration: none;
+}
+
+.customBtnLink:hover{
+    color: #546170;
+    text-decoration: none;
+}
+
+.card-header:first-child {
+    border-radius: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    background: white;
+    margin-bottom: -1px;
+}

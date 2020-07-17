@@ -1,0 +1,771 @@
+$leagurSpartanBold:'League Spartan Bold';
+#wrapper {
+    padding-left: 250px!important;
+}
+#page-content-wrapper{padding-left:40px}
+
+//edio middle section
+.m-b-60{margin-bottom: 60px;}
+.edieo-middle-section{padding:30px 0 50px 0; }
+.edieo-middle-section h2.hading-title{  color:#333333;text-transform: uppercase;margin-bottom: 20px;font-size: 40px;}
+.edieo-middle-section .edieo-common{clear: both; display: flex; flex-wrap: wrap;    margin-left: -15px;justify-content: left;}
+.edieo-middle-section .edieo-common .box{position: relative; margin-bottom: 20px;margin-left: 15px;}
+.edieo-middle-section .edieo-common a{ position: absolute; top:0px; left:0px; width:100%; height:100%; color: #ffffff;}
+.edieo-middle-section .edieo-common a .caption{position: absolute; bottom:0px; left:0px; padding:20px;width:100%}
+.edieo-middle-section .edieo-common a .caption span,.edieo-middle-section .edieo-common a .caption strong{display: block; text-transform: uppercase;line-height: 1; margin:3px;}
+.edieo-middle-section .edieo-common a .caption span{ font-size: 24px;}
+.edieo-middle-section .edieo-common a .caption strong{font-size: 45px; font-weight: 600;}
+.edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 30px;}
+.edieo-middle-section .edieo-common .box .image{     border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); overflow: hidden;}
+
+//video-detail
+.video-detail .video-content{padding: 0 30px;}
+.video-detail .video-content h1{color: #333333; font-size:40px; text-transform: uppercase; font-weight:bold;margin-bottom: 70px;}
+.video-detail .video-content p{font-size: 20px;}
+.video-detail .video-content ul{margin-top:60px; margin-left:-20px}
+.video-detail .video-content ul li{display: inline-block; margin-left: 20px;font-size: 20px; color: #333333;}
+.video-detail .video-content ul li i{margin-right:5px;}
+.video-detail .video-content .action{margin-top:20px;}
+.video-detail .video-content .action a{display: inline-block;width:auto; text-transform: uppercase;font-size: 18px; font-weight: 600; text-align: left;padding:15px 25px;border-radius: 50px;}
+.video-detail .video-content .action a i{margin-right:5px; font-size: 17px;}
+
+//related article
+.related-article .nav-link{   text-transform: uppercase;}
+.sfi-tab-conatiner .nav{background: none;}
+.margin-btm36 { margin-bottom: 36px;}
+.margin-btm-link { margin-bottom: 50px;}
+.discover-pills-wrapper {
+    margin-top: 35px;
+}.discover-pills-wrapper .tab-wrapper {
+    margin-right: 20px;
+    margin-bottom: 30px;
+}.discover-pills-wrapper .tabs {
+    padding: 12px 20px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    display: inline-block;
+    color: #333333;
+    font-size: 16px;
+}.key-psychology-wrapper {
+    border-radius: 1px;
+    box-shadow: 0 0 8.8px 0.2px rgba(0, 0, 0, 0.19);
+    padding: 23px;margin-bottom: 20px;
+    width: 98%;
+    border-left: 7px solid #d5a9db;
+}.key-psychology-wrapper div {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 9px;
+}
+.adjust-padding-left {
+    -webkit-padding-start: 5px;
+    padding-inline-start: 5px;
+}.margin-btm17 {
+    margin-bottom: 17px;
+}.blue-career {
+    border-radius: 1px;
+    border: solid 1px #dbf4fd;
+    background-color: #f4fcff;
+    font-weight: 400;
+    padding: 2px 5px 2px 5px;
+}
+.how-background {
+    background-image: url(../../../assets/images/theme-three/how-background.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-position-x: 0;
+}
+.p-position-white {
+    position: relative;
+    left: 0;
+}
+.margin-bottom19 {
+    margin-bottom: 19px;
+}.white-shadow-bg {
+    border-radius: 1px;
+    background: white;
+    padding: 6px 10px 6px 25px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    margin-right: 15px;
+}.shadow-crazy:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    right: 0;
+    left: auto;
+    width: 100%;
+    top: 2px;
+    max-width: 300px;
+    background: rgba(119, 119, 119, 0.27);
+    box-shadow: 1px 0px 3px -1px rgba(119, 119, 119, 0.27);
+    -webkit-transform: rotate(1.1deg);
+    transform: rotate(1.1deg);
+    height: 100%;
+}
+.p-position-white p {
+    margin-top: 10px;
+}
+.lightred-background {
+    border-radius: 1px;
+    background-color: #fef4f2;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}.width-215 {
+    width: 215px;
+}
+.pro-back {
+    background: rgba(213, 169, 219, 0.07);
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 490px;
+    background-position-x: 350px;
+    padding: 30px 30px;
+}.pro-con-wrapper p {
+    margin-bottom: 25px;
+    position: relative;
+}
+.pro-con-wrapper {
+    max-width: 415px;
+    margin: auto;
+
+    ::ng-deep {
+        p {
+            margin-bottom: 25px;
+            position: relative;
+
+            &::after {
+                content: '';
+                background-image: url(../../../assets/images/theme-three/tick-bullet.gif);
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: -20px;
+                background-repeat: no-repeat;
+                top: 5px;
+            }
+        }      
+    }
+}
+.border-rightpink::after {
+    content: "";
+    display: block;
+    border-right: 1px dashed #bd79c6;
+    position: absolute;
+    top: 16px;
+    left: auto;
+    right: 9px;
+    height: 100%;
+    opacity: 0.2;
+}
+.career-map-back {
+    background-image: url(../../../assets/images/theme-three/career-map.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}.sub-course-container {
+    .section-padding {
+        padding-left: 420px;
+    }
+}
+/* timeline */
+.timeline-container,
+.timeline-container li {
+    position: relative;
+    margin: auto;
+    max-width: 700px;margin-top: 70px;
+}
+
+.timeline-container:after,
+.timeline-container li:before,
+.timeline-container li>div:before,
+.timeline-container li:first-child div:after,
+.timeline-container li:last-child div:after {
+    content: "";
+    position: absolute;
+}
+
+/* color */
+.timeline-container li>div,
+.timeline-container li:before,
+.timeline-container li>div:before,
+.timeline-container:after {
+    background-color: #435285;
+}
+
+.timeline-container:after,
+.timeline-container li small,
+.timeline-container li:first-child div:after,
+.timeline-container li:last-child div:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-container li small,
+.timeline-container li>div:before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*clearfix*/
+.timeline-container li:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.timeline-container li {
+    margin: 60px 0;
+}
+
+.timeline-container li:first-child {
+    margin-top: 0;
+}
+
+.timeline-container li:last-child {
+    margin-bottom: 0;
+}
+
+/*timeline content*/
+.timeline-container li>div {
+    width: 40%;
+    color: #fff;
+    padding: 7px 45px;
+    border-radius: 1px;
+}
+
+.timeline-container li>div h2 {
+    font-size: 16px;
+}
+
+.timeline-container li:nth-child(odd)>div {
+    float: left;
+}
+
+.timeline-container li:nth-child(even)>div {
+    float: right;
+}
+
+/* Main vertical line middile */
+.timeline-container:after {
+    width: 15px;
+    height: 110%;
+    top: -20px;
+    bottom: 0;
+}
+
+/* date */
+.timeline-container li small {
+    position: absolute;
+    color: #435285;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+    background: white;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    padding-top: 0px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timeline-container li:nth-child(even) small {
+    margin-left: 0;
+    left: auto;
+    right: 2px;
+    margin-right: 0;
+}
+
+/* Square */
+.timeline-container li:before {
+    height: 7px;
+    width: 8px;
+    border: 3px solid #435285;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Horizontal line */
+.timeline-container li>div:before {
+    height: 2px;
+    left: 40%;
+    width: 10%;
+}
+
+.timeline-container li:nth-child(even) div:before {
+    left: auto;
+    right: 40%;
+}
+
+/* Remove the top part of main vertical line */
+.timeline-container li:first-child div:after,
+.timeline-container li:last-child div:after {
+    width: 2px;
+    top: 0;
+    background-color: #435285;
+    height: 50%;
+    z-index: 1;
+}
+
+.timeline-container li:last-child div:after {
+    top: auto;
+    bottom: 0;
+}
+
+.timeline-container::before {
+    content: "";
+    background-image: url(../../../assets/images/theme-three/flag-career.png);
+    display: block;
+    width: 70px;
+    height: 46px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    left: 0px;
+    top: -65px;
+    margin: 0 auto;
+    animation: flag 5s infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes flag {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+
+}
+td {
+    font-size: 14px;
+    color: #333333;
+}
+
+.table .thead-dark th {
+    color: #333333;
+    background-color: #9fc7e1;
+    border-color: #9fc7e1;
+    width: 19%;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+tbody {
+    background-color: #f2faff;
+}
+
+.footer-text-width {
+    max-width: 55%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.sub-text {
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.orange-text {
+    color: #ff5443;
+    font-size: 26px;
+}
+.dashboard-three #edieoAboutContent.sfi-tab-conatiner .font-size50{font-size: 30px;}
+.blurred-box {  height: 50vh; -webkit-filter: blur(10px); filter: blur(10px);}
+.soon-info-wrapper {top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);}
+    .dashboard-three .heartPosition {
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        left: auto;
+        font-size: 18px;
+        color: #c0c0c0;
+        cursor: pointer;
+    }
+     .bdr-radius-8{border-radius: 8px;}
+
+
+//sneak information css start
+.sneak-information h2{ font-family: $leagurSpartanBold; color: #212529;}
+.tranding-career{background: #edf2ff; padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 50px;}
+.trend-career-box {
+    background: #ffffff;
+    margin-top: 30px;
+    border-radius: 8px; overflow: hidden;
+    box-shadow: 0 5px 10px #d7e2ff;
+}.trend-career-box p {
+    padding: 10px;font-family: $leagurSpartanBold;
+}
+.trend-career-box .imgBox{margin-bottom: 0;
+    padding: 20px;
+    background-position: 0;
+    background-size: cover;
+    min-height: 300px;
+    background-repeat: no-repeat;}
+    .trend-career-box:hover{
+        box-shadow: 0 5px 10px #c2d2fd
+    }
+.pt-100{padding-top:50px} .pb-40{padding-bottom: 40px;}.pt-40{padding-top:40px;}
+.do-you-know ul li{margin-top: 30px;
+    position: relative;
+    padding-left: 70px;}
+.do-you-know ul li p strong {font-size: 22px; font-weight: 600;}
+.do-you-know ul li p{margin-bottom: 10px;}
+.do-you-know ul li span {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    padding: 10px;
+    background: #e0e9ff;
+    border-radius: 8px;
+    width: 50px;
+    text-align: center;
+    font-weight: 600;
+    color: #153b93;    margin-top: 7px;
+}
+//sneak information css end
+//edieo about information css start
+.custom-edieo-about-info h2,.custom-edieo-about-info h3 {
+    font-family: "League Spartan Bold"; color: #212529;
+}
+.pt-40{padding-top: 40px;}
+.pb-40{padding-bottom: 40px;}
+.pt-60{padding-top:60px;}
+.pb-60{padding-bottom:60px;}
+.custom-edieo-about-info h3{font-size: 1.2rem;}
+.custom-edieo-about-info .discover-pills-wrapper .tab-wrapper{    margin-bottom: 20px;}
+.custom-edieo-about-info .discover-pills-wrapper .tab-wrapper .tabs{font-size: 15px; font-weight: 400;    border-radius: 50px;padding: 9px 20px;}
+.custom-edieo-about-info .key-psychology-wrapper{border-radius: 1px;   box-shadow: none;   padding: 0;   margin-bottom: 20px; width: auto;  border-left:none}
+.related-career{background: #edf2ff;     padding-top: 80px;  padding-bottom: 60px;}
+.related-career .row ul.border-right:last-child { border-right: none!important;  }
+.related-career h3 { min-height: 60px;  }
+.career-job .p-position-white:last-child{border-bottom: none!important;}
+.competencies{background: #f5f9fc;}
+.career-jobs-box { background: #ffffff;padding: 20px;border: solid 1px #d9eefd; border-radius: 8px; min-height: 156px;}
+.career-pros .pro-con-wrapper {
+    max-width: none; padding-left: 50px; padding-right: 20px;
+
+    ::ng-deep {
+        p {
+            margin-bottom: 25px;
+            position: relative;
+
+            &::after {
+                content: '';
+                background: #e0e9ff url(../../../assets/images/edieo/arrow-icon.png) center;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: -50px;
+                background-repeat: no-repeat;
+                top: 5px;
+                border-radius: 4px;
+            }
+        }      
+    }
+}
+.career-loader{background: #edf2ff;}
+.custom-timeline-container ul{text-align: center;}
+.custom-timeline-container li { display: inline-block; width: 15%; text-align: center; vertical-align: top;}
+.custom-timeline-container li h2 { margin-bottom: 20px; position: relative;}
+.custom-timeline-container li h2::before{position: absolute;
+    left: -35%;
+    width: 70%;
+    border-top: dashed 2px #333333;
+    top: 13px;
+    content: '';}
+    .custom-timeline-container li:first-child h2::before{display: none;}
+    .entrance-examination .table-responsive { box-shadow: 0 0 13px #a6c0fd; margin-bottom: 30px;      border-radius: 8px;}
+    .entrance-examination .table-responsive table.table.table-borderless {  border-radius: 8px;  overflow: hidden;  margin-bottom: 0; }
+    .entrance-examination .table-responsive .thead-dark th{background: #153b93; color: #ffffff; font-weight: 600;}
+    .entrance-examination .table-responsive  tbody{background: #ffffff;}
+    .entrance-examination .table-responsive table.table.table-borderless tr td{    border-top: 1px solid #dee2e6; font-weight: 400;}
+//edieo about information css end
+.leagueFont{font-family:$leagurSpartanBold;}
+.viewAll{    position: absolute;
+    bottom: 0;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ababab;
+    border-top: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+    padding: 5px 15px;
+    transition: all .3s;}
+.viewAll:hover{color: #153b93;}
+.viewAll i{margin-right:10px;}
+
+
+//responsive section start
+@media(min-width:1921px){
+    .trend-career-box .imgBox{min-height:700px;}
+    .do-you-know ul li span {
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+    .do-you-know ul li {
+        margin-top: 30px;
+        position: relative;
+        padding-left: 30px;
+        display: inline-block;
+        width: 23%;
+        padding-right: 30px;
+        padding: 30px;
+        box-shadow: 0 0 10px #eaeaea;
+        margin-left: 20px;
+        margin-right: 20px;
+        vertical-align: top;
+    }
+    .do-you-know .col-xl-4{display: none;}
+    .do-you-know .col-md-12.col-xl-8.col-lg-7 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+}
+@media(max-width:1650px){
+    .edieo-video,.edieo-thumbnail{min-height:1px;}
+}
+@media(min-width:1651px) and (max-width:1920px){
+    .trend-career-box .imgBox{min-height:480px;}
+}
+@media(min-width:1201px) and (max-width:1650px){
+    .edio-banner .edieo-banner-content .title{ margin-top:60px;}
+    .edieo-banner-content h1{font-size: 90px;line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size: 20px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:90px; padding-bottom: 0px;}
+    .edieo-middle-section .edieo-common .box{width:19%;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:15px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 40px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 25px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size: 20px;}
+    .video-detail .video-content h1{font-size: 30px;  margin-bottom: 10px;padding-right: 60px; margin-right:10px;}
+    .video-detail .video-content ul{    margin-top: 30px;}
+    .video-detail .video-content{padding: 0px;}
+    .video-detail .video-content .action a{font-size: 19px;padding: 15px 20px;}
+    
+ 
+}
+@media(max-width:1200px){
+    #page-content-wrapper{padding-top:30px}
+    .edio-banner .edieo-banner-content .title{ margin-top:0%;}
+    .edieo-banner-content h1{font-size: 80px;line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size:17px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:90px; padding-bottom: 0px;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:10px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 30px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 20px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size:15px;}
+    .video-detail .video-content h1{font-size: 30px;  margin-bottom: 20px;}   
+    .edieo-middle-section h2.hading-title{font-size: 30px;}
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 35px;}
+    .video-detail .video-content ul{margin-top:30px;}
+    .video-detail .video-content p{font-size: 14px;}
+    .video-detail .video-content { padding: 0px 0px; }
+    .edieo-middle-section .edieo-common .box{width:23%}
+    .video-detail .video-content .action a{font-size: 15px;}
+    .video-detail .video-content .action a i{font-size: 15px;}
+    .sfi-tab-conatiner .nav{margin-bottom: 30px;}
+
+}
+@media(max-width:1199px){
+    .video-detail .video-content {    padding: 20px 0px;   }
+}
+@media(min-width:768px) and (max-width:992px){
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content h1{font-size: 60px;}
+    .edieo-banner-content p{font-size: 14px;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{font-size: 18px;}
+    .edieo-middle-section .edieo-common .box{    width: 30%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left: -20px;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .video-detail .video-content h1 {font-size: 30px; margin-bottom: 20px;}
+    .video-detail .video-content .action a i { font-size: 17px; }
+    .video-detail .video-content .action a{font-size: 20px;}
+    .video-detail .video-content { padding: 0 0px; }
+    .video-detail .video-content { padding: 30px 0px; }
+    .edieo-middle-section .edieo-common .box{width:22%}
+    .do-you-know { padding-bottom: 70px!important;    }
+    .do-you-know .img { display: none;  }
+    .sneak-information div.mb-3 { margin-bottom: 50px!important; }
+
+}
+@media(max-width:767px){
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content h1{font-size: 60px;}
+    .edieo-banner-content p{font-size: 14px;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{font-size: 18px;}
+    .edieo-middle-section .edieo-common .box{    width: 30%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left: -20px;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .edieo-video, .edieo-thumbnail { height: 320px;overflow: hidden; }
+    .edieo-thumbnail img{height:100%;max-width:inherit}
+    .edieo-banner-content h1 { font-size: 40px; margin-top: 10px; }
+    .edieo-middle-section .edieo-common .box{width:45%;}
+    .edio-banner .edieo-banner-content .title {  margin-top: 7%;   }
+    .video-detail .video-content {   padding: 0; margin: 30px 0 0 0; }
+    .video-detail{padding-left: 3%!important;  padding-right: 3%!important;}
+    .related-sec{padding-left:3%!important; padding-right:3%!important;}
+    .sneak-information div.mb-3 { margin-bottom: 50px!important; }
+    .do-you-know { padding-bottom: 70px!important;    }
+    .do-you-know .img { display: none;  }
+    
+}
+@media screen and (max-width: 767px) {
+
+    .timeline-container li:nth-child(odd)>div,
+    .timeline-container li:nth-child(even)>div {
+        float: right;
+        width: 95%;
+    }
+
+    .timeline-container li:first-child div:after,
+    .timeline-container li:last-child div:after {
+        content: none;
+    }
+
+    .timeline-container:after,
+    .timeline-container li:first-child div:after,
+    .timeline-container li:last-child div:after,
+    .timeline-container li:before {
+        top: 0;
+        left: 0;
+    }
+
+    .timeline-container li small,
+    .timeline-container li:nth-child(even) small {
+        top: 0;
+        left: 3%;
+        margin: 0;
+        right: auto;
+    }
+
+    .timeline-container li {
+        margin: 0;
+        padding: 35px 0;
+    }
+
+    .timeline-container li:last-child>div:after {
+        content: "";
+        height: 7px;
+        width: 8px;
+        position: absolute;
+        top: 100%;
+        border: 3px solid #fff;
+        z-index: 2;
+        background-color: #435285;
+    }
+
+    .timeline-container::before {
+        content: "";
+        background-image: url(../../../assets/images/theme-three/flag-career.png);
+        display: block;
+        width: 70px;
+        height: 46px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: auto;
+        left: -36px;
+        top: -50px;
+        margin: 0 auto;
+        transform: rotateY(180deg);
+    }
+    .timeline-container li > div:before{left:0px;}
+    .timeline-container li:nth-child(even) div:before{left:0px; right:inherit;}
+    .border-rightpink::after{border-right:none!important}
+    .pro-con-wrapper{text-align: left;}
+    .pro-back h4.sub-text{text-align: left;}
+    .how-background{padding: 15px; text-align: left;}
+    .how-background .col-12.ml-3 {   margin-left: 0!important;    }
+    .white-shadow-bg{padding: 6px 10px 6px 10px;}
+    .theme-three #edieoAboutContent.sfi-tab-conatiner .font-size50{text-align: left;}
+    .theme-three #edieoAboutContent.sfi-tab-conatiner .nav {  width: 64%; }
+    .related-career .text-center { text-align: left!important;margin-bottom: 0px;}
+    .related-career .border-right{border-right:none!important}
+    .related-career h3{min-height: 0px;}
+    .career-job .border-left {   border-left: none!important;  margin-top: 50px; }
+    .career-job .p-position-white{margin-left:0px!important}
+    .competencies .text-center { text-align: left!important;}
+    .career-pros .career-pros-box { margin-bottom: 20px; margin-top: 20px;    margin-left: 0!important; }
+    .career-loader .text-center {text-align: left!important; }
+    .custom-timeline-container li {display: block;width: 100%;text-align: left; margin-bottom: 20px;}
+    .custom-timeline-container h2,.custom-timeline-container h3{display: inline-block; margin-right:5px;}
+    .custom-timeline-container h2:before{display: none;}
+    .custom-timeline-container h2{margin-bottom: 0px!important;  vertical-align: middle;  margin-right: 10px;}
+    .entrance-examination .text-center { text-align: left!important; }
+}
+@media(max-width:480px){
+    .edieo-middle-section .edieo-common .box{ width: 44%;  margin-left: auto; margin-right: auto;  }
+    .edieo-middle-section h2.hading-title{text-align: center;}
+    .edieo-middle-section .edieo-common a .caption{    padding: 20px;text-align: center;}
+    .embed-responsive{height:100%;}
+    .edieoMainTabs .embed-responsive{height:70%;}
+    .edio-banner .edieo-banner-content{z-index: 900;}
+    .edieo-banner-content p br{display: none;}
+    .edieo-video video{height:100%;}
+    .edio-banner .edieo-banner-content{margin-top:15px;}
+    .video-detail .video-content .action a i { font-size: 17px; }
+    .video-detail .video-content .action a{font-size: 20px;}
+    .video-detail .video-content{text-align: center;}
+    .video-detail .video-content .action a{text-align: center;}
+    .edieo-middle-section .edieo-common{margin-left:0px;}
+    #edieoAboutContent{text-align: left;}
+    .theme-three #edieoAboutContent.sfi-tab-conatiner .nav {  width: 100%; }
+    .related-career .text-center { text-align: center!important;margin-bottom: 0px;}
+    .related-career .border-right{border-right:none!important}
+    .related-career h3{min-height: 0px;}
+    .career-job .border-left {   border-left: none!important;  margin-top: 50px; }
+    .career-job .p-position-white{margin-left:0px!important}
+    .competencies .text-center { text-align: center!important;}
+    .career-pros .career-pros-box { margin-bottom: 20px; margin-top: 20px;    margin-left: 0!important; }
+    .career-loader .text-center {text-align: center!important; }
+    .custom-timeline-container li {display: block;width: 100%;text-align: center; margin-bottom: 20px;}
+    .custom-timeline-container h2,.custom-timeline-container h3{display: inline-block; margin-right:5px;}
+    .custom-timeline-container h2:before{display: none;}
+    .custom-timeline-container h2{margin-bottom: 0px!important;  vertical-align: middle;  margin-right: 10px;}
+    .entrance-examination .text-center { text-align: center!important; }
+    .custom-edieo-about-info .align-items-top{text-align: center;}
+    .custom-edieo-about-info .discover-pills-wrapper .tab-wrapper{margin-left:auto; margin-right:auto;}
+    .custom-edieo-about-info .text-left.text-lg-left {   text-align: center!important;    }
+    .career-job { text-align: center; }
+    .career-jobs-box{text-align: center; min-height: 1px;}
+    .career-pros .pro-con-wrapper {
+        max-width: none; padding-left:0; padding-right: 0; text-align: center;
+    
+        ::ng-deep {
+            p {
+                margin-bottom: 25px;
+                position: relative;
+    
+                &::after {
+                  display: none;
+                }
+            }      
+        }
+    }
+    .custom-edieo-about-info h2, .custom-edieo-about-info h3{text-align: center;}
+
+}
+@media(max-width:320px){
+    .edieo-middle-section .edieo-common .box{ width: 43%;  }
+    
+}

@@ -1,0 +1,121 @@
+<app-header></app-header>
+
+<div class="theme-three">
+<!--middle container start-->
+<div class="great-challenge">
+  <!--heading start-->
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12">
+          <h1 class="heading-title">
+              Great<br>Challenge
+              <span>Great Challenge by Great Place To Study is a national level experiential competition for students who are in the final year of school. Every child has  a genius in them and our challenge will give students an opportunity to reach their highest potential.</span>
+          </h1>
+      </div>
+    </div>
+  </div>
+  <!--heading end-->
+
+  <!--challanges box panel start-->
+  <div class="custom-container mt-6">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="great-challenge-wrapper text-center">
+          <a href="https://rc.greatplacetostudy.com/" target="_blank" class="great-challenge-box great d-block">
+            <span class="status live">LIVE<em></em></span>
+            <span class="logo"><img src="assets/images/great-challenge/royalchand-logo.png" width='188px' class="img-fluid" /></span>
+            <h2>DR. Chenraj Roychand Scholarship</h2>
+            <!-- <div class="footer">
+              <div class="row">
+                <div class="col-md-4 col"><div class="duration">56<span>Days</span></div></div>
+                <div class="col-md-4 col"><div class="duration">07<span>Hours</span></div></div>
+                <div class="col-md-4 col"><div class="duration">52<span>MINuteS</span></div></div>
+              </div>
+            </div> -->
+            <span class="text-center by">BY</span>
+            <span class="logo"><img src="assets/images/great-challenge/jain-logo.png" class="img-fluid" /></span>
+          </a>
+          <p>Get a step closer to your dream with one of the coveted Scholarship, Roychand Scholarship for students who want to pursue creative and liberal education
+            </p>
+            <a href="https://rc.greatplacetostudy.com/" target="_blank" class="d-inline-block custom-secondary-btn">Participate Now</a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 text-center">
+          <div class="great-challenge-wrapper text-center">
+              <div class="great-challenge-box art-n-entertainment">
+                <span class="status live">LIVE<em></em></span>
+                <h2>FILM<br>As An ART</h2>
+                <!-- <span class="text-center by">BY</span>
+                <span class="logo"><img src="assets/images/great-challenge/dice-logo.png" class="img-fluid" width='200px' /></span> -->
+               
+              </div>
+              <p>Invoke the filmmaker in you, as we presents the Behind The Lens Contest. Get a chance to learn from industry experts and win exciting gifts. 
+                </p>
+                <a href="/faaart" class="d-inline-block custom-secondary-btn ">Participate Now</a>
+            </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="great-challenge-wrapper text-center">
+              <div class="great-challenge-box design-lords">
+                <span class="status">Coming Soon<em></em></span>
+                <h2>Robotics for<br>Humanity</h2>
+                <span class="text-center by">BY</span>
+                <span class="logo"><img src="assets/images/great-challenge/amrita-logo.png" class="img-fluid" /></span>
+              </div>
+              <p>This is the challenge for the student who can shape imagination into a design.
+                </p>
+                <a href="javascript:void(0);" (click)="callregModal('robotics')" class="d-inline-block custom-secondary-btn">Notify Me</a>
+            </div>
+            <!-- (click)="openModalroboHuman()" -->
+      </div>
+    </div>
+  </div>
+  <!--challanges box panel end-->
+</div>
+<!--middle container end-->
+  </div>
+
+  
+
+  <!--  GREAT CHALLANGE NOTIFICATION MODAL  -->
+  <div class="modal auth-modal fade noback" id="greatChallengeNotify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog noBlue login-modal"  role="document" >  
+        <div class="modal-content ">  
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid removePadding" >
+                  <div class="row justify-content-center">
+                        <div class="tab-content w-100">
+                            <div class="tab-pane active" id="student">
+                                <div class=" text-left">                                
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 login-dots-reg">
+                                        <h3 class="sigin-Head-reg pl-2"><img src="assets/images/common/blue-gpts.png" alt="gpts logo"></h3>
+                                        <form #chregform="ngForm" (ngSubmit)="greatChallengeNotify(notify_for,chregform.value)" novalidate>
+                                          
+                                          <div class="form-group">
+                                            <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" name='name' required placeholder="Your Name" ngModel>
+                                          </div>
+                                          <div class="form-group">
+                                              <input type="email" class="form-control removeBorderRadius formHeight custom-form-control" name='email' required placeholder="Your Email Id" ngModel>
+                                            </div>
+                                          <div class="form-group">
+                                          <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" name="contact_no" required placeholder="Contact No" ngModel>
+                                          </div>
+                                          <div class="form-group mb-4 mt-4">
+                                              <input type="submit" class="custom-primary-btn d-flex justify-content-center align-items-center"  value="Notify Me">
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

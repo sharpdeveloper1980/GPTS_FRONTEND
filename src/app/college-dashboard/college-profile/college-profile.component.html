@@ -1,0 +1,681 @@
+<app-header></app-header>
+
+<div class="container-fluid whiteBox p-0">
+  <div class="custom-tabset college-dashboard-profile">
+    <ngb-tabset [justify]="currentJustify">
+      <!-- personal info -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">COLLEGE</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="profile-form dashboard-from">
+            <div class="row">
+              <!-- heading -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                <div class="col">
+                  <p class="headProgram">Basic Information</p>
+                </div>
+                <div class="col">
+                  <p class="headProgram">Contact Details</p>
+                </div>
+              </div>
+
+              <!-- body -->
+              <div class="col-12 d-xl-flex- d-lg-flex d-md-flex">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                <!-- left -->
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">College
+                      Name</label>
+                    <div class="col-sm-9">
+
+                      <input type="text" class="form-control" id="inputEmail3">
+
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">University
+                      Name</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="universityList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="University"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Ownership</label>
+                    <div class="col-sm-9">
+                      <ng-select class="custom blueDropdown" [items]="ownershipList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Ownership"></ng-select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Type of
+                      College</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="typeOfCollege" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Year Of
+                      Establishment</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="yearOfEst" bindValue="id" bindLabel="name"
+                        [searchable]="true" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Location</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="locationList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Recognitions</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="recogList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3"
+                      class="col-sm-3 col-form-label createLabel text-right">Accrediations</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="accredationList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Area</label>
+                    <div class="col-sm-9">
+
+                      <input type="text" appOnlyNumber class="form-control" placeholder="in sq. ft.">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Number of
+                      Students</label>
+                    <div class="col-sm-9">
+
+                      <input type="text" appOnlyNumber class="form-control">
+
+                    </div>
+                  </div>
+
+
+
+                  <!-- <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right"></label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right"></label>
+                    <div class="col-sm-9 d-flex removePadding">
+
+                      <div class="col">
+                        <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                          [searchable]="false" placeholder="Years"></ng-select>
+                      </div>
+
+                      <div class="col">
+                        <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                          [searchable]="false" placeholder="Years"></ng-select>
+                      </div>
+
+                    </div>
+                  </div> -->
+
+
+
+
+                </div>
+
+                <!-- right -->
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Address</label>
+                    <div class="col-sm-9">
+
+                      <input type="text" class="form-control">
+
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Country</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="userTypeList" bindValue="id" bindLabel="name"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Pincode</label>
+                    <div class="col-sm-9">
+
+                      <input type="text" class="form-control">
+
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Landline
+                      Number</label>
+                    <div class="col-sm-9 d-flex">
+
+                      <div class="col-2 removePadding">
+                        <input type="text" class="form-control">
+                      </div>
+
+                      <div class="col-10">
+                        <input type="text" class="form-control">
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Mobile
+                      Number</label>
+                    <div class="col-sm-9 d-flex">
+
+                      <div class="col-2 removePadding">
+                        <input type="text" class="form-control">
+                      </div>
+
+                      <div class="col-10">
+                        <input type="text" class="form-control">
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Email ID</label>
+                    <div class="col-sm-9">
+
+                      <input type="email" class="form-control">
+
+                    </div>
+                  </div>
+
+                  <!-- add more -->
+                  <!-- <div class="col-12 removePadding">
+                    <div class="d-flex justify-content-end">
+                      <a href="#" class="blueAdd">Add more details</a>
+                    </div>
+                  </div> -->
+
+
+                </div>
+
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+              </div>
+
+              <!-- submit btn -->
+              <div class="col-12 removePadding">
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="saveBtn roundBtn">Submit</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+      <!-- about tab -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">ABOUT</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="profile-form dashboard-from">
+            <div class="row">
+              <!-- heading -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                <div class="col">
+                  <p class="headProgram">Basic Information</p>
+                </div>
+
+              </div>
+
+
+              <!-- body -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 removePadding">
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">About the
+                      Institute</label>
+                    <div class="col-sm-9 removePadding">
+
+                      <textarea class="form-control"></textarea>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Key Features</label>
+                    <div class="col-sm-9 removePadding">
+                      <div class="col-12 d-xl-flex d-lg-flex d-md-flex removePadding">
+                        <div class="col removePadding">
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col">
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col removePadding">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-12 d-xl-flex d-lg-flex d-md-flex removePadding">
+                        <div class="col removePadding">
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+              </div>
+
+              <!-- body 2 -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Facilities at the
+                      Institute</label>
+                    <div class="col-sm-9">
+
+                      <ng-select class="custom blueDropdown" [items]="facilitiesList" bindValue="title" bindLabel="title"
+                        [searchable]="false" placeholder="Years"></ng-select>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+              </div>
+
+              <!-- body 3 -->
+              <div class="col-12 removePadding">
+                <div class="col-12">
+                  <p class="headProgram">Gallery</p>
+                </div>
+                <!-- videos -->
+                <div class="col-12 d-flex removePadding">
+
+                  <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 removePadding">
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Upload
+                        Videos</label>
+                      <div class="col-sm-9 removePadding">
+                        <div class="boxUpload">
+                          <p class="text-center">Upload videos from the past event</p>
+                          <div class="d-flex justify-content-center">
+                            <button class="saveBtn customSave">Upload</button>
+                          </div>
+                        </div>
+                        <div class="boxUpload">
+                          <div class="d-flex justify-content-center topPadding">
+                            <button type="button" class="blueAdd" data-toggle="modal" data-target="#myModal">Add more
+                              Videos</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- images -->
+                <div class="col-12 d-flex removePadding">
+
+                  <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 removePadding">
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Upload
+                        Images</label>
+                      <div class="col-sm-9 removePadding">
+                        <div class="boxUploadImage">
+
+                          <div class="d-flex justify-content-center">
+                            <button class="saveBtn buttonImagePosition">Change</button>
+                          </div>
+                        </div>
+                        <div class="boxUploadImage">
+                          <div class="d-flex justify-content-center">
+                            <button class="blueAdd buttonImagePosition addMorePosition">Add more Image</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- body 4 -->
+              <div class="col-12 removePadding">
+                <div class="col-12">
+                  <p class="headProgram">Popular Alumni</p>
+                </div>
+                <!-- videos -->
+                <div class="col-12 d-flex removePadding">
+
+                  <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 removePadding">
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label createLabel text-right">Upload
+                        Alumni Words and Pics</label>
+                      <div class="col-sm-9 removePadding">
+                        <div class="boxUpload boxUploadWidth">
+                          <div class="col-12">
+                            <div class="d-flex justify-content-end">
+                              <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                            </div>
+                          </div>
+                          <div class="col-12 d-flex">
+                            <!-- image -->
+                            <div class="col-4">
+                              <img src="../../../assets/images/common/alumniPhoto.jpg" class="img-fluid" alt="image">
+                            </div>
+                            <!-- text -->
+                            <div class="col-8">
+                              <p class="alumniPara">Laboris deserunt veniam, minim id eu Ut anim Lorem culpa consectetur
+                                ullamco commodo consectetur sunt nostrud elit, reprehenderit ipsum</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="boxUpload boxUploadWidth">
+                          <div class="d-flex justify-content-center topPaddingTwo">
+                            <button class="blueAdd">Add more Videos</button>
+                          </div>
+                        </div> -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- button -->
+              <div class="col-12">
+                <div class="d-flex justify-content-center">
+                  <button class="saveBtn roundBtn">Submit</button>
+                </div>
+              </div>
+
+              <!-- video upload -->
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title collegeHead">Upload Video</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                      <!-- row one -->
+                      <div class="row">
+                        <!-- video upload -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                          <div class="form-group">
+                            <label>Upload Video</label>
+                            <div class="uploadBtnBack">
+                              <input type="button" class="greenBtnUpload form-control" value="Browse">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- video description -->
+                        <div class="col-xl-8 col-lg-8 col-md-4 col-sm-12 col-12">
+                          <div class="form-group">
+                            <label>Video Description</label>
+                            <div>
+                              <textarea class="form-control customTextarea"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- row two -->
+                      <div class="row d-xl-flex d-lg-flex d-md-flex">
+                        <!-- video upload -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                          <div class="form-group">
+                            <label>Blog Heading</label>
+                            <input type="text" class="form-control customFormKnowledge"
+                              placeholder="Enter Heading Here">
+                          </div>
+                        </div>
+                        <!-- video description -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                          <div class="form-group">
+                            <label>Author</label>
+                            <input type="text" class="form-control customFormKnowledge" placeholder="Author Name">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                      <button type="button" class="btn blueGradientSubmit">Submit</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+
+
+      <!-- programs -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">PROGRAMS</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="profile-form dashboard-from">
+            <div class="row">
+              <!-- heading -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                <div class="col">
+                  <p class="headProgram">Programs Offered</p>
+                </div>
+
+              </div>
+
+              <!-- table -->
+              <div class="col-12">
+                <table class="table table-bordered">
+                  <thead class="thead-light tableBgProgram">
+                    <tr class="text-center">
+                      <td>Programs Offered</td>
+                      <td>Duration</td>
+                      <td>Admission Charges</td>
+                      <td>Tution Fees</td>
+                      <td>Exam Accepted</td>
+                      <td>Eligibility Criteria</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tdProgram">
+                      <td class="text-center">B-Tech<p>(Computer Science)</p>
+                      </td>
+                      <td class="text-center">4 Years(8 Semesters)</td>
+                      <td class="text-center">INR 1000</td>
+                      <td class="text-center">INR 80,000 <span>Exclude GST</span>
+                        <p>Per Semester</p>
+                      </td>
+                      <td class="text-center">CAT, MAT</td>
+                      <td>Laboris deserunt veniam,
+                        minim id eu Ut anim Lorem
+                        culpa consectetur ullamco
+                        commodo consectetur
+                        sunt nostrud elit,
+                        reprehenderit ipsum</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- add button -->
+              <div class="col-12">
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="blueAdd">Add more programs</a>
+                </div>
+              </div>
+
+              <!-- submit btn -->
+              <div class="col-12">
+                <div class="d-flex justify-content-center">
+                  <button class="saveBtn roundBtn text-uppercase">Submit</button>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+      <!-- scholarship -->
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          <div class="tab-title">SCHOLARSHIP</div>
+          <div *ngIf="infoCompleteStatus" class="completed-tab profile-tab-status">Completed</div>
+          <div *ngIf="!infoCompleteStatus" class="incomplete-tab profile-tab-status">YOUR INFO IS INCOMPLETE</div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <div class="profile-form dashboard-from">
+            <div class="row">
+              <!-- heading -->
+              <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                <div class="col">
+                  <p class="headProgram">Scholarships</p>
+                </div>
+
+              </div>
+
+              <!-- table -->
+              <div class="col-12">
+                <table class="table table-bordered">
+                  <thead class="thead-light tableBgProgram">
+                    <tr class="text-center">
+                      <td>Scholarship Offered</td>
+                      <td>Eligibility Criteria</td>
+                      <td>Application Process</td>
+                      <td>Download Application</td>
+                      <td>ast Date of Application</td>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tdProgram">
+                      <td class="text-center">Laboris deserunt</td>
+                      <td>Laboris deserunt veniam, minim
+                        id eu Ut anim Lorem culpa
+                        consectetur ullamco commodo
+                        consectetur sunt nostrud.</td>
+                      <td>Laboris deserunt veniam, minim
+                        id eu Ut anim Lorem culpa
+                        consectetur ullamco commodo
+                        consectetur sunt nostrud.</td>
+                      <td class="text-center d-flex justify-content-center"><button class="saveBtn">Upload Application
+                          Form</button></td>
+                      <td class="text-center">25<sup>th</sup> March, 2019</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- add button -->
+              <div class="col-12">
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="blueAdd">Add more Scholarship</a>
+                </div>
+              </div>
+
+
+            </div>
+
+            <!-- packages -->
+
+
+            <!-- recruiters -->
+
+
+            <!-- btn -->
+            <div class="row">
+              <!-- submit btn -->
+              <div class="col-12">
+                <div class="d-flex justify-content-center">
+                  <button class="saveBtn roundBtn text-uppercase">Submit</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+
+</div>

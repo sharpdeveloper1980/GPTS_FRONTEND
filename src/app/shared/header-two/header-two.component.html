@@ -1,0 +1,835 @@
+<div class="scrolled-div theme-three" appScrollDetect (scrolledOver)="changeUI($event)" [class.scrolled-over]="scrolledOver">
+  <!-- Old -->
+  <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top header position-fixed"> -->
+
+  <!-- New -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top header" id="header">
+
+      <!-- Custom Header -->
+      <!-- <div class="scholar_head">
+          <div class="custom-container d-flex flex-wrap cross_width_full position-relative">
+              <button (click)="closeHeader()" class="x_cross">x</button>
+                  <span class="triangle-down"></span>
+              <div class="challange_box challange_black_divider hide_challange">
+                  <div>
+                      <a class="d-block" routerLink="/roychandra-scholership">
+                          <p class="text-uppercase text-center great_challange_yellow">GREAT Challenge</p>
+                          <p class="roychand_scholar text-center">The Roychand Scholarship 2019</p>
+                      </a>
+                  </div>
+              </div>
+              <div class="challange_box box_sm_buttons">
+                  <a routerLink="/roychandra-scholership" class="challange_custom_btn">The Roychand Scholarship</a>
+                  <a routerLink="/discover-colleges" class="challange_custom_btn">Discover College</a>
+                  <a routerLink="/certifiedschool" class="challange_custom_btn">Certified Schools</a>
+                  <a routerLink="/featuredinstitute" class="challange_custom_btn">Featured Institutes</a>
+              </div>
+          </div>
+      </div> -->
+
+      <div class="header-wrapper custom-container">
+            <a class="navbar-brand" routerLink="/home">
+                <img src="assets/images/common/logo-animate.svg" class="img-fluid logoHeader blue-logo" alt="image">
+                <img src="assets/images/common/gpts-whiteLogo.png" class="img-fluid logoHeader white-logo" alt="image">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-navicon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- <div id="google_translate_element"></div> -->
+                <div class="">
+                    <div></div>
+                </div>
+                <ul class="navbar-nav ml-auto d-none d-md-flex align-items-center" *ngIf="loggedIn">
+                    <!-- <div class="header-search" id="searchIcon" (click)="sidebarToggle()"> <img
+                        src="assets/images/common/search.png" class="searchIconHead">
+                </div> -->
+                    <!-- <li class="nav-item"> <a class="nav-link headerBtn" href="#"><span class="redBadge">20</span>
+                                                                    Compare</a> </li>
+                                                            <li class="nav-item"> <a class="nav-link headerBtn" href="#"><span class="redBadge">20</span>
+                                                                    Compare</a> </li> -->
+                    <li class="nav-item"><a routerLink="/great-challenge" class="great_challenge_weight custom-secondary-btn">The Great Challenge</a>
+
+                    </li>
+                    <li class="nav-item myDashPosition" *ngIf="studentRegistred"> <a class="nav-link headerBtn" [routerLink]="dashboardRoutes">My Dashboard</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!studentRegistred"> <a class="nav-link headerBtn  RegisterBtnPosition" routerLink="/user-signup">Registration</a> </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{userName}}
+                        </button>
+                        <div class="dropdown-menu headDropTwo" aria-labelledby="navbarDropdown">
+                            <button class="dropdown-item" (click)="openChangePasswordModal()">Change
+                                Password</button>
+                            <button class="dropdown-item" (click)="logOut()">Logout</button>
+                        </div>
+                    </li>
+                    <!-- <button class="transparent-button login-button" data-toggle="modal" data-target="#exampleModal">LOGIN</button> -->
+                </ul>
+                <ul class="navbar-nav ml-auto d-none d-md-flex" *ngIf="!loggedIn">
+                    <li class="nav-item"><a routerLink="/great-challenge" class="great_challenge_weight custom-secondary-btn custom-greatchallenge-btn">The Great Challenge</a>
+                        <!-- <ul class="dropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item"><button (click)="openSignupModal()" class="nav-link headerBtn login-btn registerNow">Register</button></li>
+                    <li class="nav-item"> <button class="nav-link headerBtn login-btn" (click)="openModal()">
+                            Login</button> </li>
+                </ul>
+                <div class="d-md-none">
+                    <div class="user-auth-container d-flex justify-content-between">
+                        <div class="welcome-user-container w-100 text-center">
+                            <img src="assets/images/common/user-menu.png" alt="image">
+                        </div>
+                        <div class="" *ngIf="!loggedIn">
+                            <button (click)="openSignupModal()" class="nav-link headerBtn login-btn registerNow">Register</button>
+                        </div>
+                        <div class="" *ngIf="!loggedIn">
+                            <button class="nav-link headerBtn login-btn" (click)="openModal()">
+                                Login</button>
+                        </div>
+                        <div *ngIf="loggedIn && studentRegistred">
+                            <a [routerLink]="dashboardRoutes">My Dashboard</a>
+                        </div>
+                        <div *ngIf="loggedIn && !studentRegistred">
+                            <a class="" routerLink="/user-signup">Registration</a>
+                        </div>
+                        <div *ngIf="loggedIn" class="position-relative">
+                            <button class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{userName}}
+                            </button>
+                            <div class="dropdown-menu headDropTwo" aria-labelledby="navbarDropdown">
+                                <button class="dropdown-item" (click)="openChangePasswordModal()">Change
+                                    Password</button>
+                                <button class="dropdown-item" (click)="logOut()">Logout</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div class="search-career position-relative">
+                            <!-- <tag-input [secondaryPlaceholder]="'Search Career'" [(ngModel)]="videoSerachList"
+                                [onlyFromAutocomplete]="true" [maxItems]='1' (onAdd)="searchVideo(videoSerachList[0])">
+                                <tag-input-dropdown [appendToBody]="false" [showDropdownIfEmpty]="true"
+                                    [autocompleteItems]="careerList" [identifyBy]="'id'" [displayBy]="'name'">
+                                </tag-input-dropdown>
+                            </tag-input> -->
+                            <ng-select (change)="searchVideo($event.slug)" class="custom-search-career" [items]="careerList" bindValue="id" bindLabel="name" [searchable]="true" placeholder="Search Career">
+                            </ng-select>
+                        </div>
+                        <div class="static-links">
+                            <div class="static-inner-links">
+                                <div class="static-inner-head">GPTS</div>
+                                <div class="static-sub-menu">
+                                    <a routerLink="/about-us">About GPTS</a>
+                                    <a routerLink="/pressmedia">GPTS in Press</a>
+                                    <a routerLink="/bloglist">Blogs</a>
+                                    <a routerLink="/faq">FAQ’s</a>
+                                    <a routerLink="/career">Career With Us</a>
+                                    <a routerLink="/contactus">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="static-inner-links">
+                                <div class="static-inner-head">For Students</div>
+                                <div class="static-sub-menu">
+                                        <a routerLink="/careerlibrary" class="dd">Career Library</a>
+                                        <a routerLink="/discover-colleges" class="dd">Discover College</a>
+                                        <a routerLink="/city-tour" class="dd">10 City Tour</a>
+                                        <a routerLink="/careerdiscovery" class="dd">Career Assessment</a>
+                                        <a routerLink="/edieo" class="dd">EDIEO</a>
+
+                                </div>
+                            </div>
+                            <div class="static-inner-links">
+                                <div class="static-inner-head">For Instituions</div>
+                                <div class="static-sub-menu">
+                                    <a routerLink="/CDAP">CDAP</a>
+                                    <a routerLink="/sfiwebsite">School Fulfilment Index</a>
+                                    <a routerLink="/glicertification">GLI Certification</a>
+                                    <a routerLink="/certifiedschool">Certified Schools</a>
+                                    <a routerLink="/featuredinstitute">Featured Institutes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- == dropdown big == -->
+                <div class="dropdown hamburger-menu">
+                    <button id="navbarHeaderDropdown" (click)="toggleHeader()" class="navBtnCustom">
+                        <i *ngIf="!showMenu" class="fa fa-navicon"></i>
+                        <i *ngIf="showMenu" class="fa fa-times"></i>
+                    </button>
+                    <!-- big dropdown-->
+                    <ul *ngIf="showMenu" class="dropdown-menu dropdown-menu-large d-block show" aria-labelledby="navbarHeaderDropdown">
+                        <div class="container">
+                            <div class="row dropPaddingTop">
+                                <!-- r1 -->
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-flex d-lg-flex d-md-flex align-items-end">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 removePadding">
+                                        <img src="assets/images/common/blue-gpts.png" class="img-fluid menu-logo" alt="image" width="135">
+                                    </div>
+                                    <!-- search with social icons-->
+                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+                                        <!-- social icons -->
+                                        <div>
+                                            <p class="text-right dropSocial"> <a href="http://instagram.com/greatplacetostudy"><i class="fa fa-instagram"></i></a>
+                                                <a href="https://facebook.com/GPTSindia/"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/Gptsglobal"><i class="fa fa-twitter"></i></a> <a href="https://www.youtube.com/channel/UCgbxKE_8QO188ag0fV5XeIg"><i class="fa fa-youtube-play"></i></a> </p>
+                                        </div>
+                                        <div class="form-group position-relative mb-0">
+                                            <ng-select class="custom-search-career" [items]="careerList" bindValue="id" bindLabel="name" [searchable]="true" placeholder="Search Career" (change)="searchVideo($event.slug)">
+                                            </ng-select>
+                                            <i class="search-icon fa fa-search" aria-hidden="true"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- r3 -->
+                            <div class="row borderDropBottom ">
+                                <!-- left -->
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/about-us" class="dd">About Us</a>
+                                </div>
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/about-us" class="dd">Our Teams</a>
+                                </div>
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/career" class="dd">Career with Us</a>
+                                </div>
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/certifiedschool" class="dd">Certified Institutes</a>
+                                </div>
+
+                            </div>
+                            <!-- center -->
+                            <div class="row borderDropBottom border-e1">
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/bloglist" class="dd">Blogs</a>
+                                </div>
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/pressmedia" class="dd">Press & Media</a>
+                                </div>
+                                <!-- left -->
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/faq" class="dd">FAQs</a>
+                                </div>
+                                <div class="col dropdownZindex">
+                                    <a routerLink="/contactus" class="dd">Contact Us</a>
+                                </div>
+                            </div>
+                            <!-- top head -->
+                            <div class="row borderDropBottom border-e1">
+
+                                <div class="col-12 margin-bottom25">
+                                    <h3 class="drop-head"> <a routerLink="/iamstudent" class="drop-head">For Students</a></h3>
+                                </div>
+
+
+                                <div class="col-12 d-flex removePadding">
+                                    <!-- left -->
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/careerlibrary" class="dd">Career Library</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/discover-colleges" class="dd">Discover College</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/city-tour" class="dd">10 City Tour</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/careerdiscovery" class="dd">Career Assessment</a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 d-flex removePadding borderDropBottom">
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/edieo" class="dd">EDIEO</a>
+                                    </div>
+
+                                    <div *ngIf="studentRegistred" class="col dropdownZindex">
+                                        <a routerLink="/student-dashboard" class="dd">Dashboard</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- top head -->
+                            <div class="row borderDropBottom border-e1">
+
+                                <div class="col-12 margin-bottom25">
+                                    <h3 class="drop-head"><a routerLink="/iaminstitute" class="drop-head">For Institutes</a></h3>
+                                </div>
+
+
+                                <div class="col-12 d-flex removePadding">
+                                    <!-- left -->
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/CDAP" class="dd">CDAP</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/sfiwebsite" class="dd">School Fulfilment Index</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/glicertification" class="dd">GLI Certification</a>
+                                    </div>
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/certifiedschool" class="dd">Certified Schools</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex removePadding borderDropBottom">
+                                    <div class="col dropdownZindex">
+                                        <a routerLink="/featuredinstitute" class="dd">Featured Institutes</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row borderDropBottom margin-bottom70">
+                                <div class="col-12 text-center">
+                                    <img src="assets/images/common/drop-avatar.png" class="img-fluid" alt="image">
+                                </div>
+                            </div>
+                            <!-- row ends -->
+                        </div>
+                    </ul>
+                </div>
+                <!-- big dropdown end-->
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-12">
+        <!-- <a class="btn btn-default sidebarMenuBtn" id="menu-toggle" (click)="toogleMenu()"><i class="fa fa-angle-down"></i></a> -->
+        <div class="search-container" id="searchContainer" [@searchBar]="sidebarShow">
+            <div class="search-wrapper" id="searchWrapper" [hidden]=!sidebarShow>
+                <div class="blue-font big-text text-center">Search Career or Colleges here</div>
+                <input class="header-search-input" type="text" name="search" placeholder="Search Career by...">
+                <div class="alert filter d-inline-block"> <strong>Success!</strong> Indicates a successful or
+                    positive action.
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+                <div class="alert filter  d-inline-block">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong>
+                    Indicates a successful or positive action. </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup/Login Modals -->
+
+<div class="modal auth-modal fade noback" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" #loginModal>
+    <div class="modal-dialog modal-lg noBlue login-modal" [class.forgot-pass-container]="forgotPasswordShow" role="document" *ngIf="!studentLoggedIn">
+
+        <div class="modal-content removeBorderRadius">
+
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid removePadding" *ngIf="!forgotPasswordShow">
+                    <!-- navigation -->
+                    <!-- <div class="row">
+
+                        <div class="col-12 removePadding">
+
+                            <ul class="nav nav-tabs nav-tabsCustom">
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab"
+                                        href="#student">Student</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                        href="#institution">institution</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                        href="#schoolLogin">School</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- content -->
+                    <div class="row justify-content-center">
+                        <div class="tab-content w-100">
+                            <div class="tab-pane active" id="student">
+                                <div class="row text-left">
+                                    <!-- <div class="col-12" *ngIf="errorVar">
+                                            {{errorMessages}}
+                                        </div> -->
+
+                                    <!-- right side -->
+                                    <div class="col-xl-5 col-lg-5 col-12 loginBg cust_loginBg">
+                                        <!-- <h6 class="text-center text-uppercase loginWithtxt">or login with</h6> -->
+                                        <!-- facebook button -->
+                                        <!-- <div class="text-center">
+                              <button type="button" class="btn btn-success btn-customFacebook removeBorderRadius text-uppercase d-inline-flex justify-content-center align-items-center"><i
+                                      class="fa fab fa-facebook-f fa-2x"></img> <span class="socialname">Facebook</span>
+                              </button>
+                          </div> -->
+                                        <!-- google plus button -->
+                                        <!-- <div class="text-center">
+                              <button type="button" class="btn btn-success btn-customGoogle removeBorderRadius text-uppercase d-inline-flex justify-content-center align-items-center"><i
+                                      class="fa fa-google-plus"></i><span class="socialname">Google
+                                      <i class="fa fas fa-plus"></i></span></button>
+                          </div> -->
+                                        <!-- <img src="assets/images/common/login-image.png" class="img-fluid himg" alt="image"> -->
+                                        <h3 class="cust-insituQuote insituQuote">Finding your
+                                            <strong>passion</strong> is finding a part of your soul.</h3>
+                                    </div>
+
+                                    <!-- left side -->
+                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 login-dots">
+                                        <h3 class="sigin-Head">SIGN IN</h3>
+                                        <!-- Login form -->
+                                        <form class="formMargintp" [formGroup]="loginForm" (ngSubmit)="login()">
+                                            <div class="alert alert-danger" *ngIf="formError.length">
+                                                <div *ngFor="let err of formError">
+                                                    {{err}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <!-- <label class="text-uppercase label-customLogin">Email ID</label> -->
+                                                <input type="email" class="form-control removeBorderRadius custom-form-control" autofocus formControlName="email" placeholder="Email Id">
+                                            </div>
+                                            <div class="form-group">
+                                                <!-- <label class="text-uppercase label-customLogin">Password</label> -->
+                                                <input type="password" class="form-control removeBorderRadius custom-form-control" formControlName="password" placeholder="Password">
+                                            </div>
+
+                                            <!-- forgot password -->
+                                            <div class="form-group">
+                                                <div (click)="forgotPasswordShow = true" class="forgotPass">Forgot password?
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" id="keepSigned">
+                        <label class="form-check-label smallCheckText" for="defaultCheck1">
+                          Keep me signed in </label>
+                      </div> -->
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!loginForm.valid" class="custom-primary-btn d-flex justify-content-center align-items-center">Sign In</button>
+                                            </div>
+                                            <!-- signup -->
+                                            <div class="form-group">
+                                                <p class="singup-in">Don't have an account? <button type="button" class="bg-transparent link" (click)="showSignUpModal()">Register Now</button></p>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- institutions -->
+                            <div class="tab-pane container fade" id="institution">
+                                <div class="row">
+                                    <!-- left side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 rightBrLogin">
+
+                                        <form class="formMargintp" [formGroup]="instituteLoginForm" (ngSubmit)="institueLogin()">
+
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Email Id</label>
+                                                <input type="email" class="form-control removeBorderRadius formHeight" formControlName="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Password</label>
+                                                <input type="password" class="form-control removeBorderRadius formHeight" formControlName="password"> </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="keepSigned2">
+                                                <label class="form-check-label smallCheckText" for="defaultCheck1">
+                                                    Keep me signed in </label>
+                                            </div>
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!instituteLoginForm.valid" class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase">login</button>
+                                            </div>
+                                        </form>
+                                        <!-- forgot password -->
+                                        <div class="form-group"> <a href="#" class="forgotPass">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <!-- right side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 loginBg">
+                                        <h3 class="text-center insituQuote"><span class="loginQuote"></span>Elit, enim
+                                            dolore magna. In culpa magna aute amet,
+                                            voluptate. Sunt quis laboris labore labore.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- institutions -->
+                            <div class="tab-pane container fade" id="schoolLogin">
+                                <div class="row">
+
+                                    <!-- left side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 rightBrLogin
+                                    ">
+
+                                        <form class="formMargintp" [formGroup]="schoolLoginForm" (ngSubmit)="schoolLogin()">
+
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Email Id</label>
+                                                <input type="email" class="form-control removeBorderRadius formHeight" formControlName="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Password</label>
+                                                <input type="password" class="form-control removeBorderRadius formHeight" formControlName="password"> </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="keepSigned2">
+                                                <label class="form-check-label smallCheckText" for="defaultCheck1">
+                                                    Keep me signed in </label>
+                                            </div>
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!this.schoolLoginForm.valid" class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase">login</button>
+                                            </div>
+                                        </form>
+                                        <!-- forgot password -->
+                                        <div class="form-group"> <a href="#" class="forgotPass">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <!-- right side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 loginBg">
+                                        <h3 class="text-center insituQuote"><span class="loginQuote"></span>Elit, enim
+                                            dolore magna. In culpa magna aute amet,
+                                            voluptate. Sunt quis laboris labore labore.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid ">
+                    <div class="row forgot-password-wrapper justify-content-center" *ngIf="forgotPasswordShow">
+                        <div class="col-lg-5 col-12 loginBg cust_loginBg">
+                            <!-- <img src="assets/images/common/login-image.png" class="img-fluid himg" alt="image"> -->
+                            <h3 class="cust-insituQuote insituQuote">Finding your
+                                <strong>passion</strong> is finding a part of your soul.</h3>
+                        </div>
+
+                        <div class="col-lg-7 col-12 login-dots text-left">
+                            <h3 class="sigin-Head">Forgot Password</h3>
+                            <div class="alert alert-danger" *ngIf="formError.length">
+                                <div *ngFor="let err of formError">
+                                    {{err}}
+                                </div>
+                            </div>
+                            <div class="alert alert-success" *ngIf="forgotPassMsg.length">
+                                <div>
+                                    {{forgotPassMsg}}
+                                </div>
+                            </div>
+                            <form class="formMargintp" [formGroup]="forgotPasswordForm" (ngSubmit)="forgotPassword()">
+                                <div class="form-group ">
+                                    <label class="text-uppercase label-customLogin">Email Id</label>
+                                    <input type="email" class="form-control removeBorderRadius" formControlName="email">
+                                </div>
+                                <div class="form-group">
+                                    <button [disabled]="!forgotPasswordForm.valid" type="submit" class="custom-primary-btn">Submit</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <p class="singup-in">Back to <button type="button" class="bg-transparent link" (click)="forgotPasswordShow = false">Sign In</button></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- registration modal -->
+
+<div class="modal auth-modal fade noback" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true" #signupModal>
+    <div class="modal-dialog modal-xl noBlue" role="document" *ngIf="!studentLoggedIn">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="removeBootstrapModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid removePadding">
+                    <!-- navigation -->
+                    <!-- <div class="row">
+
+                        <div class="col-12 removePadding">
+
+                            <ul class="nav nav-tabs nav-tabsCustom">
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab"
+                                        href="#studentSignup">Student</a>
+                                </li>
+                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                        href="#institutionSignup">Institution</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                        href="#schoolSignup">School</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- content -->
+                    <div class="row">
+                        <div class="tab-content col-12">
+                            <div class="tab-pane active" id="studentSignup">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 alert alert-warning" *ngIf="errorVar">
+                                        {{errorMessages}}
+                                    </div>
+                                    <!-- right side -->
+                                    <div class="col-xl-5 col-lg-5 col-12 loginBg cust_loginBg">
+                                        <h3 class="insituQuote mt-5">Career Discovery &
+                                                Acceleration Platform
+                                        </h3>
+                                        <p class="mt-5"><Strong>“ Be Future Ready ”</Strong></p>
+                                        <div class="services-box">
+                                            <div class="row">
+                                                <div class="col-md-6 border-right">
+                                                    <h2>CDAP by Great Place To Study</h2>
+                                                    <p>is a video streaming platform for </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul>
+                                                        <li>- Career Exploration</li>
+                                                        <li>- College Discovery</li>
+                                                        <li>- Student Engagement</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="reg-text note-text"> <b>Note:</b> Our platform operates as free to use <a href="/CDAP" >Future Readiness</a> Center inside Schools and currently not available for individual students and families. If you are an individual student, interested to explore the world of higher education and future prospects, you can let your school know to enable our Career Discovery Programme for your future.</p>
+
+                                    </div>
+                                    <!-- left side -->
+                                    <div class="col-xl-7 col-lg-7 col-md-12 col-12 login-dots-reg">
+                                        <h3 class="sigin-Head-reg">SIGN UP</h3>
+                                        <!-- SignUp form -->
+                                        <form class="formMargintp" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                                            <div class="alert alert-danger" *ngIf="formError.length">
+                                                <div *ngFor="let err of formError">
+                                                    {{err}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <!-- <label class="text-uppercase label-customLogin">School</label> -->
+                                                <ng-select class="custom changeSelect signupSelect custom-form-control" [items]="schoolDrop" bindValue="id" bindLabel="name" [searchable]="false" placeholder="School" formControlName="school">
+                                                </ng-select>
+                                            </div>
+                                            <div class="form-row">
+                                              <div class="form-group col-md-6">
+                                                <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" autofocus formControlName="name" placeholder="First Name">
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                                <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" autofocus formControlName="lastname" placeholder="Last Name">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                                <input type="email" class="form-control removeBorderRadius formHeight custom-form-control" formControlName="email" placeholder="Email ID">
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+
+                                                    <input type="password" class="form-control removeBorderRadius formHeight custom-form-control" formControlName="password" placeholder="Password">
+                                                </div>
+                                                <div class="form-group col-md-6">
+
+                                                    <input type="password" class="form-control removeBorderRadius formHeight custom-form-control" formControlName="confirm_password" placeholder="Confirm Password">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control removeBorderRadius formHeight custom-form-control" formControlName="licence_code" placeholder="License code">
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+                                                <label class="form-check-label smallCheckText" for="keepSigned1">
+                                                    Keep me signed in </label>
+                                            </div>
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!signUpForm.valid" class="custom-primary-btn d-flex justify-content-center align-items-center">Register</button>
+                                            </div>
+                                            <!-- signup -->
+                                            <div class="form-group text-left mb-5">
+                                                <p class="singup-in">Already have an account? <button type="button" class="bg-transparent link" (click)="showSignInModal()">Sign In</button></p>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- institutions -->
+                            <div class="tab-pane container fade" id="institutionSignup">
+                                <div class="row">
+
+                                    <!-- left side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 rightBrLogin
+                                    ">
+                                        <!-- form -->
+                                        <form class="formMargintp" [formGroup]="instituteSignupForm" (ngSubmit)="institueSignup()">
+                                            <div class="" *ngIf="formError.length">
+                                                <div *ngFor="let err of formError | keyvalue">
+                                                    {{err.value}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Institution Name</label>
+                                                <input type="text" class="form-control removeBorderRadius " autofocus formControlName="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Institution Type</label>
+                                                <ng-select class="custom changeSelect" [items]="InstitutionTypeList" bindValue="id" bindLabel="name" [searchable]="false" placeholder="" formControlName="usertype"></ng-select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Email Id</label>
+                                                <input type="email" class="form-control removeBorderRadius" formControlName="email"> </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Confirm Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName="confirm_password"> </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="keepSigned3">
+                                                <label class="form-check-label smallCheckText" for="keepSigned4">
+                                                    Keep me signed in </label>
+                                            </div>
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!instituteSignupForm.valid" class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase">signup</button>
+                                            </div>
+                                        </form>
+                                        <!-- forgot password -->
+
+                                    </div>
+                                    <!-- right side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <h3 class="text-center insituQuote"><span class="loginQuote"></span>Elit, enim
+                                            dolore magna. In culpa magna aute amet,
+                                            voluptate. Sunt quis laboris labore labore.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- institutions -->
+                            <div class="tab-pane container fade" id="schoolSignup">
+                                <div class="row">
+
+                                    <!-- left side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 rightBrLogin
+                                    ">
+                                        <!-- form -->
+                                        <form class="formMargintp" [formGroup]="schoolSignupForm" (ngSubmit)="schoolSignup()">
+                                            <div class="" *ngIf="formError.length">
+                                                {{formError}}
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">School Name</label>
+                                                <input type="text" class="form-control removeBorderRadius" autofocus formControlName="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Email Id</label>
+                                                <input type="email" class="form-control removeBorderRadius" formControlName="email"> </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-uppercase label-customLogin">Confirm Password</label>
+                                                <input type="password" class="form-control removeBorderRadius" formControlName="confirm_password"> </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="keepSigned3">
+                                                <label class="form-check-label smallCheckText" for="keepSigned4">
+                                                    Keep me signed in </label>
+                                            </div>
+                                            <!-- button -->
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]="!schoolSignupForm.valid" class="btn btn-success btn-customSuccess removeBorderRadius text-uppercase">signup</button>
+                                            </div>
+                                        </form>
+                                        <!-- forgot password -->
+
+                                    </div>
+                                    <!-- right side -->
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <h3 class="text-center insituQuote"><span class="loginQuote"></span>Elit, enim
+                                            dolore magna. In culpa magna aute amet,
+                                            voluptate. Sunt quis laboris labore labore.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade confirm-container" id="changePassword">
+    <div class="modal-dialog noBlue " role="document">
+        <div class="mx-auto modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" (click)="removeBootstrapModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="container-flid">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-4 col-12 loginBg cust_loginBg">
+                            <!-- <img src="assets/images/common/login-image.png" class="img-fluid himg" alt="image"> -->
+                            <h3 class="cust-insituQuote insituQuote">Finding your
+                                <strong>passion</strong> is finding a part of your soul.</h3>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-12 text-left login-dots">
+                            <h3 class="sigin-Head">Change Password</h3>
+                            <div *ngIf="confirmErr.length" class="error-text alert alert-danger text-center">
+                                {{confirmErr}}
+                            </div>
+                            <form class="row justify-content-center" [formGroup]="changePasswordForm" (ngSubmit)="changePassword()">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Current Password</label>
+                                        <input type="password" formControlName="current_password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">New Password</label>
+                                        <input formControlName="new_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm Password</label>
+                                        <input formControlName="confirm_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    </div>
+                                    <button [disabled]="!changePasswordForm.valid" type="submit" class="custom-primary-btn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#navbarHeaderDropdown').click(function() {
+            $(this).toggleClass('open');
+        });
+    });
+
+</script>

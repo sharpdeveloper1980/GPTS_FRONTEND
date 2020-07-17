@@ -1,0 +1,96 @@
+.dashLabel{
+    margin-bottom: 0px;
+}
+
+.blueHeadGradient{
+    background: -webkit-linear-gradient(10deg,#12e0f8, #036bda);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 3.5em;
+}
+
+.blueTextGradient{
+    background: -webkit-linear-gradient(10deg,#12e0f8, #036bda);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 2em;
+}
+
+.greenHeadGradient{
+    background: -webkit-linear-gradient(10deg,#9ee15b, #14a599);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 3.5em;
+}
+
+.greenTextGradient{
+    background: -webkit-linear-gradient(10deg,#9ee15b, #14a599);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 2em;
+}
+
+.orangeHeadGradient{
+    background: -webkit-linear-gradient(10deg,#f8c554, #f6711f);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 3.5em;
+}
+
+.orangeTextGradient{
+    background: -webkit-linear-gradient(10deg,#f8c554, #f6711f);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 2em;
+}
+
+.rightInfo{
+    position: absolute;
+    right: 25px;
+    bottom: 35px;
+    font-size: 1.3em;
+    color: #d4d4d4;
+}
+
+.customwhiteBox{
+    border-radius: 4px;
+    margin-top: 4em;
+    padding: 2em;
+    margin-bottom: 1em;
+    
+}
+
+.removePadding{
+    padding: 0;
+}
+
+.morePadding{
+    padding: 0em;
+}
+
+.advancedBorderRight{
+    border-right: 1px solid #f7f7f7;
+}
+
+.editBtn {
+    color: #919eae;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+    padding: 6px 12px;
+    display: block;
+    border: 1px solid #919eae;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    right: 15px;
+    top: -6px!important;
+}
+
+
+

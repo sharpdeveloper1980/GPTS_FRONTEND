@@ -1,0 +1,1302 @@
+ <!-- header -->
+ <app-header></app-header>
+ <!-- header ends -->
+<div class="theme-three universityContainer">
+<!--dream-institute start-->
+<div class="dream-institute pt-100" *ngIf="universityList.length>0">
+<div class="custom-container-fluid custom-container">
+ <div class="row mb-5">
+  <div class="col-md-12 text-center">
+    <h1 class="heading-title">
+      <div class="top-college-list-menu text-center" id="edioSearch">
+      <ng-select class="custom-search-career d-inline-block search_colleges" [items]="clusterList" bindValue="id" bindLabel="name"  [searchable]="false" placeholder="Search Colleges" (change)="searchCollege($event.slug)" >
+      </ng-select>
+      </div>
+    </h1>
+  </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12">
+       <div id="dreamInstituteVideo">
+        <div class="video-carousel" data-aos="fade-up" data-aos-duration="1000">
+          <!--slider start-->
+          <div class="swiper-container" [swiper]="dreamConfig">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+                  <div class="swiper-slide career-slide" *ngFor="let university of universityList">
+                      <div class="video-thumbnail">
+                          <div class="thumb" (click)="InstituteVideoPopup(university.id);">
+                            <!-- <img [src]="university.master_cover!= null ? university.master_cover : 'assets/images/university/university-list/h-img-01.jpg'" alt="university thumbanil"> -->
+                            <img [src]="university.master_cover || 'assets/images/university/university-list/h-img-01.jpg'" alt="university thumbanil">
+                            <span class="play-icon"><img src="assets/images/home-five/play-button.png" class="play icon"></span>
+                            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                          </div>
+                          <a class="caption d-block" [routerLink]="['/university',university.id]"><h3>{{university.name}}</h3>
+                          
+                          </a>
+                      </div>
+               </div>
+
+                </div>
+                <!-- <div class="custom-university-list swiper-pagination"></div> -->
+              <!-- If we need navigation buttons -->
+              <div class="control-arrow custom-control-arrow d-none">
+                <div class="swiper-button-prev arrow">
+                  <img src="assets/images/university/university-list/arrow-left.png" alt="image" class="imageLeftIcon">
+              </div>
+              <div class="swiper-button-next arrow">
+                  <img src="assets/images/university/university-list/arrow-right.png" alt="image" class="imageLeftIcon">
+              </div>
+              </div>
+          </div>
+          <!--slider end-->
+      </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<!--dream-institute end-->
+
+<!--all institute wrapper start-->
+<div class="custom-container top-college-list-menu position-relative">
+ 
+  <!-- <div #scrollContainer [class.sticky-class]="stickyPosition" [class.remove-sticky]="removeSticky"
+    [style.top.px]="removeSticky ? stopScrollTop : '100'" class="sticky-sidebar" (scrollerStop)="stopScroll($event)"
+    [ElementStop]="pageFooter" appScrollDetect (scrolledOver)="changeUI($event)">
+
+    <h3 class="mobile-select-grop" (click)="courseSectionMenu($event);"><span>Media &amp; Broadcasting Playlist Playlist</span><i class="fa fa-chevron-down" aria-hidden="true"></i> </h3>
+    <ul id="clusterMenu"  class="nav nav-tabs clusterMenu" role="tablist">
+      <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" aria-controls="one" href="#media" (click)="universityData($event)"><span>01</span> Media &amp; Broadcasting Playlist</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#marketAdvertise" (click)="universityData($event)"><span>02</span> Marketing, Advertising &amp; Public Relations Playlist</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#one" (click)="universityData($event)"><span>03</span> Industrial Design &amp; Architecture Playlist</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#compoterInfo" (click)="universityData($event)"><span>04</span> Computers &amp; Information Technology Playlist</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#engineering" (click)="universityData($event)"><span>05</span> Engineering / Technical Playlist</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#architectureColleges" (click)="universityData($event)"><span>06</span> Architecture Colleges</a></li>
+
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#armedForce" (click)="universityData($event)"><span>07</span> Armed Forces &amp; Security Playlist</a></li>
+
+     
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#publicPolicyLaw" (click)="universityData($event)"><span >08</span> Public Policy, Politics &amp; Law Playlist</a></li>
+      
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" aria-controls="one" href="#finance" (click)="universityData($event)"><span >09</span>Finance Playlist</a></li>
+    
+    </ul>
+
+
+  </div> -->
+</div>
+<div class="custom-container" #subCourseContainer>
+ 
+<section id="institute-wrapper">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 top-college-list-menu">
+                <h3 class="heading-title mb-0 mt-2">Colleges Listing</h3>
+              </div>
+              <!--<div class="col-lg-8 col-md-6 col-sm-12">
+                <div class="top-college-list-menu text-right" id="edioSearch">
+                  <ng-select class="custom-search-career d-inline-block" [items]="clusterList" bindValue="id" bindLabel="name"  [searchable]="false" placeholder="Media & Broadcasting" (change)="searchCollege($event.slug)" >
+                  </ng-select>
+
+                
+                </div>
+              </div>-->
+            </div>
+          </div>
+          <div class="col-lg-12 customBdrLeft">
+            <div class="tab-content">
+              <!--tab one start-->
+              <div class="tab-pane active" id="media" role="tabpanel">
+                <div class="top-college-list pt-5 pb-60" id="universityScroll">
+                  <h2 class="mb-3">Institutes Perfect For Your Needs </h2>
+                  <p class="mb-5">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+                    
+                  <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5"  href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/1.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>A.J.K Mass Communication Research Centre</h3>
+                         
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/2.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Asian School of Journalism</h3>
+                         
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/3.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Department of Media Studies Christ University</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/4.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Film and Television Institute of India</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/5.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>IIMC</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/6.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Lady Shri Ram College for Women</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/7.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Satyajit Ray Film & Television Institute</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/8.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Symbiosis Institute of Media and Communication Pune</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/9.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Whistling Woods International</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/media-n-broadcasting/10.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Xavier Institute of Communication</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                  </div>
+                    
+                </div>
+              </div>
+              <div class="tab-pane active" id="marketAdvertise" role="tabpanel">
+                <div class="top-college-list pt-5 pb-60" id="universityScroll">
+                  <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+                  <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+                    
+                  <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5"  href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/1.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Christ University</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/2.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Flame University</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/3.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Madras Christian College</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/4.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Manipal Institute of Higher Education</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/5.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Mithibai College</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/6.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Mount Carmel College</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/7.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Narsee Monjee Institute of Management Studies</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/8.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Sharda University</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/9.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Stella Maris College</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+      
+                    
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                      <a class="college-box d-block mb-5" href="javascript:void(0)">
+                        <div class="thumb"><img src="assets/images/university/university-list/marketing-advertising-n-public-relation/10.jpg" class="img-fluid list-img" alt="thumbnail">
+                          <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                        </div>
+                        <div class="caption"><h3>Symbiosis Institute of Media and Communication Pune</h3>
+                          
+                          </div>
+                        </a>                
+                    </div>
+      
+                  </div>
+                    
+                </div>
+              </div>
+               <div class="tab-pane active" id="one" role="tabpanel">
+            <div class="top-college-list pt-5 pb-60" id="universityScroll">
+            <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+            <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+              
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5"  href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/chitkara-university.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>Chitkara University</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/dj-academy.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>D J Academy</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/idc-school-of-design.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>IDC School of Design</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/isdi-school-of-design-n-innovation.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>ISDI School of Design & Innovation</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/istituto-marangoni.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>Istituto Marangoni</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/mit-school-of-design.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>MIT School of Design</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+              
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/srishti-school-of-art-Design-n-technology.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>Srishti School of Art, Design & Technology</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+              
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/symbiosis-institute-of-design.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>Symbiosis Institute of Design</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+
+              
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/the-design-village.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>The Design Village</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+
+              
+              <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+                <a class="college-box d-block mb-5" href="javascript:void(0)">
+                  <div class="thumb"><img src="assets/images/university/university-list/unitedworld-institute-of-design.jpg" class="img-fluid list-img" alt="thumbnail">
+                    <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+                  </div>
+                  <div class="caption"><h3>Unitedworld Institute of Design</h3>
+                    
+                    </div>
+                  </a>                
+              </div>
+
+            </div>
+              
+          </div>
+</div>
+
+<div class="tab-pane active" id="compoterInfo" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Banaras Hindu University</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Birla Institute of Technology </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>BMS College of Engineering</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Delhi Technological University</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>IIT Delhi</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Netaji Subhash Institute of Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>PSG College of Engineering</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>R.V. College of Engineering (RVCE)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>SRM Institute of Science and Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/computer-information-technology/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Vellore Institute of Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+<div class="tab-pane active" id="engineering" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>A.J.K Mass Communication Research Centre</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Birla Institute of Technology  </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>College of Engineering Pune</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Manipal Institute of Technology (MIT)</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>NIT</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>R.V. College of Engineering (RVCE)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>SRM Institute of Science and Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Thapar Institute of Engineering and Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Vellore Institute of Technology</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/engineering/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Visvesvaraya National Institute of Technology Nagpur</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+<div class="tab-pane active" id="armedForce" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Armed Forces Medical College</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Army Air Defence College </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Army Cadet College (ACC)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Indian Air Force Academy (AFA)</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Indian Military Academy (IMA)</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Indian Naval Academy (INA)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Indian Special Forces Training School (SFTS)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National Defence Academy (NDA)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National Defence College (NDC)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/armed-force/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Rashtriya Indian Military College (RIMC)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+<div class="tab-pane active" id="publicPolicyLaw" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Gujarat National Law University</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>ILS Law College, Pune </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Jindal Global Law School, Sonipat</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>NALSAR University of Law, Hyderabad</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National Law Institute University, Bhopal</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National Law School of Indian University, Bangalore</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National Law University New Delhi</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>National University of Juridical Sciences</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>New Law College, BVDU Pune</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/public-policy-and-law/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Symbiosis Society's Law College, Pune</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+<div class="tab-pane active" id="finance" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Amity University</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Anil Surendra Modi School of Commerce, NMIMS </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Christ university</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>ICFAI Business School </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Loyola College</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Madras Christian College</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Presidency College</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Shaheed Sukhdev College for Business Studies</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Shri Ram College for Commerce</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/finance/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Symbiosis Centre for Management Studies</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+<div class="tab-pane active" id="architectureColleges" role="tabpanel">
+  <div class="top-college-list pt-5 pb-60" id="universityScroll">
+    <h2 class="mb-3 head_college d-none">Institutes Perfect For Your Needs </h2>
+    <p class="mb-5 head_college d-none">Choose from the finest institutions in India catered just for you. Refer to the unique video list of 10 carefully picked colleges/universities assorted according to your subject requirements and get all the information you need. Get set, get ahead!</p>
+      
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5"  href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/1.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>CEPT University, Ahmedabad</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/2.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Department of Architecture and Planning, IIT Roorkee </h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/3.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Department of Architecture, Birla Institute of Technology - Mesra</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/4.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Faculty of Architecture and Ekistics, Jamia Millia Islamia University</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/5.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Faculty of Architecture, Manipal Academy of Higher Education (MAHE)</h3>
+            
+            </div>
+          </a>                
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/6.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>R V School of Architecture, Bengaluru</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/7.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>School of Planning and Architecture (SPA)</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/8.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>School of Planning and Architecture, University of Mysore</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/9.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Sir J.J. College of Architecture</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-6">
+        <a class="college-box d-block mb-5" href="javascript:void(0)">
+          <div class="thumb"><img src="assets/images/university/university-list/architecture-colleges/10.jpg" class="img-fluid list-img" alt="thumbnail">
+            <span class="favroite-icon"><img src="assets/images/university/university-list/star-white.png" alt="favroit icon"></span>
+          </div>
+          <div class="caption"><h3>Sushant School of Art & Architecture</h3>
+            
+            </div>
+          </a>                
+      </div>
+
+    </div>
+      
+  </div>
+</div>
+</div>
+          </div>
+        </div>
+</section>
+
+<!--all institute wrapper end-->
+
+
+</div>
+
+<section class="dummy-content" #pageFooter style="height:50px;"></section>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback" id="clusterVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-02')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9" *ngIf="clusterdetail">
+                  <!-- removed this "big-video-container" class from here-->
+                  <vg-player class="embed-responsive-item">
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-buffering></vg-buffering>
+                      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                          <vg-play-pause></vg-play-pause>
+                          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                          <vg-scrub-bar [vgSlider]="true">
+                              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                              <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                          </vg-scrub-bar>
+                          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                          <vg-mute></vg-mute>
+                          <vg-volume></vg-volume>
+                          <vg-fullscreen></vg-fullscreen>
+                      </vg-controls>
+                      
+                      <video  #homeVideo  [poster]="clusterdetail.video_thumb" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [src]="clusterdetail.cluster_video">
+                      </video>
+                  </vg-player>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--  Video MODAL  -->
+<div class="modal auth-modal fade noback"  *ngIf="universityVideoThumb" id="dreamVideoPopup" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog noBlue login-modal"  role="document" >  
+      <div class="modal-content ">  
+          <div class="modal-header">
+              <button type="button" class="close" (click)="removeBootstrapModal('test-01')">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <!-- removed this "big-video-container" class from here-->
+              <vg-player class="embed-responsive-item">
+                  <vg-overlay-play></vg-overlay-play>
+                  <vg-buffering></vg-buffering>
+                  <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                      <vg-play-pause></vg-play-pause>
+                      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                      <vg-scrub-bar [vgSlider]="true">
+                          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                          <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                      </vg-scrub-bar>
+                      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                  </vg-controls>
+                  
+                  <video  #homeVideo   id="firstvideo" [vgMedia]="homeVideo" class="videoClass" [poster]="universityVideoThumb" [src]="universityVideoVideo">
+                  </video>
+              </vg-player>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+

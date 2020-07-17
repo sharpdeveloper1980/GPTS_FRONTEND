@@ -1,0 +1,117 @@
+.blogHead{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.blogPara{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.blogDate{
+    color: #8a939e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.marginBlog{
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.collegeHead{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+
+}
+
+.customTextarea{
+    background: #f7f7f7;
+    border-radius: 0;
+    border: 1px solid #f7f7f7;
+}
+
+.collegeLabel{
+    color: #546170;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+.greenBtnUpload{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    background: #50b945;
+}
+
+.uploadBtnBack{
+    background: #f7f7f7;
+    padding-top: 2em;
+    margin-top: 0em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1.2em;
+    border: 1px solid #d6d6d6;
+}
+
+.customTextarea{
+    resize: none;
+    border: 1px solid #d6d6d6;
+    height: 106px;
+}
+
+.customFormKnowledge{
+    border: 1px solid #d6d6d6;
+    background: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.blueGradientSubmit{
+    background-image: linear-gradient(90deg, #01e4ef, #04adfa);
+    border-radius: 20px;
+    padding: 7px 37px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 0px solid #e9ecef; 
+}
+
+.editBtn {
+    color: #919eae;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+    padding: 6px 5px;
+    display: block;
+    border: 1px solid #919eae;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    right: 15px;
+    top: -7px !important;
+    background: white;
+}

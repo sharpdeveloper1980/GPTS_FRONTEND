@@ -1,0 +1,229 @@
+<!-- Sidebar -->
+<!-- button -->
+
+<div class="position-relative">
+    
+    <!-- <div id="sidebar-wrapper" *ngIf="studentLoggedIn"> -->
+       
+    <div *ngIf="userType == 1">
+        <button (click)="sidebarToggle()" class="sidebarShow">
+            <i class="fa fa-bars"></i> </button>
+        <div id="sidebar-wrapper" class="toggle-show" *ngIf="studentLoggedIn">
+           
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <div class="profileimg"> <span>
+                        <img *ngIf="profileImageVar; else blankProfile_content" [src]="profileImgSrc"
+                            class="img-fluid profileImgGraph" alt=image>
+                        <ng-template #blankProfile_content>
+                            <img [src]="defaultProfilePic" class="img-fluid profileImgGraph" alt=image>
+                        </ng-template>
+                    </span> <span class="profileCompletion"><span
+                            class="ppErcentage">{{this.profileComplete}}%</span></span>
+                    <!-- change image pop up -->
+                    <a data-toggle="modal" data-target="#profilePicModal" class="changeProfile"><i
+                            class="fa fa-pencil pencil-bg"></i></a>
+                </div>
+                <!-- name -->
+                <p class="pName text-center">{{userName}}</p>
+                <p class="pMobile ellipses" *ngIf="contact.length">
+                    <!-- <img src="assets/images/common/calling_icon.png"
+                    class="img-fluid" alt="image"> -->
+                    {{contact}}</p>
+                <p class="pEmail ellipses" [title]="emailId" *ngIf="emailId.length">
+                    <!-- <img
+                        src="assets/images/common/email_id_icon.png" class="img-fluid" alt="image"> -->
+                    {{emailId}}</p>
+                <p class="pSkype ellipses" [title]="skype" *ngIf="skype != null && skype.length">
+                    <!-- <img
+                    src="assets/images/common/skype_icon.png" class="img-fluid" alt="image"> -->
+                    {{skype}}</p>
+            </li>
+            <li *ngFor="let studeDashboardItem of sidebarDataList; index as i" class="list-wrapper-link"
+                [class.active]="studeDashboardItem.router === routeActive" >
+                <a *ngIf="studeDashboardItem.router; else dropdown" [routerLink]="studeDashboardItem.router">
+                    <div (click)="linkClicked(i, $event)">
+                        <img [src]="studeDashboardItem.img" class="img-fluid iconS"
+                            alt="image">{{studeDashboardItem.title}}
+                    </div>
+                </a>
+                <ng-template #dropdown>
+                    <div (click)="menuClicked(i)"><img [src]="studeDashboardItem.img" class="img-fluid iconS"
+                            alt="image">{{studeDashboardItem.title}}
+                        <i class="fa fa-angle-down anglePosition"></i> </div>
+                </ng-template>
+                <div *ngIf="studeDashboardItem.sub != null" class="list-drop" [id]="'list'+i">
+              <!-- <div class="list-drop" [id]="'list'+i"> -->
+            <li *ngFor="let subItem of studeDashboardItem.sub" >
+                <a [routerLink]="subItem.router"  routerLinkActive="active" class="subDrop"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;{{subItem.title}}</a>
+            </li>
+    </div>
+    </li>
+    </ul>
+    </div>
+</div>
+<div *ngIf="userType == 2">
+<div id="sidebar-wrapper" class="toggle-show" *ngIf="studentLoggedIn">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <div class="profileimg">
+                <span>
+                    <img *ngIf="profileImageVar; else blankProfile_content" [src]="profileImgSrc"
+                        class="img-fluid profileImgGraph" alt=image>
+                    <ng-template #blankProfile_content>
+                        <img [src]="defaultProfilePic" class="img-fluid profileImgGraph" alt=image>
+                    </ng-template>
+                </span>
+                <span class="profileCompletion"><span class="ppErcentage">60%</span></span>
+                <!-- change image pop up -->
+                <a data-toggle="modal" data-target="#profilePicModal" class="changeProfile">Change</a>
+            </div>
+            <!-- name -->
+            <p class="pName text-center">{{userName}}</p>
+            <p class="pMobile" *ngIf="contact.length"><img src="assets/images/common/calling_icon.png" class="img-fluid"
+                    alt="image">
+                {{contact}}</p>
+            <p class="pEmail ellipses" *ngIf="emailId.length"><img src="assets/images/common/email_id_icon.png"
+                    class="img-fluid" alt="image">
+                {{emailId}}</p>
+            <p class="pSkype ellipses" *ngIf="skype != null && skype.length"><img
+                    src="assets/images/common/skype_icon.png" class="img-fluid" alt="image">
+                {{skype}}</p>
+        </li>
+        <li *ngFor="let collegeDashboardItem of collegeDashboardList; index as i" class="list-wrapper-link"
+            [class.active]="collegeDashboardItem.router === routeActive">
+            <a *ngIf="collegeDashboardItem.router; else dropdown" [routerLink]="collegeDashboardItem.router">
+                <div (click)="linkClicked(i, $event)">
+                    <img [src]="collegeDashboardItem.img" class="img-fluid iconS"
+                        alt="image">{{collegeDashboardItem.title}}
+                </div>
+            </a>
+            <ng-template #dropdown>
+                <div (click)="menuClicked(i)"><img [src]="collegeDashboardItem.img" class="img-fluid iconS"
+                        alt="image">{{collegeDashboardItem.title}}
+                    <i class="fa fa-angle-down anglePosition"></i> </div>
+            </ng-template>
+            <div *ngIf="collegeDashboardItem.sub != null" class="list-drop" [id]="'list'+i">
+        <li *ngFor="let subItem of collegeDashboardItem.sub">
+            <a [routerLink]="subItem.router" class="subDrop">{{subItem.title}}</a>
+        </li>
+</div>
+</li>
+</ul>
+</div></div>
+
+<!--counselor dashboard menu start-->
+<div *ngIf="userType == 5">
+    <div id="sidebar-wrapper" class="toggle-show" *ngIf="studentLoggedIn">
+<button (click)="sidebarToggle()" class="sidebarShow">
+    <i class="fa fa-bars"></i> </button>
+<ul class="sidebar-nav">
+    <li class="sidebar-brand">
+        <div class="profileimg"> <span>
+               <img  src="https://res.cloudinary.com/dzscocrwk/image/upload/v1581420873/gpts/avatar8.jpg"
+                    class="img-fluid profileImgGraph" alt=image>
+            </span> 
+            <!-- change image pop up -->
+           
+        </div>
+        <!-- name -->
+        <p class="pName text-center">{{userName}}</p>
+        <p class="pEmail ellipses" [title]="emailId" *ngIf="emailId.length">
+            <!-- <img
+                src="assets/images/common/email_id_icon.png" class="img-fluid" alt="image"> -->
+            {{emailId}}</p>
+       
+    </li>
+    <li class="list-wrapper-link">
+        <a  href="javascript:void(0);" class="active">
+            <div> <img src="assets/images/common/dashboard-icon.png" class="img-fluid iconS"
+                    alt="image">Dashboard
+            </div>
+        </a>
+        
+     
+</li>
+</ul>
+</div></div>
+<!--counselor dashboard menu end-->
+
+<!--university dashboard menu start-->
+<div *ngIf="userType == 3" id="universityDashboard">
+    <div id="sidebar-wrapper" class="toggle-show" *ngIf="studentLoggedIn">
+    <button (click)="sidebarToggle()" class="sidebarShow">
+        <i class="fa fa-bars"></i> </button>
+<ul class="sidebar-nav">
+    <li class="list-wrapper-link">
+        <a  routerLink="home" routerLinkActive="active">
+            <div> <img src="assets/images/university/dashboard-attribute/dashboard-icon.png" class="img-fluid" alt="Dashboard image">&nbsp;Dashboard
+            </div>
+        </a>       
+</li>
+<li class="list-wrapper-link"> 
+    
+    <a routerLink="courses" routerLinkActive="active">
+    <div> <img src="assets/images/university/dashboard-attribute/course-icon.png" class="img-fluid" alt="Courses image">&nbsp;Courses
+    </div>
+</a></li>
+<li class="list-wrapper-link">
+    
+    <a routerLink="scholarship"routerLinkActive="active">
+    <div> <img src="assets/images/university/dashboard-attribute/scholarship-icon.png" class="img-fluid" alt="Scholarship image">&nbsp;Scholarship
+    </div>
+</a></li>
+<li class="list-wrapper-link">
+    
+    <a routerLink="entrance-exam"routerLinkActive="active">
+    <div> <img src="assets/images/university/dashboard-attribute/entrance-exam-icon.png" class="img-fluid" alt="Entrance Exam image">&nbsp;Entrance Exam 
+    </div>
+</a></li>
+<li class="list-wrapper-link"> 
+    <a routerLink="video-career-library"routerLinkActive="active">
+    <div> <img src="assets/images/university/dashboard-attribute/video-career-library-icon.png" class="img-fluid" alt="Video Career Library image">&nbsp;Video Career Library
+    </div>
+</a></li>
+</ul>
+</div>
+</div>
+<!--university dashboard menu end-->
+
+
+
+</div>
+
+
+
+<div id="profilePicModal" class="modal fade" role="dialog">
+    <div class="modal-dialog profilepopup">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div>
+                <button type="button" class="close" data-dismiss="modal" (click)="changeBackProfile()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-loader" *ngIf="uploadLoader">
+                    <img src="assets/images/theme-three/loader.svg">
+                </div>
+                <div class="col-12">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="labelCustom mb-4">Upload Profile {{imageChangeText}}</label>
+                            <input type="file" accept="image/jpg,image/png,image/jpeg"
+                                class="form-control remove-padding" (change)="pictureSelected($event)">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div *ngIf="uploadPicVar" class="profile-image-container">
+                            <img [src]="uploadPic"
+                                class="img-fluid profileImgGraph" alt=image>
+                            <!-- <ng-template #blankProfile_content>
+                                <img [src]="defaultProfilePic" class="deaulut img-fluid profileImgGraph" alt=image>
+                            </ng-template> -->
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btnUpload" [disabled]="!profileImageChanged" (click)="uploadPicture()">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>

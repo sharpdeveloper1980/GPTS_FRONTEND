@@ -1,0 +1,615 @@
+<div class="universityContainer">
+
+  <!-- header -->
+  <app-header></app-header>
+  <!-- header ends -->
+
+  <!-- header image (note: have to discuss with manu regarding slider at this place) -->
+  <div class="container-fluid removePadding">
+    <div class="row">
+      <div class="poster-image" appScrollDetect (scrolledOver)="changeUI($event)"> <img class="poster-image img-fluid"
+          src="assets/images/common/universityHead.jpg">
+      </div>
+    </div>
+  </div>
+  <!-- header image ends -->
+  <!-- school logo + name + rate -->
+  <div #instituteName class="container-fluid removePadding bgWhite">
+    <div class="container removePadding">
+      <div class="row d-xl-flex d-lg-flex d-md-flex">
+        <!-- logo -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <img src="assets/images/common/school-logo.jpg" class="img-fluid schoolLogoLocation" alt="school-logo">
+        </div>
+        <!-- school name , location, location -->
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+          <!-- school name -->
+          <h5 class="schoolName">Jagran Lakecity University, <span class="schoolLocation">Bhopal</span> </h5>
+          <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+              class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            <span class="schoolRating">4.5</span></p>
+        </div>
+        <!-- navigation -->
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+          <ul class="noList">
+            <li class="universityNavAnchor"><a href="#">About College</a></li>
+            <li class="universityNavAnchor"><a href="#">Testimonial</a></li>
+            <li class="universityNavAnchor"><a href="#">Why Us</a></li>
+            <li class="universityNavAnchor"><a href="#">SSI</a></li>
+            <li class="universityNavAnchor"><a href="#">Courses</a></li>
+            <li class="universityNavAnchor"><a href="#" class="blueBtnUniversity">Apply Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- school logo + name + rate -->
+  <!-- about school + video -->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row d-xl-flex d-lg-flex d-md-flex">
+        <!-- about school -->
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <!-- heading -->
+          <h4 class="schoolHeading">About</h4>
+          <p class="schoolPara text-justify">{{aboutUnivText}}</p>
+          <div class="col-12 d-xl-flex d-lg-flex d-md-flex removePadding">
+            <!-- public icon -->
+            <div class="col text-center removePadding">
+              <img src="assets/images/common/public-icon.png" alt="image"><span class="iconOne">{{college_type}}</span>
+            </div>
+            <!-- calendar -->
+            <div class="col text-center removePadding">
+              <img src="assets/images/common/public-icon.png" alt="image"><span class="iconOne">Calendar</span>
+            </div>
+            <!-- diploma -->
+            <div class="col text-center removePadding">
+
+              <img src="assets/images/common/diploma-icon.png" alt="image"><span class="iconOne">Diploma</span>
+            </div>
+            <!-- area -->
+            <div class="col text-center removePadding">
+              <img src="assets/images/common/area-icon.png" alt="image"><span class="iconOne">Area</span>
+            </div>
+            <!-- location -->
+            <div class="col text-center removePadding">
+              <img src="assets/images/common/location-icon.png" alt="image"><span class="iconOne">Location</span>
+            </div>
+            <!-- enrollment -->
+            <div class="col text-center removePadding">
+              <img src="assets/images/common/enrolled-icon.png" alt="image"><span class="iconOne">Enrollment</span>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!-- video plugin -->
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+          <div class="swiper-container univ-about-carousel marUniTop" [swiper]="aboutUnivConfig">
+            <div class="swiper-wrapper">
+              <div *ngFor="let slide of aboutUnivCarousel; i as index" class="swiper-slide career-carousel-slide">
+                <div class="w-100 h-100">
+                  <div class="home-video-container">
+                    <img class="img-fluid" src="assets/images/homepage/careeer-lib-home.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev-about uniprev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next swiper-button-next-about uninext"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- word that matter slider -->
+  <div class="container-fluid marginWhyTop text-center wordsBack removePadding">
+    <div class="container">
+
+
+      <!-- repeat this section - for slider -->
+      <div class="row marginTopWord">
+
+        <div class="col-12">
+          <h4 class="wordHeadMatter"><img src="assets/images/common/quote-white.png" class="quotePos" alt="image">Words
+            That Matter</h4>
+        </div>
+
+        <!-- repeat this for slider-->
+        <div class="swiper-container univ-about-carousel" #wordsCarousel [swiper]="wordsConfig">
+          <div class="swiper-wrapper">
+            <div *ngFor="let slide of alumniTestimonial; i as index" class="swiper-slide career-carousel-slide">
+              <div class="col-12 testiBottom">
+                <p class="text-center wordsText">Labore elit, laboris non ad amet, Excepteur ullamco anim id incididunt
+                  amet,
+                  aliquip irure consectetur seunin im quico nsectetur proident, tempor in fugiat incididunt
+                  reprehenderit
+                  culpa
+                  consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor in fugiat incididunt
+                  reprehenderit culpa nsectetur minim aliqua qui commodo ad repreh enderit doeur ullamco anim id
+                  incididunt
+                  amet, aliquip irure consectetur seunin im quico nsectetur proident, tempor in fugiat incididunt
+                  reprehenderit
+                  culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor in fugiat
+                  incididunt
+                  reprehenderit culpa nsectetur minim aliqua qui commodo ad
+                </p>
+                <div class="col-12 d-flex justify-content-center">
+                  <div class="col-1">
+                    <img src="assets/images/common/profile.jpg" class="img-fluid testiImage" alt="image">
+                  </div>
+                  <div class="col-2 text-left">
+                    <p class="testiName">Shreya Majumdar</p>
+                    <p class="testiUniName">- Jagran University</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- why choose school -->
+  <div class="container-fluid whiteBackWhy removePadding">
+
+    <div class="container">
+
+      <div class="row">
+        <!-- image -->
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12"></div>
+        <!-- heading = points -->
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 d-xl-flex">
+          <!-- heading -->
+          <div class="col-12">
+            <h4 class="schoolHeading">Why choose JLU</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div class="row d-xl-flex d-lg-flex d-md-flex">
+        <!-- image -->
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+          <img src="assets/images/common/why-uni.jpg" class="img-fluid" alt="image">
+        </div>
+        <!-- heading = points -->
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+
+          <!-- points s1 -->
+          <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>International Immersion</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>Student Participation</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+          </div>
+
+
+          <!-- s2 -->
+          <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>Faculties</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>Transportation Facility</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+          </div>
+
+
+          <!-- s3 -->
+          <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex">
+            <!-- left -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>Shopping Complex</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+            <!-- right -->
+            <div class="col-xl-6 col-lg-6 col-md-6 co-sm-12 col-12">
+              <h4 class="headWhyUni"><i class="fa fa-caret-right caretUni"></i>Other Facilities</h4>
+              <p class="whyText">Culpa consectetur minim aliqua qui mmodo ad repreh enderit do consequat sunt ea tempor
+                in fugiat incididunt reprehenderit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ssi -->
+  <div class="container-fluid marginWhyTop">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- heading -->
+          <h4 class="schoolHeading studePaddBtm">Student Satisfaction Index</h4>
+          <!-- para -->
+          <p class="schoolPara">Excepteur minim amet, aliquip. Dolore dolore velit mollit nisi ut. Ut reprehenderit
+            pariatur cupidatat mollit eiusmod. Ipsum voluptate aute est. In ipsum deserunt dolor. Magna quis velit
+            consequat consequat sit. Fugiat nisi est consectetur aute. Ullamco eu deserunt veniam, </p>
+        </div>
+      </div>
+      <!-- 6 card boxes -->
+      <div class="row">
+        <!-- c1 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/hf-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Happiness Factor</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+        <!-- c2 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/ca-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Extra Curricular Activity</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+        <!-- c3 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/le-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Learning Experience</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+        <!-- c4 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/loc-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Life on Campus</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+        <!-- c5 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/infra-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Infrastructure</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+        <!-- c6 -->
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div class="whiteCardSsi text-center">
+            <!-- icon -->
+            <img src="assets/images/common/ar-blueicon.png" class="img-fluid kpiLogoWidth" alt="image">
+            <!-- head -->
+            <p class="kpiName">Alumni Relation</p>
+            <!-- star -->
+            <p class="starSizeLocation"><i class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i
+                class="fa fa-star goldStar"></i><i class="fa fa-star goldStar"></i><i class="fa fa-star greyStar"></i>
+            </p>
+            <p class="kpiRating">3.5</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <!-- scholarship and financial aids -->
+  <div class="container-fluid removePadding whiteBackWhy">
+    <div class="container">
+      <div class="row">
+        <!-- heading -->
+        <div class="co-12">
+          <!-- heading -->
+          <h4 class="schoolHeading studePaddBtm">Scholarships/Financial Aids</h4>
+        </div>
+        <!-- table -->
+        <div class="col-12">
+          <table class="table table-striped table-responsive tableShadow">
+            <thead class="blueTableHead">
+              <tr>
+                <th>Scholarship Offered</th>
+                <th>Eligibility Criteria</th>
+                <th>Process Details</th>
+                <th>Download </th>
+                <th>Last Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+              <tr class="tableFont">
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td>Quip irure consectetur seunin im quico nsectetur proident
+                </td>
+                <td class="text-center"><a href="#" class="downAnchor"><i class="fa fa-download"></i></a></td>
+                <td>17 April 2019</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- receommended courses -->
+  <div class="container-fluid removePadding blueBackBg">
+    <div class="container">
+      <!-- heading -->
+      <div class="row">
+        <div class="col-12">
+          <h4 class="schoolHeading studePaddBtm textWhite">Recommended Courses</h4>
+        </div>
+      </div>
+
+      <div class="swiper-container recom-univ-carousel" [swiper]="recomCourseConfig">
+        <div class="swiper-wrapper">
+          <div *ngFor="let slide of aboutUnivCarousel; i as index" class="swiper-slide recom-univ-carousel-slide">
+            <div class="dThree">
+              <h3 class="orangeHeading">BA LLB</h3>
+              <h4 class="orangeHeadTwo">(Hons.)</h4>
+              <p class="paraRecommend">Quip irure consectetur seunin imicoectet ur proident, tempor in ugiat incid
+                idun
+                erit culpa tetur minim aliqua qui mmodo dent, tempor in ugiat incid itempor </p>
+              <p class="d-flex whiteBackWhy paddLeft">
+                <span class="rOne borderrOne">3 years <br> <span class="rTwo">Course</span>
+                </span>
+                <span class="rOne borderrOne">3 years
+                  <br> <span class="rTwo">Class Size</span></span> <span class="rOne">1hr 45 mins <br> <span
+                    class="rTwo">Class
+                    Duration</span></span> </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev swiper-button-prev-products"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next swiper-button-next-products"></div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- prominent recruiters -->
+  <Div class="container-fluid removePadding whiteBackWhy testiBottom">
+    <div class="container">
+      <div class="row">
+        <!-- heading -->
+        <div class="col-12">
+          <h4 class="schoolHeading studePaddBtm">Prominent Recruiters</h4>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div class="row">
+        <!-- left -->
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex">
+          <!--image-->
+          <div class="col-3">
+            <img src="../../.././../assets/images/common/profile.jpg" class="img-fluid" alt="image" width="65">
+          </div>
+          <!--text-->
+          <div class="col-9">
+            <h5 class="uni-name">University Name</h5>
+          </div>
+        </div>
+        <!-- center -->
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex">
+          <!--image-->
+          <div class="col-3">
+            <img src="../../.././../assets/images/common/profile.jpg" class="img-fluid" alt="image" width="65">
+          </div>
+          <!--text-->
+          <div class="col-9">
+            <h5 class="uni-name">University Name</h5>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex">
+          <!--image-->
+          <div class="col-3">
+            <img src="../../.././../assets/images/common/profile.jpg" class="img-fluid" alt="image" width="65">
+          </div>
+          <!--text-->
+          <div class="col-9">
+            <h5 class="uni-name">University Name</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </Div>
+
+
+  <!-- facilities -->
+  <div class="container-fluid marginWhyTop lightBlueBg marginWhyTopTwo">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="schoolHeading">Facilities Provided</h4>
+        </div>
+      </div>
+      <div class="row d-xl-flex d-lg-flex d-md-flex">
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/library.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Library</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/cafeteria.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Cafeteria</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/wifi.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Wifi</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"> <img src="assets/images/facility/hostel.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Hostel</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/gym.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Gym</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/games.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Games</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/shop.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Shops</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/atm.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">ATM</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/labs.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Labs</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/outdoor.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Outdoor Game</p>
+        </div>
+        <div class="col text-center">
+          <div class="gradBoxWhite"><img src="assets/images/facility/antirag.png" class="img-fluid facilitySize"
+              alt="image"></div>
+          <p class="facilityName">Anti Ragging Cell</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

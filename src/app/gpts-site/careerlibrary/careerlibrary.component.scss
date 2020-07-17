@@ -1,0 +1,752 @@
+/* new style - redesign  */
+
+.career-library-back {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.remove-box-padding {
+    padding: 0;
+}
+
+.margin-bottom68 {
+    margin-bottom: 68px;
+}
+
+.margin-bottom16 {
+    margin-bottom: 16px;
+}
+
+.max-width-video-text {
+    max-width: 250px;
+}
+
+.margin-top38 {
+    margin-top: 38px;
+}
+
+.margin-top30 {
+    margin-top: 30px;
+}
+
+.margin-top53 {
+    margin-top: 53px;
+}
+
+.margin-top98 {
+    margin-top: 98px;
+}
+
+.margin-bottom44 {
+    margin-bottom: 44px;
+}
+
+.font-color6f {
+    color: #6f6e6e;
+}
+
+.remove-top-box-padding {
+    padding-top: 0;
+}
+
+.white-color {
+    color: #fcfcfc;
+}
+
+.font-size60 {
+    font-size: 60px;
+}
+
+.career-blue-bg {
+    background-image: url(../../../assets/images/theme-three/career-blue-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.margin-btm137 {
+    margin-bottom: 137px;
+}
+
+.border-blue-btm::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #c2ecff;
+    width: 90%;
+    height: 20px;
+    position: absolute;
+    bottom: -70px;
+}
+
+.custom-search-career {
+    width: calc(100% - 43.94px);
+}
+
+.custom-input {
+    width: 100%;
+    background: white;
+    border: none;
+    outline: none;
+}
+
+/* new style - redesign  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blueBannerhead {
+    color: #2853B5;
+    font-weight: 700;
+    line-height: 65px;
+    font-size: 4em;
+}
+
+.whiteparaBanner {
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.careerLibBackground {
+    background-image: url(../../../assets/images/static/careerbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding-top: 9em;
+    padding-bottom: 7em;
+    margin-bottom: 3em;
+}
+
+.headCareer {
+    color: white;
+    font-size: 1.5em;
+}
+
+.orangeRegister {
+    background: #F7941D;
+    border-radius: 0px;
+    padding: 12px 55px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+}
+
+.inputControl {
+    background: #f2f2f2;
+    height: 53px;
+    border: none;
+    border-left: 0px solid black;
+}
+
+.blueBtnSearch {
+    background: #2853B5;
+    color: white;
+    border-radius: 0;
+    width: 65px;
+    font-size: 20px;
+    padding-top: 2px;
+}
+
+.headOne {
+    font-size: 35px;
+    color: #333333;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.paraOne {
+    color: #333333;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.blueBackgroundVideo {
+    background: #2853B5;
+    color: white;
+    position: relative;
+}
+
+.namevideo {
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nameVideoTxt {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.marginWatch {
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.paraThree {
+    color: #343434;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.paraFour {
+    margin-bottom: 0;
+}
+
+.paraFive {
+    opacity: 0.5;
+}
+
+.morePad {
+    padding: 4%;
+}
+
+.paraSix {
+    padding-top: 10%;
+}
+
+.btnBlueActive {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+    margin-top: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.paraSeven {
+    padding-top: 4%;
+}
+
+.sliderBrowse {
+    font-size: 14px;
+    font-weight: 200;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 5px;
+    margin-bottom: 0;
+}
+
+.contentGreyBackground {
+    max-height: 80em;
+    overflow-y: hidden;
+
+}
+
+.video-conatiner {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border: solid 1px #c2ecff;
+    border-radius: 2px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+    background-color: #f7fdff;
+    margin-top: 0px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.customControlSearch {
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    background: transparent;
+    width: 100px;
+    padding-bottom: 0px;
+    float: right;
+}
+
+.courseHeadEngineer {
+    font-weight: 600;
+    color: #333333;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+    margin-bottom: 0;
+}
+
+.marginTopBtmCourse {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.marginTopBtmCourseTwo {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.viewBtn {
+    border: 1px solid #262525;
+    border-radius: 0px;
+    font-size: 14px;
+    text-align: center;
+    width: 115px;
+    background: transparent;
+    color: #262525;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+}
+
+.secBrowse {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.customFontBlue {
+    font-size: 2em;
+    color: #919191;
+    letter-spacing: 0.5px;
+    padding-top: 1.5em;
+}
+
+.blueFont {
+    color: #2853B5;
+}
+
+.orangeFont {
+    color: #F7941D;
+}
+
+.careerSizeFooter {
+    width: 72%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.careerlibrary-body .dropdown-menu.show {
+    height: auto;
+}
+
+.dropdown-menu.show {
+    display: block;
+    height: 8em;
+    position: absolute !important;
+    transform: none !important;
+    top: 100% !important;
+    border-radius: 0;
+    border: none;
+    background: #F2F2F2;
+    color: black;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.careerThreeText {
+    font-weight: 600;
+    color: #343434;
+    font-size: 15px;
+    padding-top: 5%;
+}
+
+.rightBrCareer {
+    border-right: 1px solid #343434;
+}
+
+.marginThreeLine {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.btnBlueActive {
+    background: #2853B5;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-radius: 0;
+    padding: 12px;
+    margin-top: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.swiper-slide {
+    width: 410px;
+}
+
+.browse-tiles-carousel {
+    .swiper-slide {
+        width: 210px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        &:hover {
+            box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            height: 135px;
+        }
+    }
+}
+
+.input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.careerlibrary-registered-body .input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 0;
+    background: rgb(220, 245, 255);
+    ;
+    color: #343434;
+    padding: 0 1em;
+    font-size: 15px;
+}
+
+.custom-control {
+    border-radius: 0px;
+    border: 0px solid transparent;
+    box-shadow: none;
+    font-weight: 300;
+    color: #343434;
+    border: 0px;
+    outline: none;
+}
+
+.blue-search-box {
+    padding-bottom: 0;
+    padding-top: 15px;
+    border-radius: 2px;
+    background-color: #17baff;
+    margin-top: 108px;
+}
+
+.form-blue-bg {
+    background: rgb(220, 245, 255);
+}
+
+.margin-do-you-swiper {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.new-card {
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    padding: 10px;
+    background: white;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.career-library-bubble {
+    position: relative;
+}
+
+.career-library-bubble::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/career-library-bubble.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -55px;
+    width: 100%;
+    height: 70vh;
+    left: -530px;
+    right: auto;
+    background-position: left bottom;
+    z-index: -1;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/* Gaga CSS */
+
+.cl_new_video {
+    width: 23%;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.height_50 {
+    height: 50px;
+}
+
+.img_box_purple {
+    padding: 15px;
+    border: 1px solid #ead3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening_area_bg {
+    background-color: #fdf3f2;
+    border: 1px solid #f2ceca;
+    padding-top: 65px;
+    padding-bottom: 50px;
+}
+
+.opening_head {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+    font-weight:400;
+}
+
+.font_18 {
+    font-size: 18px;
+}
+
+.explore_btn_style {
+    border: 1px solid #edbbb6;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    color: #000000;
+}
+
+.opening_video_padding {
+    padding: 0 50px;
+}
+.section_padding {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl_new_video .whiteBoxVideo {
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+/* Gaga CSS End */
+
+@media(max-width:1200px) {
+
+    .banner-height {
+        .text-macro {
+            max-width: 632px;
+            margin: auto;
+        }
+    }
+
+    .blueBannerhead {
+        font-size: 40px;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    .whiteparaBanner {
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .swiper-button-prev-inspi,
+    .swiper-button-next-inspi {
+        top: initial;
+        bottom: 0;
+    }
+
+    .inspiring-carousel {
+        padding-bottom: 10px;
+    }
+
+    .headOne {
+        font-size: 28px;
+    }
+
+    .courseHeadEngineer {
+        font-size: 18px;
+    }
+
+    .customFontBlue {
+        font-size: 20px;
+    }
+
+    .three-col-text {
+        .col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .responsive-margin-top {
+        margin-top: 50px;
+    }
+
+    /* Gaga CSS */
+
+    .opening_video_padding {
+        padding: 0 20px;
+    }
+
+    /* Gaga CSS End */
+}
+
+@media (max-width: 991px) {
+    .courseHeadEngineer {
+        text-align: center;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .responsive-margin-top {
+        margin-top: 50px;
+    }
+
+    .whiteBoxVideo .text-macro {
+
+        line-height: 25px;
+    }
+
+    .margin-bottom68 {
+        margin-bottom: 0;
+    }
+
+    .white-border-video.margin-bottom68 {
+        margin-bottom: 30px;
+
+    }
+
+    .margin-top98 {
+        margin-top: -65px;
+    }
+
+    .responsive-margin-bottom {
+        margin-bottom: 30px;
+    }
+
+    .footer-text-width {
+        max-width: 595px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    /* Gaga CSS */
+
+    .cl_new_video {
+        width: 31%;
+    }
+
+    /* Gaga CSS End */
+}
+
+@media (max-width: 767px) {
+    .margin-top98 {
+        margin-top: -23px;
+    }
+
+    .font-size30 {
+        font-size: 25px;
+    }
+
+    .font-size60 {
+        font-size: 35px;
+    }
+
+    .browse-tiles-carousel .swiper-slide {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* Gaga CSS */
+
+    .cl_new_video {
+        width: 47%;
+    }
+
+    /* Gaga CSS End */
+}
+
+@media (max-width: 575px) {
+    .cl_new_video {
+        width: 80%;
+    }
+
+    .explore_btn_style {
+        font-size: 14px;
+    }
+
+    .opening_video_padding {
+        padding: 0;
+    }
+}

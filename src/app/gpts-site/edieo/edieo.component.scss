@@ -1,0 +1,493 @@
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+.p-t-80 {padding-top:80px;}
+.p-b-80{padding-bottom: 80px;}
+.m-t-80 {margin-top:80px;}
+.m-b-80{margin-bottom: 80px;}
+.mt-60{margin-top:60px;}
+.mb-60{margin-bottom: 60px;}
+.pt-80{padding-top:80px;}
+.pb-80{padding-bottom:80px;}
+.pt-60{padding-top:60px;}
+.pb-60{padding-bottom: 60px;}
+a.viewMore{   font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+    color: #2853b5;
+    letter-spacing: 0;
+    margin: 0;       padding: 20px 0 10px;
+    background: #ffffffde;
+    margin-top: -34px;
+    position: relative;}
+    a.viewMore.show {
+        margin-top: 0;
+        padding: 0;
+    }
+//edieo banner
+.edio-banner .edieo-banner-content{ position: absolute; left:0px; top:0px; width:100%; height:auto;top: 50%;color: #ffffff;transform: translateY(-50%);}
+.edio-banner .edieo-banner-content .title .eb{background: #a048e9; font-family: $leagueSpartanBold; padding:5px 10px 0; display: inline-block; font-weight: 500; position: relative;z-index: 1;font-size: 40px;line-height:1.4}
+.edio-banner .edieo-banner-content .title .series{background: #ffffff; font-family: $leagueSpartanBold; padding: 5px 10px 0;color:#a048e9; display: inline-block; font-weight: 500; margin-left:3px; position: relative; z-index: 1;font-size: 40px;line-height:1.4}
+.edio-banner .edieo-banner-content .title .eb::before{ content: " ";  position: absolute;  display: block;  width: 52%; height: 100%; left: 0px; z-index: -1; background: #a048e9; -webkit-transform-origin: bottom left; transform-origin: bottom left;
+-webkit-transform: skew(13deg, 0deg); transform: skew(13deg, 0deg);  top: 0;    }
+.edio-banner .edieo-banner-content .title .series::after{  content: " "; position: absolute; display: block;  width: 52%; height: 100%; right: 0px; z-index: -1; background: #ffffff;
+-webkit-transform-origin: bottom left; transform-origin: bottom left;  -webkit-transform: skew(-13deg, 0deg);  transform: skew(-13deg, 0deg); top: 0;  }
+.edieo-banner-content h1{ font-size: 60px;font-weight: 600;text-transform: uppercase;margin-top: 20px;}
+.edieo-banner-content p{font-size: 24px; margin-top:20px; margin-bottom: 40px;}
+.edieo-banner-action .play{font-size: 20px;text-transform: uppercase;margin-right: 10px; font-weight: 600;} 
+.edieo-banner-action .play i{margin-right: 5px;font-size: 10px;vertical-align: top; margin-top: 8px;}
+.edieo-banner-action .my-list{background: #ffffff; color: #17baff; font-size: 20px; border-color: #ffffff; font-weight: 600;}
+.edieo-banner-action .my-list i{    font-size: 15px;    margin-right: 5px;   vertical-align: top;   margin-top: 5px;}
+.edieo-video{position: relative; z-index: 0;}
+.edieo-video::after{position: absolute; top:0px; left:0px; width:100%; height:100%; background: rgba(0,0,0,.4); content:''}
+.edio-banner{position: relative;    padding-top: 15px;}
+
+
+//edio middle section
+
+.edieo-middle-section{padding:60px 0 50px 0; }
+.edieo-middle-section h2.hading-title{  color:#333333;text-transform: uppercase;margin-bottom: 20px;font-size: 40px;}
+.edieo-middle-section .edieo-common{clear: both; display: flex; flex-wrap: wrap;    margin-left: -15px;justify-content: left; margin-bottom: 40px;}
+.edieo-middle-section .edieo-common .box{position: relative; margin-bottom: 20px;margin-left: 15px;width: 18.3%;}
+.edieo-middle-section .edieo-common a{ position: absolute; top:0px; left:0px; width:100%; height:100%; color: #ffffff;}
+.edieo-middle-section .edieo-common a .caption{position: absolute; bottom:0px; left:0px; padding:20px;width:100%}
+.edieo-middle-section .edieo-common a .caption span,.edieo-middle-section .edieo-common a .caption strong{display: block; text-transform: uppercase;line-height: 1; margin:3px;}
+.edieo-middle-section .edieo-common a .caption span{ font-size: 24px;}
+.edieo-middle-section .edieo-common a .caption strong{font-size: 45px; font-weight: 600;}
+.edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 30px;}
+.edieo-middle-section .edieo-common .box .image{     border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); overflow: hidden;}
+#edioSearch{  text-transform: capitalize;
+    display: inline-block;
+    float: right;
+    font-size: 17px;
+    margin-right: 22px;
+    min-width: 315px;}
+    
+//country-eb-series
+.country-eb-series{margin-bottom: 60px;}
+.country-eb-series h2{color:#000000;margin-bottom: 40px;}
+.country-eb-series-content{padding-top: 80px;}
+.country-eb-series h2 > span{font-size: 34px;text-transform: uppercase;color: #333333;}
+.country-eb-series h2 p{font-size: 71px; font-weight: 400;}
+.country-eb-series h2 p strong{font-weight: 800;}
+.country-eb-series-content .edieo-series-action{margin-bottom: 40px;}
+.country-eb-series-content .edieo-series-action .play{font-size: 24px;text-transform: uppercase;margin-right: 10px;} 
+.country-eb-series-content .edieo-series-action .play i{margin-right: 5px;font-size: 10px;vertical-align: top; margin-top: 8px;}
+.country-eb-series-content .edieo-series-action .my-list{background: #ffffff; color: #17baff; font-size: 24px; border-color: #ffffff; box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);}
+.country-eb-series-content .edieo-series-action .my-list i{    font-size: 15px;    margin-right: 5px;   vertical-align: top;   margin-top: 5px;}
+.country-eb-series-content .edieo-series-desc p{margin-bottom: 40px; font-size: 19px;}
+.country-eb-series-content .edieo-series-desc p strong{font-weight: 500;}
+
+//Edieo middle new section css start
+section.edieo-section .container-fluid { padding-left: 0;}
+.edieo-section .atricle-menu{background: #f3f3f3;  padding: 50px 0 50px 55px;}
+.edieo-section .atricle-menu h3 { margin-bottom: 30px; padding-right: 20px; font-size: 30px; font-weight: 400;}
+.edieo-section .atricle-menu ul{    max-height: 400px; overflow-y: scroll;;}
+.edieo-section .atricle-menu ul li a {  padding: 10px 20px; cursor: pointer;  border-radius: 50px 0 0 50px; display: block;color: #333333;font-weight: 400;font-size: 16px;}
+.edieo-section .atricle-menu ul li a:hover,.edieo-section .atricle-menu ul li.activeLink a{background: #ffffff;}
+.edieo-section .aside-section {  padding: 50px 35px 50px 20px;}
+.edieo-section .aside-section h2{font-family: $leagueSpartanBold;margin-bottom: 40px;   
+    position: relative; font-size: 30px;
+    padding-right: 23%;}
+.edieo-section .aside-section h2 a {     float: right;
+    text-transform: capitalize;
+    vertical-align: top;
+    /* padding-left: 80px; */
+    position: absolute;
+    right: 0;
+    top: 0;}
+.edieo-section .career-video { margin-bottom: 40px; padding-bottom: 40px; border-bottom: solid 1px #f1f1f1;}
+.video-thumbnail span.play-icon {position: absolute; border: none; width: 50px; height: auto; opacity: .7; transition: all .2s ease;}
+.video-thumbnail:hover span.play-icon{width:55px; opacity: 1;}
+.video-thumbnail img {width: 100%;transition: all .2s ease;}
+.video-thumbnail { text-align: center;}
+.video-thumbnail .thumb{cursor: pointer;position: relative;}
+.video-thumbnail span.play-icon img{box-shadow: none!important;}
+.edieo-section  .career-list .box{color: #333333;}
+// .edieo-section  .career-list .box .image { height: 300px; overflow: hidden;}
+.edieo-section  .career-list .box .caption{margin-top:10px;font-weight: 400;}
+//home video popup css start
+#dreamVideoPopup .modal-content { background: none; padding: 0;    border: none;}
+#dreamVideoPopup .modal-content .modal-header { border: none; padding: 0; position: absolute; z-index: 1; right: -8px; top: -4px;}
+#dreamVideoPopup .modal-content .modal-body { padding: 0;box-shadow: 0 0 10px #333;}
+#dreamVideoPopup .modal-content .modal-header button.close {padding: 0; background: #ffffff; opacity: 1; width: 30px; height: 30px; border-radius: 50px; box-shadow: 0 0 13px #949494;}
+#dreamVideoPopup.modal.show .modal-dialog { top: 50%; transform: translate(0, -50%);}
+.edieo-section .career-list h4{font-size: 20px;}
+#careerAsideSection .career-list{min-height: 600px;}
+.notDataFound{color: #cccccc;}
+//Edieo middle new section css end
+
+//related suggested university list css start
+#relatedMasterStory{margin:0 20px}
+#relatedMasterStory h3.suggested-heading{font-family: $roboto-family; font-weight: 400; position: relative;z-index: 2; font-size: 22px;}
+#relatedMasterStory h3.suggested-heading span{background: #ffffff;    position: relative;display: inline-block;  z-index: 2;padding-right:10px;}
+#relatedMasterStory h3.suggested-heading:after{position: absolute; top:50%; transform: translateY(-50%); height:1px; background: #70707038;  content: ''; width: 100%; left: 0; z-index: 1;}
+#relatedMasterStory .swiper-container .swiper-slide { width: 23.6%;cursor: initial; border: solid 1px #f1f1f1;padding:20px; transition:all .3s ease}
+#relatedMasterStory .swiper-container .swiper-slide:hover{box-shadow: 3px 3px 6px #00000029;border-radius: 5px;}
+#relatedMasterStory .swiper-container .swiper-slide a.caption { font-size: 14px; font-family: $leagueSpartanBold; margin-top: 10px; position: relative; padding-right:45px; display: inline-block;color: #070707;text-align: left;}
+#relatedMasterStory .swiper-container .swiper-slide a.caption span{position: absolute;  right: 0px; background: #EDEDED; display: inline-block; width: 25px; height: 25px; text-align: center; font-size: 10px;line-height: 27px;border-radius: 50px;margin-top: 0px; top: 0;}
+#relatedMasterStory .swiper-container{padding-bottom: 20px;}
+#relatedMasterStory .swiper-container .swiper-slide a.caption em {
+    font-weight: 400;
+    display: block;
+    font-style: normal; font-family: $roboto-family;
+}
+//related suggested university list css start
+
+.mobile-select-grop{display: none;background: #283679; color: #ffffff; padding: 15px; font-size: 19px!important; border-radius: 4px; cursor: pointer; position: relative;}
+.mobile-select-grop i { position: absolute; right: 15px; font-size: 14px;transition: all 0.4s ease; top:39%; transform: translateY(-50%); transform: rotateZ(-90deg);}
+.mobile-select-grop { background: #283679; color: #ffffff; padding: 15px; font-size: 19px; border-radius: 4px; cursor: pointer; position: relative;}
+.edieo-banner-content p.fontB{font-weight: 400; font-family: $leagueSpartanBold;}
+
+@media(max-width:1650px){
+    .edieo-video,.edieo-thumbnail{min-height:1px;}
+}
+@media(min-width:1201px) and (max-width:1650px){
+    .edio-banner .edieo-banner-content .title{ margin-top:0;}
+    .edieo-banner-content h1{font-size: 50px;line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size: 20px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:50px; padding-bottom: 0px;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:15px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 40px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 25px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size: 20px;}
+    .country-eb-series-content { padding-top: 50px;    }
+    .country-eb-series h2{margin-bottom: 40px;}
+    .country-eb-series-content .edieo-series-action {  margin-bottom: 50px;    }
+    #edioSearch{margin-right:15px}
+   .custom-container .banner-title,.top-schools-content .banner-title{font-size: 25px;}
+}
+@media(min-width:1201px){
+    .edieo-section .sticky-sidebar{width:420px!important}
+}
+@media(max-width:1200px){
+    .edieo-section .career-list .box .image{
+        height: 270px;
+    }
+    .edio-banner .edieo-banner-content .title{ margin-top:0%;}
+    .edieo-banner-content h1{font-size: 50px;line-height: 1; margin-top: 20px;}
+    .edieo-banner-content p{font-size:17px; margin-top: 10px; margin-bottom: 20px;}
+    .edieo-middle-section{padding-top:50px; padding-bottom: 0px;}
+    .edieo-middle-section .edieo-common .box{width: 18.4%;}
+    .edieo-middle-section .edieo-common .box .image img{width:100%}
+    .edieo-middle-section .edieo-common a .caption{padding:10px;}
+    .edieo-middle-section .edieo-common a .caption strong{font-size: 30px;}
+    .edieo-middle-section .edieo-common a .caption.font-34 strong{font-size: 20px;}
+    .edieo-middle-section .edieo-common a .caption span{ font-size:15px;}
+    .country-eb-series-content { padding-top: 10px;    }
+    .country-eb-series h2{margin-bottom: 40px;}
+    .country-eb-series-content .edieo-series-action {  margin-bottom: 50px;    } 
+    .country-eb-series h2 > span{font-size: 20px;}
+    .country-eb-series h2 p{font-size: 40px;}
+    .country-eb-series-content .edieo-series-desc p{    font-size: 17px;margin-bottom: 20px;}
+    .edieo-middle-section h2.hading-title{font-size: 30px;}
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 35px;}
+    #edioSearch{margin-right:15px;margin-bottom: 20px;}
+
+    #country-institution-video .video-thumbnail .thumb > img{
+        height: auto;
+    }
+    .custom-container .banner-title,.top-schools-content .banner-title{font-size: 25px;}
+}
+@media(max-width:1199px){
+    .edieo-middle-section .edieo-common .box{width: 18%;}
+    
+}
+@media(min-width:1025px){
+    .edieo-section .sticky-sidebar {
+       
+position: absolute;
+top: 0;
+margin-top:0;
+width: 380px;
+
+z-index: 1;
+    }
+    .edieo-section .sticky-class {
+        position: fixed;
+        top: 100px;
+        margin-top:0px;
+        padding-top:120px;
+    
+        
+    }
+    .edieo-section .sticky-class.remove-sticky {
+        // transition: all 0s;
+        position: absolute;
+        margin-top:0px;
+    
+    }
+    .edieo-section .atricle-menu.mobile{display: none;}
+    .edieo-section .atricle-menu.desktop{display: block;}
+}
+@media(max-width:1024px){
+
+    .edieo-section .atricle-menu.mobile{display:block;}
+    .edieo-section .atricle-menu.desktop{display:none;}
+}
+@media(max-width:992px){
+    .edieo-section .career-list .box .image{
+        height: 220px;
+    }
+    .edieo-section .atricle-menu h3{font-size: 20px; font-weight: 500;}
+    .edieo-section .atricle-menu{padding-left:30px}
+    .edieo-section .atricle-menu ul li a{font-size: 15px;}
+    .edieo-section .aside-section h2{font-size: 20px;}
+    .custom-container .banner-title, .top-schools-content .banner-title{font-size: 22px;}
+}
+@media(min-width:768px) and (max-width:992px){
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content h1{font-size: 30px; font-weight: 500;}
+    .edieo-banner-content p{font-size: 14px;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{font-size: 18px;}
+    .edieo-middle-section .edieo-common .box{    width: 30.3%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left: -20px;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .country-eb-series-content .edieo-series-action .my-list,.country-eb-series-content .edieo-series-action .play{font-size: 15px; }
+    #edioSearch {  margin-right: 2px;  }
+
+    #country-institution-video .video-carousel .swiper-container .swiper-slide { width: 29%;    }
+     #country-institution-video{ margin-top: -110px;}
+}
+@media(max-width:767px){
+
+    #relatedMasterStory .swiper-container .swiper-slide{width:50%;}
+    .edieo-section .atricle-menu{padding:20px 10px;}
+    .edieo-section .career-list .box .image{height:200px}
+    .video-thumbnail .thumb{margin-bottom: 20px;}
+    .edieo-section .atricle-menu h3{margin-bottom: 0px;}
+    .mobile-select-grop{    display: block;    margin-bottom: 10px;padding-right:35px; width:100%;}
+    #careerMenu {position: absolute;  width: 94%; display: none;z-index: 1000;background: #283679;
+        padding: 25px 0;
+        border-radius: 4px;}
+    #careerMenu.show {   display: block; max-height: 300px;  overflow-y: scroll;width: 93%;
+    margin-top: 10px;}
+    .mobile-select-grop.active i{transform: rotateZ(0deg);}
+    
+#careerMenu li a.nav-link.active { background: none;}
+    #careerMenu li a { color: #ffffff; padding-left: 50px; display: block;padding-right:15px;}
+    #careerMenu li.activeLink a{    color: #293679;}
+    #careerMenu li a span{font-size: 15px; margin-left: 20px; margin-top: 5px;}
+    .edieo-section .mobile-none{display: none;}
+
+    .edio-banner .edieo-banner-content .title .eb, .edio-banner .edieo-banner-content .title .series{font-size: 20px;}
+    .edieo-banner-content p{font-size: 17px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 80%;}
+    .edieo-banner-action .play,.edieo-banner-action .my-list{font-size: 13px;}
+    .edieo-middle-section .edieo-common .box{    width: 46%; margin-bottom: 20px; margin-left: 20px;}
+    .edieo-middle-section .edieo-common{margin-bottom: 40px;justify-content: left;  margin-left: -20px;}
+    .theme-three .custom-primary-btn{    padding: 5px 10px;}
+    .country-eb-series-content .edieo-series-action .my-list,.country-eb-series-content .edieo-series-action .play{font-size: 15px; }
+    .edieo-video, .edieo-thumbnail { height: auto;overflow: hidden;padding-top: 15px; }
+    .edieo-thumbnail img{height:100%;max-width:inherit}
+    .edieo-banner-content h1 { font-size: 25px;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+    .edieo-middle-section .edieo-common .box{width:45%;}
+    .country-eb-series-content{text-align: left;}
+    .country-eb-series-content .edieo-series-action,.country-eb-series h2{margin-bottom: 20px;}
+    .edio-banner .edieo-banner-content .title {  margin-top: -2%;   }
+    .edieo-banner-action .my-list i{    margin-top: 8px;font-size: 11px;}
+    .edieo-middle-section h2.hading-title {   font-size: 30px;   display: block;   text-align: left;  width: 100%;  }
+    #edioSearch { margin-right: 10px; margin-bottom: 19px; }
+    
+    #country-institution-video {
+        margin-top: 0;
+    }
+    #country-institution-video .video-carousel .swiper-container{    padding-left: 0;
+            padding-bottom: 0;}
+            .upcoming-trending.pt-150.pb-150 {
+                width: 100%;
+                margin: auto;
+                padding: 0 15px;
+            }
+    #country-institution-video .video-carousel{width:100%;}
+    #country-institution-video .video-carousel .swiper-container .swiper-slide{width:33%;}
+    #country-institution-video .video-carousel .swiper-container .swiper-button-next-blogs{    left: 100px;}
+    #country-institution-video .video-carousel .swiper-container .swiper-button-prev-blogs{    left: 36px;}
+
+    .custom-container .container-fluid.pl-0.pr-0,div#homeTopSection {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .custom-container .home-banner-content{padding: 0px!important;}
+}
+@media(max-width:480px){
+    .edio-banner{display: none;}
+    #relatedMasterStory .swiper-container .swiper-slide{width:100% }
+    .edieo-middle-section .edieo-common .box{    width: 44%;}
+    .edieo-middle-section h2.hading-title{text-align: center;}
+    .edieo-middle-section .edieo-common a .caption{    padding: 20px;text-align: center;}
+    .country-eb-series-content { text-align: center; margin: 30px 0; }
+    .embed-responsive{height:100%;}
+    .edio-banner .edieo-banner-content{z-index: 900;}
+    .edieo-banner-content p br{display: none;}
+    .edieo-video video{height:100%;}
+    .edio-banner .edieo-banner-content{margin-top:0;}
+    .edio-banner .edieo-banner-content .title{display: none;}
+    .edieo-banner-action .play, .edieo-banner-action .my-list{padding: 1px 10px;}
+    #edioSearch{ margin-right: 0; margin-top: 20px;  margin-bottom: 20px; margin-left: auto; float: none; float: left;  width: 97%; min-width:1px; }
+    #dreamVideoPopup .modal-content .modal-header,#clusterVideoPopup .modal-content .modal-header {
+        right: 22px;
+        top: -20px;
+    }
+    .edieo-section .aside-section h2{padding-right:0px}
+    .edieo-section .aside-section h2 a{float: none;margin-top:10px; position: static;    display: block!important;
+        width: 40%;}
+    .edieo-section .aside-section{padding:30px;}
+
+    #country-institution-video .video-carousel .swiper-container{    padding-left: 0px;
+        padding-bottom: 20px;
+        padding-right: 0px;}
+
+    #country-institution-video .video-carousel .swiper-container .swiper-slide {  width: 47%;  }
+}
+@media(max-width:375px){
+    .edieo-section .career-list .box .image{height: 190px;}
+}
+@media(max-width:320px){
+    .edieo-banner-content h1{    font-size: 20px;    margin-top: 0;    margin-bottom: 0;}
+    .edieo-banner-content p{    font-size: 13px;  margin-top: 5px; margin-bottom: 10px;}
+    .edio-banner .edieo-banner-content{margin-top:0px;}
+    .edieo-middle-section .edieo-common .box{width:43%;}
+    #edioSearch{width:100%;}
+    #careerMenu{width:91%;}
+    .edieo-section .aside-section h2{font-size: 18px;}
+    .edieo-section .aside-section h2 a{width:70%;text-align: center;}
+    .edieo-section .career-list .box .caption{ font-size: 14px; }
+    .edieo-section .career-list .box .image{height: 140px;}
+
+    #country-institution-video .video-carousel .swiper-container .swiper-slide{width:100%;margin:0px;}
+
+    #country-institution-video .video-carousel .swiper-container{ padding-left: 0; padding-bottom: 0;}
+
+    .custom-container .container-fluid.pl-0 {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .custom-container .home-banner-content{padding: 0px!important;}
+    .custom-container .banner-title, .top-schools-content .banner-title{font-size: 25px;}
+}
+
+//home top section css end
+
+//country institution css start
+#country-institution-video .video-carousel{position: static;margin-left:inherit;}
+#country-institution-video .video-carousel .swiper-container .swiper-slide{width:20%;
+    margin: 0 15px;}
+#country-institution-video .video-carousel .swiper-container{padding-left:20px; padding-bottom: 20px;    padding-top: 70px;}
+#country-institution-video .video-thumbnail img {box-shadow: 3px 3px 18px #00000026;;}
+#country-institution-video { margin-top: -60px;}
+
+#country-institution-video h2.hading-title {
+    color: #333333;
+    text-transform: uppercase;
+    margin-top: 55px !important;
+    font-size: 40px;
+    margin-left: 10px !important;
+}
+
+// For tab view
+@media(min-width:1401px) and (max-width:1600px){
+    .custom-container .banner-title,.top-schools-content .banner-title{ font-size: 29px; }
+}
+
+
+
+/*custom css start*/
+@media(min-width:768px) {
+  #country-institution-video .swiper-slide.career-slide.ng-star-inserted {
+    width: 32% !important;
+    margin: 8px !important;
+  }
+}
+
+@media(min-width:520px) and (max-width:768px){
+   #country-institution-video .swiper-slide.career-slide.ng-star-inserted {
+    width: 45% !important;
+    margin: 9px !important;
+  }
+}
+
+@media (max-width:520px){
+   #country-institution-video .swiper-slide.career-slide.ng-star-inserted {
+    width: 98% !important;
+    margin: 9px !important;
+  }
+}
+
+
+#country-institution-video .favroite-icon {
+    display: none;
+}
+#country-institution-video img {
+    height: 220px;
+    object-fit: cover;
+}
+#country-institution-video .play-icon img {
+    width: 75px;
+    height: 75px;
+}
+#country-institution-video h3 {
+    font-size: 20px;
+    margin-top: 16px;
+}
+#dreamuniVideoPopup .modal-open .modal {
+    background: transparent;
+}
+#dreamuniVideoPopup .modal-body {
+    padding: 0px;
+    box-shadow: 0 0 10px #333;
+}
+#dreamuniVideoPopup .modal-content { 
+    border:none;
+}
+#dreamuniVideoPopup .modal-header {
+    padding:0px;
+    height: 0;
+}
+#dreamuniVideoPopup .modal-header .close {
+    background: white;
+    width: 40px;
+    height: 40px;
+    line-height: 10px;
+    border-radius: 50%;
+    z-index: 999;
+    opacity: 100%;
+    padding: 0px;
+}
+#dreamuniVideoPopup .modal-header .close:hover {
+    background:white;
+    opacity: 100%;
+}
+#country-institution-video .swiper-container {
+    padding-top: 0px !important;
+}
+.lock_box {
+    width: 50px;
+    float: right;
+    position: absolute;
+    right: -6px;
+    z-index: 99;
+}
+.lock {
+    width: 45px !important;
+}
+.lock_box .fa {
+    position: absolute;
+    right: 11px;
+    font-size: 21px;
+    top: 4px;
+    color: #153b93;
+}
+.lock_box img {
+    border-radius: 0px 3px 0px 0px;
+}
+/*custom css ent*/
+
+

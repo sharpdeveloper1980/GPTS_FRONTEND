@@ -1,0 +1,177 @@
+/* new stylingo */
+
+.user-sign-back {
+  background-image: url(../../../assets/images/theme-three/instiBanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-height {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  .row {
+    align-items: flex-end;
+  }
+}
+
+.font-size30 {
+  font-size: 30px;
+}
+
+.margin-bottom25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom99 {
+  margin-bottom: 99px;
+}
+
+.margin-bottom72 {
+  margin-bottom: 72px;
+}
+
+.box-shadow {
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px 0 rgba(0, 0, 0, 0.1);
+  border:none;
+  background-color:transparent;
+}
+
+.headingLeft {
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 37px;
+  font-size: 30px;
+  /* margin-top: 55px; */
+  /* text-align: center; */
+}
+
+.margin-bottom84 {
+  margin-bottom: 70px;
+}
+
+.regiPara {
+  font-size: 16px;
+  margin-bottom: 33px;
+}
+
+.rightMarginLabel {
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+.border-bottom-option {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.form-control.removeBorderRadius {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 0;
+}
+
+input[type="number"] {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.white-Back-round {
+  border-radius: 2px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  padding: 40px;
+  padding-top: 0;
+}
+
+label {
+  color: #333333;
+  font-size: 14px;
+}
+
+/* new stylingo ends */
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 9px !important;
+}
+
+.registrationBtn {
+  border-radius: 5px;
+  background-color: #17baff;
+  border: solid 1px #17baff;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.rightMarginLabel {
+  margin-right: 6px;
+}
+
+.removePadding {
+  padding: 0px;
+}
+
+.RegisHead {
+  font-size: 1.2em;
+  color: #546170;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.greyBackground {
+  background: #f7f7f7;
+}
+
+.headingThreeReg {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.paraAdvantageOption {
+  font-size: 0.85em;
+  padding: 1em;
+}
+
+/*Added by Sucheta*/
+
+.static-caption {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.static-caption span {
+  background: #f7941d;
+  font-weight: 700;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.blue-bg-box {
+  background: #2853b5;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.blue-bg-box img {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 0px;
+  }
+}

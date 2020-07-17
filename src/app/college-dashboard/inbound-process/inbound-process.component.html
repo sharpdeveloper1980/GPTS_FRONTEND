@@ -1,0 +1,94 @@
+<!-- app header -->
+<app-header></app-header>
+
+<!-- whitebox accordion -->
+<div class="container-fluid whiteBox">
+    <!-- header -->
+    <div class="row headingSpacing">
+        <div class="col-6">
+            <h3 class="boxHeading">Inbound Applications</h3>
+        </div>
+
+        <div class="col-6">
+            <h3 class="boxHeading text-right">125 Applications</h3>
+        </div>
+    </div>
+
+
+    <!-- accordion -->
+    <div class="row">
+       
+        <div class="col-12">
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                <ngb-panel title="23 January, 2019(4 Applications)" class="customTitle">
+                    <ng-template ngbPanelContent>
+                        <div class="d-flex">
+                            <div *ngFor="let cardItem of CardList; i as index" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-sm-12 col-12">
+                                <div class="borderCardDashboard text-center">
+                                    <img src="../../../assets/images/common/bethel-logo-vertical-color.png" class="img-fluid logoDash"
+                                        alt="image">
+                                    <a href="#" class="positionEllipsis"><i class="fa fa-ellipsis-v"></i></a>
+                                    <!-- name of student -->
+
+                                    <p class="dashUniName">Username</p>
+
+                                    <p class="dashDivi">IELTS: 7.2 | CAT</p>
+                                    <p class="dashStudentEmail">test@test.com</p>
+                                    <p class="dashStudentNumber">+91-999999999</p>
+                                    <p class="paraStudent text-center">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Donec at magna vitae
+                                        mi eleifend condimentum...</p>
+
+                                    <!-- click btns -->
+                                    <div class="col-12 remove-padding d-flex borderView">
+                                        <div class="col-6 text-center">
+                                            <a href="#" class="viewGreen customView">Shortlist</a>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <a href="#" class="viewMore customView" (click)="openVerticallyCentered(content)">More</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel title="23 January, 2019(4 Applications)" class="customTitle">
+                   
+                    <ng-template ngbPanelContent>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                        3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                        anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                        vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                        heard of them accusamus
+                        labore sustainable VHS.
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel title="23 January, 2019(4 Applications)" class="customTitle">
+                    <ng-template ngbPanelContent>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                        3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                        anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                        vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                        heard of them accusamus
+                        labore sustainable VHS.
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </div>
+    </div>
+
+
+</div>

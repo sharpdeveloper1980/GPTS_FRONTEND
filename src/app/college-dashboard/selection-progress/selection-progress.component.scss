@@ -1,0 +1,87 @@
+.orangeGradient{
+    background-image: linear-gradient(to right, #f66c1c , #fa9839);
+}
+
+.blueGradient{
+    background-image: linear-gradient(to right, #036eda , #0faff1);
+}
+
+.greenGradient{
+    background-image: linear-gradient(to right, #14a599 , #33dd84);
+}
+
+.violetGradient{
+    background-image: linear-gradient(to right, #a704fd , #b957fe);
+}
+
+.pinkGradient{
+    background-image: linear-gradient(to right, #ff6893 , #fe81c2);
+}
+
+.customImageSelection{
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
+.selectionUser{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 1em;
+    text-rendering: geometricPrecision;
+    margin-bottom: 0;
+}
+
+.selectionExam{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 0.8em;
+    text-rendering: geometricPrecision;
+}
+
+.emailSelection{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 0.8em;
+    text-rendering: geometricPrecision;
+    margin-bottom: 0;
+}
+
+.greenSelection{
+    font-family: 'Open Sans', sans-serif;
+    color: #50b945;
+    font-size: 1em;
+    text-rendering: geometricPrecision;
+    
+    text-align: center;
+    display: block;
+}
+
+.gBorder{
+    border-right: 1px solid #cccccc;
+}
+
+.redRejection{
+    font-family: 'Open Sans', sans-serif;
+    color: #f48181;
+    font-size: 1em;
+    text-rendering: geometricPrecision;
+    
+    text-align: center;
+    display: block;
+}
+
+.twoOptionBorder{
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.rightPos{
+    
+        position: absolute;
+        right: 10px;
+        color: #546170;
+ 
+}

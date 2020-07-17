@@ -1,0 +1,658 @@
+/* new stylingo */
+
+.press-media-back {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.font-size20 {
+    font-size: 20px;
+}
+
+.margin-top69 {
+    margin-top: 20px;
+}
+
+.margin-bottom48 {
+    margin-bottom: 0px;
+}
+
+.blue-box {
+    border-radius: 3px;
+    background-color: #17baff;
+    min-height: 249px;
+    padding: 20px;
+}
+
+.para-white-one {
+    font-size: 16px;
+    padding-top: 35px;
+}
+
+.footer-text-width {
+    max-width: 740px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.back.back-sushma-one {
+    background-image: url('../../../assets/images/theme-three/sushma.jpg');
+    background-repeat: no-repeat;
+
+    p {
+        font-size: 25px;
+    }
+}
+
+.back.back-sushma-two {
+    background-image: url('../../../assets/images/theme-three/sushma.jpg');
+    background-repeat: no-repeat;
+
+    p {
+        font-size: 25px;
+    }
+}
+
+.back.back-sushma-three {
+    background-image: url('../../../assets/images/theme-three/4box-press.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new stylingo ends */
+
+/* mtero ui */
+
+@media (min-width: 768px) {
+
+    p.font-size20.font-color33,
+    p.text-small.font-color33 {
+        color: #333333 !important;
+    }
+
+    p.text-small.font-color33 {
+        font-size: 14px;
+    }
+
+    .faq-boxes-container {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        padding-top: 10px;
+    }
+
+    .metro-faq-box-container {
+        margin-bottom: 10px;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        min-height: 249px !important;
+        float: left;
+        overflow: hidden;
+    }
+
+    .metro-faq-box-container .metro-box-inner {
+        background-color: #0000008f;
+        min-height: 249px;
+        /* height: 100%; */
+        transition: all 0.5s ease;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+    }
+
+    .metro-box-xl.metro-faq-box-container .metro-box-inner {
+        background-position: center;
+    }
+
+    .metro-faq-box-container a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .metro-faq-box-container a .metro-box-inner span {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -20px;
+        top: -20px;
+        border-radius: 50%;
+        transform: scale(0);
+    }
+
+    .metro-faq-box-container a .metro-box-inner span.circle1 {
+        background: rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .metro-faq-box-container a .metro-box-inner span.circle2 {
+        background: rgba(255, 255, 255, 0.4);
+        transition: all 0.5s ease;
+    }
+
+    .metro-faq-box-container a:hover .metro-box-inner span {
+        transform: scale(70);
+    }
+
+    .metro-faq-box-container a:hover {
+        color: #111;
+    }
+
+    .question-container {
+        display: table;
+        width: calc(100% - 10px);
+        min-height: 249px;
+        padding: 40px;
+        position: absolute;
+    }
+
+    .metro-box-xl .question-container {
+        min-height: 310px;
+    }
+
+    .question-container p {
+        display: block;
+        vertical-align: bottom;
+        text-align: left;
+        line-height: 23px;
+        margin-bottom: 20px;
+    }
+
+    .faq-boxes-container .modal .modal-header span .fa {
+        font-size: 35px;
+        position: absolute;
+        margin-top: -6px;
+        margin-left: -3px;
+    }
+
+    .faq-boxes-container .modal {
+        background: -webkit-linear-gradient(-45deg, #17e0cf91 0%, #9f23f780 100%);
+    }
+
+    .faq-boxes-container .modal .modal-body h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .faq-boxes-container .modal .modal-body p {
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .faq-boxes-container .modal .modal-footer button {
+        font-size: 14px;
+        padding: 3px 35px;
+    }
+
+    /* flip animation */
+
+    /* entire container, keeps perspective */
+    .flip-container {
+        perspective: 1000px;
+    }
+
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container,
+    .front,
+    .back {
+        width: 100%;
+        /* height: 480px; */
+    }
+
+    /* flip speed goes here */
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+
+        position: relative;
+    }
+
+    /* hide back of pane during swap */
+    .front,
+    .back {
+        backface-visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* front pane, placed above back */
+    .front {
+        z-index: 2;
+        /* for firefox 31 */
+        transform: rotateY(0deg);
+    }
+
+    .front p {
+        color: #fff;
+        font-weight: 400;
+
+
+    }
+
+    p.font-colo33 {
+        font-color: #333333;
+    }
+
+
+    /* back, initially hidden pane */
+    .back {
+        transform: rotateY(180deg);
+        background: #484848;
+        padding: 15px;
+        min-height: 249px;
+    }
+
+    .back p {
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .back::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .back::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background: rgba(17, 17, 17, 0.22);
+    }
+
+    .back::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        background: -webkit-linear-gradient(-90deg, #17e0cf 0%, #9f23f7 100%);
+    }
+
+    .question-container {
+        width: 100%;
+    }
+
+    .mobile-show-icon {
+        display: none;
+    }
+
+    .question-container .fa {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-lg-10.offset-lg-1 {
+        padding: 15px;
+    }
+
+    .header-box {
+        min-height: 150px;
+    }
+
+    .faq-boxes-container {
+        background: transparent;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 0px;
+    }
+
+    .metro-faq-box-container {
+        padding: 0px;
+        margin-bottom: 15px;
+    }
+
+    .bottom-space-fix.metro-faq-box-container {
+        position: relative !important;
+    }
+
+    .question-container {
+        width: calc(100%);
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        line-height: 23px;
+        /* height: 100px; */
+        padding: 40px;
+    }
+
+    .question-container p {
+        margin-bottom: 0px;
+    }
+
+    .metro-box-inner.front {
+        // background-image: none !important;
+    }
+
+    .header-box .metro-box-inner {
+        min-height: 249px;
+    }
+
+    .header-box .question-container img {
+        width: 150px;
+        float: none;
+        margin: auto;
+    }
+
+    .metro-faq-box-container .back {
+        background-color: #d8d8d8;
+    }
+
+    .metro-faq-box-container .back p {
+        margin-bottom: 0px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .mobile-show-icon {
+        display: block;
+        width: 25px;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .question-container .fa {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 20px;
+        transition: all 0.5s ease;
+    }
+
+    .flipper[aria-expanded="true"] .question-container .fa {
+        transform: rotate(180deg);
+    }
+
+    /* accordian */
+
+    .metro-box-inner.front {
+        color: rgba(0, 0, 0, 0.87);
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        min-height: 249px;
+    }
+
+    .back {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+    }
+
+    .back.show {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+
+
+
+/* metro ui ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gliinstituBanner {
+    background-image: url(../../../assets/images/static/press-n-media.jpg);
+    background-position: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-size: cover;
+}
+
+.gliinstituHead {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 3.7em;
+    letter-spacing: 0.8px;
+}
+
+.pGli {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 13%;
+    letter-spacing: 0.7px;
+}
+
+
+.featuredBgOne {
+    background: url(../../../assets/images/static/pattern.jpg);
+    background-size: contain;
+    background-position-y: 0em;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.featureHeading {
+    font-weight: 400;
+    color: #343434;
+    font-size: 35px;
+    padding-top: 2em;
+    padding-bottom: 7%;
+
+    span.orange {
+        background: #f4941c;
+        color: white;
+        font-weight: 600;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+.fParaOne {
+    font-weight: 600;
+    font-size: 16px;
+    color: #343434;
+    line-height: 29px;
+}
+
+.fParaTwo {
+    font-weight: 400;
+    font-size: 16px;
+    color: #343434;
+    margin-bottom: 5em;
+    line-height: 29px;
+}
+
+.cardDate {
+    color: #343434;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 100;
+
+}
+
+.card-title {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    font-size: 12px;
+    color: #343434;
+    font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsBlue {
+    background: #2853b5;
+    border-radius: 0;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.card {
+    border: none;
+    border-top: 1px solid #ececec;
+    box-shadow: 5px 7px 15px -17px black;
+    border-radius: 0;
+    margin-bottom: 2em;
+}
+
+.bluefont {
+    color: #2853b5;
+}
+
+/* == my kungfu == */
+
+
+@media(max-width: 1199px) {
+    .font-size20 {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 991px) {
+    .font-size20 {
+        font-size: 17px;
+    }
+}
+
+
+
+
+@media(max-width: 768px) {
+    .gliinstituHead {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 2.7em;
+        letter-spacing: 0.8px;
+        padding-top: 45px;
+    }
+
+    .font-size20 {
+        font-size: 16px;
+    }
+
+    .question-container p.font-size20.font-color-white {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .question-container p.font-size20.font-color33 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+}

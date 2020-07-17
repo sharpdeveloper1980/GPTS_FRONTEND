@@ -1,0 +1,112 @@
+.whiteBox{
+    background-color: white;
+    padding: 25px;
+    box-shadow: 1px 2px 27px -10px black;
+    transition: all 0.5s ease-in-out;
+}
+
+.whiteBox:hover{
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.searchText{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 13px;
+}
+
+.searchBtn{
+    background: #62e2ac;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: white;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    width: 165px;
+}
+
+.customForm-Control{
+    background: #f8f9f9;
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 13px;
+    border-radius: 0px;
+}
+
+.removePadding{
+    padding: 0px;
+}
+
+.whiteBoxPosition{
+    margin-top: -4em;
+}
+
+.studentCardHeading{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 18px;
+    text-rendering: geometricPrecision;
+    margin-bottom: 1em;
+}
+
+.studentCardText{
+    font-family: 'Open Sans', sans-serif;
+    color: #546170;
+    font-size: 13px;
+    text-rendering: geometricPrecision;
+    line-height: 20px;
+    margin-bottom: 3em;
+}
+
+.blueHollowBtn{
+    color: #328bf1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 150px;
+    padding: 9px 20px;
+    border-radius: 4px;
+    border: 1px solid #328bf1;
+}
+
+.blueHollowBtn:hover{
+    color: #328bf1;
+    
+}
+
+.iconStudent{
+    width: 150px;
+    image-rendering: auto;
+}
+
+.cardWhite{
+    background: white;
+    padding: 1em;
+    box-shadow: 1px 2px 29px -10px black;
+    transition: all 0.5s ease-in-out;
+    width: 300px;
+}
+
+.cardWhite:hover{
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.cardPosition{
+    // margin-bottom: 9em;
+    margin-top: 3em;
+}
+
+.posterHead{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: white;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top: 140px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,195 @@
+
+$leagueSpartanBold:'League Spartan Bold';
+$roboto-family:'Roboto', sans-serif;
+//global css
+.pt-60{padding-top: 100px;}
+.pb-60{padding-bottom: 100px;}
+.mb-30{margin-bottom: 30px;}
+.mb-60{margin-bottom: 60px;}
+.pt-100{padding-top: 100px;}
+.pb-100{padding-bottom: 100px;}
+.pb-80{padding-bottom: 80px;}
+.pt-80{padding-top: 80px;}
+.pb-100{padding-bottom: 100px;}
+.pt-100{padding-top: 100px;}
+.pb-120{padding-bottom: 120px;}
+.pt-120{padding-top: 120px;}
+.pb-150{padding-bottom: 150px;}
+.pt-150{padding-top: 150px;}
+.heading-title{font-family: $leagueSpartanBold;color: #0044C1;position: relative;}
+.heading-title:before{ content: ''; height: 3px; background: #ececec; width: 100px;  top: 0px; margin-top: -30px; position: absolute;}
+
+//banner section
+#summer-banner{ background:url(../../../assets/images/summer-school/summer-hero.jpg) center bottom no-repeat;
+    min-height: 1100px; background-size: cover; position: relative;}
+#summer-banner .banner-content{
+    position: absolute;  top:50%; transform: translateY(-50%); background: #FEC94B; padding: 40px;
+    width: 450px; left: 57px;}
+#summer-banner .banner-content h1{color: #1C4796; font-family: $leagueSpartanBold; font-size: 35px;}
+#summer-banner .banner-content  p{color: #4A4A4A;font-size: 16px;
+    line-height: 1.4;}
+#summer-banner .banner-content  a.register{background: #ffffff!important; font-size: 14px; color: #000001!important; border-color: #ffffff!important;text-align: center;}
+#summer-banner .banner-content span.detail { position: absolute; bottom: -21px; right: 50px; background: #9DDDE9; width: 50px;
+    height: 50px; border-radius: 50%; text-align: center; line-height: 50px;}
+
+    //course section
+    .course-box{
+        // min-height: 406px;
+        min-height: 326px;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        
+    }
+    .course-box .couse-content.hover{
+        position: absolute;
+        bottom:-100%;
+        left:0px; color: #ffffff;
+        width:100%;
+        padding: 20px; z-index: 2;
+        
+        opacity: 0;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+    .course-box .couse-content:not(.hover){
+        position: absolute;
+        left:0px; color: #ffffff;
+        bottom:0px;
+        width:100%;
+        padding: 20px; z-index: 2;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+
+  #courseList   h3{  font-size: 17px; word-break: break-all; line-height: 28px; font-family: $roboto-family; font-weight: 600; letter-spacing: 0px;
+opacity: 1; text-transform: uppercase;   }
+  #courseList   a.view-course{ background: #FEC94B!important; border-color: #FEC94B!important; color: #000001!important;transition: all .3s .3s ease-in-out;
+        display: none!important;}
+  #courseList  p{ font-family: $roboto-family;
+         line-height: 24px; font-weight: 400;  letter-spacing: 0px;transition: all .3s .3s ease-in-out;}
+
+.course-box .img img.default{opacity: 1; position: relative; display: block;    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;}
+    .course-box:hover .img img.default {
+        -webkit-transform: scale(1.1,1.1);
+        -moz-transform: scale(1.1,1.1);
+        -o-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+    }
+.course-box .img img.hover{opacity: 0; display: none; transition: all .3s ease-in-out;position: absolute; left:0px; top:0px; width:100%; height: 110%;z-index: 2;}
+// .course-box .img img.default{z-index: 1; opacity: 1;}
+// .course-box:hover .img img.default{opacity: 0;}
+// .course-box:hover .img img.hover{opacity: 1;}
+// .course-box:hover .img{margin-top:-20px;}
+// .course-box:hover .couse-content{bottom: 20px;}
+.course-box:hover .couse-content.hover{ opacity: 1; bottom: 0px;}
+.course-box:hover .couse-content:not(.hover){opacity: 0;}
+
+//outcome css start
+#experienceOutCome p{color: #848484;font-family:$roboto-family;
+    line-height: 1.4;}
+    #experienceOutCome  a.register{background: #FEC94B!important; font-size: 14px; color: #000001!important; border-color: #FEC94B!important;text-align: center;}
+#experienceOutCome .list{margin-bottom: 15px; margin-top: 15px; text-align: center;}
+#experienceOutCome .list .icon{    text-align: center;  border: solid 3px #2DB9C2;  width: 133px;
+    margin: auto;  height: 127px; border-radius: 17px; margin-bottom: 10px; line-height: 115px;}
+    
+//outcome css end
+
+//roychand popup css start
+#roychandScholarshipReg .modal-dialog{min-width: 1px;}
+#roychandScholarshipReg .login-dots-reg{padding-right: 30px; padding-left:30px; }
+.login-dots-reg{ content: "";width: 100%;height: 100%; position: absolute;top: 0%; right: 0;}
+.modal-header { display: flex; align-items: flex-start;justify-content: space-between; padding: 0;border-bottom: 0px solid #dee2e6; border-top-left-radius: 0rem;border-top-right-radius: 0rem;}
+.auth-modal .close{background: none; padding: 1px; float: right; opacity: 1; color: #333333; right: 20px; position: absolute; z-index: 9; width: auto; height: auto; border-radius: 50%;
+    top: 16px;box-shadow: none;}
+
+.sigin-Head-reg { color: #000000; font-size: 25px; margin-bottom: 20px; font-weight: 300; position: relative; z-index: 1;padding-top: 20px; text-align: left;font-family: 'League Spartan Bold';}
+.login-dots-reg {position: relative;padding-right: 70px; padding-left: 70px;}
+.custom-primary-btn { border-radius: 50px;background-color: #FEC94B;border: 1px solid #FEC94B;padding: 8px 20px;color: #000001;font-size: 17px;min-width: 150px;font-weight: 400;line-height: 24px;
+    transition: .4s ease-in-out;margin-bottom: 10px;}
+.custom-form-control {background: 0 0;border: none;border-bottom: 1px solid #e2e2e2;}
+.form-control {height: 45px;font-size: 0.95rem;    padding-left: 0;
+    padding-right: 0;}
+.modal-body{padding-bottom: 2rem;}
+ngb-datepicker-navigation-select > .custom-select{margin-right:5px;}
+.roychandScholarshipReg .form-check label a,.roychandScholarshipReg .form-check label{ color: #495057; font-size: 14px;}
+.roychandScholarshipReg .form-check input[type="checkbox"]{vertical-align: middle;}
+.roychandScholarshipReg .form-group select{cursor: pointer;}
+.banner-content p.note {font-weight: normal;font-family: "Open Sans", sans-serif;font-size: 15px; text-shadow: 0 1px 3px #000;}
+
+//roychand popup css end
+#greatChallengeNotify .modal-dialog {min-width: 1px;}
+#greatChallengeNotify .login-dots-reg { padding-right: 30px;padding-left: 30px;}
+// .login-dots-reg {content: ""; background-image: url(../../../assets/images/theme-three/login-dots.jpg); background-repeat: no-repeat; background-position: center;background-size: cover;width: 100%;height: 100%;position: relative;top: 0%;right: 0;}
+.sigin-Head-reg img { width: 60px;}
+
+
+    @media(max-width:1600px){
+        #summer-banner{ min-height: 650px; }
+        
+    }
+    @media(max-width:1200px){
+        .course-box{  min-height:287px; }
+        #summer-banner .banner-content{width:420px}
+    }
+    @media(max-width:1024px){
+        .course-box{  min-height: 223px; }
+        .course-box .couse-content h3{font-size: 17px;
+            line-height: 21px;    word-break: break-all;  }
+        #summer-banner .banner-content{width:375px}
+        #summer-banner .banner-content h1{
+            font-size: 30px;
+        }
+    }
+
+    @media(max-width:991px){
+        .course-box {  min-height: 390px;  }
+        #experienceOutCome .list .icon{
+            line-height: 104px;
+            width: 121px;
+            height: 115px;
+        }
+    }
+    @media(max-width:767px){
+        #summer-banner {
+            min-height: 650px;
+            background-position: 0 0;
+        }
+        .course-box{
+            min-height: 460px;
+        }
+        #experienceOutCome .col-lg-6.col-md-6 {
+            margin-bottom: 40px;
+        }
+    }
+    @media(max-width:480px){
+        #summer-banner .banner-content{left:50px;text-align: center;}
+        .course-box {  min-height: 490px;   width: 350px;  margin: auto;   }
+        .heading-title{text-align: center;}
+        .heading-title:before{left:50%;transform: translateX(-50%);}
+        div#experienceOutCome {   text-align: center;  }
+        .heading-title{font-size: 30px;}
+    }
+    @media(max-width:440px){
+        #summer-banner .banner-content{left:20px;}
+    }
+    @media(max-width:375px){
+        #summer-banner .banner-content{ width:90%;}
+        .course-box { min-height: 430px;  width: 300px;  margin: auto; }
+    }
+    @media(max-width:320px){
+        #summer-banner .banner-content h1 {  font-size: 24px; }
+        .course-box{  min-height: 395px; width: 280px; margin: auto;    }
+    }

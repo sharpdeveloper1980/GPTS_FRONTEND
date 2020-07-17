@@ -1,0 +1,366 @@
+<app-header></app-header>
+
+<div class="home-page theme-three">
+  <div id="ourSolution" class="pt-100 pb-100">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col-md-6">
+        <div class="solution-left-content">
+          <h1 class="mb-4">Our<br> Solutions</h1>
+          <p>Great Place To Study endeavours to bring about a positive change in the education industry and offers practical solutions to educators and students to achieve this. Our diverse workforce and functional platform are dedicated to bridge the gap between educators and students across the country.</p>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="solution-right">
+              <ul>
+                <li class="align-items-center s-row" (click)="showContent($event,1);" (mouseover)="hoverClass($event)">
+                  <span class="icons"><img class="img dactive" src="assets/images/our-solution/001-timeline.svg" alt="icon">
+                    <img class="img noActive" src="assets/images/our-solution/002-timeline-active.svg" alt="icon">
+                  </span>
+                  <span class="content">Future Ready Schools</span>
+                  <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>
+                </li>
+                <li class="align-items-center s-row" (click)="showContent($event,2);" (mouseover)="hoverClass($event)">
+                  <span class="icons">
+                    <img class="img dactive" style="max-width:60px" src="assets/images/our-solution/004-star.svg" alt="icon">
+                    <img class="img noActive" style="max-width:60px" src="assets/images/our-solution/003-star-active.svg" alt="icon">
+                  </span>
+                  <span class="content">Featured Institution</span>
+                  <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>
+                </li>
+                <li class="align-items-center s-row" (click)="showContent($event,3);" (mouseover)="hoverClass($event)">
+                  <span class="icons">
+                    <img class="img dactive" style="max-width: 60px;" src="assets/images/our-solution/005-university.svg" alt="icon">
+                    <img class="img noActive" style="max-width: 60px;" src="assets/images/our-solution/005-university-active.svg" alt="icon">
+                  </span>
+                  <span class="content">GLI Certified Schools</span>
+                  <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="solutionScrollContent1" class="pt-100 pb-100 solutionScrollContent"> 
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-lg-7 customBdr">
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <a href="javasscript:void(0)" class="close-icon" (click)="closeBox(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-lg-2">
+                <span class="icon-active">
+                  <img class="img-fluid" style="max-width:40px" src="assets/images/our-solution/002-timeline-active.svg" alt="icon">
+                </span>
+              </div>
+              <div class="col-lg-8">
+                <h3>Future Ready Schools</h3>
+                <p class="mb-3">Our Future-ready Schools are participants of the Future Readiness Summit that discussed the changing trends of the professional world. The summit witnessed a coming together of industry experts and educators who examined emerging career options for a brighter future of students.</p>
+                <!-- <ul>
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>At consectetur urna tincidunt fringilla</li>
+                  <li>At elementum quam egestas vitae</li>
+                </ul> -->
+                <a href="assets/pdf/virtual-career-lab.pdf" target="_blank" class="d-inline-block custom-default-btn download">Sample Presentation</a>
+                        <a href="/city-tour" class="d-inline-block text-link">Know More<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <p class="text-center mb-3">School included under this category</p>
+<div class="school-list">  
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/1.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/2.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/3.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/4.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/5.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/6.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/7.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/8.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/9.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/10.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/11.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/12.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/13.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/14.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/15.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/16.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/17.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/18.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/20.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color2"><img src="assets/images/our-solution/future-ready-school/21.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color3"><img src="assets/images/our-solution/future-ready-school/22.jpg" class="img-fluid"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+      <div class="box color1"><img src="assets/images/our-solution/future-ready-school/19.jpg" class="img-fluid"></div>
+    </div>
+   
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="solutionScrollContent2" class="pt-100 pb-100 solutionScrollContent"> 
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-7 customBdr">
+            <div class="row">
+              <div class="col-lg-12 mb-4">
+                <a href="javasscript:void(0)" class="close-icon" (click)="closeBox(2)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-lg-2">
+                  <span class="icon-active">
+                    <img class="img-fluid" style="max-width:40px" src="assets/images/our-solution/003-star-active.svg" alt="icon">
+                  </span>
+                </div>
+                <div class="col-lg-8">
+                  <h3>Featured Institutes</h3>
+                  <p class="mb-3">Our Featured Institutes highlights India’s best institutions, their vision and contribution to education in India. These institutes find a platform to voice their stellar pedagogic model through television and web formats.</p>
+                  <!-- <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>At consectetur urna tincidunt fringilla</li>
+                    <li>At elementum quam egestas vitae</li>
+                  </ul> -->
+                  <a href="assets/pdf/gis-season-3.pdf" target="_blank" class="d-inline-block custom-default-btn download">Sample Presentation</a>
+                  <a href="/featuredinstitute" class="d-inline-block text-link">Know More<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+  <div class="school-list">
+     <div class="row">
+
+       <div class="col-md-12 mb-2"> 
+         <p class="text-center">GREAT INDIAN <span>SCHOOLS</span></p></div>
+    
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+          <div class="imgBorderTwo">
+            <a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=umqRIuYGUN0&feature=youtu.be', 'Ramagya School')"
+              target="_blank">
+              <i class="fa fa-play"></i>
+              <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560233600.jpg" class="img-fluid " alt="image" width="100%">
+            </a>           
+          </div>
+      </div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+  <div class="imgBorderTwo">
+    <a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=roSjGTbjyEY&feature=youtu.be', 'Rustomjie International School')"
+      target="_blank">
+      <i class="fa fa-play"></i>
+      <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560233858.jpg" class="img-fluid " alt="image" width="100%">
+    </a>           
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+  <div class="imgBorderTwo">
+    <a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=onp-CaStPOI&feature=youtu.be', 'HVB Global Academy')"
+      target="_blank">
+      <i class="fa fa-play"></i>
+      <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560233757.jpg" class="img-fluid " alt="image" width="100%">
+    </a>           
+  </div>
+</div></div>
+
+
+<div class="row">
+
+  <div class="col-md-12 mb-2"> 
+    <p class="text-center">GREAT INDIAN <span>INSTITUTES</span></p></div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+     <div class="imgBorderTwo">
+       <a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=6p0b192f11c&feature=youtu.be', 'International Management Institute')"
+         target="_blank">
+         <i class="fa fa-play"></i>
+         <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560235720.jpg" class="img-fluid " alt="image" width="100%">
+       </a>           
+     </div>
+ </div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+<div class="imgBorderTwo">
+<a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=pGprw_Igp6A&feature=youtu.b', 'Presidency University')"
+ target="_blank">
+ <i class="fa fa-play"></i>
+ <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560235759.jpg" class="img-fluid " alt="image" width="100%">
+</a>           
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+<div class="imgBorderTwo">
+<a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=rGcjgwZjY_Q&feature=youtu.be', 'PIBM')"
+ target="_blank">
+ <i class="fa fa-play"></i>
+ <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560235842.jpg" class="img-fluid " alt="image" width="100%">
+</a>           
+</div>
+</div></div>
+
+
+
+<div class="row">
+
+  <div class="col-md-12 mb-2"> 
+    <p class="text-center">EDUCATION <span>EVANGELIST</span> OF INDIA</p></div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+     <div class="imgBorderTwo">
+       <a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=Ph9O9MseLL8&feature=youtu.be', 'ABBS')"
+         target="_blank">
+         <i class="fa fa-play"></i>
+         <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560243904.jpg" class="img-fluid " alt="image" width="100%">
+       </a>           
+     </div>
+ </div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+<div class="imgBorderTwo">
+<a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=VTkNTeVN2iA&feature=youtu.be', 'AIMS Institute')"
+ target="_blank">
+ <i class="fa fa-play"></i>
+ <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560243973.jpg" class="img-fluid " alt="image" width="100%">
+</a>           
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+<div class="imgBorderTwo">
+<a class="video-link" (click)="openVideoModal('https://www.youtube.com/watch?v=ubskpvQOkqg&feature=youtu.be', 'Vouge School of fashion & Technology')"
+ target="_blank">
+ <i class="fa fa-play"></i>
+ <img src="https://www.greatplacetostudy.com/cdap/backend/public/thumbnail_images/1560244070.jpg" class="img-fluid " alt="image" width="100%">
+</a>           
+</div>
+</div></div>
+
+
+  </div>
+  
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div id="solutionScrollContent3" class="pt-100 pb-100 solutionScrollContent"> 
+          <div class="custom-container">
+            <div class="row">
+              <div class="col-lg-7 customBdr">
+              <div class="row">
+                <div class="col-lg-12 mb-4">
+                  <a href="javasscript:void(0)" class="close-icon" (click)="closeBox(3)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                    <span class="icon-active">
+                      <img class="img-fluid" style="max-width:40px" src="assets/images/our-solution/005-university-active.svg" alt="icon">
+                    </span>
+                  </div>
+                  <div class="col-lg-8">
+                    <h3>GLI Certification programme</h3>
+                    <p class="mb-3">The GLI Certification programme rates institutes on the basis of their education models, student happiness quotient and student-centric policies among other critical parameters.</p>
+                    <!-- <ul>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>At consectetur urna tincidunt fringilla</li>
+                      <li>At elementum quam egestas vitae</li>
+                    </ul> -->
+                    <a href="assets/pdf/school-fulfilment-ppt.pdf" target="_blank" class="d-inline-block custom-default-btn download">Sample Presentation</a>
+                    <a href="/certifiedschool" class="d-inline-block text-link">Know More<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></a>
+                            
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+    <div class="school-list" *ngIf="certifiedSchool.All">
+      <p class="text-center">School included under this category</p>
+      <div class="row">
+
+        <div *ngFor="let data of certifiedSchool.All" class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+          <div class="box color1"> <img [src]="data.logo" class="img-fluid" alt="image"></div>
+        </div>
+       
+      </div>
+    </div>
+    
+              </div>
+            </div>
+          </div>
+          </div>
+  </div>
+  </div>
+
+
+  <ng-template #content let-modal>
+    <div class="youtube-container">
+      <div class="modal-header border-none">
+        <h4 class="modal-title" id="modal-basic-title">
+          {{videoName}}
+        </h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" [src]="videoSrc" id="video" allowscriptaccess="always"
+            allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </ng-template>

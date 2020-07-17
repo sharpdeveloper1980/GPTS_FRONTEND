@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+$leagurSpartanBold:'League Spartan Bold';
+$poppinsFontFamily:'Poppins', sans-serif;
+$lattofont:'Lato', sans-serif;
+.latoFont{font-family: 'Lato', sans-serif;;}
+.leagurSpartanBold{ font-family: $leagurSpartanBold;}
+.poppinsFont{font-family: 'Poppins', sans-serif;}
+.pt-60{padding-top: 60px;}
+.pb-60{padding-bottom: 60px;}
+.pt-100{padding-top: 100px;}
+.pb-100{padding-bottom: 100px;}
+.weight300{font-weight: 300!important;}
+.faaart_banner {
+    background-image: url(../../../assets/images/faaart/hero-banner-faaart.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+background-position: center bottom;
+    min-height:1000px; color: #ffffff;
+}
+.banner-content{padding-top:250px ;}
+.banner-content h1{font-size: 90px;font-weight: 900; line-height: 1;margin: 10px 0;} 
+.banner-content h1 strong{display: block; font-weight: 900; line-height: 1; color: #ffd214;}
+    .royal-chand-logo {
+        position: relative;
+        bottom: -190px; 
+    }
+    .banner-content p{font-weight: 300; font-size: 20px;  margin-bottom: 30px;}
+    .banner-content a.custom-primary-btn{font-weight: 900;
+        background: #1dabbc;
+        border-color: #1dabbc;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 16px 30px;
+        display: inline-block;}
+        .banner-content a.custom-primary-btn:hover{border-color: #ffffff; color: #ffffff; background: none;}
+
+.banner-content button.custom-primary-btn{
+    color: #2853b5;
+    background: #ffffff; border-color: #ffffff;
+}
+.banner-content button.custom-primary-btn:hover{color: #ffffff;
+    background: #2853b5; border-color: #2853b5;}
+p{
+    font-family: $lattofont;
+    font-weight: 400; font-size: 18px;
+}
+    .about p span{color: #1dabbc; font-style: italic;}
+.about h2{font-size: 50px;color: #333333;  text-transform: uppercase;}
+.about h2 span{display: block; margin-top:20px;color: #ed6f13; font-weight: 300; font-size: 24px;}
+.about a{text-decoration: underline; color: #3b5998;}
+.objective{background: #f7f7f7;}
+h2.heading-title{font-weight: 900; color: #db084c;}
+h2.heading-title span{display: block; color: #a1a1a1; text-transform: uppercase; position: relative; padding-bottom: 20px;margin-top: 10px;    font-size: 13px;  font-weight: 600;}
+ h2.heading-title span:after{position: absolute; bottom:0px; height:3px; width:50px; background: #1dabbc; left:50%; transform:translateX(-50%); content:''}
+.objective p{font-weight: 300;}
+.objective p strong{font-weight: 400;}
+//how to apply css start
+.step-process h2.heading-title{color: #ffffff;}
+.step-process h2.heading-title span{color: #f2f2f2;}
+.step-process{color: #ffffff; background:#db084c ; position: relative; margin-bottom: 320px;}
+.step-process span.bg-overlay{background:url(../../../assets/images/faaart/process-bg.png) center bottom no-repeat;position: absolute; width:100%; height:254px;bottom:-220px;}
+.step-process .step{width:100%;}
+.step-process .step +p{ padding: 20px 15px;  font-size: 15px;}
+//how to apply css end
+//test of talent start
+.test-of-talent .tot-box{ padding: 46px;color: #ffffff;padding-top: 35px;    min-height: 169px; margin:20px 0;}
+.test-of-talent .tot-box.box1{background: url(../../../assets/images/faaart/test-o-planet-01.png) no-repeat 0 0;background-size: cover;  padding-left: 142px; }
+.test-of-talent .tot-box.box2{background: url(../../../assets/images/faaart/test-o-planet-02.png) no-repeat 0 0;background-size: cover;  padding-left: 142px;}
+.test-of-talent .tot-box.box3{background: url(../../../assets/images/faaart/test-o-planet-03.png) no-repeat 0 0;background-size: cover;  padding-right: 142px;min-height: 180px;}
+.test-of-talent .tot-box.box4{background: url(../../../assets/images/faaart/test-o-planet-04.png) no-repeat 0 0;background-size: cover;  padding-right: 142px;min-height: 180px;}
+.test-of-talent .tot-box p{font-weight: 300; font-size: 16px;}
+//test of talent end
+
+//movie master css start
+.movie-master{background-image: url(../../../assets/images/faaart/movie-master-bg.jpg);background-repeat: no-repeat; background-size: cover; background-position: 0 0; color: #ffffff; background-attachment: fixed;}
+.master-pic{padding: 30px; background: url(../../../assets/images/faaart/master-bg-top.png) no-repeat center top,url(../../../assets/images/faaart/master-bg-bottom.png) no-repeat center bottom;     text-align: center;
+    margin-bottom: 20px;}
+    .master-box{text-align: center; margin-bottom: 50px;}
+    .master-box h3{text-transform: uppercase;font-size: 16px;     letter-spacing: 3px;    margin-bottom: 5px;}
+    .master-box p{    font-weight: 300;    font-size: 13px;}
+//movie master css end
+
+//show down css start
+.show-down{background: #1f1e1c; border-top:solid 4px #aba099; position: relative;    padding: 20px;color: #ffffff;}
+.show-down:after{background: #908780; bottom: 0; width: 101%; height: 10px; content: ''; position: absolute; margin-left: -5px; left: 0;}
+.show-down span.left-thumb{position: absolute; left:0px; }
+.show-down span.right-thumb{position: absolute; right:0px; }
+.show-down span.thumb{top:0px; width:20px;background: #2e2c2a;height: 100%;  margin-top: -4px;}
+.show-down-box{padding: 80px 50px;}
+.show-down-box h2{color: #ef0953;text-transform: uppercase;font-weight: 700; font-size: 50px; margin-bottom: 10px;}
+.show-down-box p{     font-weight: 300; text-transform: uppercase;font-size: 16px; line-height: normal;}
+.show-down-box .borderLeft:before{ height: 100%; width: 4px; background: #1dabbc; content: ''; position: absolute;  left: 0; transform: rotate3d(1, 1, 1, 10deg);}
+//show down css end
+
+//other actioon css start
+.other-action .some-action{background: url(../../../assets/images/faaart/bottom-register-bg.jpg) no-repeat; color: #ffffff; background-size: cover; min-height: 320px;}
+.other-action .some-action h2.heading-title{color: #ffffff; text-transform: uppercase;    font-weight: 600; font-size: 40px;}
+.some-action a.custom-primary-btn { background: #ef0953; border-color: #ef0953; text-transform: uppercase; font-weight: 600; font-size: 20px; padding: 15px 40px;}
+.some-action a.custom-primary-btn:hover{background: none; border-color: #ffffff; color: #ffffff;}
+//other actioon css end
+
+
+.yellow_color {color: #eec129;}
+.white_color {color: #ffffff;}
+.roy_banner_text {font-size: 54px;}
+.blue_check-style-list {  div { padding-left: 40px; position: relative; margin-bottom: 20px;
+        &::after { content: " "; position: absolute; left: 0;top: 5px;background-repeat: no-repeat;width: 20px;height: 20px;margin: auto;background-size: contain;background-image: url(../../../assets/images/common/blue_check.gif);
+        }
+    }
+}
+.margin_t60 {margin-top: 60px;}
+.map_gray { background-image: url(../../../assets/images/theme-three/discover-colleges/dotted_map.png);background-repeat: no-repeat;background-size: 100%;background-position: center;}
+.timeline .custom-text-medium {font-size: 34px;}
+.timeline {display: flex;flex-wrap: wrap;justify-content: center;}
+.timeline:before {content: "";  width: 0.5px; height: 100%; border: 1px solid #f0eff5; position: absolute; top: 0; /* left: 50%; */ z-index: 1; -webkit-transform: translateX(-50%); transform: translateX(-50%);
+    border-radius: 0%; line-height: 50px;}
+.timeline_img_max { max-width: 260px;}
+.time_dots {color: #ffffff; background: #ffffff; border-radius: 50%; border: 2px solid #18baff; font-size: 0px; height: 13px; width: 12px; z-index: 9;}
+.time_dots_odd {right: -5px;}
+.time_dots_even {left: -7px;}
+.odd_margin_auto {margin-right: auto;}
+.even_margin_auto {margin-left: auto;}
+.odd_padding {padding-right: 70px;}
+.even_padding {padding-left: 70px;}
+.margin-top38 {margin-top: 38px;}
+.purple_box {background-color: #c5c3f4; padding: 4px 20px; color: #ffffff; margin-right: 15px; margin-left: 15px;}
+.margin-bottom50 { margin-bottom: 50px;}
+
+//roychand popup css start
+#roychandScholarshipReg .modal-dialog{min-width: 1px;}
+#roychandScholarshipReg .login-dots-reg{padding-right: 30px; padding-left:30px; }
+.login-dots-reg{ content: "";width: 100%;height: 100%; position: absolute;top: 0%; right: 0;}
+.modal-header { display: flex; align-items: flex-start;justify-content: space-between; padding: 0;border-bottom: 0px solid #dee2e6; border-top-left-radius: 0rem;border-top-right-radius: 0rem;}
+.auth-modal .close{background: none; padding: 1px; float: right; opacity: 1; color: #333333; right: 20px; position: absolute; z-index: 9; width: auto; height: auto; border-radius: 50%;
+    top: 16px;box-shadow: none;}
+
+.sigin-Head-reg { color: #000000; font-size: 25px; margin-bottom: 20px; font-weight: 300; position: relative; z-index: 1;padding-top: 20px; text-align: left;font-family: 'League Spartan Bold';}
+.login-dots-reg {position: relative;padding-right: 70px; padding-left: 70px;}
+.custom-primary-btn { border-radius: 50px;background-color: #153b93;border: 1px solid #153b93;padding: 8px 20px;color: #fff;font-size: 17px;min-width: 150px;font-weight: 400;line-height: 24px;
+    transition: .4s ease-in-out;margin-bottom: 10px;}
+.custom-form-control {background: 0 0;border: none;border-bottom: 1px solid #e2e2e2;}
+.form-control {height: 45px;}
+.modal-body{padding-bottom: 2rem;}
+ngb-datepicker-navigation-select > .custom-select{margin-right:5px;}
+.roychandScholarshipReg .form-check label a,.roychandScholarshipReg .form-check label{ color: #495057; font-size: 14px;}
+.roychandScholarshipReg .form-check input[type="checkbox"]{vertical-align: middle;}
+.roychandScholarshipReg .form-group select{cursor: pointer;}
+.banner-content p.note {font-weight: normal;font-family: "Open Sans", sans-serif;font-size: 15px; text-shadow: 0 1px 3px #000;}
+
+//roychand popup css end
+#greatChallengeNotify .modal-dialog {min-width: 1px;}
+#greatChallengeNotify .login-dots-reg { padding-right: 30px;padding-left: 30px;}
+.login-dots-reg {content: ""; background-image: url(../../../assets/images/theme-three/login-dots.jpg); background-repeat: no-repeat; background-position: center;background-size: cover;width: 100%;height: 100%;position: relative;top: 0%;right: 0;}
+#greatChallengeNotify .login-dots-reg .custom-primary-btn:hover{background: #ffffff; color:#153b93;}
+
+
+
+
+//@responsiv css start
+@media (max-width:1100px){
+    .show-down-box .borderLeft:before{    transform: rotate3d(1, 1, 1, 0deg);}
+    .master-pic{background-size: 96%;}
+    .test-of-talent .tot-box{background-size: 97%!important;}
+    .test-of-talent .tot-box.box1,.test-of-talent .tot-box.box2{padding-left:120px}
+    .test-of-talent .tot-box.box3,.test-of-talent .tot-box.box4{padding-right: 125px;   min-height: 143px; padding-top: 14px; padding-bottom: 0;}
+    .test-of-talent .tot-box p{font-size: 15px;}
+    .movie-master{background-position: -850px 0px;}
+}
+
+@media (max-width: 991px) {
+    .timeline_img_max {
+        max-width: 200px;
+    }
+
+    .odd_padding {
+        padding-right: 40px;
+    }
+
+    .even_padding {
+        padding-left: 40px;
+    }
+    .benefit .row .row div[class*="col-md-"] {  margin-bottom: 30px;   }
+    .roychand_banner{margin-bottom: 50px;}
+    .royal-chand-logo {    bottom: 0;  width: 150px;  margin: auto; 
+        margin-left: 0; }
+    .banner-content h3{text-align: left;}
+    .roychand_banner.dynheader .text-right {text-align: left!important;}
+    .banner-content {  padding-top: 200px; }
+    .eligibility .border-right{border-right:none!important}
+    .eligibility div[class*="col-md-"]{margin-bottom: 20px;}
+    .selection-process {  text-align: center;  }
+    .show-down-box .borderLeft:before{display: none;}
+    .test-of-talent .tot-box{min-height:200px;}
+    .test-of-talent .tot-box{background-size: 100%!important;padding-top: 55px;padding: 101px;}
+    .test-of-talent .tot-box.box3,.test-of-talent .tot-box.box4{    padding-right: 215px;   min-height: 215px;  padding-top: 44px; padding-bottom: 0;}
+    .show-down-box div[class^='col-lg-'] {  margin-bottom: 20px; }
+    .movie-master {  background-position: -540px 0px;    }
+}
+@media(min-width:768px) and (max-width:991px){
+    .test-of-talent .tot-box.box1, .test-of-talent .tot-box.box2 {padding-left: 180px;padding-top: 60px; }
+}
+@media (max-width: 768px) {
+
+    .timeline_container .custom-text-medium {
+        text-align: left !important;
+    }
+
+    .timeline:before {
+        left: 13.5px;
+    }
+
+    .time_dots_odd {
+        right: auto;
+        left: -7px;
+    }
+
+    .odd_padding, .even_padding {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .timeline_img_max {
+        max-width: 250px;
+    }
+
+    .roychand_banner {
+    	background-position: center left;
+	}
+
+	.roy_banner_text {
+    	font-size: 46px;
+	}
+
+	.logos_width {
+		width: 125px;
+		height: auto;
+	}
+
+	.height_content_banner {
+    	height: 240px;
+	}
+
+	.link_gpts_roy {
+		font-size: 12px;
+    }
+    
+    .banner-content {
+        padding-top: 130px;
+    }
+    .banner-content{padding-top:200px}
+   
+    
+   
+}
+
+@media(max-width:767px){
+   .master-box{margin-left: 20%; margin-right: 20%;} 
+   .test-of-talent .tot-box.box1,.test-of-talent .tot-box.box2{padding-left:128px}
+    .test-of-talent .tot-box.box3,.test-of-talent .tot-box.box4{padding-right: 125px;   min-height: 164px; padding-top: 30px; padding-bottom: 0;}
+    .test-of-talent .tot-box{min-height:150px;padding-top: 45px;  padding: 41px;}
+}
+
+@media (max-width: 576px) {
+
+    .odd_padding, .even_padding {
+        padding-right: 0px;
+    }
+
+    .roy_banner_text {
+    	font-size: 46px;
+	}
+
+	.timeline_img_max {
+        max-width: 200px;
+    }
+
+    .roy_banner_text {
+    	font-size: 34px;
+	}
+
+	.logos_width {
+		width: 100px;
+	}
+    .banner-content h1{font-size: 40px;   margin-bottom: 30px;}
+    .royal-chand-logo{margin-bottom: 30px;}
+    .roychand_banner{min-height:800px}
+    .about h2{font-size: 40px;}
+    .how-to-apply .how-to-apply-box p{font-size: 16px;}
+    .benefit .benefit-box{width:70%; margin:auto; background-position: bottom!important;}
+    .test-of-talent .col-lg-6.pl-0 { padding-left: 15px!important; }
+    .test-of-talent .col-lg-6.pr-0 { padding-right: 15px!important; }
+    .step-process .step + p{margin-bottom: 30px;}
+}
+
+
+@media(max-width:480px){
+    .banner-content h3{font-size: 25px;}
+    .banner-content h1{font-size: 60px;}
+    .about h2 span{font-size: 20px;}
+    .how-to-apply .scholarship-award .how-to-apply-box span.icon{font-size: 30px;}
+    .benefit .benefit-box{width:100%; margin:auto;}
+    .test-of-talent .tot-box{text-align: center; font-size: 16px;border-radius: 8px;padding: 12px 12px!important;min-height: 1px!important;margin:10px 0;}
+    .test-of-talent .tot-box.box1 { background: #ef0953!important;  }
+    .test-of-talent .tot-box.box2 { background: #25bbcd!important; }
+    .test-of-talent .tot-box.box3 { background: #ef0953!important;  }
+    .test-of-talent .tot-box.box4 { background: #25bbcd!important; }
+    .master-box { margin-left: 10%; margin-right: 10%; }
+    .step-process .step{width:50%; margin:auto}
+    .show-down-box h2{font-size: 35px;}
+    .movie-master { background-position: -380px 0px; }
+    .banner-content{text-align: center;}
+    
+}
+@media(max-width:320px){
+    .show-down-box h2{font-size: 30px;}
+    .show-down-box{ padding: 50px 20px; }
+    .other-action .some-action h2.heading-title{font-size: 30px;}
+    
+}

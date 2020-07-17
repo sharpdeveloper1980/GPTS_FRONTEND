@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(assets/fonts/roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(assets/fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Light;
+    src: url(assets/fonts/roboto/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: League-Spartan;
+    src: url(assets/fonts/league_spartan/LeagueSpartan-Bold.otf);
+}
+@font-face {
+    font-family: openSans-semiBold;
+    src: url(assets/fonts/openSans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: openSans-Ragular;
+    src: url(assets/fonts/openSans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: openSans-Light;
+    src: url(assets/fonts/openSans/OpenSans-Light.ttf);
+}
+
+
+
+.roboto_medium {
+    font-family: Roboto-Medium;
+}
+.roboto_regular {
+    font-family: Roboto-Regular;
+}
+.roboto_light {
+    font-family: Roboto-Light;
+}
+.openSans_light {
+    font-family: openSans-Light;
+}
+.openSanse_ragular {
+    font-family: openSans-Ragular;
+}
+.openSanse_semiBold {
+    font-family: openSans-semiBold;
+}
+
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~swiper/dist/css/swiper.min.css';
+@import "~font-awesome/css/font-awesome.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+
+// Custom styling
+@import "./assets/styles/responsive.scss";
+@import "./assets/styles/common.scss";
+@import "./assets/styles/header.scss";
+@import "./assets/styles/dashboard.scss";
+@import "./assets/styles/college-dashboard.scss";
+@import "./assets/styles/datepicker.scss";
+@import "./assets/styles/form.scss";
+@import "./assets/styles/homepage-carousel.scss";
+@import "./assets/styles/dropdown-pages.scss";
+@import "./assets/styles/video-player.scss";
+@import "./assets/styles/theme-three.scss";
+@import "./assets/styles/theme-three-resp.scss";
+@import "./assets/styles/dashboard-three.scss";
+@import "./assets/styles/dashboard-three-resp.scss";
+
+// Icomoon
+@import "./assets/icomoon/style.css";

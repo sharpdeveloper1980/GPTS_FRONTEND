@@ -1,0 +1,1019 @@
+<app-header></app-header>
+
+<div class="theme-three">
+
+<!--hero banner start-->
+<div class="hero-banner pt-80 pb-80">
+    <div class="hero-content">
+  <div class="custom-container">
+   <div class="row align-items-center">
+     <div class="col-lg-4 col-md-12 pr-0" id="mobileView">
+            <h3>KNOWLEDGE</h3>
+            <h1>WEBIN<span>AR</span></h1>
+            <p>A knowledge series with subject matter experts helping you learn about some of the most interesting subjects and careers which has been growing over the past couple of years.</p>
+            <a href="javascript:void(0);" (click)="topRegistration()" class="d-inline-block custom-secondary-btn">REGISTER</a>
+          </div>
+          <div class="col-md-8 pl-0">
+           <div class="row" id="heroBannerImages">
+             <div class="col-lg-3 col-md-3 col-3">
+              <div class="box pt-5 mt-5">
+              <img src="assets/images/webinar/web-1.jpeg" class="img-fluid"></div>   
+            </div>
+             <div class="col-lg-3 col-md-3 col-3">
+              <div class="box">
+              <img src="assets/images/webinar/web-2.jpeg" class="img-fluid"></div></div> 
+             <div class="col-lg-3 col-md-3 col-3">
+              <div class="box pt-5 mt-5"> 
+              <img src="assets/images/webinar/web-3.jpeg" class="img-fluid">
+            </div></div>
+             <div class="col-lg-3 col-md-3 col-3">
+              <div class="box"> 
+              <img src="assets/images/webinar/web-4.jpeg" class="img-fluid"></div>
+              </div>
+           </div>
+          </div>
+     </div>
+   </div>
+  
+  </div>
+
+</div>
+<!--hero banner end-->
+
+
+<!--enhance your knowlwdge html start-->
+<section id="enhanceKnowledge" class="pb-150 pt-100">
+  <div class="custom-container">
+    <div class="row">
+      <div class="offset-xl-1 col-xl-10 col-lg-12 col-md-12">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="banner-title mb-4">
+            <strong>ENHANCE</strong>
+            <span>YOUR</span> KNOWLEDGE BASE
+          </h2>
+          <p class="enhancePadd">In the time when we have access to all possible information in a click of a button, and when the world is much closer because of technology and internet. It is important that we make our choices informed and not just influenced. Great Place to Study’s Knowledge Webinar is curated along with the help of subject matter experts who spent in the industry and then moved in to the space of education to make sure they bridge the gap between awareness and knowledge.</p>
+        </div>
+       
+        <div class="col-lg-6">
+        <div class="enhance-image">
+          <div class="embed-responsive embed-responsive-16by9 ">
+            <!-- removed this "big-video-container" class from here-->
+            <vg-player class="embed-responsive-item">
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-controls [vgAutohide]="true" [vgAutohideTime]="1.5">
+                    <vg-play-pause></vg-play-pause>
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                    <vg-scrub-bar [vgSlider]="true">
+                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                        <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+                    <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+                
+               
+             
+                <ng-container >
+                    <video  #homeVideo  poster="https://d33umu47ssmut9.cloudfront.net/home-video/new/5e848ca869cb7.jpg" id="firstvideo" [vgMedia]="homeVideo" class="videoClass" src="https://d33umu47ssmut9.cloudfront.net/home-video/new/5e848ca94fd1d.mp4">
+                    </video>
+               </ng-container>
+            
+            </vg-player>
+
+            
+        </div>
+        </div>  
+        </div>
+      </div>
+      </div>
+  </div></div>
+</section>
+<!--enhance your knowlwdge html end-->
+
+
+<!--topics for the webinar html start-->
+<section id="topics" class="pt-100 pb-80 d-none">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 mb-4 pb-4 text-center">
+        <h2 class="banner-title">
+          <strong>TOPICS</strong>
+          <span>FOR </span>THE WEBINAR
+        </h2>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <ul class="row">
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/robot.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/robot-hover.png" alt="icon">
+            </span>
+            Robotics & AI
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/idea.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/idea-hover.png" alt="icon">
+            </span>
+            Entrepreneurship
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/meaning.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/meaning-hover.png" alt="icon">
+            </span>
+            Visual communication
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/speaker.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/speaker-hover.png" alt="icon">
+            </span>
+            Media & advertising
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/film.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/film-hover.png" alt="icon">
+            </span>
+            Film making
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/gaming.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/gaming-hover.png" alt="icon">
+            </span>
+            Gaming
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/script.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/script-hover.png" alt="icon">
+            </span>
+            Script writing
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/interior.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/interior-hover.png" alt="icon">
+            </span>
+            Interior design
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/product.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/product-hover.png" alt="icon">
+            </span>
+            Product design
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/Journalism.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/Journalism-hover.png" alt="icon">
+            </span>
+            Journalism
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/uiux.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/uiux-hover.png" alt="icon">
+            </span>
+            UI/UX
+          </li>
+          <li class="col-md-3 col-sm-3 col-6 mb-5 text-center col-lg-2">
+            <span class="icon">            
+              <img class="default img-fluid" src="assets/images/webinar/education.png" alt="icon">
+              <img class="hover img-fluid" src="assets/images/webinar/education-hover.png" alt="icon">
+            </span>
+            International education
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--topics for the webinar html end-->
+
+
+<!--scheduled time table html start-->
+<section id="scheduled" class="pt-0 pb-120">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center mb-4 pb-4">
+        <h2 class="banner-title">
+          <strong>SCHEDULE</strong>
+          <span>OUR </span>TIME TABLE
+        </h2>
+      </div>
+    </div>
+    <div class="row align-items-top mt-5">
+    <div class="col-md-12 col-lg-7 col-xl-6 offset-xl-0 pr-5">
+      <div class="calendar-box">
+       <div class="calendar-content">
+            <table class="table" cellspacing="10">
+                <thead>
+                  <tr>
+                      <th class="weekend">Sun</th>
+                      <th>Mon</th>
+                      <th>Tue</th>
+                      <th>Wed</th>
+                      <th>Thu</th>
+                      <th>Fri</th>
+                      <th class="weekend">Sat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td><span></span><div>1</div></td>
+                    <td (click)="showSpeaker($event,16);"class="clickable weekend "><span>Design Thinking</span><div>2</div></td>
+                  </tr>
+                  <tr>
+                      <td class="weekend"><span></span><div>3</div></td>
+                      <td><span></span><div>4 </div></td>
+                      <td><span></span><div>5</div></td>
+                      <td><span></span><div>6</div></td>
+                      <td><span></span><div>7</div></td>
+                      <td><span></span><div>8</div></td>
+                      <td class="weekend"><span></span><div>9</div></td>
+                    </tr>
+                    <tr>
+                      <td><span></span><div>10</div></td>
+                        <td  class="clickable  weekend"><span></span><div>11</div></td>
+                        <td (click)="showSpeaker($event,17);" class="clickable active"><span>Relations & Career <br>in Defense</span><div>12</div></td>
+                        <td (click)="showSpeaker($event,18);" class="clickable"><span>Life Lessons<br>Learnt</span><div>13</div></td>
+                        <td (click)="showSpeaker($event,19);" class="clickable "><span>Shaping<br> Humanity</span><div>14</div></td>
+                        <td (click)="showSpeaker($event,20);" class="clickable "><span>Filmmaking</span><div>15</div></td>
+                        <td (click)="showSpeaker($event,21);" class="clickable weekend "><span>Education</span><div>16</div></td>
+                      </tr>
+                      <tr>
+                          <td class="weekend"><span></span><div>17</div></td>
+                          <td class="clickable"><span></span><div>18</div></td>
+                          <td  class="clickable"><span></span><div>19</div></td>
+                          <td class="clickable"><span></span><div>20</div></td>
+                          <td class="clickable"><span></span><div>21</div></td>
+                          <td  class="clickable"><span></span><div>22</div></td>
+                          <td  class="clickable weekend"><span></span><div>23</div></td>
+                        </tr>
+                        <tr>
+                            <td class="weekend"><span></span><div>24</div></td>
+                            <td  class="clickable"><span></span><div>25</div></td>
+                            <td class="clickable"><span></span> <div>26</div></td>
+                            <td class="clickable"><span></span><div>27</div></td>
+                            <td class="clickable"><span></span><div>28</div></td>
+                            <td><span></span><div>29</div></td>
+                            <td class="clickable weekend"><span></span><div>30</div></td>
+                          </tr>
+
+                          <tr>
+                            <td class="weekend"><span></span><div>31</div></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            
+                          </tr>
+                </tbody>
+              </table>
+
+          </div>
+      </div>
+
+      </div>
+      <div class="col-md-12 col-lg-5 col-xl-6 offset-xl-0 pl-5">
+       
+        <div class="speakers" id="speaker16" style="display: none;">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/zulfi.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Zulfi Ali<span>Creative and Academic Director, JD Institute of Fashion Technology South<br><br>Mr. Zulfi Ali has 15 years of deep and wide expertise in academics, industry, branding and graphics. As the creative and academic director of JD Institute of Fashion technology, south he has crafted a vision for design education that will cater to the contemporary demands of the industry and design aspirants. Having served as the creative director for the Menswear apparel brand 'Urbantouch' , he delivers the insight of the industry centric viewpoint into mainstream academics. An ambassador for sustainability, human centric design and design thinking, he has conducted numerous seminars and workshops to propagate the role of design in our modern society and its relevance for a sustainable future.
+
+                </span></h3>
+                  <p class="mb-2"><b>Date/Time:</b>2 May&nbsp;&nbsp;|&nbsp;&nbsp;3.00-4.00 PM</p>
+                  <p class="mb-2"><b>Topic:</b>A Solution for the future.
+                  </p>
+                <p><b>Description: </b>This webinar will look at the contemporary issues that humankind stares at the beginning of this decade and how design thinking can become the fundamental fix for all our challenges. A quick look into the process of design thinking and applications that makes a difference. An interactive session where the audience can express their curiosity to know more about this topic. </p>
+                
+                
+                <a href="https://www.facebook.com/GPTSindia/videos/221310219172383/" target="_blank" class="custom-primary-btn d-inline-block">watch webinar</a>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speakers" id="speaker17">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/shokin-3.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Lt Gen Shokin Chauhan
+                  <span>Param Vishisht Seva Medal, Ati Vishisht Seva Medal, Yudh Seva Medal, Sena Medal and Vishisht Seva Medal, he was selected to assume the coveted appointment as the Chairman of the Cease Fire Monitoring Group in August 2018, post retirement from the army in March
+                    2018. Earlier, the General was the Director General of Assam Rifles, India’s oldest and largest ParaMilitary Force.
+                    
+
+                </span></h3>
+                  <p><b>Date/Time:</b>12 May&nbsp;&nbsp;|&nbsp;&nbsp;3.00-4.00 PM</p>
+                 <p class="mb-2"><b>Topic:</b>Internal Security, International Relations & Career in Defense.
+                  </p>
+                 <!-- <p><b>Description: </b>This webinar will look at the contemporary issues that humankind stares at the beginning of this decade and how design thinking can become the fundamental fix for all our challenges. A quick look into the process of design thinking and applications that makes a difference. An interactive session where the audience can express their curiosity to know more about this topic. </p>
+                 -->
+                
+                <a href="https://meeting.zoho.com/meeting/register?sessionId=1027603033" target="_blank" class="custom-primary-btn d-inline-block">Reserve Your Spot</a>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="speakers" id="speaker18" style="display: none;">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/megha-tata.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Megha Tata
+                  <span>Managing Director – South Asia, Discovery<br><br>
+                    Megha Tata joined Discovery Communications India as Managing Director of South Asia on April 01, 2019. A media & entertainment industry veteran, Megha has held leadership roles at organisations such as BTVI, HBO, Turner International and Star TV, in an illustrious career spanning more than 28 years.
+                    <br><br>
+                    Megha currently leads multiple national as well as international industry forums. She was recently co opted as the Director on board of Indian Broadcasting Foundation. She is on board of the NationalMedia & Entertainment Committee of FICCI and is the Vice President of the Indian chapter of theInternational Advertising Association (IAA).
+
+                </span></h3>
+                  <p><b>Date/Time:</b>13 May&nbsp;&nbsp;|&nbsp;&nbsp;12.00-1.00 PM</p>
+                 <p class="mb-2"><b>Topic:</b>Life Lessons Learnt - Megha Tata
+                  </p>
+                 <p><b>Description:</b> </p>
+                  <ul>
+                    <li>Primary education and influences in childhood</li>
+                    <li>Higher education and the impact of learning</li>
+                    <li>College and exposure to the world</li>
+                    <li>Professional experience and the growth as a person</li>
+                  </ul>
+                
+                
+                <a href="https://meeting.zoho.com/meeting/register?sessionId=1018418071"  target="_blank" class="custom-primary-btn d-inline-block">Reserve Your Spot</a>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="speakers" id="speaker19" style="display: none;">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/sanjay-roy.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Sanjoy Roy
+                  <!-- <span>Coming Soon...
+
+                </span> -->
+              </h3>
+                  <p><b>Date/Time:</b>14 May&nbsp;&nbsp;|&nbsp;&nbsp;3.00-4.00 PM</p>
+                 <p class="mb-2"><b>Topic:</b>Value of Arts in shaping Humanity
+                  </p>
+                 <!-- <p><b>Description:</b> </p>
+                  <ul>
+                    <li>Primary education and influences in childhood</li>
+                    <li>Higher education and the impact of learning</li>
+                    <li>College and exposure to the world</li>
+                    <li>Professional experience and the growth as a person</li>
+                  </ul> -->
+                
+                
+                <a href="https://meeting.zoho.com/meeting/register?sessionId=1047073093"  target="_blank" class="custom-primary-btn d-inline-block">Reserve Your Spot</a>
+               </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="speakers" id="speaker20" style="display: none;">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/subhash-ghai.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Subhash Ghai
+                  <!-- <span>Coming Soon...
+
+                </span> -->
+              </h3>
+                  <p><b>Date/Time:</b>15 May&nbsp;&nbsp;|&nbsp;&nbsp;5.30-6.30 PM</p>
+                 <p class="mb-2"><b>Topic:</b>Filmmaking - From Being Pure Creative Art to Being a Blend of Art & Technique
+                  </p>
+                 <!-- <p><b>Description:</b> </p>
+                  <ul>
+                    <li>Primary education and influences in childhood</li>
+                    <li>Higher education and the impact of learning</li>
+                    <li>College and exposure to the world</li>
+                    <li>Professional experience and the growth as a person</li>
+                  </ul> -->
+                
+                
+                <a href="https://meeting.zoho.com/meeting/register?sessionId=1062017643" target="_blank" class="custom-primary-btn d-inline-block">Reserve Your Spot</a>
+               </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="speakers" id="speaker21" style="display: none;">
+          <div class="row align-items-top">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="speaker-image">
+          <img src='assets/images/webinar/rajan-saxena.jpg' class="img-fluid" alt="webinar image">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+               <div class="speaker-desc">
+                <h3>Rajan Saxena
+                  <!-- <span>Coming Soon...
+
+                </span> -->
+              </h3>
+                  <p><b>Date/Time:</b>16 May&nbsp;&nbsp;|&nbsp;&nbsp;3.00-4.00 PM</p>
+                 <p class="mb-2"><b>Topic:</b>What Changes are to be expected in undergraduate education?</p>
+                 <!-- <p><b>Description:</b> </p>
+                  <ul>
+                    <li>Primary education and influences in childhood</li>
+                    <li>Higher education and the impact of learning</li>
+                    <li>College and exposure to the world</li>
+                    <li>Professional experience and the growth as a person</li>
+                  </ul> -->
+                
+                
+                <a href="https://meeting.zoho.com/meeting/register?sessionId=1051722704"  target="_blank" class="custom-primary-btn d-inline-block">Reserve Your Spot</a>
+               </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+<!--scheduled time table html end-->
+
+<!--previous webinar list start-->
+<section id="previousWebinar" class="pb-120">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12 text-center mb-4 pb-4">
+        <h2 class="banner-title">
+          <strong>WEBINAR</strong>
+          <span>GALLERY </span>
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+           <!--slider start-->
+           <div class="swiper-container" [swiper]="preWebinar">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides  *ngFor="let careerSlide of occupationArray; i as index"-->
+                <div class="swiper-slide career-slide">
+                    <div class="video-thumbnail">
+                        <div class="thumb" >
+                          <img src="assets/images/webinar/rahul-puri.jpg" class="img-fluid" alt="university thumbanil">
+                            <div class="topic"><span>Film Making</span></div>                      
+                        </div>
+                        <div class="des">
+                          <span class="date">13/04</span>  
+                          <h4 class="mt-4">Rahul Puri</h4>
+                          <p class="mb-4"><strong>Whistling Woods International</strong></p>
+                          <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/1105990056432515/" target="_blank">watch webinar</a>
+                        </div>
+                        
+                    </div>
+             </div>
+             <div class="swiper-slide career-slide">
+              <div class="video-thumbnail">
+                  <div class="thumb" >
+                    <img src="assets/images/webinar/chaintanya-chinchlikar.jpg" class="img-fluid" alt="university thumbanil">
+                    <div class="topic"><span>New Media</span></div>                      
+                  </div>
+                  <div class="des">  <span class="date">14/04</span>  
+                    <h4 class="mt-4">Chaitanya Chinchlikar</h4>
+                    <p class="mb-4"><strong>Whistling Woods International</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/216202602994100" target="_blank">watch webinar</a>
+                  </div>
+                 
+              </div>
+       </div>
+
+             
+             <div class="swiper-slide career-slide">
+              <div class="video-thumbnail">
+                  <div class="thumb" >
+                    <img src="assets/images/webinar/fashion-stylist.jpg" class="img-fluid" alt="university thumbanil">
+                    <div class="topic"><span>Fashion & Styling</span></div>                    
+                  </div>
+                  <div class="des"><span class="date">15/04</span> 
+                    <h4 class="mt-4">Jewellyn Alvares</h4>
+                    <p class="mb-4"><strong>Whistling Woods International</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/1555153321304306/" target="_blank">watch webinar</a>
+                  </div>
+                 
+              </div>
+       </div>
+       
+
+       <div class="swiper-slide career-slide">
+        <div class="video-thumbnail">
+            <div class="thumb" >
+              <img src="assets/images/webinar/architecture.jpg" class="img-fluid" alt="university thumbanil">
+              <div class="topic"><span>Architecture</span></div>                       
+            </div>
+            <div class="des"><span class="date">16/04</span> 
+              <h4 class="mt-4">Dr Pilar Maria Guerrieri</h4>
+              <p class="mb-4"><strong>Politecnico De Milano</strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/227019765307118" target="_blank">watch webinar</a>
+            </div>
+            
+        </div>
+ </div>
+      
+ <div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/diwakar-shukla.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Media &
+          Advertisement</span></div>                         
+      </div>
+      <div class="des"> <span class="date">17/04</span> 
+        <h4 class="mt-4">Dr. Diwakar Shukla</h4>
+        <p class="mb-4"><strong>Jagran Lakecity University</strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/224615128753429/" target="_blank">watch webinar</a>
+      </div>
+      
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/maheshwar.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Robotics & AI</span></div>                        
+      </div>
+      <div class="des"><span class="date">18/04</span>  
+        <h4 class="mt-4">Maheshwara Chaitanya</h4>
+        <p class="mb-4"><strong>Amrita University </strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/231609327910517/" target="_blank">watch webinar</a>
+      </div>
+      
+  </div>
+</div>
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/kumkum-portrait.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Visual Communications</span></div>                      
+      </div>
+      <div class="des"><span class="date">20/04</span> 
+        <h4 class="mt-4">Kumkum Nadig</h4>
+        <p class="mb-4"><strong>Srishti School of Art & Design
+          </strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/271706223837937" target="_blank">watch webinar</a>
+      </div>
+      
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/marius.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Fashion Design</span></div>                         
+      </div>
+      <div class="des"><span class="date">21/04</span>  
+        <h4 class="mt-4">Mr. Marius Janusauskas & Ms Nandita</h4>
+        <p class="mb-4"><strong>UnitedWorld Institute of Design</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/1642491935997636/videos/524229364907848/" target="_blank">watch webinar</a>
+      </div>
+     
+  </div>
+</div>
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/hariesh.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Interior Design</span></div>                          
+      </div>
+      <div class="des"><span class="date">22/04</span> 
+        <h4 class="mt-4">Hariesh K. Sankaran</h4>
+        <p class="mb-4"><strong>UnitedWorld Institute of Design</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/1642491935997636/videos/643312009551827/" target="_blank">watch webinar</a>
+      </div>
+     
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/meghdut.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Entrepreneurship</span></div>                         
+      </div>
+      <div class="des"><span class="date">23/04</span>
+        <h4 class="mt-4">Meghdut Roy Chowdhury</h4>
+        <p class="mb-4"><strong>Techno India Group</strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/531935727696083/" target="_blank">watch webinar</a>
+      </div>
+      
+  </div>
+</div>
+
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/sp.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Liberal Arts</span></div>                     
+      </div>
+      <div class="des"> <span class="date">24/04</span> 
+        <h4 class="mt-4">Sanjay Padode</h4>
+        <p class="mb-4"><strong>IFIM</strong></p>  <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/805436809951854/" target="_blank">watch webinar</a>
+      </div>
+    
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/parthasarathy.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Gaming</span></div>                        
+      </div>
+      <div class="des"><span class="date">25/04</span>
+        <h4 class="mt-4">PK Parthasarathy</h4>
+        <p class="mb-4"><strong>Chitkara University</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/615523029173859/" target="_blank">watch webinar</a>
+      </div>
+     
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/abhayjeet.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>UI/UX</span></div>                       
+      </div>
+      <div class="des"> <span class="date">27/04</span> 
+        <h4 class="mt-4">Abhayjeet Singh</h4>
+        <p class="mb-4"><strong>Chitkara University</strong></p><a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/572721423619597/" target="_blank">watch webinar</a>
+      </div>
+      
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/law.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Law</span></div>                      
+      </div>
+      <div class="des"> <span class="date">28/04</span>  
+        <h4 class="mt-4">Prof. Padmanabha Ramanujam</h4>
+        <p class="mb-4"><strong>QS Gauge</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/284887262521658/" target="_blank">watch webinar</a>
+      </div>
+     
+  </div>
+</div>
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/preeti-das.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Journalism</span></div>                          
+      </div>
+      <div class="des"><span class="date">29/04</span> 
+        <h4 class="mt-4">Preeti Das</h4>
+        <p class="mb-4"><strong>UnitedWorld Institute of Design</strong></p> <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/1642491935997636/videos/250070776348227" target="_blank">watch webinar</a>
+      </div>
+     
+  </div>
+</div>
+
+
+<div class="swiper-slide career-slide">
+  <div class="video-thumbnail">
+      <div class="thumb" >
+        <img src="assets/images/webinar/col-bose.jpg" class="img-fluid" alt="university thumbanil">
+        <div class="topic"><span>Product Design</span></div>                        
+      </div>
+      <div class="des"><span class="date">30/04</span>  
+        <h4 class="mt-4">Surojit Bose</h4>
+        <p class="mb-4"><strong>UnitedWorld Institute of Design</strong></p>  <a class="custom-primary-btn d-inline-block" href="https://www.facebook.com/GPTSindia/videos/633934247455370/" target="_blank">watch webinar</a>
+      </div>
+    
+  </div>
+</div>
+              </div>
+              <!-- <div class="custom-university-list swiper-pagination"></div> -->
+            <!-- If we need navigation buttons -->
+            <div class="control-arrow custom-control-arrow">
+              <div class="swiper-button-prev arrow">
+                <img src="assets/images/home-five/preview.png" alt="image" class="imageLeftIcon">
+            </div>
+            <div class="swiper-button-next arrow">
+              <img src="assets/images/home-five/next.png" alt="image" class="imageLeftIcon">
+            </div>
+            </div>
+        </div>
+        <!--slider end-->
+        </div>
+  </div></div>
+</section>
+<!--previous webinar list end-->
+
+<section id="contactForm" class="pb-150 pt-100 d-none">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="banner-title text-center">
+          <strong>REGISTER</strong>
+          <span>FILL THIS </span>FORM
+        </h2>
+      </div>
+      </div>
+      
+      <div class="row">
+        <div class="offset-lg-1 col-lg-10">
+        <div class="contact-form">
+          <div class="row">
+            <div class="col-md-12 text-center mb-5">
+              <p>Register your spot in the limited access webinar. Gain the knowledge and information<br>that you would need to make sure you take the best decision with respect to your career.</p>
+            </div>
+          </div>
+          <div class="row">
+<div class="col-lg-6">
+  <div class="row mb-3">
+     <div class="col-md-4">
+              <label class="control-label">Already Registered?</label>
+            </div>
+            <div class="col-md-8 text-left">
+              <div class="ml-auto multiple-checkbox-wrapper">
+                <div class="checkbox-container" >
+                  <input type="radio" (click)="showForm('emailId');" value="male" id="male" name="student_gender" >
+                  <label for="male">Yes</label>
+                  <div class="custom-checkbox"></div>
+                </div>
+                <div class="checkbox-container" >
+                  <input type="radio" (click)="showForm('registerForm');" checked value="female" id="female" name="student_gender">
+                  <label for="female">No</label>
+                  <div class="custom-checkbox"></div>
+                </div>
+              </div>
+            </div>
+ </div>
+</div>
+          </div>
+          <form id="registerForm" class="form-show" #webinarRegistration = "ngForm" (ngSubmit) = "webinarReg(webinarRegistration.value,0)" style="display: block;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="alert alert-success" *ngIf="msgNew">
+               {{msgNew}}
+              </div>
+              <div class="alert alert-danger" *ngIf="errorNew">
+                <ul>
+                <li *ngFor="let val of errorNew">{{val}}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 bdrRight pr-4">
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Full Name<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" name="fName" required class="form-control"ngModel>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Email ID<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" name="email" required class="form-control"ngModel>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Phone<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" name="phone" required class="form-control"ngModel>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Webinar Name</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" disabled class="form-control" name="webinarName"  [(ngModel)]='webinarName'>
+                </div>
+              </div>
+             
+            </div>
+            <div class="col-lg-6 pl-4">
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Are you?<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <div class="ml-auto multiple-checkbox-wrapper">
+                    <div class="checkbox-container">
+                      <input type="radio" checked value="1" id="x" name="status" ngModel>
+                      <label for="x">Student</label>
+                      <div class="custom-checkbox"></div>
+                    </div>
+                    <div class="checkbox-container">
+                      <input type="radio" value="2" id="y" name="status" ngModel>
+                      <label for="y">Parent</label>
+                      <div class="custom-checkbox"></div>
+                    </div>
+                    <div class="checkbox-container">
+                      <input type="radio" value="3" id="z" name="status" ngModel>
+                      <label for="z">Counsellor</label>
+                      <div class="custom-checkbox"></div>
+                    </div>
+                    <div class="checkbox-container">
+                      <input type="radio" value="4" id="a" name="status" ngModel>
+                      <label for="a">Other</label>
+                      <div class="custom-checkbox"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">School Name<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" name="sName" class="form-control"ngModel>
+                 
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-lg-4">
+                  <label class="control-label">Class<em>*</em></label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" name="class" class="form-control" ngModel>
+                </div>
+              </div>
+
+            </div>
+          </div>
+         <div class="row">
+           <div class="col-md-12 mt-5 text-center">
+             <button type="submit"  class="custom-primary-btn cust-submit">Submit</button>
+             <img *ngIf="loading" src="assets/images/common/loading-gif.gif" style="width:60px; margin-left:10px;" />
+           </div>
+         </div>
+
+          </form>
+          
+          <form id="emailId" style="display: none;" #webEmail = "ngForm" (ngSubmit) = "webinarEmailReg(webEmail.value,1)" class="form-show" >
+            <div class="row">
+              <div class="col-md-12">
+                <div class="alert alert-success" *ngIf="msgEmail">
+                 {{msgEmail}}
+                </div>
+                <div class="alert alert-danger" *ngIf="errorEmail">
+                  <ul>
+                  <li *ngFor="let val of errorEmail">{{val}}</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row mb-3">
+                  <div class="col-lg-4">
+                    <label class="control-label">Email ID<em>*</em></label>
+                  </div>
+                  <div class="col-lg-8">
+                    <input type="text" name="email" required class="form-control"ngModel>
+                  </div>
+                </div>
+  
+               
+              </div>
+              <div class="col-lg-6">
+                <div class="row mb-3">
+                  <div class="col-lg-4">
+                    <label class="control-label">Webinar Name</label>
+                  </div>
+                  <div class="col-lg-8">
+                    <input type="text" disabled class="form-control" name="webinarName"  [(ngModel)]='webinarName'>
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+         
+          <div class="row">
+            <div class="col-md-12 mt-5 text-center">
+              <button type="submit" class="custom-primary-btn cust-submit">Submit</button>
+              <img *ngIf="loading" src="assets/images/common/loading-gif.gif" style="width:60px; margin-left:10px;" />
+            </div>
+          </div>
+          </form>
+        </div>
+      </div></div>
+  </div>
+</section>
+
+
+<!--regisration section start-->
+<div class="cityTourRegistration d-none" id="cityTourRegistration">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-5 registration-form">
+      <h3>REGISTRATION</h3>
+      <form #cityReg = "ngForm" (ngSubmit) = "cityTourRegistration(cityReg.value)" id="cityReg">
+        <div class="alert alert-success" *ngIf="msg">
+          Thank you for registering with us. We will get back to you soon.
+        </div>
+        <div class="alert alert-danger" *ngIf="error">
+          <ul>
+          <li *ngFor="let val of error">{{val}}</li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name='name' required placeholder="Your Name" >
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name='email' required placeholder="Your Email Id" ngModel >
+          </div>
+        <div class="form-group">
+             <input type="text" class="form-control" name="school" required placeholder="School Name" ngModel>
+            </div>
+            <div class="form-group">
+                <!-- <input type="text" class="form-control" name="city" required placeholder="City" ngModel> -->
+                <select name="city" class="form-control"  ngModel>
+                  <option hidden value="" disabled selected>Select City</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Bhopal">Bhopal</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Mumbai">Mumbai</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="contact" required placeholder="Contact No" ngModel>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="noofguest" required placeholder="No Of Guest" ngModel>
+              </div>
+              <div class="form-group">
+                 <input type="submit" class="d-block custom-secondary-btn"  id="ctregbtn" value="Register Now" >
+                </div>
+                <!-- <div class="form-group text-center">
+                   <a href="#" class="d-block custom-primary-btn download">Download Summit Details</a>
+                  </div> -->
+      </form>
+    </div>
+    <div class="col-lg-7 registration-image"></div>
+  </div>
+</div>
+</div>
+<!--regisration section end-->
+
+
+
+
+  </div>

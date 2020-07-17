@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="margin-top-main" id="dashboardMarginT">
+    <div id="wrapper" class="toggle-show">
+        <app-sidebar></app-sidebar>
+        <div class="dashboard-wrapper">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+    <button (click)="scrollToTop()">
+       <img src="assets/images/common/rocket-ship.png" alt="bottom arrow"> <span>TOP</span>
+    </button>
+  </div>

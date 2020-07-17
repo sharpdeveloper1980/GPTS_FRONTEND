@@ -1,0 +1,391 @@
+/* new stylingo */
+.dalham-background {
+    background-image: url(../../../assets/images/theme-three/banner/green-orange-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.banner-height {
+    .row {
+        align-items: center;
+    }
+}
+
+.banner-icon-position {
+    position: relative;
+    top: 30px;
+}
+
+
+
+.dalham-products-wrapper {
+    .link {
+        margin-top: 28px;
+        display: inline-block;
+    }
+}
+
+.font-size25 {
+    font-size: 25px;
+}
+
+.margin-bottom24 {
+    margin-bottom: 24px;
+}
+
+.margin-bottom45 {
+    margin-bottom: 45px;
+}
+
+.border-bottom-light {
+    border-top: 1px solid #e7e7e7;
+}
+
+.margin-bottom20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom12 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom32 {
+    margin-bottom: 29px;
+}
+
+.line-height30 {
+    line-height: 30px;
+    max-width: 359px;
+}
+
+.bubble-blue-left {
+    position: relative;
+}
+
+.bubble-blue-left::after {
+    content: '';
+    background-image: url('../../../assets/images/theme-three/bubble-right-dalham.jpg');
+    width: 100%;
+    height: 142vh;
+    background-position: left;
+    position: absolute;
+    top: -121px;
+    background-repeat: no-repeat;
+    left: -235px;
+    z-index: -1;
+}
+
+.margin-bottom96 {
+    margin-bottom: 96px;
+}
+
+
+
+.box {
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 30px;
+}
+
+.box:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 131, 196, 0.8);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.blue-boxy {
+    background: rgba(65, 131, 196, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    transition: all 0.5s ease-in-out;
+    min-height: auto;
+
+    p.name {
+        font-weight: 400;
+    }
+
+    p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.box:hover .blue-boxy {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover:before {
+    bottom: 0;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.box .box-content {
+    width: 100%;
+    padding: 0 30px;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    transition: all 0.2s ease 0s;
+}
+
+.box-content {
+
+    p {
+        color: white;
+        font-size: 13px;
+        line-height: 1.54;
+        padding-top: 40px;
+    }
+}
+
+.box:hover .box-content {
+    left: 0;
+    text-align: center;
+}
+
+.box .title {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+
+.box .post {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    max-width: 250px;
+    margin: auto;
+}
+
+.box .icon {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 20px;
+    right: -100%;
+    transition: transform 0.5s ease 0.5s;
+}
+
+.box:hover .icon {
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.box .icon li {
+    transform: translate3d(600px, 0px, 0px);
+    transition: all 0.5s ease 0.5s;
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.box .icon li:last-child {
+    transition-delay: 0.5s;
+}
+
+.box:hover .icon li {
+    transform: translate3d(0, 0, 0);
+}
+
+.box .icon li a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 45px;
+    background: #fff;
+    text-align: center;
+    font-size: 21px;
+    color: #6194c7;
+    margin-bottom: 5px;
+    transition: all 0.5s ease 0s;
+    border-radius: 4px;
+}
+
+.icon i {
+    position: relative;
+    top: -5px;
+}
+
+.box .icon li a:hover {
+    background: #6194c7;
+    color: #fff;
+}
+
+.orange-head-width {
+    max-width: 1030px;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+.margin-bottom115 {
+    margin-bottom: 115px;
+}
+
+.violet-background {
+    border-radius: 2px;
+    background-color: #eaeffb;
+    position: relative;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.violet-background::after {
+    content: '';
+    background-image: url(../../../assets/images/theme-three/violet-back.png);
+    width: 100%;
+    height: 24vh;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+}
+
+
+.max-width2 {
+    max-width: 200px;
+}
+
+.font-color33 i {
+    padding-right: 15px;
+    line-height: 33px;
+}
+
+.footer-text-width {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.index-dalham {
+    z-index: 3;
+    position: relative;
+}
+
+/* new stylingo ends */
+
+
+
+
+@media (max-width: 1199px) {
+    .blue-boxy {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .violet-background::after {
+        content: '';
+        display: none;
+    }
+
+    .dalham-products-wrapper div {
+        margin-bottom: 40px;
+    }
+
+    .dalham-products-wrapper div {
+        margin-bottom: 40px;
+        text-align: -webkit-center;
+        text-align: center;
+    }
+
+    .blue-boxy {
+        min-height: auto;
+    }
+
+    .margin-bottom115 {
+        margin-bottom: 35px;
+    }
+
+    .bubble-blue-left::after {
+        background-size: contain;
+    }
+
+    .line-height30 {
+        line-height: 30px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .violet-background::after {
+        display: none;
+    }
+
+    .dalham-products-wrapper div {
+        margin-bottom: 40px;
+        text-align: -webkit-center;
+        text-align: center;
+    }
+
+    .blue-boxy {
+        min-height: auto;
+    }
+
+    .margin-bottom115 {
+        margin-bottom: 35px;
+    }
+
+    .bubble-blue-left::after {
+
+        background-size: contain;
+    }
+
+    .line-height30 {
+        line-height: 30px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .dalham-products-wrapper div {
+        margin-bottom: 40px;
+        text-align: -webkit-center;
+        text-align: center;
+    }
+
+    .blue-boxy {
+        min-height: auto;
+    }
+
+    .margin-bottom115 {
+        margin-bottom: 35px;
+    }
+
+    .bubble-blue-left::after {
+
+        background-size: contain;
+    }
+
+    .line-height30 {
+        line-height: 30px;
+        max-width: 100%;
+    }
+}

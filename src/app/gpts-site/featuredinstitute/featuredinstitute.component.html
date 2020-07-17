@@ -1,0 +1,310 @@
+<app-header></app-header>
+
+
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="featured-institute-back dynheader">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-5 col-12 text-center text-lg-left">
+          <h2 class="text-big">Discover the finest institutions for your child</h2>
+          <p class="text-macro"></p>
+        </div>
+        <div class="col-lg-7 col-12 text-center text-lg-right">
+          <img src="assets/images/theme-three/banner/featured-institutes.svg"
+            class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- about gpts -->
+  <div class="custom-container section-padding">
+    <div class="row">
+      <div class="col-xl-4 col-12">
+        <img src="assets/images/theme-three/featured-about.png" class="img-fluid" alt="image">
+      </div>
+      <div class="col-xl-8 col-12">
+        <h3 class="font-size50 custom-text-light margin-btm36">About GPTS Featured</h3>
+        <p class="orange-text font-size25">Step into the world of progressive education institutions.</p>
+        <p class="font-color33 text-small">Here is your chance to explore some of the finest institutions that can
+          transform your child’s life. GPTS Featured is a global platform that enables schools, colleges and
+          universities to showcase their unique approach to education.
+          We believe that an ideal school is one that holistically nurtures your child while giving them the foundation
+          to realise and pursue their dreams. Great Place To Study is on a journey to highlight and celebrate schools
+          that are leading the transformation of the education sector by adopting innovative practices. We have
+          collaborated with leading media houses to help you in your quest to discover great education institutions for
+          your child.
+
+        </p>
+        <p class="font-color33 text-small custom-margin-weight">Our media partners include CNBC, CNN, Times Now, ET Now
+          and India Today TV. GPTS also has an annual publication in partnership with Forbes, India.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- listing -->
+  <div class="custom-container section-padding pt-0">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3 class="font-size50 custom-text-light margin-btm36">Featured Institute</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ngb-tabset type="pills" [justify]="'center'" activeId={{firstparam}}>
+          <ngb-tab id="tab-1" title="WATCH">
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div *ngFor="let series of seriesName; index as i" class="margiW" id="tabrow{{i}}">
+                  <h4 class="text-uppercase tabFeatuHead text-center" [innerHtml]="series.title"></h4>
+                  <p class="text-center feparaOne">{{series.desc}}</p>
+                  <!-- set 1 -->
+                  <div class="col-12 removePadding comiMargin" *ngIf="seriesName.length">
+                    <div class="position-relative">
+                      <div *ngIf="series.list.length">
+                        <div class="d-flex flex-wrap justify-content-center">
+                          <!-- Slides -->
+                          <div class="featured-vid col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12"
+                            *ngFor="let videoSeries of series.list | slice: 0:show; i as index">
+                            <div class="imgBorderTwo">
+                              <a class="video-link" (click)="openVideoModal(videoSeries.video_link, videoSeries.name)"
+                                target="_blank">
+                                <i class="fa fa-play"></i>
+                                <img src="{{videoSeries.thumb}}" class="img-fluid " alt="image" width="100%">
+                              </a>
+                              <div class="whiteFBg text-center">
+                                <p class="p5">{{videoSeries.name}}</p>
+                                <p class="p6">{{videoSeries.location}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="d-inline-block custom-secondary-btn margin-top45"
+                              *ngIf="series.list.length > 8 &&  show <= series.list.length else lessBtn"
+                              (click)="show = show+8">VIEW MORE</button>
+                            <ng-template #lessBtn>
+                              <button class="d-inline-block custom-secondary-btn margin-top45" (click)="show = 8">
+                                VIEW LESS
+                              </button>
+                            </ng-template>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- button -->
+                  <!-- <div class="col-12 text-center">
+            <button (click)="loadMore()" class="btn bbBluebtn">Load More</button>
+          </div> -->
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab id="tab-2">
+            <ng-template ngbTabTitle>READ</ng-template>
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div class="margiW">
+                  <h4 class="text-uppercase tabFeatuHead text-center">Print <span>Media</span></h4>
+                  <p class="text-center font-size20 orange-text">GPTS has an annual publication in partnership with
+                    Forbes India titled Great
+                    Indian Institutes. </p>
+                  <p class="text-center feparaOne">In the past few years, GPTS has expanded into different segments of
+                    the
+                    education
+                    system. Currently, our organisation has publishes different magazines for preschools, schools and
+                    higher
+                    education institutions.</p>
+                  <!-- set 1 -->
+                  <div class="col-12 removePadding d-xl-flex d-lg-flex flex-wrap comiMargin">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/Connoisseur%20of%20Higher%20Education%20E-book.pdf"
+                          target="_blank"><img src="assets/images/static/forbes1.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">Connoisseurs of Higher Education 2015 A Special initiative to showcase the
+                            thought
+                            leaders of Higher Education.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4  col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/Forbes%20-%20Great%20Indian%20Institutions.pdf"
+                          target="_blank"><img src="assets/images/static/forbes2.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">The Great Indian B-Schools 2016 A Special initiative to showcase the great
+                            management
+                            Institutes of Higher Education.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4  col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/Forbes%20Executive%20Edition.pdf"
+                          target="_blank"><img src="assets/images/static/forbes3.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">Executive Education 2018 To showcase some of the thought leader institutions in
+                            the
+                            country's executive education community.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4  col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/The%20Great%20Indian%20Schools%202018.pdf"
+                          target="_blank"><img src="assets/images/static/forbes4.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">The Great Indian Schools 2018 A special edition to profile Schools from India's
+                            K12
+                            education community.<br><br></p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4  col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/FINAL_FORBES_GII2018.pdf"
+                          target="_blank"><img src="assets/images/static/forbes5.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">Great Indian Institutes 2018 - A special initiative to showcase the mavens of
+                            Higher
+                            Education in India.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/Forbes_The_Great_Indian_Schools_2018-2019.pdf"
+                          target="_blank"><img src="assets/images/static/forbes6.jpg" class="img-fluid " alt="image"
+                            width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">The Great Indian Schools 2018 A special edition to profile Schools from India's
+                            K12
+                            education community.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4  col-sm-6 col-12">
+                      <div class="imgBorder">
+                        <a href="https://greatplacetostudy.com/public/pdf/Forbes-Preschool-V4.pdf" target="_blank"><img
+                            src="assets/images/static/forbes7.png" class="img-fluid " alt="image" width="100%"></a>
+                        <div class="whiteFBg text-center">
+                          <p class="p1">It features some of the most progressive preschools in the country that have
+                            created
+                            a
+                            nurturing environment for budding young minds.</p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>COMING SOON</ng-template>
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div class="margiW">
+                  <h4 class="text-uppercase tabFeatuHead text-center">Coming <span>Soon</span></h4>
+                  <p class="text-center font-size20 orange-text">Storied of influential educators have the potential to
+                    inspire a new generation of thought leaders.</p>
+                  <p class="text-center feparaOne"> Witness the latest advancements in education in an uplifting show
+                    that focuses on the stalwarts of the field. Education Evangelist of India follows the story of
+                    inspiring educators and edupreneurs, giving them a stage to convey to the world the promise of
+                    Indian education.</p>
+                  <!-- set 1 -->
+                  <div class="col-12 removePadding d-xl-flex d-lg-flex d-md-flex comiMargin">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12">
+                      <div class="imgBorder imgborderTwo">
+                        <img src="assets/images/static/featured/evan.jpg" class="img-fluid " alt="image" width="100%">
+
+                      </div>
+                    </div>
+                    <!-- text -->
+                    <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12">
+                      <p class="p3 p3Res"><strong>Education Evangelist of India</strong> </p>
+                      <p class="orange-text p3-orange">Releasing on September ’19</p>
+                      <p class="p4">Great Place To Study will soon be launching ‘Educational Evangelist of India’, the
+                        first-ever web series hosted by Chetan Bhagat that will feature 40 path-breaking stories of the
+                        lives
+                        and work of prominent educationalists in India. The show will be featured on <a
+                          href="http://www.forbesindia.com/">forbesindia.com</a>. </p>
+                      <p class="p4">Forbes is one of the leading business
+                        magazines in the
+                        world with a strong presence in digital and print media. GPTS has partnered with Forbes India to
+                        launch a first-of-its-kind web series that highlights individuals who are working towards
+                        transforming
+                        the education sector in the country.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        Experience the power of great schools.
+      </div>
+      <div class="sub-text">
+        Great Thing happens!
+      </div>
+      <button (click)="queryModal.openModal()" class="custom-secondary-btn">
+        Get Certified
+      </button>
+    </div>
+  </div>
+
+  <app-query-modal #queryModal></app-query-modal>
+
+  <!-- Youtube video modal -->
+
+  <ng-template #content let-modal>
+    <div class="youtube-container">
+      <div class="modal-header border-none">
+        <h4 class="modal-title" id="modal-basic-title">
+          {{videoName}}
+        </h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" [src]="videoSrc" id="video" allowscriptaccess="always"
+            allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</div><!-- theme three div ends -->
+<app-query-modal #queryModal></app-query-modal>

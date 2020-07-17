@@ -1,0 +1,100 @@
+<!-- main page starts -->
+<div id="page-content-wrapper">
+
+    <!-- thriving index box -->
+    <div class="container-fluid whiteBox">
+        <!-- box heading -->
+        <div class="row headingCareer pt-3 pb-2">
+            <div class="col-6">
+                <p class="headingOne text-uppercase leagueBold">Career Discovery</p>
+            </div>
+            <div class="col-6"></div>
+        </div>
+
+        <!-- congrats -->
+        <div class="row">
+            <div class="col-12">
+                <p class="greenText text-uppercase">congratualtions</p>
+                <p class="careerParaOne">You have begun your career journey with a step in the right direction</p>
+            </div>
+
+            <!-- bordered grey box para -->
+            <div class="col-12">
+                <p class="careerParaTwo"><span class="careerParaSpan"></span><strong>Life is full of possibilities when
+                        you have
+                        the freedom to make
+                        real decisions that affect your future. With the power bestowed upon you by the Career Discovery
+                        and
+                        Acceleration Programme</strong>
+                    <br>
+                    <span class="careerParaThree"><i class="fa fa-caret-right blokRight"></i>You can choose to study the
+                        career
+                        subjects you
+                        like
+                        in the college you
+                        love.</span>
+                </p>
+                <p class="careerParaFour">Today, your life changes, you will be joining a league of exceptional minds
+                    that will
+                    conquer the world. <strong>‘The Career Discovery Test’</strong> will swing open the gates of the
+                    finest career
+                    options and
+                    educational institutions for you</p>
+                <p class="text-center position-relative careerParaFive"><img src="assets/images/common/quote.png"
+                        class="img-fluid position-absolute quoImg" alt="image">Discovering your passion is discovering a
+                    part of
+                    your soul</p>
+            </div>
+        </div>
+
+        <!-- white -->
+        <div class="row d-flex">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 whiteBocx">
+                <p class="text-center careerParaSix">The Thriving Index® (TI) is an exploratory assessment which helps
+                    you
+                    discover your personal strengths, blind-spots and motivators.</p>
+                <p class="text-center careerParaSeven">Your responses will be mapped to 8 different Work Styles as well
+                    as your
+                    suitability across 24 occupational clusters and 750+jobs profiles.</p>
+                <!-- 4 icons -->
+                <div class="col-12 d-xl-flex d-lg-flex d-md-flex">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+                        <img src="assets/images/common/paper-icon.png" class="img-fluid iconImageCareer" alt="image">
+                        <p class="careerIconText">Take the career discovery test</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+                        <img src="assets/images/common/thinking-icon.png" class="img-fluid iconImageCareer" alt="image">
+                        <p class="careerIconText">Identify your strengths</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+                        <img src="assets/images/common/download-icon.png" class="img-fluid iconImageCareer" alt="image">
+                        <p class="careerIconText">Download your detailed report</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+                        <img src="assets/images/common/podium-icon.png" class="img-fluid iconImageCareer" alt="image">
+                        <p class="careerIconText">Get best fit career options</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+            <div class="col-12">
+                <div class="checkbox">
+                    <label class="checkFont" (change)="termsCheck($event)"><input type="checkbox" #termsElement>I agree
+                        to the <a href="/terms" target="_blank">Terms and Conditions</a>
+                        and <a href="/privacy"  target="_blank">Privacy Policy</a> </label>
+                </div>
+            </div>
+            <!-- get started -->
+            <div class="col-12 text-center">
+                <button *ngIf="tteRegisterVar" id="ttegetstarted" type="button" [disabled]="!termsVar"
+                    class="text-uppercase text-center greenBtnCareer" (click)="tteNewUser()">Get Started</button>
+                <button *ngIf="!tteRegisterVar" id="ttetaketest" [disabled]="!termsVar" type="button" (click)="tteTestRedirect()"
+                    class="text-uppercase text-center greenBtnCareer">{{ssoBttonText}}</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

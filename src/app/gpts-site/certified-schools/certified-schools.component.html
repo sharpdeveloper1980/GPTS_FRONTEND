@@ -1,0 +1,187 @@
+<app-header></app-header>
+
+<div class="theme-three">
+  <!-- banner section -->
+  <div class="certified-school-back dynheader">
+    <div class="custom-container banner-height">
+      <div class="row">
+        <div class="col-lg-6 col-12 text-center text-lg-left">
+          <h2 class="text-big">Happy school for happy students</h2>
+          <!-- <p class="text-macro">At GPTS, we have tools to disrupt the education system. We help institutes to find the
+            best way of nurturing young millennials for their holistic development.</p> -->
+        </div>
+        <div class="col-lg-6 col-12 text-center text-center">
+          <img src="assets/images/theme-three/banner/certified-institute.svg"
+            class="img-fluid bannerImgSub banner-icon-position" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- about certified schools -->
+
+  <div class="custom-container section-padding">
+
+    <div class="row">
+      <div class="col-xl-4 col-12">
+        <img src="assets/images/theme-three/featured-about.png" class="img-fluid" alt="image">
+      </div>
+      <div class="col-xl-8 col-12">
+        <h3 class="font-size50 custom-text-light margin-btm36">Certified Schools</h3>
+        <p class="orange-text font-size25 margin-btm36">Great Place To Study has set a benchmark for institutes to meet
+          global education standards.</p>
+        <p class="font-color33 text-small">Imagine your child feels safe and happy at school. Student Fulfilment Index
+          enables you to play an active role in your child’s school life and create a positive learning environment.
+          Student Fulfilment Index (SFI), a unique offering by Great Place To Study, gives all stakeholders, especially
+          parents and teachers a platform to fine-tune existing education models. For the first time, students, parents,
+          teachers and alumni will play an active part in designing the future of the education system. Through SFI,
+          GPTS certifies institutions based on 7 Key Performance Indicators (KPIs). Schools that have met and exceeded
+          the standards set by GPTS are recognised as a ‘great place to study’. Engineered by industry experts, SFI is
+          designed to usher in a healthy and happy environment for children.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 3 tab school list -->
+  <div class="custom-container section-padding pt-0">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3 class="font-size50 custom-text-light margin-btm36">Certified School List</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ngb-tabset *ngIf="dataFetched" type="pills" [justify]="'center'">
+          <ngb-tab title="All">
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div class="margiW">
+                  <div class="row justify-content-center">
+                    <div *ngFor="let data of certifiedSchool.All | slice: 0: sliceVar" class="colCustom">
+                      <div class="cOne text-center">
+                        <img [src]="data.logo" class="img-fluid" alt="image">
+                        <!-- school name -->
+                        <p class="whiteFBg" title="{{data.name}}">{{data.name}}</p>
+                        <!-- location -->
+                        <p class="cThree ">{{data.location}}</p>
+                        <!-- star -->
+                        <div class="bordrTp">
+                          <p>
+                            <i class="fa fa-star {{data.rating}} {{i}}"
+                              *ngFor="let Arrdata of convertToArray(5); index as i"
+                              [class.goldy]="data.rating >= i+1"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-5 text-center">
+                    <button class="custom-secondary-btn" *ngIf="sliceVar < certifiedSchool.All.length; else less"
+                      (click)="sliceVar = certifiedSchool.All.length">View All</button>
+                    <ng-template #less>
+                      <button class="custom-secondary-btn" (click)="sliceVar = 10">View Less</button>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Daycare">
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div class="margiW">
+                  <div class="row justify-content-center">
+                    <div *ngFor="let data of certifiedSchool.Daycare | slice: 0: sliceVar" class="colCustom">
+                      <div class="cOne text-center">
+                        <img [src]="data.logo" class="img-fluid" alt="image">
+                        <!-- school name -->
+                        <p class="whiteFBg" title="{{data.name}}">{{data.name}}</p>
+                        <!-- location -->
+                        <p class="cThree ">{{data.location}}</p>
+                        <!-- star -->
+                        <div class="bordrTp">
+                          <p>
+                            <i class="fa fa-star {{data.rating}} {{i}}"
+                              *ngFor="let Arrdata of convertToArray(5); index as i"
+                              [class.goldy]="data.rating >= i+1"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-5 text-center">
+                    <button class="custom-secondary-btn" *ngIf="sliceVar < certifiedSchool.All.length; else less"
+                      (click)="sliceVar = certifiedSchool.All.length">View All</button>
+                    <ng-template #less>
+                      <button class="custom-secondary-btn" (click)="sliceVar = 10">View Less</button>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Residential">
+            <ng-template ngbTabContent>
+              <div class="whiteBackFeature">
+                <div class="margiW">
+                  <div class="row justify-content-center">
+                    <div *ngFor="let data of certifiedSchool.Residential | slice: 0: sliceVar" class="colCustom">
+                      <div class="cOne text-center">
+                        <img [src]="data.logo" class="img-fluid" alt="image">
+                        <!-- school name -->
+                        <p class="whiteFBg" title="{{data.name}}">{{data.name}}</p>
+                        <!-- location -->
+                        <p class="cThree ">{{data.location}}</p>
+                        <!-- star -->
+                        <div class="bordrTp">
+                          <p>
+                            <i class="fa fa-star {{data.rating}} {{i}}"
+                              *ngFor="let Arrdata of convertToArray(5); index as i"
+                              [class.goldy]="data.rating >= i+1"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-5 text-center">
+                    <button class="custom-secondary-btn" *ngIf="sliceVar < certifiedSchool.All.length; else less"
+                      (click)="sliceVar = certifiedSchool.All.length">View All</button>
+                    <ng-template #less>
+                      <button class="custom-secondary-btn" (click)="sliceVar = 10">View Less</button>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- footer -->
+  <div class="page-footer-section text-center">
+    <div class="custom-container">
+      <div class="custom-head custom-text-medium custom-text-light footer-text-width">
+        Finding the perfect school for your child has never been easier.
+      </div>
+      <!-- <div class="sub-text">
+        Great Thing happens!
+      </div> -->
+      <button (click)="queryModal.openModal()" class="custom-secondary-btn">
+        Get Certified
+      </button>
+    </div>
+  </div>
+  <app-query-modal #queryModal></app-query-modal>
+
+</div> <!-- theme three ends -->

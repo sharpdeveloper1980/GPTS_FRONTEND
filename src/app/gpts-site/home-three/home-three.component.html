@@ -1,0 +1,825 @@
+<app-header></app-header>
+
+<div class="home-page theme-three">
+    <div class="gray-background">
+        <div class="container start-section-padding">
+            <div class="row align-items-center main-human-background">
+                <div class="col-lg col-12 main-home-wrapper">
+                    <h1 class="home-head-text text-big custom-text-light">
+                        What does it mean to be truly
+                        <span class="text-very-heavy">
+                            GREAT ?
+                        </span>
+                    </h1>
+                    <div class="orange-text sub-text">
+                        Find out.
+                    </div>
+                    <a routerLink="/iamstudent" class="d-inline-block custom-primary-btn">For Students</a>
+                    <a routerLink="/iaminstitute" class="d-inline-block custom-secondary-btn">For Institutions</a>
+
+                    <!-- <div class="">
+              <img src="assets/images/theme-three/"
+            </div> -->
+                </div>
+                <div class="d-xl-none">
+                    <img class="img-fluid" src="assets/images/theme-three/Homepage-banner.svg">
+                </div>
+            </div>
+            <!-- Video Section -->
+            <!-- Old -->
+            <!-- <div class="row side inner-side-spacing align-items-center flex-column-reverse flex-xl-row video-wrapper"
+        data-aos="fade-up" data-aos-duration="1000"> -->
+
+            <!-- New -->
+            <div class="row side video-wrapper flex-wrap flex-xl-row" data-aos="fade-up" data-aos-duration="1000">
+
+                <!-- Old -->
+                <!-- <div class="col-lg-8 col-12 mx-auto"> -->
+
+                <!-- New -->
+                <div class="video_box_width">
+
+                    <div *ngIf="videoLoad" class="white-border-video margin-bottom68">
+                        <div class="embed-responsive embed-responsive-16by9 " (click)="stopAllVid('firstvideo')">
+                            <!-- removed this "big-video-container" class from here-->
+                            <vg-player class="embed-responsive-item">
+                                <vg-overlay-play></vg-overlay-play>
+                                <vg-buffering></vg-buffering>
+                                <vg-controls>
+                                    <vg-play-pause></vg-play-pause>
+                                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-scrub-bar [vgSlider]="true">
+                                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                        <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                    </vg-scrub-bar>
+                                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                    <vg-mute></vg-mute>
+                                    <vg-volume></vg-volume>
+                                    <vg-fullscreen></vg-fullscreen>
+                                </vg-controls>
+                                <video preload="auto" [poster]="homeVideoThumb" id="firstvideo" [vgMedia]="homeVideo" [src]="homeVideoUrl" class="videoClass" #homeVideo></video>
+                            </vg-player>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="custom-vid-wrapper side-video embed-responsive embed-responsive-16by9" (click)="playVideo()">
+            <div #playIcon class="play-icon">
+              <i class="fa fa-play "></i>
+            </div>
+            <video class="embed-responsive-item" [poster]="homeVideoThumb" #homeVideo [src]="homeVideoUrl"></video>
+          </div> -->
+                </div>
+
+                <!-- Old -->
+                <!-- <div class="col-12">
+                    <div class="video-section-text text-center">
+                        <div class="custom-text-medium custom-text-light ">
+                            Introducing the first video streaming platform for career exploration
+                        </div>
+                        <div class="orange-text sub-text">
+                            Play the stories
+                        </div>
+                        <a routerLink="/CDAP" class="custom-secondary-btn">Explore CDAP</a>
+                    </div>
+                </div> -->
+
+
+                <!-- New -->
+                <div class="video_text_box_width">
+                    <!-- <div class="video-section-text"> -->
+                    <!-- text-center -->
+                    <!-- <div class="custom-text-medium custom-text-light ">
+              Introducing the first video streaming platform for career exploration
+            </div> -->
+                    <div class="home-text-heading custom-text-light">
+                        Stream your Career here! 
+                        <!-- <br> <span class="orange-text">Streaming</span> -->
+                    </div>
+                    <!-- <div class="video_sub_texting">
+                        Watch the maestros of industries take you on an incredible journey that will set your career trajectory on the path of success. You will have the chance to experience the nuances of every career field and get advice from the most experienced individuals. Find the answers you seek regarding careers, educational institutions, campus life and learning experience. Through visually stunning and captivating videos, you will start on a path to find your passion and explore the exciting world that lies ahead.
+                    </div> -->
+
+                    <div class="video_sub_texting">
+                        <!-- orange-text sub-text -->
+                        Leave nothing to your imagination as we bring you the Career Discovery & Acceleration Platform aka CDAP, where you can watch videos and find out all about the choicest of careers and best colleges - all through captivating visuals and well-researched content.
+                    </div>
+
+                    <a routerLink="/CDAP" class="custom-secondary-btn">Explore CDAP</a>
+                    <!-- </div> -->
+                </div>
+
+                <div class="three_vid_section">
+                    <!-- 1 -->
+                    <div class="three_vid_width">
+
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('nanovideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video preload="auto" [poster]="homeNanoVideoThumb" id="nanovideo" [vgMedia]="homeVideo" [src]="homeNanoVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">Nano Classes</p> -->
+                            <p class="text-macro">{{homeNanoVideoTitle}}</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+                    <div class="three_vid_width">
+
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('collagevideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video preload="auto" [poster]="homeCollegeVideoThumb" id="collagevideo" [vgMedia]="homeVideo" [src]="homeCollegeVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">College Video</p> -->
+                            <p class="text-macro">{{homeCollegeVideoTitle}}</p>
+                        </div>
+
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="three_vid_width">
+
+                        <div *ngIf="videoLoad" class="margin-bottom68 video_white_thin_border">
+                            <div class="embed-responsive embed-responsive-16by9" (click)="stopAllVid('cvideo')">
+                                <!-- removed this "big-video-container" class from here-->
+                                <vg-player class="embed-responsive-item">
+                                    <vg-overlay-play></vg-overlay-play>
+                                    <vg-buffering></vg-buffering>
+                                    <vg-controls>
+                                        <vg-play-pause></vg-play-pause>
+                                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-scrub-bar [vgSlider]="true">
+                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                            <vg-scrub-bar-buffering-time vgFor="homeVideo"></vg-scrub-bar-buffering-time>
+                                        </vg-scrub-bar>
+                                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                        <vg-mute></vg-mute>
+                                        <vg-volume></vg-volume>
+                                        <vg-fullscreen></vg-fullscreen>
+                                    </vg-controls>
+                                    <video preload="auto" [poster]="homeCareerVideoThumb" id="cvideo" [vgMedia]="homeVideo" [src]="homeCareerVideoUrl" class="videoClass" #homeVideo></video>
+                                </vg-player>
+                            </div>
+                        </div>
+
+                        <div class="whiteBoxVideo">
+                            <!-- <p class="text-macro">Career Video</p> -->
+                            <p class="text-macro">{{homeCareerVideoTitle}}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- New -->
+    <div class="search_begin_bg">
+        <div class="container section-padding">
+            <div class="row flex-lg-row-reverse flex-column-reverse align-items-center">
+                <div class="col-lg-6 col-md-9 col-sm-12 col-12 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center position-relative">
+                    <img src="assets/images/theme-three/search_circles_divider.png" class="img-fluid position-absolute search_c_divide">
+                    <div class="circle-links-wrapper auto_margin_left_right">
+                        <a routerLink="/careerlibrary" class="image-link d-inline-block">
+                            <img class="img-fluid" src="assets/images/theme-three/certiVector.svg">
+                        </a>
+                        <a routerLink="/careerlibrary" class="link">Explore Career</a>
+                    </div>
+                    <div class="circle-links-wrapper auto_margin_left_right">
+                        <a routerLink="/discover-colleges" class="image-link d-inline-block">
+                            <img class="img-fluid" src="assets/images/theme-three/careerVidVect.svg">
+                        </a>
+                        <a routerLink="/discover-colleges" class="link">Discover College</a>
+                    </div>
+                    <div class="circle-links-wrapper auto_margin_left_right">
+                        <a routerLink="/edieo" class="image-link d-inline-block">
+                            <img class="img-fluid border_100" src="assets/images/theme-three/nano1.jpg">
+                        </a>
+                        <a routerLink="/edieo" class="link">Edieo</a>
+                    </div>
+                    <div class="circle-links-wrapper auto_margin_left_right">
+                        <a routerLink="/getdiscover" class="image-link d-inline-block">
+                            <img class="img-fluid" src="assets/images/theme-three/featuredVect.svg">
+                        </a>
+                        <a routerLink="/getdiscover" class="link">Get Discovered</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="custom-head home-text-heading custom-text-light margin_t60 text-center text-lg-left text-xl-left">Join the Quest!</div>
+                    <div class="orange-text home-sub-text text-center text-lg-left text-xl-left">
+                        Reimagine your Career Exploration.
+                    </div>
+                    <!-- <p class="text-small d-none d-md-block">Career Discovery and Acceleration Platform (CDAP) allows you the opportunity to reimagine career fields that kindle your passion. Leave no stone unturned while you actively pursue your dream to be the best version of ‘you’. Find answers about the right careers, explore interesting colleges, broadcast your ideas and get discovered by reputable educational institutions. It is time you began the journey towards career success.</p> -->
+
+                    <p class="home-text-small d-none d-md-block text-center text-lg-left text-xl-left">Don’t settle for anything less than perfect! Get all the download about the trendiest career options and most happening colleges. Broadcast your ideas and get discovered by top-notch institutes. Begin your journey of success with CDAP! </p>
+
+                    <!--  Conquer the world through this powerful tool that puts the world at your fingertips. -->
+                    <!-- <div class="blue_check-style-list margin_t60">
+                        <div class="">
+                            <strong>Explore Careers:</strong>
+                            You will have the chance to learn about a vast array of interesting careers and get all the information about your fields of interest. 
+                        </div> 
+
+                        <div class="">
+                            <strong>Discover Colleges:</strong> Find educational institutes that offer programmes to suit your interests and passion. CDAP allows you to simplify and navigate the complex task of choosing the right college.
+                        </div> 
+                        <div class="">
+                            <strong>Expand Your Knowledge Base:</strong> With nano classes and Edieo, you have the opportunity to learn about new career fields and explore innovative learning avenues.
+                        </div> 
+                        <div class="">
+                            <strong>Get Discovered:</strong> Educational institutions are always looking for promising young minds, being a part of CDAP will put you in the unique position of getting noticed by prestigious institutes.
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="forbes_left_bg">
+            <!-- Special Initiatives -->
+            <div class="container  section-padding initiatives">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="custom-head home-text-heading custom-text-light">Special Initiatives</div>
+                        <!-- <div class="orange-text sub-text">
+                            Proide nsunt inculp cepteur sint occaecaa qui officia
+                        </div> -->
+                        <!-- <p class="text-small">Great Place To Study is invested in ensuring that students are given the opportunity to enrol in educational programmes that will help them get one step closer to their dream career. GPTS has partnered with some of the most respected educations institutions to offer students the chance to be a part of exciting educational initiatives.</p> -->
+                    </div>
+                </div>
+                <div class="row dotted_map">
+                    <div class="col-12 fixed_blocks_height pl-0 pr-0">
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 roychand_init">
+                            <a routerLink="/roychand-scholarship" class="d-flex height_100">
+                                <!-- <p class="roy_text">The Roychand Scholarship</p> -->
+                                <p class="roy_text">The Great Challenge</p>
+                                <!-- <img src="assets/images/theme-three/jain_university_logo_white.png" class="img-fluid position-absolute jain_logo"> -->
+                                <ul class="position-absolute roy_bottom_ul">
+                                    <li class="roy_bottom_li">Roychand Scholarship</li>
+                                    <li class="roy_bottom_li">Robotics for Humanity</li>
+                                    <li class="roy_bottom_li">Design Lords</li>
+                                </ul>
+                                <a routerLink="/roychand-scholarship" class="position-absolute roychand_arrow">
+                                    <i class="fa fa-arrow-circle-o-right"></i>
+                                </a>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 special_img_double">
+                            <div class="amrita_box_bg">
+                                <a routerLink="/city-tour" class="d-flex height_100">
+                                <!-- <p class="common_img_text_init width_init_img2">Study in Amrita University</p> -->
+                                    <p class="common_img_text_init width_init_img2">Future Readiness Summit <span>A 10 City Tour</span></p>
+                                </a>
+                            </div>
+                            <div class="gpts_ns_bg">
+                                <a routerLink="/dalham" class="d-flex height_100">
+                                    <!-- <p class="common_img_text_init width_init_img3">GPTS Republic Non Stem Listing</p> -->
+                                    <p class="common_img_text_init width_init_img3">Explore the world of DALHAM</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12 design_box_bg">
+                            <!-- <a routerLink="/design-college" class="d-flex height_100"> -->
+                                <!-- <p class="common_img_text_init width_init_img4">Design Colleges Of India</p> -->
+                                <p class="common_img_text_init width_init_img4">The Design College Playlist - 2020</p>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Forbes -->
+                <div class="row justify-content-between">
+                    <div class="forbes_marquee_first">
+                    <img src="assets/images/theme-three/forbes_marquee.png" class="img-fluid forbes_featured">
+                    </div>
+                    <div class="forbes_box">
+                        <a target="_blank" href="https://www.greatplacetostudy.com/public/pdf/Great_India_Schools_2019.pdf" class="d-flex align-items-center">
+                            <div>
+                                <div class="forbes_circular_1 forbes_circle_width"></div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="forbes_box_head">The Great Indian Schools 2019</p>
+                                <p class="forbes_box_subtext">A special edition to profile Schools from India's K12 education community.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="forbes_box">
+                        <a target="_blank" href="https://www.greatplacetostudy.com/public/pdf/The%20Great%20Indian%20Schools%202018.pdf" class="d-flex align-items-center">
+                            <div>
+                                <div class="forbes_circular_2 forbes_circle_width"></div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="forbes_box_head">The Great Indian Schools 2018</p>
+                                <p class="forbes_box_subtext">A special edition to profile Schools from India's K12 education community.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="forbes_box">
+                        <a href="https://www.greatplacetostudy.com/public/pdf/final Preschools Compressed.pdf" class="d-flex align-items-center">
+                            <div>
+                                <div class="forbes_circular_3 forbes_circle_width"></div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="forbes_box_head">Great Indian Preschools 2018-19</p>
+                                <p class="forbes_box_subtext">It features some of the most progressive preschools in the country.</p> <!-- that have created a nurturing environment for budding young minds-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 mt-5 text-center pl-0 pr-0">
+                        <a routerLink="/featuredinstitute" [queryParams]="{tabparam: 'tab-2'}" class="custom-secondary-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- TV Series -->
+                <div class="row tv_series mt-5 align-items-center">
+                    <div class="col-xl-4">
+                        <div class="custom-head home-text-heading custom-text-light text-center text-xl-left">Featured Story</div>
+                        <div class="orange-text home-sub-text featured_stories_padding text-center text-xl-left">
+                            Unravelling the World of Education
+                        </div>
+                        <!-- <p class="text-small d-none d-md-block">Great Place To Study has pioneered many featured programmes in an honest effort to showcase
+                        promising Indian institutions and respected members of the education fraternity. In collaboration with Republic TV, GPTS has worked on highlighting progressive voices in the education community and empowering institutions to convey their success story to the world.</p> -->
+
+                        <div class="mt-5 text-center text-xl-left"><a routerLink="/featuredinstitute" class="custom-secondary-btn">Play the Stories</a></div>
+                    </div>
+                    <div class="col-xl-8 col-lg-10 mx-auto d-flex flex-lg-row flex-md-row tv_justify tv_right_area_padding mt-5">
+                        <div class="tv_gii_bg tv_boxes_width">
+                            <a routerLink="/featuredinstitute" [queryParams]="{tabparam: 'great-indian-institutes'}" class="tv_boxes">
+                            <img src="assets/images/theme-three/gii_tv_logo.png" class="img-fluid tv_logos_top">
+                            <p class="text-center mt-5 mb-4 tv_boxes_head">Great Indian Institutes</p>
+                            <p class="text-center tv_boxes_subhead">Showcasing institutions that are setting new benchmarks in education fraternity.</p>
+                            <img src="assets/images/theme-three/republic_tv_logo.jpg" class="img-fluid tv_logo_republic">
+                            </a>
+                        </div>
+                        <div class="tv_gis_bg tv_boxes_width">
+                                <a routerLink="/featuredinstitute" [queryParams]="{tabparam: 'great-indian-schools'}" class="tv_boxes">
+                            <img src="assets/images/theme-three/gis_tv_logo.png" class="img-fluid tv_logos_top">
+                            <p class="text-center mt-5 mb-4 tv_boxes_head">Great Indian Schools</p>
+                            <p class="text-center tv_boxes_subhead">Celebrating schools that are currently leading the change in the Indian education system.</p>
+                            <img src="assets/images/theme-three/republic_tv_logo.jpg" class="img-fluid tv_logo_republic">
+                            </a>
+                        </div>
+                        <div class="tv_ee_bg tv_boxes_width">
+                                <a routerLink="/featuredinstitute" [queryParams]="{tabparam: 'education-evangelist-of-india'}" class="tv_boxes">
+                            <img src="assets/images/theme-three/ee_tv_logo.png" class="img-fluid tv_logos_top">
+                            <p class="text-center mt-5 mb-4 tv_boxes_head">Education Evangelist</p>
+                            <p class="text-center tv_boxes_subhead">First television series focussing on institutions with quality of education.</p>
+                            <img src="assets/images/theme-three/Times_Now.png" class="img-fluid tv_logo_republic tv_logo_times_now">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container  section-padding">
+        <!-- Certified Schools -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="custom-head home-text-heading custom-text-light">Certified Schools</div>
+                    </div>
+                    <div class="col-12 mt-5 school_flex">
+                        <!-- 1 -->
+                        <div class="school_column">
+                            <div class="school_circle d-flex justify-content-center align-items-center"><img src="assets/images/theme-three/certify_1.jpg" class="img-fluid"></div>
+                            <div class="mt-4 text-center school_name">Rajkumar College</div>
+                            <div class="text-center star_yellow">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="school_column">
+                            <div class="school_circle d-flex justify-content-center align-items-center"><img src="assets/images/theme-three/certify_2.jpg" class="img-fluid"></div>
+                            <div class="mt-4 text-center school_name">Punjab Public School</div>
+                            <div class="text-center star_yellow">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="school_column">
+                            <div class="school_circle d-flex justify-content-center align-items-center"><img src="assets/images/theme-three/certify_3.jpg" class="img-fluid"></div>
+                            <div class="mt-4 text-center school_name">Sherwood College</div>
+                            <div class="text-center star_yellow">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="school_column">
+                            <div class="school_circle d-flex justify-content-center align-items-center"><img src="assets/images/theme-three/certify_4.jpg" class="img-fluid"></div>
+                            <div class="mt-4 text-center school_name">St. Georges College</div>
+                            <div class="text-center star_yellow">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="school_column">
+                            <div class="school_circle d-flex justify-content-center align-items-center"><img src="assets/images/theme-three/certify_5.jpg" class="img-fluid"></div>
+                            <div class="mt-4 text-center school_name">St. Pauls School</div>
+                            <div class="text-center star_yellow">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+
+                        <div class="school_column d-xl-none d-lg-none"></div>
+
+                    </div>
+                </div>
+                <div class="text-center d-xl-block mt-5">
+                    <a routerLink="/certifiedschool" class="custom-secondary-btn">View More</a>
+                </div>
+    </div>
+
+    <!-- <div class="container  section-padding">
+        <div class="row text-center">
+            <div class="col-12">
+                <div class="custom-head custom-text-medium custom-text-light">Your Search Begins here</div>
+                <div class="orange-text sub-text">
+                    The first visual library of award winning institutions and heart winning careers.
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-wrap justify-content-around flex-column flex-lg-row">
+                <div class="circle-links-wrapper">
+                    <a routerLink="/careerlibrary" class="image-link d-inline-block">
+                        <img class="img-fluid" src="assets/images/theme-three/careerVidVect.svg">
+                    </a>
+                    <a routerLink="/careerlibrary" class="link">Video Career Library</a>
+                </div>
+                <div class="circle-links-wrapper">
+                    <a routerLink="/certifiedschool" class="image-link d-inline-block">
+                        <img class="img-fluid" src="assets/images/theme-three/certiVector.svg">
+                    </a>
+                    <a routerLink="/certifiedschool" class="link">Certified Institutes</a>
+                </div>
+                <div class="circle-links-wrapper">
+                    <a routerLink="/featuredinstitute" class="image-link d-inline-block">
+                        <img class="img-fluid" src="assets/images/theme-three/featuredVect.svg">
+                    </a>
+                    <a routerLink="/featuredinstitute" class="link">Featured Institutes</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container  innovation-container">
+        <div class="section-padding border-top">
+            <div class="row flex-column-reverse flex-lg-row">
+                <div class="col-12 col-lg-6">
+                    <div class="custom-head custom-text-medium custom-text-light innovation-text-wrapper">
+                        <div class="inovations-head">
+                            How our innovations
+                            are impacting education
+                        </div>
+                        <div class="blue-text sub-text line-height35">Explore our innovative offerings</div>
+                        <p class="text-small d-none d-md-block">
+                            Great Place To Study has opened up a dialogue among educational institutions to work towards
+                            student-centric policies, giving them a roadmap that can be used to build the foundation for a successful
+                            school, one that focuses on its most important asset, its <b class="text-uppercase">students</b>.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center">
+                    <img class="img-fluid" src="assets/images/theme-three/innovation-home.svg">
+                </div>
+
+            </div>
+            <div class="row justify-content-between innovations-wrapper">
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/ssi-ico.svg">
+                    <div class="innovations-head">School Fulfilment Index</div>
+                    <p class="text-small">
+                        School Fulfilment Index Programme is an online survey hosted by Great Place To Study that covers various
+                        aspects of an institute.
+                    </p>
+                    <a routerLink="/sfiwebsite" class="micro-text link">
+                        Learn more
+                    </a>
+                </div>
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/CDP-ico.png">
+                    <div class="innovations-head">Career Discovery Platform</div>
+                    <p class="text-small">
+                        It is an innovative strength based psychological assessment specifically designed to help students discover
+                        their passion, dreams, strengths and areas of improvement.
+                    </p>
+                    <a routerLink="/careerdiscovery" class="micro-text link">
+                        Learn more
+                    </a>
+                </div>
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/video-career-library.png">
+                    <div class="innovations-head">Video Career Library</div>
+                    <p class="text-small">
+                        With access to 250+ careers
+                        videos, young minds will have an opportunity to learn from the best and the brightest in the industry.
+                    </p>
+                    <a routerLink="/careerlibrary" class="micro-text link">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+            <div *ngIf="showMoreInnovations" class="row justify-content-between innovations-wrapper show-fade">
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/GLI-ico.png">
+                    <div class="innovations-head">Global League of Institutions</div>
+                    <p class="text-small">
+                        GLI Certification by Great Place To Study. The process measures student satisfaction on 7 key performance
+                        indicators to get a detailed
+                        understanding of the impact of the institute’s educational standards and practices.
+                    </p>
+                    <a routerLink="/glicertification" class="micro-text link">
+                        Learn more
+                    </a>
+                </div>
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/MA-ico.png">
+                    <div class="innovations-head">Media Avenues</div>
+                    <p class="text-small">
+                        We have 6 intellectual properties, with India's top national channels enabling schools
+                        and colleges to share their unique stories. GPTS is also an exclusive partner with Forbes India for
+                        branded content in education.
+                    </p>
+                    <a routerLink="/featuredinstitute" class="micro-text link">
+                        Learn more
+                    </a>
+                </div>
+                <div class="col-12 col-lg innovation-box">
+                    <img class="innovation-icon" src="assets/images/theme-three/SOP-ico.png">
+                    <div class="innovations-head">Student Engagement Platform</div>
+                    <p class="text-small">
+                        The first Big Data intelligence search
+                        tool that will allow
+                        institutions to ‘search, select and enrol’ the right candidate across the globe. This will be a seamless
+                        enrollment experience for institutions.
+                    </p>
+                    <p class="micro-text link">
+                        Coming Soon
+                    </p>
+                    <a routerLink="/dalham" class="micro-text link">
+            Learn more
+          </a>
+                </div>
+            </div>
+            <div class="text-center load-more-button">
+                <button class="custom-secondary-btn" (click)="showMoreInnovations = !showMoreInnovations">
+                    <span *ngIf="!showMoreInnovations">Load More</span>
+                    <span *ngIf="showMoreInnovations">View Less</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="great-things-background section-padding">
+        <div class="container ">
+            <div class="custom-head custom-text-medium custom-text-light text-center">
+                Our solutions
+            </div>
+
+            <ngb-tabset class="custom-tab-wrapper">
+                <ngb-tab>
+                    <ng-template ngbTabTitle>Our Products</ng-template>
+                    <ng-template ngbTabContent>
+                        <div class="great-thing-content row no-gutters align-items-center">
+                            <div class="custom-col">
+                                <img class="img-fluid" src="assets/images/theme-three/01.png">
+                            </div>
+                            <div class="custom-col great-thing-content-text">
+                                <div class="sub-text">
+                                    We are always working on amazing products for you.
+                                </div>
+                                <div class="check-style-list">
+                                    <div class="">
+                                        <strong>GPTS Featured</strong>
+                                        Popular shows conceptulized and produced by GPTS showcasing top education institutions in engaging
+                                        format on national television.
+                                    </div>
+                                    <div class="">
+                                        <strong>School Fulfilment Index</strong> SFI measures satisfaction levels of key stake holders
+                                        on 7 Key Performance Indicators.
+                                    </div>
+                                    <div class="">
+                                        <strong>Career Library</strong> Video Career Library is first of its kind platform to help students
+                                        have an in depth knowledge and understanding about a career in visually appealing and cinematic
+                                        format.
+                                    </div>
+                                    <div class="">
+                                        <strong>Career Discovery</strong> A tool which is designed on the scientifically powered algorithms
+                                        and positive psyvology to help students discover career on the basis of inherit strengths.
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                    <ng-template ngbTabTitle>Certified Schools</ng-template>
+                    <ng-template ngbTabContent>
+                        <div class="great-thing-content row no-gutters align-items-center">
+                            <div class="custom-col">
+                                <img class="img-fluid" src="assets/images/theme-three/03.png">
+                            </div>
+                            <div class="custom-col great-thing-content-text">
+                                <div class="sub-text">
+                                    Join the thought leaders who will redefine education for the next gen, become a GLI certified
+                                    institute.
+                                </div>
+                                <div class="check-style-list">
+                                    <div class="">
+                                        Make your institute synonymous with student happiness and satisfaction.
+                                    </div>
+                                    <div class="">
+                                        The opportunity to stand amongst india's finest educational institutions on a global platform.
+                                    </div>
+                                    <div class="">
+                                        Get to know what makes your institute "Great" through our school fullfilment index.
+                                    </div>
+                                    <div class="">
+                                        Communicate to the world about your high student satisfaction amongst your key stake holders.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                    <ng-template ngbTabTitle>Career Library</ng-template>
+                    <ng-template ngbTabContent>
+                        <div class="great-thing-content row no-gutters align-items-center">
+                            <div class="custom-col">
+                                <img class="img-fluid" src="assets/images/theme-three/02.png">
+                            </div>
+                            <div class="custom-col great-thing-content-text">
+                                <div class="sub-text">
+                                    Get inspired to follow your dream by our career library platform.
+                                </div>
+                                <div class="check-style-list">
+                                    <div class="">
+                                        Browse through a wide range of upcoming and new age careers in every domain.
+                                    </div>
+                                    <div class="">
+                                        Get the insider’s take on the industry by listening to the experts.
+                                    </div>
+                                    <div class="">
+                                        Sign in to get informative content on diverse careers and road maps to achieve your dreams.
+                                    </div>
+                                    <div class="">
+                                        Get all the necessary information to make informed career decisions.
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+        </div>
+    </div> -->
+
+    <!-- <div class="discover-container container  section-padding pt-0">
+            <div class="row flex-column-reverse flex-xl-row align-items-center">
+                <div class="col-xl-6">
+                    <div class="discover-content-wrapper">
+                        <div class="custom-head custom-text-medium custom-text-light">
+                            Who are we
+                        </div>
+                        <div class="orange-text sub-text mb-0 line-height35">
+                            Great Place to Study is an education research firm that is dedicated to bringing a new era of cognizance
+                            in
+                            the global education system.
+                        </div>
+
+                        <div class="d-flex flex-wrap discover-pills-wrapper">
+                            <div class=""><a routerLink="/about-us" class="">About Us</a></div>
+                            <div class=""><a routerLink="/pressmedia" class="">Press & Media</a></div>
+                            <div class=""><a routerLink="/career" class="">Career with us</a></div>
+                            <div class=""><a routerLink="/dalham" class="">Our Foundation</a></div>
+                            <div class=""><a routerLink="/faq" class="">FAQ's</a></div>
+
+                            <div class=""><a routerLink="" class="">Our growth story</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 d-flex align-items-center image-container">
+                    <img class="img-fluid" src="assets/images/theme-three/discover-pane-img.png">
+                </div>
+            </div>
+        </div> -->
+
+    <div class="blogs-section section-padding container  pt-0">
+        <div class="custom-head custom-text-medium custom-text-light text-center">
+            Insights & Blogs
+        </div>
+
+        <div class="row blog-card-section">
+            <div *ngFor="let blogCard of blogsCarousel | slice: 0:3; index as i" class="col-12 col-md-4 col-xl-4" [ngClass]="{'d-none': i>0,
+          'd-md-block': i>0 && i<=2,
+           'd-xl-block': i>2}">
+                <div class="card">
+                    <a class="blog-link" [routerLink]="['/bloglist', blogCard.slug ]"></a>
+                    <img class="card-img-top" [src]="blogCard.thumb" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" [title]="blogCard.title">{{blogCard.title}}</h5>
+                        <h6 class="card-subtitle text-muted d-flex justify-content-between">
+                            <span>{{blogCard.author_name}}</span>
+                            <span class="date">{{blogCard.created_at}}</span>
+                        </h6>
+                        <!-- <p class="card-text">{{blogCard.description}}...</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center d-xl-block mt-5">
+            <a routerLink="/bloglist" class="custom-secondary-btn">View More</a>
+        </div>
+        <!-- <div class="text-center d-block d-xl-none mt-5">
+        <button class="custom-primary-btn">View More</button>
+      </div> -->
+    </div>
+
+
+    <!-- <div class="page-footer-section text-center">
+        <div class="container ">
+            <div class="custom-text-medium custom-text-light footer-text-width">
+                Find your Passion! 
+            </div>
+            <div class="sub-text">
+        Great Thing happens!
+      </div>
+            <button *ngIf="!loggedIn" (click)="openSignupModal()" class="custom-primary-btn">
+                Get Started
+            </button>
+        </div>
+    </div> -->
+</div>
